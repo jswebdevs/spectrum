@@ -1130,9 +1130,14 @@ nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
   nav.navbar .navbar-brand { margin-right: 8px; }
   #templatemo_main_nav,
   #templatemo_main_nav.collapse,
+  #templatemo_main_nav.collapse:not(.show),
   #templatemo_main_nav.collapse.show {
     position: static !important;
     display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    max-height: none !important;
     flex: 1 1 auto !important;
     width: auto !important;
     max-width: none !important;
@@ -1222,22 +1227,22 @@ nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
     margin-left: auto;
   }
 
-  /* FULL-WIDTH DROPDOWN OVERLAY: starts just after the header with zero gap */
-  #templatemo_main_nav.collapse,
+  /* FULL-HEIGHT MOBILE DROPDOWN OVERLAY (TAKES 100% MOBILE VIEWPORT HEIGHT) */
   #templatemo_main_nav.collapsing,
   #templatemo_main_nav.collapse.show {
-    position: absolute !important;
-    top: 100% !important;
+    position: fixed !important;
+    top: var(--navbar-bottom, 65px) !important;
     left: 0 !important;
     right: 0 !important;
-    width: 100% !important;
+    bottom: 0 !important;
+    width: 100vw !important;
     margin: 0 !important;
     background-color: #ffffff !important;
     box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15) !important;
     border-top: 1px solid #e5e7eb !important;
     border-bottom: 3px solid #1e7e34 !important;
     padding: 0 !important;
-    z-index: 1050 !important;
+    z-index: 99999 !important;
     order: unset !important;
     flex: none !important;
   }
@@ -1251,10 +1256,25 @@ nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
   }
 
   #templatemo_main_nav.collapse.show {
-    max-height: calc(100vh - 75px) !important;
+    height: calc(100vh - var(--navbar-bottom, 65px)) !important;
+    height: calc(100dvh - var(--navbar-bottom, 65px)) !important;
+    max-height: none !important;
     overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    overscroll-behavior: contain !important;
+    touch-action: pan-y !important;
     opacity: 1 !important;
+    padding-bottom: 50px !important;
     transition: opacity 0.2s ease !important;
+    /* Invisible scrollbars */
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+
+  #templatemo_main_nav.collapse.show::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
   }
 
   #templatemo_main_nav.collapse:not(.show) {

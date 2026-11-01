@@ -82,4 +82,73 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     }
+
+    // -------------------------------------------------------------------------
+    // 3. Mobile Navigation Fullscreen Lock & Scroll Management
+    // -------------------------------------------------------------------------
+    const mainNav = document.getElementById('templatemo_main_nav');
+    const navbar = document.querySelector('nav.navbar');
+
+    function updateNavBottom() {
+        if (navbar) {
+            const rect = navbar.getBoundingClientRect();
+            document.documentElement.style.setProperty('--navbar-bottom', Math.round(rect.bottom) + 'px');
+        }
+    }
+
+    if (mainNav) {
+        // Calculate navbar bottom position
+        updateNavBottom();
+
+        // When mobile menu begins opening
+        mainNav.addEventListener('show.bs.collapse', function () {
+            updateNavBottom();
+            document.body.classList.add('mobile-menu-open');
+        });
+
+        // When mobile menu begins closing
+        mainNav.addEventListener('hide.bs.collapse', function () {
+            document.body.classList.remove('mobile-menu-open');
+        });
+
+        // Ensure closed state cleanup
+        mainNav.addEventListener('hidden.bs.collapse', function () {
+            document.body.classList.remove('mobile-menu-open');
+        });
+
+        // Close mobile menu on regular navigation link click
+        mainNav.querySelectorAll('.nav-link:not(.dropdown-toggle), .dropdown-item').forEach(function (link) {
+            link.addEventListener('click', function () {
+                if (window.innerWidth < 992) {
+                    if (typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
+                        const bsCollapse = bootstrap.Collapse.getInstance(mainNav);
+                        if (bsCollapse) {
+                            bsCollapse.hide();
+                        }
+                    }
+                }
+            });
+        });
+    }
+
+    // Clean up if resized to desktop or rotated
+    window.addEventListener('resize', function () {
+        if (window.innerWidth >= 992) {
+            document.body.classList.remove('mobile-menu-open');
+            if (mainNav && mainNav.classList.contains('show')) {
+                if (typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
+                    const bsCollapse = bootstrap.Collapse.getInstance(mainNav);
+                    if (bsCollapse) {
+                        bsCollapse.hide();
+                    }
+                }
+            }
+        } else {
+            updateNavBottom();
+        }
+    });
+
+    window.addEventListener('orientationchange', function () {
+        setTimeout(updateNavBottom, 150);
+    });
 });

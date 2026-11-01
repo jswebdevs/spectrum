@@ -22,6 +22,15 @@ index_content = f"""<!DOCTYPE html>
 
     <!-- Start Banner / Hero Slider -->
     <div id="template-mo-zay-hero-carousel" class="carousel slide sld" data-bs-ride="carousel" data-bs-interval="5000">
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1: Digital Identity"></button>
+            <button type="button" data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="1" aria-label="Slide 2: Artificial Intelligence"></button>
+            <button type="button" data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="2" aria-label="Slide 3: Blockchain Technology"></button>
+            <button type="button" data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="3" aria-label="Slide 4: Smart Card Technologies"></button>
+            <button type="button" data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="4" aria-label="Slide 5: Software &amp; IT Solutions"></button>
+        </div>
+
         <div class="carousel-inner">
             <!-- Slide 1: Digital Identity (banner_img_03.jpg) -->
             <div class="carousel-item active sld-slide sld-slide-1">
@@ -65,7 +74,28 @@ index_content = f"""<!DOCTYPE html>
                 </div>
             </div>
 
-            <!-- Slide 3: Smart Card Technologies (banner_img_04.jpg) -->
+            <!-- Slide 3: Blockchain Technology (sld_img.jpg) -->
+            <div class="carousel-item sld-slide sld-slide-5">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-lg-6 col-md-7 hero_text">
+                            <h4 class="header_two">Decentralized Trust and Security with</h4>
+                            <h1 class="header_thr">Blockchain</h1>
+                            <p>Empowering transparent, tamper-proof transactions and decentralized ledger architectures for sovereign digital trust and enterprise verification.</p>
+                            <div class="hero_icons d-flex align-items-center my-3">
+                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_leadership.png" class="me-2" alt=""> LEADERSHIP WORK</span>
+                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_qwork.png" class="me-2" alt=""> QUALITY WORK</span>
+                            </div>
+                            <div class="hero_buttons d-flex align-items-center mt-4">
+                                <a href="services.html" class="hero_button">Read More</a>
+                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center"><img src="assets/img/icon_video.png" class="me-2" alt=""> Watch Video</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Smart Card Technologies (banner_img_04.jpg) -->
             <div class="carousel-item sld-slide sld-slide-3">
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
@@ -86,7 +116,7 @@ index_content = f"""<!DOCTYPE html>
                 </div>
             </div>
 
-            <!-- Slide 4: Software & IT Solutions (banner_img_05.jpg) -->
+            <!-- Slide 5: Software & IT Solutions (banner_img_05.jpg) -->
             <div class="carousel-item sld-slide sld-slide-4">
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
@@ -272,61 +302,61 @@ index_content = f"""<!DOCTYPE html>
             
             <div class="row pt-4">
                 <!-- Project 1: TCB Smart Family Card (FIRST) -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="portfolio_image bg-white p-3 shadow-sm h-100 d-flex flex-column justify-content-between" style="border-radius: 12px; border: 1px solid #dee2e6;">
-                        <div>
-                            <img src="assets/img/project_1.png" alt="TCB Smart Family Card Project" class="img-fluid mb-3" style="border-radius: 8px;">
-                            <span class="badge bg-success mb-2">Digital Identity</span>
-                            <h5 class="fw-bold mb-2">TCB Smart Family Card</h5>
-                            <p class="text-muted" style="font-size: 13px;">Automated beneficiary identification platform managing over 10M citizen family records nationwide.</p>
+                <div class="col-lg-3 col-md-6 mb-4 reveal-on-scroll">
+                    <div class="portfolio_image bg-white p-3 shadow-sm h-100 d-flex flex-column justify-content-between text-center align-items-center" style="border-radius: 12px; border: 1px solid #dee2e6;">
+                        <div class="w-100 text-center">
+                            <picture class="mx-auto d-block"><source srcset="assets/img/project_1.webp" type="image/webp"><img src="assets/img/project_1.png" alt="TCB Smart Family Card Project" class="img-fluid mb-3 mx-auto d-block" loading="lazy" style="border-radius: 8px;"></picture>
+                            <div class="mb-2"><span class="badge bg-success">Digital Identity</span></div>
+                            <h5 class="fw-bold mb-2 text-center">TCB Smart Family Card</h5>
+                            <p class="text-muted text-center mx-auto" style="font-size: 13px; line-height: 1.6;">Automated beneficiary identification platform managing over 10M citizen family records nationwide.</p>
                         </div>
-                        <div class="pt-2">
-                            <a href="case-study.html" class="button btn-sm">View Case Study</a>
+                        <div class="pt-2 text-center w-100">
+                            <a href="case-study.html#tcb" class="button btn-sm d-inline-block">View Case Study</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 2: Industrial e-Court BD -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="portfolio_image bg-white p-3 shadow-sm h-100 d-flex flex-column justify-content-between" style="border-radius: 12px; border: 1px solid #dee2e6;">
-                        <div>
-                            <img src="assets/img/project_2.png" alt="Industrial e-Court Bangladesh" class="img-fluid mb-3" style="border-radius: 8px;">
-                            <span class="badge bg-primary mb-2">Enterprise Software</span>
-                            <h5 class="fw-bold mb-2">Industrial e-Court BD</h5>
-                            <p class="text-muted" style="font-size: 13px;">Full digital judiciary automation, electronic case filing, cause list management, and summons tracking.</p>
+                <div class="col-lg-3 col-md-6 mb-4 reveal-on-scroll">
+                    <div class="portfolio_image bg-white p-3 shadow-sm h-100 d-flex flex-column justify-content-between text-center align-items-center" style="border-radius: 12px; border: 1px solid #dee2e6;">
+                        <div class="w-100 text-center">
+                            <picture class="mx-auto d-block"><source srcset="assets/img/project_2.webp" type="image/webp"><img src="assets/img/project_2.png" alt="Industrial e-Court Bangladesh" class="img-fluid mb-3 mx-auto d-block" loading="lazy" style="border-radius: 8px;"></picture>
+                            <div class="mb-2"><span class="badge bg-primary">Enterprise Software</span></div>
+                            <h5 class="fw-bold mb-2 text-center">Industrial e-Court BD</h5>
+                            <p class="text-muted text-center mx-auto" style="font-size: 13px; line-height: 1.6;">Full digital judiciary automation, electronic case filing, cause list management, and summons tracking.</p>
                         </div>
-                        <div class="pt-2">
-                            <a href="case-study.html" class="button btn-sm">View Case Study</a>
+                        <div class="pt-2 text-center w-100">
+                            <a href="case-study.html#ecourt" class="button btn-sm d-inline-block">View Case Study</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 3: Smart Card Transport -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="portfolio_image bg-white p-3 shadow-sm h-100 d-flex flex-column justify-content-between" style="border-radius: 12px; border: 1px solid #dee2e6;">
-                        <div>
-                            <img src="assets/img/project_3.png" alt="Smart Card Issuance Platform" class="img-fluid mb-3" style="border-radius: 8px;">
-                            <span class="badge bg-warning text-dark mb-2">Smart Card</span>
-                            <h5 class="fw-bold mb-2">Smart Card Platform</h5>
-                            <p class="text-muted" style="font-size: 13px;">Automated laser engraving and dual-interface smart card personalization architecture.</p>
+                <div class="col-lg-3 col-md-6 mb-4 reveal-on-scroll">
+                    <div class="portfolio_image bg-white p-3 shadow-sm h-100 d-flex flex-column justify-content-between text-center align-items-center" style="border-radius: 12px; border: 1px solid #dee2e6;">
+                        <div class="w-100 text-center">
+                            <picture class="mx-auto d-block"><source srcset="assets/img/project_3.webp" type="image/webp"><img src="assets/img/project_3.png" alt="Smart Card Issuance Platform" class="img-fluid mb-3 mx-auto d-block" loading="lazy" style="border-radius: 8px;"></picture>
+                            <div class="mb-2"><span class="badge bg-warning text-dark">Smart Card</span></div>
+                            <h5 class="fw-bold mb-2 text-center">Smart Card Platform</h5>
+                            <p class="text-muted text-center mx-auto" style="font-size: 13px; line-height: 1.6;">Automated laser engraving and dual-interface smart card personalization architecture.</p>
                         </div>
-                        <div class="pt-2">
-                            <a href="case-study.html" class="button btn-sm">View Case Study</a>
+                        <div class="pt-2 text-center w-100">
+                            <a href="case-study.html#smartcard" class="button btn-sm d-inline-block">View Case Study</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 4: National e-Licensing -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="portfolio_image bg-white p-3 shadow-sm h-100 d-flex flex-column justify-content-between" style="border-radius: 12px; border: 1px solid #dee2e6;">
-                        <div>
-                            <img src="assets/img/project_4.png" alt="National e-Licensing System" class="img-fluid mb-3" style="border-radius: 8px;">
-                            <span class="badge bg-info text-dark mb-2">Government System</span>
-                            <h5 class="fw-bold mb-2">National e-Licensing</h5>
-                            <p class="text-muted" style="font-size: 13px;">Paperless digital regulatory portal with payment gateway and automated certificate generation.</p>
+                <div class="col-lg-3 col-md-6 mb-4 reveal-on-scroll">
+                    <div class="portfolio_image bg-white p-3 shadow-sm h-100 d-flex flex-column justify-content-between text-center align-items-center" style="border-radius: 12px; border: 1px solid #dee2e6;">
+                        <div class="w-100 text-center">
+                            <picture class="mx-auto d-block"><source srcset="assets/img/project_4.webp" type="image/webp"><img src="assets/img/project_4.png" alt="National e-Licensing System" class="img-fluid mb-3 mx-auto d-block" loading="lazy" style="border-radius: 8px;"></picture>
+                            <div class="mb-2"><span class="badge bg-info text-dark">Government System</span></div>
+                            <h5 class="fw-bold mb-2 text-center">National e-Licensing</h5>
+                            <p class="text-muted text-center mx-auto" style="font-size: 13px; line-height: 1.6;">Paperless digital regulatory portal with payment gateway and automated certificate generation.</p>
                         </div>
-                        <div class="pt-2">
-                            <a href="case-study.html" class="button btn-sm">View Case Study</a>
+                        <div class="pt-2 text-center w-100">
+                            <a href="case-study.html#licence" class="button btn-sm d-inline-block">View Case Study</a>
                         </div>
                     </div>
                 </div>
@@ -2168,10 +2198,15 @@ about_content = f"""<!DOCTYPE html>
             </div>
             <div class="row g-4 align-items-stretch">
                 <!-- Mission -->
-                <div class="col-lg-6">
+                <div class="col-lg-6 reveal-on-scroll">
                     <div class="abt-mission-box">
                         <div class="d-flex align-items-center mb-3">
-                            <img src="assets/img/mission.png" alt="Our Mission" style="height: 52px;" class="me-3">
+                            <div class="mission-icon-wrap me-3">
+                                <picture>
+                                    <source srcset="assets/img/mission.webp" type="image/webp">
+                                    <img src="assets/img/mission.png" alt="Our Mission">
+                                </picture>
+                            </div>
                             <h3 class="mb-0">Our Mission</h3>
                         </div>
                         <p>
@@ -2181,10 +2216,15 @@ about_content = f"""<!DOCTYPE html>
                 </div>
 
                 <!-- Vision -->
-                <div class="col-lg-6">
+                <div class="col-lg-6 reveal-on-scroll">
                     <div class="abt-mission-box">
                         <div class="d-flex align-items-center mb-3">
-                            <img src="assets/img/vission.png" alt="Our Vision" style="height: 52px;" class="me-3">
+                            <div class="mission-icon-wrap me-3">
+                                <picture>
+                                    <source srcset="assets/img/vission.webp" type="image/webp">
+                                    <img src="assets/img/vission.png" alt="Our Vision">
+                                </picture>
+                            </div>
                             <h3 class="mb-0">Our Vision</h3>
                         </div>
                         <p>

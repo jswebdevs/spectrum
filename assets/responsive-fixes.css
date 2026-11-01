@@ -218,9 +218,14 @@ nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
   nav.navbar .navbar-brand { margin-right: 8px; }
   #templatemo_main_nav,
   #templatemo_main_nav.collapse,
+  #templatemo_main_nav.collapse:not(.show),
   #templatemo_main_nav.collapse.show {
     position: static !important;
     display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    max-height: none !important;
     flex: 1 1 auto !important;
     width: auto !important;
     max-width: none !important;
@@ -375,22 +380,22 @@ nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
     margin-left: auto;
   }
 
-  /* FULL-WIDTH DROPDOWN OVERLAY: starts just after the header with zero gap */
-  #templatemo_main_nav.collapse,
+  /* FULL-HEIGHT MOBILE DROPDOWN OVERLAY (TAKES 100% MOBILE VIEWPORT HEIGHT) */
   #templatemo_main_nav.collapsing,
   #templatemo_main_nav.collapse.show {
-    position: absolute !important;
-    top: 100% !important;
+    position: fixed !important;
+    top: var(--navbar-bottom, 65px) !important;
     left: 0 !important;
     right: 0 !important;
-    width: 100% !important;
+    bottom: 0 !important;
+    width: 100vw !important;
     margin: 0 !important;
     background-color: #ffffff !important;
     box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15) !important;
     border-top: 1px solid #e5e7eb !important;
     border-bottom: 3px solid #1e7e34 !important;
     padding: 0 !important;
-    z-index: 1050 !important;
+    z-index: 99999 !important;
     order: unset !important;
     flex: none !important;
   }
@@ -404,10 +409,25 @@ nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
   }
 
   #templatemo_main_nav.collapse.show {
-    max-height: calc(100vh - 75px) !important;
+    height: calc(100vh - var(--navbar-bottom, 65px)) !important;
+    height: calc(100dvh - var(--navbar-bottom, 65px)) !important;
+    max-height: none !important;
     overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    overscroll-behavior: contain !important;
+    touch-action: pan-y !important;
     opacity: 1 !important;
+    padding-bottom: 50px !important;
     transition: opacity 0.2s ease !important;
+    /* Invisible scrollbars: scroll works cleanly without any scrollbar shown */
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+
+  #templatemo_main_nav.collapse.show::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
   }
 
   #templatemo_main_nav.collapse:not(.show) {
@@ -741,6 +761,10 @@ nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
   background-image: url('../img/banner_img_05.jpg');
 }
 
+#template-mo-zay-hero-carousel .sld-slide-5 {
+  background-image: url('../img/sld_img.jpg');
+}
+
 #template-mo-zay-hero-carousel .hero_text {
   z-index: 2;
   padding-top: 30px;
@@ -851,7 +875,28 @@ nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
 }
 
 #template-mo-zay-hero-carousel .carousel-indicators {
-  display: none !important;
+  bottom: 20px !important;
+  margin-bottom: 0 !important;
+  z-index: 5;
+  display: flex !important;
+}
+
+#template-mo-zay-hero-carousel .carousel-indicators [data-bs-target] {
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50% !important;
+  background-color: #2e3760 !important;
+  opacity: 0.35 !important;
+  border: none !important;
+  margin: 0 5px !important;
+  transition: all 0.3s ease !important;
+}
+
+#template-mo-zay-hero-carousel .carousel-indicators .active {
+  background-color: #f26522 !important;
+  opacity: 1 !important;
+  width: 32px !important;
+  border-radius: 6px !important;
 }
 
 @media (max-width: 991.98px) {
@@ -1035,6 +1080,50 @@ nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
   font-size: 15px !important;
   line-height: 1.8 !important;
   margin-bottom: 0 !important;
+}
+
+/* ==========================================================================
+   MISSION & VISION ICON & BOX FIXES
+   ========================================================================== */
+.abt_pg_mission img {
+  width: auto !important;
+  max-width: 100% !important;
+  padding-bottom: 0 !important;
+}
+
+.mission-icon-wrap {
+  width: 68px !important;
+  height: 68px !important;
+  min-width: 68px !important;
+  border-radius: 14px !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  padding: 8px !important;
+}
+
+.mission-icon-wrap picture {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.mission-icon-wrap img,
+.abt-mission-box .mission-icon-wrap img,
+.abt_pg_mission .abt-mission-box img {
+  width: 52px !important;
+  height: 52px !important;
+  max-width: 52px !important;
+  max-height: 52px !important;
+  object-fit: contain !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: block !important;
 }
 
 .text-center .header_two,
@@ -1922,6 +2011,65 @@ picture {
 .project-icon-wrap picture {
   display: inline-flex;
 }
+
+/* ==========================================================================
+   HOMEPAGE FEATURED PROJECTS CARD CENTERING
+   ========================================================================== */
+.portfolio .portfolio_image {
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.portfolio .portfolio_image img {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block !important;
+}
+
+.portfolio .portfolio_image h5,
+.portfolio .portfolio_image p {
+  text-align: center !important;
+}
+
+.portfolio .portfolio_image .badge {
+  display: inline-block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.portfolio .portfolio_image a.button {
+  text-align: center !important;
+  display: inline-block !important;
+}
+
+/* ==========================================================================
+   MOBILE MENU BODY SCROLL LOCK & BACKGROUND PROTECTION
+   ========================================================================== */
+body.mobile-menu-open {
+  overflow: hidden !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+}
+
+body.mobile-menu-open > *:not(nav.navbar):not(.top_bar) {
+  pointer-events: none !important;
+  user-select: none !important;
+}
+
+@media (min-width: 992px) {
+  body.mobile-menu-open {
+    overflow: visible !important;
+    height: auto !important;
+  }
+  body.mobile-menu-open > *:not(nav.navbar):not(.top_bar) {
+    pointer-events: auto !important;
+    user-select: auto !important;
+  }
+}
+
 
 
 
