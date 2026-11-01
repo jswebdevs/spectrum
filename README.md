@@ -51,3 +51,4 @@ A 100% pure, framework-free implementation of the **Spectrum IT Solutions Ltd.**
 - [`assets/css/responsive-fixes.css`](assets/css/responsive-fixes.css) — Responsive bug fixes
 
 # spectrum
+# spectrum
