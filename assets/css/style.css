@@ -1048,12 +1048,23 @@ nav.navbar .navbar-toggler {
   padding: 0 !important;
   border: none !important;
   background: transparent !important;
-  display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   cursor: pointer !important;
   outline: none !important;
   box-shadow: none !important;
+}
+
+@media (min-width: 992px) {
+  nav.navbar .navbar-toggler {
+    display: none !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  nav.navbar .navbar-toggler {
+    display: flex !important;
+  }
 }
 
 nav.navbar .navbar-toggler:focus,

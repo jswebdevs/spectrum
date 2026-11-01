@@ -2,6 +2,84 @@ import os
 
 DIR = '/home/newadmin/Projects/Spectrum/plain-html'
 
+def get_head(title, description, canonical_slug, og_image="assets/img/banner_img_01.jpg"):
+    canonical_url = f"https://spectrum.com.bd/{canonical_slug}"
+    og_image_url = f"https://spectrum.com.bd/{og_image}" if not og_image.startswith("http") else og_image
+    return f"""    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{title}</title>
+    <meta name="description" content="{description}">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="{canonical_url}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Spectrum IT Solutions Ltd.">
+    <meta property="og:title" content="{title}">
+    <meta property="og:description" content="{description}">
+    <meta property="og:url" content="{canonical_url}">
+    <meta property="og:image" content="{og_image_url}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@SpectrumITSolutions">
+    <meta name="twitter:title" content="{title}">
+    <meta name="twitter:description" content="{description}">
+    <meta name="twitter:image" content="{og_image_url}">
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Bootstrap & Site Styles -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive-fixes.css">
+    <!-- Structured Data (JSON-LD Organization & WebPage) -->
+    <script type="application/ld+json">
+    [
+      {{
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Spectrum IT Solutions Ltd.",
+        "url": "https://spectrum.com.bd/",
+        "logo": "https://spectrum.com.bd/assets/img/logo.png",
+        "telephone": "+8801615900004",
+        "email": "contact@spectrum.com.bd",
+        "address": {{
+          "@type": "PostalAddress",
+          "streetAddress": "52/1, New Eskaton Road (Hasan Holdings Ltd., 12th Floor)",
+          "addressLocality": "Dhaka",
+          "postalCode": "1000",
+          "addressCountry": "BD"
+        }},
+        "sameAs": [
+          "https://www.facebook.com/myspectrumit",
+          "https://www.linkedin.com/company/spectrum-it-solutions-limited",
+          "https://www.youtube.com/@SpectrumITSolutionsbdLtd"
+        ]
+      }},
+      {{
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "{title}",
+        "description": "{description}",
+        "url": "{canonical_url}",
+        "isPartOf": {{
+          "@type": "WebSite",
+          "name": "Spectrum IT Solutions Ltd.",
+          "url": "https://spectrum.com.bd/"
+        }}
+      }}
+    ]
+    </script>"""
+
 COMMON_HEAD = """    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
@@ -75,7 +153,7 @@ def get_navbar(active_page=''):
                 </div>
             </div>
 
-            <button class="navbar-toggler border-0 ms-auto collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="templatemo_main_nav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler d-lg-none border-0 ms-auto collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="templatemo_main_nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
