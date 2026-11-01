@@ -1,0 +1,19 @@
+# Spectrum IT Solutions Ltd.
+> Premier Dhaka-based software company providing digital identity, biometric infrastructure, smart card platforms, AI systems, and national-scale software engineering.
+
+## Key pages
+- [Home](https://spectrum.com.bd/index.html): Homepage with overview of capabilities
+- [About](https://spectrum.com.bd/about_us.html): Company background, 12+ years experience, ISO 9001 & ISO 27001
+- [Services](https://spectrum.com.bd/services.html): Digital identity, smart cards, AI, cybersecurity, ERP
+- [Digital Identity & Security](https://spectrum.com.bd/Digital_Identity_&_Security.html): National biometric identity architecture & Upokari platform
+- [Smart Card Technologies](https://spectrum.com.bd/Smart_Card_Technologies.html): Turnkey smart card personalization, encoding & kiosks
+- [Artificial Intelligence](https://spectrum.com.bd/Artificial_Intelligence.html): Computer vision, cognitive OCR, and decision models
+- [Products](https://spectrum.com.bd/products.html): Enterprise hardware and software products
+- [Projects](https://spectrum.com.bd/projects.html): Delivered government and corporate projects
+- [Case Studies](https://spectrum.com.bd/case-study.html): TCB Smart Family Card, Industrial e-Court BD
+- [Contact](https://spectrum.com.bd/contact.html): Enquiries and consultations
+
+## Contact
+- Email: contact@spectrum.com.bd
+- Phone: +8801615900004
+- Address: 52/1, New Eskaton Road (Hasan Holdings Ltd., 12th Floor), Dhaka-1000, Bangladesh
