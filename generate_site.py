@@ -1771,14 +1771,14 @@ dis_content = f"""<!DOCTYPE html>
                             <h6 class="fw-bold text-success mb-1"><i class="fas fa-shield-alt me-1"></i> 100% Anti-Spoof Interception</h6>
                             <p class="small text-muted mb-0">Instantly intercepts high-definition printed masks, video replays on iPad/monitors, 3D silicone molds, and generative AI deepfakes.</p>
                         </div>
-                        <div class="d-flex align-items-center gap-3 pt-1">
-                            <div class="badge bg-light text-dark border px-3 py-2">
+                        <div class="d-flex flex-wrap align-items-center gap-2 pt-2">
+                            <div class="badge bg-light text-dark border px-3 py-2 mb-1">
                                 <i class="fas fa-fingerprint text-success me-1"></i> AFIS/ABIS Minutiae Match
                             </div>
-                            <div class="badge bg-light text-dark border px-3 py-2">
+                            <div class="badge bg-light text-dark border px-3 py-2 mb-1">
                                 <i class="fas fa-eye text-primary me-1"></i> Iris Biometric Ready
                             </div>
-                            <div class="badge bg-light text-dark border px-3 py-2">
+                            <div class="badge bg-light text-dark border px-3 py-2 mb-1">
                                 <i class="fas fa-lock text-warning me-1"></i> SHA-256 Audit Seal
                             </div>
                         </div>

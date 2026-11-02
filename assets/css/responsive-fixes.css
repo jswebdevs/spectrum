@@ -2474,6 +2474,12 @@ body.mobile-menu-open > *:not(nav.navbar):not(.top_bar) {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
     transition: all 0.3s ease;
 }
+.dis-step-card .badge {
+    white-space: normal;
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+}
 .dis-step-card:hover {
     border-color: #cbd5e1;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
