@@ -208,7 +208,7 @@ body, ul, li, p, a, label, input, div {
 }
 .sld{
     height: 570px;
-    background-image: url('../img/sld_img.jpg');
+    background-color: #f8fafc;
     background-repeat: no-repeat;
 }
 .carousel-caption{

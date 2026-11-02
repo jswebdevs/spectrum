@@ -28,15 +28,21 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="ard" href="/.well-known/ard.json">
+    <!-- Resource Hints & Preloads -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preload" as="image" href="assets/img/banner_img_03.webp" type="image/webp" media="(min-width: 768px)" fetchpriority="high">
     <!-- Google Fonts & FontAwesome -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"></noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"></noscript>
     <!-- Bootstrap & Site Styles -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.css">
-    <link rel="stylesheet" href="assets/css/owl.theme.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive-fixes.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="stylesheet" href="assets/css/responsive-fixes.min.css?v=20261102c">
     <!-- Structured Data (JSON-LD Organization & WebPage) -->
     <script type="application/ld+json">
     [
@@ -77,6 +83,7 @@
     </script>
 </head>
 <body>
+    <a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
     <!-- Start Top bar -->
     <div class="container-fluid bg-dark pt-2 pb-2 top_bar">
         <div class="container text-light d-flex justify-content-between align-items-center">
@@ -86,8 +93,10 @@
                 <a class="text-light" href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" aria-label="Spectrum YouTube"><i class="fab fa-youtube fa-sm fa-fw"></i></a>
             </div>
             <div class="top_email d-flex align-items-center">
-                <i class="fa fa-envelope me-2"></i>
-                <a class="text-light text-decoration-none" href="mailto:contact@spectrum.com.bd">contact@spectrum.com.bd</a>
+                <a class="top_email_badge text-decoration-none" href="mailto:contact@spectrum.com.bd">
+                    <i class="fa fa-envelope"></i>
+                    <span>contact@spectrum.com.bd</span>
+                </a>
             </div>
         </div> 
     </div>
@@ -98,12 +107,12 @@
             <div class="d-flex align-items-center">
                 <div class="logo">
                     <a class="navbar-brand text-success align-self-center m-0 p-0" href="index.html">
-                        <img src="assets/img/logo.png" alt="Spectrum IT Solutions Logo">
+                        <img src="assets/img/logo.png" width="165" height="60" alt="Spectrum IT Solutions Logo">
                     </a>
                 </div>
                 <div class="iso d-none d-lg-flex align-items-center ms-3">
-                    <img src="assets/img/ISO_9001.png" alt="ISO 9001:2015" class="me-1">
-                    <img src="assets/img/ISO_27001.png" alt="ISO 27001:2013">
+                    <img src="assets/img/ISO_9001.png" width="70" height="75" alt="ISO 9001:2015" class="me-1">
+                    <img src="assets/img/ISO_27001.png" width="70" height="75" alt="ISO 27001:2013">
                 </div>
             </div>
 
@@ -162,8 +171,9 @@
         </div>
     </nav>
 
+    <main id="main-content">
     <!-- Start Banner / Hero Slider -->
-    <div id="template-mo-zay-hero-carousel" class="carousel slide sld" data-bs-ride="carousel" data-bs-interval="5000">
+    <div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="false" data-bs-interval="false">
         <!-- Carousel Indicators -->
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1: Digital Identity"></button>
@@ -174,105 +184,120 @@
         </div>
 
         <div class="carousel-inner">
-            <!-- Slide 1: Digital Identity (banner_img_03.jpg) -->
+            <!-- Slide 1: Digital Identity (banner_img_03.webp) -->
             <div class="carousel-item active sld-slide sld-slide-1">
+                <picture class="hero-bg-picture">
+                    <img src="assets/img/banner_img_03.webp" alt="Digital Identity" class="hero-bg-img" loading="lazy" decoding="async">
+                </picture>
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <div class="col-lg-6 col-md-7 hero_text">
-                            <h4 class="header_two">Secure and Seamless Future with</h4>
+                            <p class="header_two mb-1">Secure and Seamless Future with</p>
                             <h1 class="header_thr">Digital Identity</h1>
                             <p>Digital Identity enables secure, verified access to services, protecting user data and simplifying online interactions globally.</p>
                             <div class="hero_icons d-flex align-items-center my-3">
-                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_leadership.png" class="me-2" alt=""> LEADERSHIP WORK</span>
-                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_qwork.png" class="me-2" alt=""> QUALITY WORK</span>
+                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_leadership.png" width="28" height="42" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> LEADERSHIP WORK</span>
+                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_qwork.png" width="39" height="38" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> QUALITY WORK</span>
                             </div>
                             <div class="hero_buttons d-flex align-items-center mt-4">
-                                <a href="Digital_Identity_&_Security.html" class="hero_button">Read More</a>
-                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center"><img src="assets/img/icon_video.png" class="me-2" alt=""> Watch Video</a>
+                                <a href="Digital_Identity_&_Security.html" class="hero_button" aria-label="Explore Digital Identity and Security solutions">Explore Solution</a>
+                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center" aria-label="Watch video about Digital Identity on YouTube"><img src="assets/img/icon_video.png" width="38" height="38" class="me-2" alt="" aria-hidden="true"> Watch Video</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Slide 2: Blockchain Technology (sld_img.jpg) -->
-            <div class="carousel-item sld-slide sld-slide-5">
-                <div class="container h-100">
-                    <div class="row h-100 align-items-center">
-                        <div class="col-lg-6 col-md-7 hero_text">
-                            <h4 class="header_two">Decentralized Trust and Security with</h4>
-                            <h1 class="header_thr">Blockchain</h1>
-                            <p>Empowering transparent, tamper-proof transactions and decentralized ledger architectures for sovereign digital trust and enterprise verification.</p>
-                            <div class="hero_icons d-flex align-items-center my-3">
-                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_leadership.png" class="me-2" alt=""> LEADERSHIP WORK</span>
-                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_qwork.png" class="me-2" alt=""> QUALITY WORK</span>
-                            </div>
-                            <div class="hero_buttons d-flex align-items-center mt-4">
-                                <a href="services.html" class="hero_button">Read More</a>
-                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center"><img src="assets/img/icon_video.png" class="me-2" alt=""> Watch Video</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide 3: Artificial Intelligence (banner_img_01.jpg) -->
+            <!-- Slide 2: Blockchain Technology (banner_img_05.webp) -->
             <div class="carousel-item sld-slide sld-slide-2">
+                <picture class="hero-bg-picture">
+                    <img src="assets/img/banner_img_05.webp" alt="Blockchain Technology" class="hero-bg-img" loading="lazy" decoding="async">
+                </picture>
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <div class="col-lg-6 col-md-7 hero_text">
-                            <h4 class="header_two">Revolutionizing Your World with</h4>
+                            <p class="header_two mb-1">Future of Digital Trust Lies in</p>
+                            <h1 class="header_thr">Blockchain Technology</h1>
+                            <p>Blockchain Technology ensures secure, transparent, and tamper-proof data exchange through decentralized networks.</p>
+                            <div class="hero_icons d-flex align-items-center my-3">
+                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_leadership.png" width="28" height="42" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> LEADERSHIP WORK</span>
+                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_qwork.png" width="39" height="38" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> QUALITY WORK</span>
+                            </div>
+                            <div class="hero_buttons d-flex align-items-center mt-4">
+                                <a href="services.html" class="hero_button" aria-label="Explore Blockchain Technology implementations">Explore Solution</a>
+                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center" aria-label="Watch video about Blockchain Technology on YouTube"><img src="assets/img/icon_video.png" width="38" height="38" class="me-2" alt="" aria-hidden="true"> Watch Video</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Artificial Intelligence (banner_img_01.webp) -->
+            <div class="carousel-item sld-slide sld-slide-3">
+                <picture class="hero-bg-picture">
+                    <img src="assets/img/banner_img_01.webp" alt="Artificial Intelligence" class="hero-bg-img" loading="lazy" decoding="async">
+                </picture>
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-lg-6 col-md-7 hero_text">
+                            <p class="header_two mb-1">Revolutionizing Your World with</p>
                             <h1 class="header_thr">Artificial Intelligence</h1>
                             <p>Transforming Industries, Enhancing Human Capabilities, Automating Tasks, and Shaping the Future of Technology.</p>
                             <div class="hero_icons d-flex align-items-center my-3">
-                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_leadership.png" class="me-2" alt=""> LEADERSHIP WORK</span>
-                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_qwork.png" class="me-2" alt=""> QUALITY WORK</span>
+                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_leadership.png" width="28" height="42" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> LEADERSHIP WORK</span>
+                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_qwork.png" width="39" height="38" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> QUALITY WORK</span>
                             </div>
                             <div class="hero_buttons d-flex align-items-center mt-4">
-                                <a href="Artificial_Intelligence.html" class="hero_button">Read More</a>
-                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center"><img src="assets/img/icon_video.png" class="me-2" alt=""> Watch Video</a>
+                                <a href="Artificial_Intelligence.html" class="hero_button" aria-label="Explore Artificial Intelligence services">Explore Solution</a>
+                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center" aria-label="Watch video about Artificial Intelligence on YouTube"><img src="assets/img/icon_video.png" width="38" height="38" class="me-2" alt="" aria-hidden="true"> Watch Video</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Slide 4: Smart Card Technologies (banner_img_04.jpg) -->
-            <div class="carousel-item sld-slide sld-slide-3">
+            <!-- Slide 4: Smart Card Technologies (banner_img_04.webp) -->
+            <div class="carousel-item sld-slide sld-slide-4">
+                <picture class="hero-bg-picture">
+                    <img src="assets/img/banner_img_04.webp" alt="Smart Card Technologies" class="hero-bg-img" loading="lazy" decoding="async">
+                </picture>
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <div class="col-lg-6 col-md-7 hero_text">
-                            <h4 class="header_two">Secure Personal Identification with</h4>
+                            <p class="header_two mb-1">Secure Personal Identification with</p>
                             <h1 class="header_thr">Smart Card Technologies</h1>
                             <p>Smart cards store data securely for identification and authentication, powering national citizen registry and ID programs.</p>
                             <div class="hero_icons d-flex align-items-center my-3">
-                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_leadership.png" class="me-2" alt=""> LEADERSHIP WORK</span>
-                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_qwork.png" class="me-2" alt=""> QUALITY WORK</span>
+                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_leadership.png" width="28" height="42" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> LEADERSHIP WORK</span>
+                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_qwork.png" width="39" height="38" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> QUALITY WORK</span>
                             </div>
                             <div class="hero_buttons d-flex align-items-center mt-4">
-                                <a href="Smart_Card_Technologies.html" class="hero_button">Read More</a>
-                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center"><img src="assets/img/icon_video.png" class="me-2" alt=""> Watch Video</a>
+                                <a href="Smart_Card_Technologies.html" class="hero_button" aria-label="Explore Smart Card Technologies">Explore Solution</a>
+                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center" aria-label="Watch video about Smart Card Technologies on YouTube"><img src="assets/img/icon_video.png" width="38" height="38" class="me-2" alt="" aria-hidden="true"> Watch Video</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Slide 5: Software & IT Solutions (banner_img_05.jpg) -->
-            <div class="carousel-item sld-slide sld-slide-4">
+            <!-- Slide 5: Software & IT Solutions (banner_img_02.webp) -->
+            <div class="carousel-item sld-slide sld-slide-5">
+                <picture class="hero-bg-picture">
+                    <img src="assets/img/banner_img_02.webp" alt="Software and IT Solutions" class="hero-bg-img" loading="lazy" decoding="async">
+                </picture>
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <div class="col-lg-6 col-md-7 hero_text">
-                            <h4 class="header_two">Leading Software &amp; IT Services</h4>
+                            <p class="header_two mb-1">Leading Software &amp; IT Services</p>
                             <h1 class="header_thr">IT Solutions</h1>
                             <p>We are a software development company delivering splendid business IT Solutions and related services to customers home &amp; abroad.</p>
                             <div class="hero_icons d-flex align-items-center my-3">
-                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_leadership.png" class="me-2" alt=""> LEADERSHIP WORK</span>
-                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_qwork.png" class="me-2" alt=""> QUALITY WORK</span>
+                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_leadership.png" width="28" height="42" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> LEADERSHIP WORK</span>
+                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_qwork.png" width="39" height="38" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> QUALITY WORK</span>
                             </div>
                             <div class="hero_buttons d-flex align-items-center mt-4">
-                                <a href="services.html" class="hero_button">Read More</a>
-                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center"><img src="assets/img/icon_video.png" class="me-2" alt=""> Watch Video</a>
+                                <a href="services.html" class="hero_button" aria-label="Explore Software and IT Solutions">Explore Solution</a>
+                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center" aria-label="Watch video about Software and IT Solutions on YouTube"><img src="assets/img/icon_video.png" width="38" height="38" class="me-2" alt="" aria-hidden="true"> Watch Video</a>
                             </div>
                         </div>
                     </div>
@@ -280,11 +305,13 @@
             </div>
         </div>
 
-        <a class="carousel-control-prev text-decoration-none" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="prev">
-            <i class="fas fa-chevron-left"></i>
+        <a class="carousel-control-prev text-decoration-none" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="prev" aria-label="Previous Slide">
+            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+            <span class="visually-hidden">Previous</span>
         </a>
-        <a class="carousel-control-next text-decoration-none" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="next">
-            <i class="fas fa-chevron-right"></i>
+        <a class="carousel-control-next text-decoration-none" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="next" aria-label="Next Slide">
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <span class="visually-hidden">Next</span>
         </a>
     </div>
     <!-- End Banner / Hero Slider -->
@@ -295,13 +322,13 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="about_image text-center">
-                        <picture><source srcset="assets/img/about_us_2.webp" type="image/webp"><img src="assets/img/about_us_2.png" class="img-fluid" alt="About Spectrum IT Solutions" loading="lazy" style="border-radius: 12px;"></picture>
+                        <picture><source srcset="assets/img/about_us_2.webp" type="image/webp"><img src="assets/img/about_us_2.png" width="594" height="563" class="img-fluid" alt="About Spectrum IT Solutions" loading="lazy" decoding="async" style="border-radius: 12px; aspect-ratio: 594/563;"></picture>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="about_text">
                         <h2 class="header_two" style="color: #2e3760;">About Spectrum</h2>
-                        <h3 class="header_one mb-4" style="color: #f26522;">Innovating Technology for National Progress</h3>
+                        <h3 class="header_one mb-4" style="color: #c2410c;">Innovating Technology for National Progress</h3>
                         <p class="text-muted" style="line-height: 1.8;">
                             Spectrum IT Solutions Ltd. is a premier Dhaka-based software and IT services company established with a clear mandate to build resilient, sovereign digital solutions. We engineer complex architectures for government ministries, regulatory authorities, and leading enterprises.
                         </p>
@@ -334,8 +361,8 @@
                             </div>
                         </div>
 
-                        <div>
-                            <a href="about_us.html" class="button">Read More About Us</a>
+                        <div class="read-more-homepage">
+                            <a href="about_us.html" class="button" aria-label="Read more about Spectrum IT Solutions Ltd. and company profile">Read More About Us</a>
                         </div>
                     </div>
                 </div>
@@ -354,14 +381,14 @@
             <div class="row pt-4">
                 <!-- Card 1: Digital Identity & Security (KEPT AT FIRST) -->
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="services-item p-4 d-flex flex-column justify-content-between h-100" style="border: 2px solid #f26522; background: #fff;">
+                    <div class="services-item p-4 d-flex flex-column justify-content-between h-100" style="border: 2px solid #c2410c; background: #fff;">
                         <div>
-                            <img src="assets/img/icon_Digital_Identity_Security.png" alt="Digital Identity &amp; Security" class="mb-3">
-                            <h4 class="fw-bold">Digital Identity &amp; Security</h4>
+                            <img src="assets/img/icon_Digital_Identity_Security.png" width="101" height="101" alt="Digital Identity &amp; Security" class="mb-3">
+                            <h3 class="fw-bold" style="font-size: 1.25rem;">Digital Identity &amp; Security</h3>
                             <p class="text-muted">High-security biometric identity management, KYC infrastructure, national family cards, and verification engines.</p>
                         </div>
                         <div class="pt-3 text-center">
-                            <a href="Digital_Identity_&_Security.html" class="button">read more</a>
+                            <a href="Digital_Identity_&_Security.html" class="button" aria-label="Explore Digital Identity and Security solutions">Explore Solutions</a>
                         </div>
                     </div>
                 </div>
@@ -370,12 +397,12 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="services-item p-4 d-flex flex-column justify-content-between h-100" style="background: #fff;">
                         <div>
-                            <img src="assets/img/icon_Smart_Card_Technologies.png" alt="Smart Card Technologies" class="mb-3">
-                            <h4 class="fw-bold">Smart Card Technologies</h4>
+                            <img src="assets/img/icon_Smart_Card_Technologies.png" width="101" height="101" alt="Smart Card Technologies" class="mb-3">
+                            <h3 class="fw-bold" style="font-size: 1.25rem;">Smart Card Technologies</h3>
                             <p class="text-muted">Turnkey contact and contactless chip card issuance, encoding, laser personalization, and reader ecosystems.</p>
                         </div>
                         <div class="pt-3 text-center">
-                            <a href="Smart_Card_Technologies.html" class="button">read more</a>
+                            <a href="Smart_Card_Technologies.html" class="button" aria-label="Explore Smart Card Technologies">Explore Solutions</a>
                         </div>
                     </div>
                 </div>
@@ -384,12 +411,12 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="services-item p-4 d-flex flex-column justify-content-between h-100" style="background: #fff;">
                         <div>
-                            <img src="assets/img/icon_Artificial_Intelligence.png" alt="Artificial Intelligence" class="mb-3">
-                            <h4 class="fw-bold">Artificial Intelligence</h4>
+                            <img src="assets/img/icon_Artificial_Intelligence.png" width="101" height="101" alt="Artificial Intelligence" class="mb-3">
+                            <h3 class="fw-bold" style="font-size: 1.25rem;">Artificial Intelligence</h3>
                             <p class="text-muted">Machine learning models, facial recognition, computer vision, and cognitive document automation for enterprise scale.</p>
                         </div>
                         <div class="pt-3 text-center">
-                            <a href="Artificial_Intelligence.html" class="button">read more</a>
+                            <a href="Artificial_Intelligence.html" class="button" aria-label="Explore Artificial Intelligence services">Explore Solutions</a>
                         </div>
                     </div>
                 </div>
@@ -398,12 +425,12 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="services-item p-4 d-flex flex-column justify-content-between h-100" style="background: #fff;">
                         <div>
-                            <img src="assets/img/icon_Biometric_Technologiest.png" alt="Biometric Technologies" class="mb-3">
-                            <h4 class="fw-bold">Biometric Technologies</h4>
+                            <img src="assets/img/icon_Biometric_Technologiest.png" width="101" height="101" alt="Biometric Technologies" class="mb-3">
+                            <h3 class="fw-bold" style="font-size: 1.25rem;">Biometric Technologies</h3>
                             <p class="text-muted">AFIS/ABIS integration, iris scanning, fingerprint identification, and multi-modal biometric authentication.</p>
                         </div>
                         <div class="pt-3 text-center">
-                            <a href="Digital_Identity_&_Security.html" class="button">read more</a>
+                            <a href="Digital_Identity_&_Security.html" class="button" aria-label="Explore Biometric Technologies">Explore Solutions</a>
                         </div>
                     </div>
                 </div>
@@ -412,12 +439,12 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="services-item p-4 d-flex flex-column justify-content-between h-100" style="background: #fff;">
                         <div>
-                            <img src="assets/img/icon_Smart_Access_Control.png" alt="Smart Access Control" class="mb-3">
-                            <h4 class="fw-bold">Smart Access Control</h4>
+                            <img src="assets/img/icon_Smart_Access_Control.png" width="101" height="101" alt="Smart Access Control" class="mb-3">
+                            <h3 class="fw-bold" style="font-size: 1.25rem;">Smart Access Control</h3>
                             <p class="text-muted">Turnstiles, flap barriers, RFID gateways, and biometric access management systems for high-security facilities.</p>
                         </div>
                         <div class="pt-3 text-center">
-                            <a href="Digital_Identity_&_Security.html" class="button">read more</a>
+                            <a href="Digital_Identity_&_Security.html" class="button" aria-label="Explore Smart Access Control systems">Explore Solutions</a>
                         </div>
                     </div>
                 </div>
@@ -426,8 +453,8 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="services-item_all p-4 d-flex flex-column justify-content-center align-items-center text-center h-100">
                         <p class="text-white mb-2" style="padding-top: 0;">Explore All Capabilities</p>
-                        <h5 class="text-white fw-bold mb-4">12+ Engineering Services</h5>
-                        <a href="services.html" class="btn btn-light fw-bold px-4 py-2" style="border-radius: 8px; color: #f26522;">View All Services</a>
+                        <h3 class="text-white fw-bold mb-4" style="font-size: 1.25rem;">12+ Engineering Services</h3>
+                        <a href="services.html" class="btn btn-light fw-bold px-4 py-2" style="border-radius: 8px; color: #9a3412;" aria-label="View all 12+ engineering services">View All Services</a>
                     </div>
                 </div>
             </div>
@@ -447,13 +474,13 @@
                 <div class="col-lg-3 col-md-6 mb-4 reveal-on-scroll">
                     <div class="portfolio_image bg-white p-3 shadow-sm h-100 d-flex flex-column justify-content-between text-center align-items-center" style="border-radius: 12px; border: 1px solid #dee2e6;">
                         <div class="w-100 text-center">
-                            <picture class="mx-auto d-block"><source srcset="assets/img/project_1.webp" type="image/webp"><img src="assets/img/project_1.png" alt="TCB Smart Family Card Project" class="img-fluid mb-3 mx-auto d-block" loading="lazy" style="border-radius: 8px;"></picture>
+                            <picture class="mx-auto d-block"><source srcset="assets/img/project_1.webp" type="image/webp"><img src="assets/img/project_1.png" width="600" height="535" alt="TCB Smart Family Card Project" class="img-fluid mb-3 mx-auto d-block" loading="lazy" decoding="async" style="border-radius: 8px; aspect-ratio: 600/535;"></picture>
                             <div class="mb-2"><span class="badge bg-success">Digital Identity</span></div>
-                            <h5 class="fw-bold mb-2 text-center">TCB Smart Family Card</h5>
+                            <h3 class="fw-bold mb-2 text-center" style="font-size: 1.15rem;">TCB Smart Family Card</h3>
                             <p class="text-muted text-center mx-auto" style="font-size: 13px; line-height: 1.6;">Automated beneficiary identification platform managing over 10M citizen family records nationwide.</p>
                         </div>
                         <div class="pt-2 text-center w-100">
-                            <a href="case-study.html#tcb" class="button btn-sm d-inline-block">View Case Study</a>
+                            <a href="case-study.html#tcb" class="button btn-sm d-inline-block" aria-label="View case study on TCB Smart Family Card">View Case Study</a>
                         </div>
                     </div>
                 </div>
@@ -462,13 +489,13 @@
                 <div class="col-lg-3 col-md-6 mb-4 reveal-on-scroll">
                     <div class="portfolio_image bg-white p-3 shadow-sm h-100 d-flex flex-column justify-content-between text-center align-items-center" style="border-radius: 12px; border: 1px solid #dee2e6;">
                         <div class="w-100 text-center">
-                            <picture class="mx-auto d-block"><source srcset="assets/img/project_2.webp" type="image/webp"><img src="assets/img/project_2.png" alt="Industrial e-Court Bangladesh" class="img-fluid mb-3 mx-auto d-block" loading="lazy" style="border-radius: 8px;"></picture>
+                            <picture class="mx-auto d-block"><source srcset="assets/img/project_2.webp" type="image/webp"><img src="assets/img/project_2.png" width="299" height="256" alt="Industrial e-Court Bangladesh" class="img-fluid mb-3 mx-auto d-block" loading="lazy" decoding="async" style="border-radius: 8px; aspect-ratio: 299/256;"></picture>
                             <div class="mb-2"><span class="badge bg-primary">Enterprise Software</span></div>
-                            <h5 class="fw-bold mb-2 text-center">Industrial e-Court BD</h5>
+                            <h3 class="fw-bold mb-2 text-center" style="font-size: 1.15rem;">Industrial e-Court BD</h3>
                             <p class="text-muted text-center mx-auto" style="font-size: 13px; line-height: 1.6;">Full digital judiciary automation, electronic case filing, cause list management, and summons tracking.</p>
                         </div>
                         <div class="pt-2 text-center w-100">
-                            <a href="case-study.html#ecourt" class="button btn-sm d-inline-block">View Case Study</a>
+                            <a href="case-study.html#ecourt" class="button btn-sm d-inline-block" aria-label="View case study on Industrial e-Court Bangladesh">View Case Study</a>
                         </div>
                     </div>
                 </div>
@@ -477,13 +504,13 @@
                 <div class="col-lg-3 col-md-6 mb-4 reveal-on-scroll">
                     <div class="portfolio_image bg-white p-3 shadow-sm h-100 d-flex flex-column justify-content-between text-center align-items-center" style="border-radius: 12px; border: 1px solid #dee2e6;">
                         <div class="w-100 text-center">
-                            <picture class="mx-auto d-block"><source srcset="assets/img/project_3.webp" type="image/webp"><img src="assets/img/project_3.png" alt="Smart Card Issuance Platform" class="img-fluid mb-3 mx-auto d-block" loading="lazy" style="border-radius: 8px;"></picture>
+                            <picture class="mx-auto d-block"><source srcset="assets/img/project_3.webp" type="image/webp"><img src="assets/img/project_3.png" width="305" height="261" alt="Smart Card Issuance Platform" class="img-fluid mb-3 mx-auto d-block" loading="lazy" decoding="async" style="border-radius: 8px; aspect-ratio: 305/261;"></picture>
                             <div class="mb-2"><span class="badge bg-warning text-dark">Smart Card</span></div>
-                            <h5 class="fw-bold mb-2 text-center">Smart Card Platform</h5>
+                            <h3 class="fw-bold mb-2 text-center" style="font-size: 1.15rem;">Smart Card Platform</h3>
                             <p class="text-muted text-center mx-auto" style="font-size: 13px; line-height: 1.6;">Automated laser engraving and dual-interface smart card personalization architecture.</p>
                         </div>
                         <div class="pt-2 text-center w-100">
-                            <a href="case-study.html#smartcard" class="button btn-sm d-inline-block">View Case Study</a>
+                            <a href="case-study.html#smartcard" class="button btn-sm d-inline-block" aria-label="View case study on Smart Card Platform">View Case Study</a>
                         </div>
                     </div>
                 </div>
@@ -492,20 +519,20 @@
                 <div class="col-lg-3 col-md-6 mb-4 reveal-on-scroll">
                     <div class="portfolio_image bg-white p-3 shadow-sm h-100 d-flex flex-column justify-content-between text-center align-items-center" style="border-radius: 12px; border: 1px solid #dee2e6;">
                         <div class="w-100 text-center">
-                            <picture class="mx-auto d-block"><source srcset="assets/img/project_4.webp" type="image/webp"><img src="assets/img/project_4.png" alt="National e-Licensing System" class="img-fluid mb-3 mx-auto d-block" loading="lazy" style="border-radius: 8px;"></picture>
+                            <picture class="mx-auto d-block"><source srcset="assets/img/project_4.webp" type="image/webp"><img src="assets/img/project_4.png" width="309" height="266" alt="National e-Licensing System" class="img-fluid mb-3 mx-auto d-block" loading="lazy" decoding="async" style="border-radius: 8px; aspect-ratio: 309/266;"></picture>
                             <div class="mb-2"><span class="badge bg-info text-dark">Government System</span></div>
-                            <h5 class="fw-bold mb-2 text-center">National e-Licensing</h5>
+                            <h3 class="fw-bold mb-2 text-center" style="font-size: 1.15rem;">National e-Licensing</h3>
                             <p class="text-muted text-center mx-auto" style="font-size: 13px; line-height: 1.6;">Paperless digital regulatory portal with payment gateway and automated certificate generation.</p>
                         </div>
                         <div class="pt-2 text-center w-100">
-                            <a href="case-study.html#licence" class="button btn-sm d-inline-block">View Case Study</a>
+                            <a href="case-study.html#licence" class="button btn-sm d-inline-block" aria-label="View case study on National e-Licensing Portal">View Case Study</a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="text-center mt-4">
-                <a href="projects.html" class="button">Explore All Projects</a>
+                <a href="projects.html" class="button" aria-label="Explore all sovereign enterprise projects and deployments">Explore All Projects</a>
             </div>
         </div>
     </div>
@@ -517,28 +544,28 @@
                 <div class="col-lg-6">
                     <div class="working_process">
                         <h2 class="header_two" style="color: #2e3760;">Quality &amp; Standards</h2>
-                        <h3 class="header_one mb-4" style="color: #f26522;">Certified Software Engineering</h3>
+                        <h3 class="header_one mb-4" style="color: #c2410c;">Certified Software Engineering</h3>
                         <p class="text-muted">
                             We adhere to international best practices in software architecture, cybersecurity, and data protection.
                         </p>
                         <div class="steps">
                             <div class="steps_each pb-3">
-                                <h5 class="fw-bold"><i class="fas fa-check-circle text-success me-2"></i> ISO 9001:2015 Certified</h5>
+                                <h3 class="fw-bold" style="font-size: 1.15rem;"><i class="fas fa-check-circle text-success me-2" aria-hidden="true"></i> ISO 9001:2015 Certified</h3>
                                 <p class="text-muted">Rigorous quality management systems ensuring consistent delivery and client satisfaction.</p>
                             </div>
                             <div class="steps_each pb-3">
-                                <h5 class="fw-bold"><i class="fas fa-shield-alt text-success me-2"></i> ISO 27001:2013 Certified</h5>
+                                <h3 class="fw-bold" style="font-size: 1.15rem;"><i class="fas fa-shield-alt text-success me-2" aria-hidden="true"></i> ISO 27001:2013 Certified</h3>
                                 <p class="text-muted">Bank-grade information security management protecting sensitive national data assets.</p>
                             </div>
                             <div class="steps_each pb-3">
-                                <h5 class="fw-bold"><i class="fas fa-award text-success me-2"></i> BASIS Registered Member</h5>
+                                <h3 class="fw-bold" style="font-size: 1.15rem;"><i class="fas fa-award text-success me-2" aria-hidden="true"></i> BASIS Registered Member</h3>
                                 <p class="text-muted">Active member of Bangladesh Association of Software and Information Services (Company ID: 21-04-024).</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 text-center">
-                    <picture><source srcset="assets/img/working_process_2.webp" type="image/webp"><img src="assets/img/working_process_2.png" alt="Certified Working Process" class="img-fluid" loading="lazy" style="border-radius: 12px;"></picture>
+                <div class="col-lg-6 text-center d-none d-lg-block">
+                    <picture><source srcset="assets/img/working_process_2.webp" type="image/webp"><img src="assets/img/working_process_2.png" width="533" height="531" alt="Certified Working Process" class="img-fluid" loading="lazy" decoding="async" style="border-radius: 12px; aspect-ratio: 533/531;"></picture>
                 </div>
             </div>
         </div>
@@ -551,35 +578,35 @@
                 <h2>Our Valued Clients &amp; Partners</h2>
                 <p>Trusted by premier government agencies and top corporate institutions across Bangladesh.</p>
             </div>
-            <div class="row text-center justify-content-center align-items-center">
-                <div class="col-4 col-md-2 mb-4">
-                    <div class="client_image p-2 bg-white rounded shadow-sm">
-                        <img src="assets/img/vlc_01.jpg" alt="Partner Client 1" class="img-fluid">
+            <div class="row g-4 text-center justify-content-center align-items-center">
+                <div class="col-6 col-md-4">
+                    <div class="client_image">
+                        <img src="assets/img/vlc_01.jpg" width="192" height="136" alt="Bangladesh Election Commission / Government Partner" class="img-fluid" loading="lazy" decoding="async" style="aspect-ratio: 192/136;">
                     </div>
                 </div>
-                <div class="col-4 col-md-2 mb-4">
-                    <div class="client_image p-2 bg-white rounded shadow-sm">
-                        <img src="assets/img/vlc_02.jpg" alt="Partner Client 2" class="img-fluid">
+                <div class="col-6 col-md-4">
+                    <div class="client_image">
+                        <img src="assets/img/vlc_02.jpg" width="192" height="136" alt="TCB Ministry of Commerce Client" class="img-fluid" loading="lazy" decoding="async" style="aspect-ratio: 192/136;">
                     </div>
                 </div>
-                <div class="col-4 col-md-2 mb-4">
-                    <div class="client_image p-2 bg-white rounded shadow-sm">
-                        <img src="assets/img/vlc_03.jpg" alt="Partner Client 3" class="img-fluid">
+                <div class="col-6 col-md-4">
+                    <div class="client_image">
+                        <img src="assets/img/vlc_03.jpg" width="192" height="136" alt="Judiciary e-Court Partner" class="img-fluid" loading="lazy" decoding="async" style="aspect-ratio: 192/136;">
                     </div>
                 </div>
-                <div class="col-4 col-md-2 mb-4">
-                    <div class="client_image p-2 bg-white rounded shadow-sm">
-                        <img src="assets/img/vlc_04.jpg" alt="Partner Client 4" class="img-fluid">
+                <div class="col-6 col-md-4">
+                    <div class="client_image">
+                        <img src="assets/img/vlc_04.jpg" width="192" height="136" alt="National Governance Partner" class="img-fluid" loading="lazy" decoding="async" style="aspect-ratio: 192/136;">
                     </div>
                 </div>
-                <div class="col-4 col-md-2 mb-4">
-                    <div class="client_image p-2 bg-white rounded shadow-sm">
-                        <img src="assets/img/vlc_05.jpg" alt="Partner Client 5" class="img-fluid">
+                <div class="col-6 col-md-4">
+                    <div class="client_image">
+                        <img src="assets/img/vlc_05.jpg" width="192" height="136" alt="Commercial Enterprise Partner" class="img-fluid" loading="lazy" decoding="async" style="aspect-ratio: 192/136;">
                     </div>
                 </div>
-                <div class="col-4 col-md-2 mb-4">
-                    <div class="client_image p-2 bg-white rounded shadow-sm">
-                        <img src="assets/img/vlc_06.jpg" alt="Partner Client 6" class="img-fluid">
+                <div class="col-6 col-md-4">
+                    <div class="client_image">
+                        <img src="assets/img/vlc_06.jpg" width="192" height="136" alt="Banking &amp; Financial Partner" class="img-fluid" loading="lazy" decoding="async" style="aspect-ratio: 192/136;">
                     </div>
                 </div>
             </div>
@@ -589,41 +616,42 @@
     <!-- SECTION: CALL TO ACTION -->
     <div class="container-fluid py-5 cta-banner-section">
         <div class="container text-center py-4 position-relative" style="z-index: 2;">
-            <span class="badge px-3 py-2 rounded-pill fw-semibold mb-3" style="background: rgba(242, 101, 34, 0.2); color: #f26522; border: 1px solid rgba(242, 101, 34, 0.4); font-size: 13px;">Sovereign Digital Infrastructure</span>
+            <span class="badge px-3 py-2 rounded-pill fw-semibold mb-3" style="background: rgba(242, 101, 34, 0.2); color: #c2410c; border: 1px solid rgba(242, 101, 34, 0.4); font-size: 13px;">Sovereign Digital Infrastructure</span>
             <h2 class="display-6 fw-bold text-white mb-3">Ready to Transform Your Digital Infrastructure?</h2>
             <p class="text-light opacity-75 mx-auto mb-4" style="max-width: 650px; font-size: 16px; line-height: 1.7;">
                 Spectrum IT Solutions delivers turnkey sovereign identity, smart card architectures, and high-assurance software engineering.
             </p>
             <div class="d-flex justify-content-center align-items-center flex-wrap gap-3 pt-2">
-                <a href="contact.html" class="cta-primary-btn">
-                    <i class="fas fa-paper-plane me-2"></i> Contact Engineering
+                <a href="contact.html" class="cta-primary-btn" aria-label="Contact Engineering for project consultation">
+                    <i class="fas fa-paper-plane me-2" aria-hidden="true"></i> Contact Engineering
                 </a>
-                <a href="tel:+8801615900004" class="cta-secondary-btn">
-                    <i class="fas fa-phone-alt me-2 text-warning"></i> +8801615900004
+                <a href="tel:+8801615900004" class="cta-secondary-btn" aria-label="Call Spectrum IT Solutions at +8801615900004">
+                    <i class="fas fa-phone-alt me-2 text-warning" aria-hidden="true"></i> +8801615900004
                 </a>
             </div>
         </div>
     </div>
+    </main>
 
     <!-- Footer start -->
     <div class="footer-wrapper">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-sm-6 mb-4">
+                <div class="col-lg-3 col-sm-6 mb-4 footer-col-about">
                     <div class="footer-about">
-                        <a href="index.html"><img src="assets/img/logo.png" class="img-fluid mb-3" alt="Spectrum IT Solutions Logo"></a>
+                        <a href="index.html"><img src="assets/img/logo.png" width="165" height="60" class="img-fluid mb-3" alt="Spectrum IT Solutions Logo" loading="lazy"></a>
                         <p>We are a software development company delivering splendid business IT Solutions and related services to customers home &amp; abroad.</p>
-                        <div class="mt-3">
-                            <a class="text-light me-3" href="https://www.facebook.com/myspectrumit" target="_blank" rel="noopener" aria-label="Spectrum Facebook"><i class="fab fa-facebook-f"></i></a>
-                            <a class="text-light me-3" href="https://www.linkedin.com/company/spectrum-it-solutions-limited" target="_blank" rel="noopener" aria-label="Spectrum LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <div class="mt-3 footer-social-icons">
+                            <a class="text-light" href="https://www.facebook.com/myspectrumit" target="_blank" rel="noopener" aria-label="Spectrum Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a class="text-light" href="https://www.linkedin.com/company/spectrum-it-solutions-limited" target="_blank" rel="noopener" aria-label="Spectrum LinkedIn"><i class="fab fa-linkedin"></i></a>
                             <a class="text-light" href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" aria-label="Spectrum YouTube"><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
-                    <a href="https://basis.org.bd/company-profile/21-04-024" target="_blank" rel="noopener"><img src="assets/img/basis_logo.png" class="img-fluid" style="padding-top: 30px; padding-bottom: 30px;" alt="BASIS Member"></a>
+                    <a href="https://basis.org.bd/company-profile/21-04-024" target="_blank" rel="noopener"><img src="assets/img/basis_logo.png" width="214" height="54" class="img-fluid" style="padding-top: 30px; padding-bottom: 30px;" alt="BASIS Member" loading="lazy"></a>
                 </div>
 
                 <div class="col-lg-3 col-sm-6 mb-4">
-                    <h4 class="text-white mb-3">Valuable Projects</h4>
+                    <h3 class="text-white mb-3" style="font-size: 1.25rem;">Valuable Projects</h3>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="https://licence.gov.bd/" target="_blank" rel="noopener" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> www.licence.gov.bd</a></li>
                         <li class="mb-2"><a href="https://ocd.org.bd/" target="_blank" rel="noopener" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> www.ocd.org.bd</a></li>
@@ -634,7 +662,7 @@
                 </div>
 
                 <div class="col-lg-3 col-sm-6 mb-4">
-                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <h3 class="text-white mb-3" style="font-size: 1.25rem;">Quick Link</h3>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="Artificial_Intelligence.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Artificial Intelligence</a></li>
                         <li class="mb-2"><a href="Digital_Identity_&_Security.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Digital Identity &amp; Security</a></li>
@@ -646,8 +674,8 @@
                     </ul>
                 </div>
 
-                <div class="col-lg-3 col-sm-6 mb-4">
-                    <h4 class="text-white mb-3">Contact Us</h4>
+                <div class="col-lg-3 col-sm-6 mb-4 footer-col-contact">
+                    <h3 class="text-white mb-3" style="font-size: 1.25rem;">Contact Us</h3>
                     <p class="text-light mb-2"><i class="fas fa-map-marker-alt me-2 text-warning"></i> 52/1, New Eskaton Road (Hasan Holdings Ltd., 12th Floor), Dhaka-1000, Bangladesh</p>
                     <p class="text-light mb-2"><i class="fas fa-envelope me-2 text-warning"></i> <a href="mailto:contact@spectrum.com.bd" class="text-light text-decoration-none">contact@spectrum.com.bd</a></p>
                     <p class="text-light mb-2"><i class="fas fa-phone-alt me-2 text-warning"></i> <a href="tel:+8801615900004" class="text-light text-decoration-none">+8801615900004</a></p>
@@ -663,9 +691,7 @@
     <!-- Footer end -->
 
     <!-- Scripts -->
-    <script src="assets/js/jquery-1.11.0.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/templatemo.js"></script>
-    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js" defer></script>
+    <script src="assets/js/custom.js" defer></script>
 </body>
 </html>

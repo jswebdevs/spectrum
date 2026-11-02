@@ -28,15 +28,21 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="ard" href="/.well-known/ard.json">
+    <!-- Resource Hints & Preloads -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preload" as="image" href="assets/img/banner_img_03.webp" type="image/webp" media="(min-width: 768px)" fetchpriority="high">
     <!-- Google Fonts & FontAwesome -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"></noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"></noscript>
     <!-- Bootstrap & Site Styles -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.css">
-    <link rel="stylesheet" href="assets/css/owl.theme.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive-fixes.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="stylesheet" href="assets/css/responsive-fixes.min.css?v=20261102c">
     <!-- Structured Data (JSON-LD Organization & WebPage) -->
     <script type="application/ld+json">
     [
@@ -86,8 +92,10 @@
                 <a class="text-light" href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" aria-label="Spectrum YouTube"><i class="fab fa-youtube fa-sm fa-fw"></i></a>
             </div>
             <div class="top_email d-flex align-items-center">
-                <i class="fa fa-envelope me-2"></i>
-                <a class="text-light text-decoration-none" href="mailto:contact@spectrum.com.bd">contact@spectrum.com.bd</a>
+                <a class="top_email_badge text-decoration-none" href="mailto:contact@spectrum.com.bd">
+                    <i class="fa fa-envelope"></i>
+                    <span>contact@spectrum.com.bd</span>
+                </a>
             </div>
         </div> 
     </div>
@@ -98,12 +106,12 @@
             <div class="d-flex align-items-center">
                 <div class="logo">
                     <a class="navbar-brand text-success align-self-center m-0 p-0" href="index.html">
-                        <img src="assets/img/logo.png" alt="Spectrum IT Solutions Logo">
+                        <img src="assets/img/logo.png" width="165" height="60" alt="Spectrum IT Solutions Logo">
                     </a>
                 </div>
                 <div class="iso d-none d-lg-flex align-items-center ms-3">
-                    <img src="assets/img/ISO_9001.png" alt="ISO 9001:2015" class="me-1">
-                    <img src="assets/img/ISO_27001.png" alt="ISO 27001:2013">
+                    <img src="assets/img/ISO_9001.png" width="70" height="75" alt="ISO 9001:2015" class="me-1">
+                    <img src="assets/img/ISO_27001.png" width="70" height="75" alt="ISO 27001:2013">
                 </div>
             </div>
 
@@ -476,21 +484,21 @@
     <div class="footer-wrapper">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-sm-6 mb-4">
+                <div class="col-lg-3 col-sm-6 mb-4 footer-col-about">
                     <div class="footer-about">
-                        <a href="index.html"><img src="assets/img/logo.png" class="img-fluid mb-3" alt="Spectrum IT Solutions Logo"></a>
+                        <a href="index.html"><img src="assets/img/logo.png" width="165" height="60" class="img-fluid mb-3" alt="Spectrum IT Solutions Logo" loading="lazy"></a>
                         <p>We are a software development company delivering splendid business IT Solutions and related services to customers home &amp; abroad.</p>
-                        <div class="mt-3">
-                            <a class="text-light me-3" href="https://www.facebook.com/myspectrumit" target="_blank" rel="noopener" aria-label="Spectrum Facebook"><i class="fab fa-facebook-f"></i></a>
-                            <a class="text-light me-3" href="https://www.linkedin.com/company/spectrum-it-solutions-limited" target="_blank" rel="noopener" aria-label="Spectrum LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <div class="mt-3 footer-social-icons">
+                            <a class="text-light" href="https://www.facebook.com/myspectrumit" target="_blank" rel="noopener" aria-label="Spectrum Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a class="text-light" href="https://www.linkedin.com/company/spectrum-it-solutions-limited" target="_blank" rel="noopener" aria-label="Spectrum LinkedIn"><i class="fab fa-linkedin"></i></a>
                             <a class="text-light" href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" aria-label="Spectrum YouTube"><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
-                    <a href="https://basis.org.bd/company-profile/21-04-024" target="_blank" rel="noopener"><img src="assets/img/basis_logo.png" class="img-fluid" style="padding-top: 30px; padding-bottom: 30px;" alt="BASIS Member"></a>
+                    <a href="https://basis.org.bd/company-profile/21-04-024" target="_blank" rel="noopener"><img src="assets/img/basis_logo.png" width="214" height="54" class="img-fluid" style="padding-top: 30px; padding-bottom: 30px;" alt="BASIS Member" loading="lazy"></a>
                 </div>
 
                 <div class="col-lg-3 col-sm-6 mb-4">
-                    <h4 class="text-white mb-3">Valuable Projects</h4>
+                    <h3 class="text-white mb-3" style="font-size: 1.25rem;">Valuable Projects</h3>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="https://licence.gov.bd/" target="_blank" rel="noopener" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> www.licence.gov.bd</a></li>
                         <li class="mb-2"><a href="https://ocd.org.bd/" target="_blank" rel="noopener" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> www.ocd.org.bd</a></li>
@@ -501,7 +509,7 @@
                 </div>
 
                 <div class="col-lg-3 col-sm-6 mb-4">
-                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <h3 class="text-white mb-3" style="font-size: 1.25rem;">Quick Link</h3>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="Artificial_Intelligence.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Artificial Intelligence</a></li>
                         <li class="mb-2"><a href="Digital_Identity_&_Security.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Digital Identity &amp; Security</a></li>
@@ -513,8 +521,8 @@
                     </ul>
                 </div>
 
-                <div class="col-lg-3 col-sm-6 mb-4">
-                    <h4 class="text-white mb-3">Contact Us</h4>
+                <div class="col-lg-3 col-sm-6 mb-4 footer-col-contact">
+                    <h3 class="text-white mb-3" style="font-size: 1.25rem;">Contact Us</h3>
                     <p class="text-light mb-2"><i class="fas fa-map-marker-alt me-2 text-warning"></i> 52/1, New Eskaton Road (Hasan Holdings Ltd., 12th Floor), Dhaka-1000, Bangladesh</p>
                     <p class="text-light mb-2"><i class="fas fa-envelope me-2 text-warning"></i> <a href="mailto:contact@spectrum.com.bd" class="text-light text-decoration-none">contact@spectrum.com.bd</a></p>
                     <p class="text-light mb-2"><i class="fas fa-phone-alt me-2 text-warning"></i> <a href="tel:+8801615900004" class="text-light text-decoration-none">+8801615900004</a></p>
@@ -530,9 +538,7 @@
     <!-- Footer end -->
 
     <!-- Scripts -->
-    <script src="assets/js/jquery-1.11.0.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/templatemo.js"></script>
-    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js" defer></script>
+    <script src="assets/js/custom.js" defer></script>
 </body>
 </html>

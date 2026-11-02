@@ -42,6 +42,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 // Automatically toggle section containers if all items within are hidden
                 document.querySelectorAll('.filter-section').forEach(function (sec) {
+                    // Safety check: Never hide a container that contains the filter navigation buttons
+                    if (sec.querySelector('.filter-nav-wrap')) return;
                     const visibleItems = sec.querySelectorAll('.filter-item:not(.filter-item-hidden)');
                     if (visibleItems.length === 0) {
                         sec.classList.add('filter-item-hidden');
@@ -97,13 +99,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (mainNav) {
-        // Calculate navbar bottom position
-        updateNavBottom();
-
         // When mobile menu begins opening
         mainNav.addEventListener('show.bs.collapse', function () {
             updateNavBottom();
             document.body.classList.add('mobile-menu-open');
+            mainNav.style.removeProperty('height');
+        });
+
+        mainNav.addEventListener('shown.bs.collapse', function () {
+            mainNav.style.removeProperty('height');
         });
 
         // When mobile menu begins closing

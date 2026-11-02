@@ -17,11 +17,13 @@ index_content = f"""<!DOCTYPE html>
 )}
 </head>
 <body>
+    <a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
 {COMMON_TOP_BAR}
 {get_navbar('home')}
 
+    <main id="main-content">
     <!-- Start Banner / Hero Slider -->
-    <div id="template-mo-zay-hero-carousel" class="carousel slide sld" data-bs-ride="carousel" data-bs-interval="5000">
+    <div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="false" data-bs-interval="false">
         <!-- Carousel Indicators -->
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1: Digital Identity"></button>
@@ -32,105 +34,120 @@ index_content = f"""<!DOCTYPE html>
         </div>
 
         <div class="carousel-inner">
-            <!-- Slide 1: Digital Identity (banner_img_03.jpg) -->
+            <!-- Slide 1: Digital Identity (banner_img_03.webp) -->
             <div class="carousel-item active sld-slide sld-slide-1">
+                <picture class="hero-bg-picture">
+                    <img src="assets/img/banner_img_03.webp" alt="Digital Identity" class="hero-bg-img" loading="lazy" decoding="async">
+                </picture>
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <div class="col-lg-6 col-md-7 hero_text">
-                            <h4 class="header_two">Secure and Seamless Future with</h4>
+                            <p class="header_two mb-1">Secure and Seamless Future with</p>
                             <h1 class="header_thr">Digital Identity</h1>
                             <p>Digital Identity enables secure, verified access to services, protecting user data and simplifying online interactions globally.</p>
                             <div class="hero_icons d-flex align-items-center my-3">
-                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_leadership.png" class="me-2" alt=""> LEADERSHIP WORK</span>
-                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_qwork.png" class="me-2" alt=""> QUALITY WORK</span>
+                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_leadership.png" width="28" height="42" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> LEADERSHIP WORK</span>
+                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_qwork.png" width="39" height="38" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> QUALITY WORK</span>
                             </div>
                             <div class="hero_buttons d-flex align-items-center mt-4">
-                                <a href="Digital_Identity_&_Security.html" class="hero_button">Read More</a>
-                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center"><img src="assets/img/icon_video.png" class="me-2" alt=""> Watch Video</a>
+                                <a href="Digital_Identity_&_Security.html" class="hero_button" aria-label="Explore Digital Identity and Security solutions">Explore Solution</a>
+                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center" aria-label="Watch video about Digital Identity on YouTube"><img src="assets/img/icon_video.png" width="38" height="38" class="me-2" alt="" aria-hidden="true"> Watch Video</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Slide 2: Blockchain Technology (sld_img.jpg) -->
-            <div class="carousel-item sld-slide sld-slide-5">
-                <div class="container h-100">
-                    <div class="row h-100 align-items-center">
-                        <div class="col-lg-6 col-md-7 hero_text">
-                            <h4 class="header_two">Decentralized Trust and Security with</h4>
-                            <h1 class="header_thr">Blockchain</h1>
-                            <p>Empowering transparent, tamper-proof transactions and decentralized ledger architectures for sovereign digital trust and enterprise verification.</p>
-                            <div class="hero_icons d-flex align-items-center my-3">
-                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_leadership.png" class="me-2" alt=""> LEADERSHIP WORK</span>
-                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_qwork.png" class="me-2" alt=""> QUALITY WORK</span>
-                            </div>
-                            <div class="hero_buttons d-flex align-items-center mt-4">
-                                <a href="services.html" class="hero_button">Read More</a>
-                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center"><img src="assets/img/icon_video.png" class="me-2" alt=""> Watch Video</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide 3: Artificial Intelligence (banner_img_01.jpg) -->
+            <!-- Slide 2: Blockchain Technology (banner_img_05.webp) -->
             <div class="carousel-item sld-slide sld-slide-2">
+                <picture class="hero-bg-picture">
+                    <img src="assets/img/banner_img_05.webp" alt="Blockchain Technology" class="hero-bg-img" loading="lazy" decoding="async">
+                </picture>
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <div class="col-lg-6 col-md-7 hero_text">
-                            <h4 class="header_two">Revolutionizing Your World with</h4>
+                            <p class="header_two mb-1">Future of Digital Trust Lies in</p>
+                            <h1 class="header_thr">Blockchain Technology</h1>
+                            <p>Blockchain Technology ensures secure, transparent, and tamper-proof data exchange through decentralized networks.</p>
+                            <div class="hero_icons d-flex align-items-center my-3">
+                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_leadership.png" width="28" height="42" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> LEADERSHIP WORK</span>
+                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_qwork.png" width="39" height="38" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> QUALITY WORK</span>
+                            </div>
+                            <div class="hero_buttons d-flex align-items-center mt-4">
+                                <a href="services.html" class="hero_button" aria-label="Explore Blockchain Technology implementations">Explore Solution</a>
+                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center" aria-label="Watch video about Blockchain Technology on YouTube"><img src="assets/img/icon_video.png" width="38" height="38" class="me-2" alt="" aria-hidden="true"> Watch Video</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Artificial Intelligence (banner_img_01.webp) -->
+            <div class="carousel-item sld-slide sld-slide-3">
+                <picture class="hero-bg-picture">
+                    <img src="assets/img/banner_img_01.webp" alt="Artificial Intelligence" class="hero-bg-img" loading="lazy" decoding="async">
+                </picture>
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-lg-6 col-md-7 hero_text">
+                            <p class="header_two mb-1">Revolutionizing Your World with</p>
                             <h1 class="header_thr">Artificial Intelligence</h1>
                             <p>Transforming Industries, Enhancing Human Capabilities, Automating Tasks, and Shaping the Future of Technology.</p>
                             <div class="hero_icons d-flex align-items-center my-3">
-                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_leadership.png" class="me-2" alt=""> LEADERSHIP WORK</span>
-                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_qwork.png" class="me-2" alt=""> QUALITY WORK</span>
+                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_leadership.png" width="28" height="42" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> LEADERSHIP WORK</span>
+                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_qwork.png" width="39" height="38" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> QUALITY WORK</span>
                             </div>
                             <div class="hero_buttons d-flex align-items-center mt-4">
-                                <a href="Artificial_Intelligence.html" class="hero_button">Read More</a>
-                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center"><img src="assets/img/icon_video.png" class="me-2" alt=""> Watch Video</a>
+                                <a href="Artificial_Intelligence.html" class="hero_button" aria-label="Explore Artificial Intelligence services">Explore Solution</a>
+                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center" aria-label="Watch video about Artificial Intelligence on YouTube"><img src="assets/img/icon_video.png" width="38" height="38" class="me-2" alt="" aria-hidden="true"> Watch Video</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Slide 4: Smart Card Technologies (banner_img_04.jpg) -->
-            <div class="carousel-item sld-slide sld-slide-3">
+            <!-- Slide 4: Smart Card Technologies (banner_img_04.webp) -->
+            <div class="carousel-item sld-slide sld-slide-4">
+                <picture class="hero-bg-picture">
+                    <img src="assets/img/banner_img_04.webp" alt="Smart Card Technologies" class="hero-bg-img" loading="lazy" decoding="async">
+                </picture>
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <div class="col-lg-6 col-md-7 hero_text">
-                            <h4 class="header_two">Secure Personal Identification with</h4>
+                            <p class="header_two mb-1">Secure Personal Identification with</p>
                             <h1 class="header_thr">Smart Card Technologies</h1>
                             <p>Smart cards store data securely for identification and authentication, powering national citizen registry and ID programs.</p>
                             <div class="hero_icons d-flex align-items-center my-3">
-                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_leadership.png" class="me-2" alt=""> LEADERSHIP WORK</span>
-                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_qwork.png" class="me-2" alt=""> QUALITY WORK</span>
+                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_leadership.png" width="28" height="42" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> LEADERSHIP WORK</span>
+                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_qwork.png" width="39" height="38" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> QUALITY WORK</span>
                             </div>
                             <div class="hero_buttons d-flex align-items-center mt-4">
-                                <a href="Smart_Card_Technologies.html" class="hero_button">Read More</a>
-                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center"><img src="assets/img/icon_video.png" class="me-2" alt=""> Watch Video</a>
+                                <a href="Smart_Card_Technologies.html" class="hero_button" aria-label="Explore Smart Card Technologies">Explore Solution</a>
+                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center" aria-label="Watch video about Smart Card Technologies on YouTube"><img src="assets/img/icon_video.png" width="38" height="38" class="me-2" alt="" aria-hidden="true"> Watch Video</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Slide 5: Software & IT Solutions (banner_img_05.jpg) -->
-            <div class="carousel-item sld-slide sld-slide-4">
+            <!-- Slide 5: Software & IT Solutions (banner_img_02.webp) -->
+            <div class="carousel-item sld-slide sld-slide-5">
+                <picture class="hero-bg-picture">
+                    <img src="assets/img/banner_img_02.webp" alt="Software and IT Solutions" class="hero-bg-img" loading="lazy" decoding="async">
+                </picture>
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <div class="col-lg-6 col-md-7 hero_text">
-                            <h4 class="header_two">Leading Software &amp; IT Services</h4>
+                            <p class="header_two mb-1">Leading Software &amp; IT Services</p>
                             <h1 class="header_thr">IT Solutions</h1>
                             <p>We are a software development company delivering splendid business IT Solutions and related services to customers home &amp; abroad.</p>
                             <div class="hero_icons d-flex align-items-center my-3">
-                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_leadership.png" class="me-2" alt=""> LEADERSHIP WORK</span>
-                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_qwork.png" class="me-2" alt=""> QUALITY WORK</span>
+                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_leadership.png" width="28" height="42" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> LEADERSHIP WORK</span>
+                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_qwork.png" width="39" height="38" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> QUALITY WORK</span>
                             </div>
                             <div class="hero_buttons d-flex align-items-center mt-4">
-                                <a href="services.html" class="hero_button">Read More</a>
-                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center"><img src="assets/img/icon_video.png" class="me-2" alt=""> Watch Video</a>
+                                <a href="services.html" class="hero_button" aria-label="Explore Software and IT Solutions">Explore Solution</a>
+                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center" aria-label="Watch video about Software and IT Solutions on YouTube"><img src="assets/img/icon_video.png" width="38" height="38" class="me-2" alt="" aria-hidden="true"> Watch Video</a>
                             </div>
                         </div>
                     </div>
@@ -138,11 +155,13 @@ index_content = f"""<!DOCTYPE html>
             </div>
         </div>
 
-        <a class="carousel-control-prev text-decoration-none" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="prev">
-            <i class="fas fa-chevron-left"></i>
+        <a class="carousel-control-prev text-decoration-none" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="prev" aria-label="Previous Slide">
+            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+            <span class="visually-hidden">Previous</span>
         </a>
-        <a class="carousel-control-next text-decoration-none" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="next">
-            <i class="fas fa-chevron-right"></i>
+        <a class="carousel-control-next text-decoration-none" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="next" aria-label="Next Slide">
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <span class="visually-hidden">Next</span>
         </a>
     </div>
     <!-- End Banner / Hero Slider -->
@@ -153,13 +172,13 @@ index_content = f"""<!DOCTYPE html>
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="about_image text-center">
-                        <picture><source srcset="assets/img/about_us_2.webp" type="image/webp"><img src="assets/img/about_us_2.png" class="img-fluid" alt="About Spectrum IT Solutions" loading="lazy" style="border-radius: 12px;"></picture>
+                        <picture><source srcset="assets/img/about_us_2.webp" type="image/webp"><img src="assets/img/about_us_2.png" width="594" height="563" class="img-fluid" alt="About Spectrum IT Solutions" loading="lazy" decoding="async" style="border-radius: 12px; aspect-ratio: 594/563;"></picture>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="about_text">
                         <h2 class="header_two" style="color: #2e3760;">About Spectrum</h2>
-                        <h3 class="header_one mb-4" style="color: #f26522;">Innovating Technology for National Progress</h3>
+                        <h3 class="header_one mb-4" style="color: #c2410c;">Innovating Technology for National Progress</h3>
                         <p class="text-muted" style="line-height: 1.8;">
                             Spectrum IT Solutions Ltd. is a premier Dhaka-based software and IT services company established with a clear mandate to build resilient, sovereign digital solutions. We engineer complex architectures for government ministries, regulatory authorities, and leading enterprises.
                         </p>
@@ -192,8 +211,8 @@ index_content = f"""<!DOCTYPE html>
                             </div>
                         </div>
 
-                        <div>
-                            <a href="about_us.html" class="button">Read More About Us</a>
+                        <div class="read-more-homepage">
+                            <a href="about_us.html" class="button" aria-label="Read more about Spectrum IT Solutions Ltd. and company profile">Read More About Us</a>
                         </div>
                     </div>
                 </div>
@@ -212,14 +231,14 @@ index_content = f"""<!DOCTYPE html>
             <div class="row pt-4">
                 <!-- Card 1: Digital Identity & Security (KEPT AT FIRST) -->
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="services-item p-4 d-flex flex-column justify-content-between h-100" style="border: 2px solid #f26522; background: #fff;">
+                    <div class="services-item p-4 d-flex flex-column justify-content-between h-100" style="border: 2px solid #c2410c; background: #fff;">
                         <div>
-                            <img src="assets/img/icon_Digital_Identity_Security.png" alt="Digital Identity &amp; Security" class="mb-3">
-                            <h4 class="fw-bold">Digital Identity &amp; Security</h4>
+                            <img src="assets/img/icon_Digital_Identity_Security.png" width="101" height="101" alt="Digital Identity &amp; Security" class="mb-3">
+                            <h3 class="fw-bold" style="font-size: 1.25rem;">Digital Identity &amp; Security</h3>
                             <p class="text-muted">High-security biometric identity management, KYC infrastructure, national family cards, and verification engines.</p>
                         </div>
                         <div class="pt-3 text-center">
-                            <a href="Digital_Identity_&_Security.html" class="button">read more</a>
+                            <a href="Digital_Identity_&_Security.html" class="button" aria-label="Explore Digital Identity and Security solutions">Explore Solutions</a>
                         </div>
                     </div>
                 </div>
@@ -228,12 +247,12 @@ index_content = f"""<!DOCTYPE html>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="services-item p-4 d-flex flex-column justify-content-between h-100" style="background: #fff;">
                         <div>
-                            <img src="assets/img/icon_Smart_Card_Technologies.png" alt="Smart Card Technologies" class="mb-3">
-                            <h4 class="fw-bold">Smart Card Technologies</h4>
+                            <img src="assets/img/icon_Smart_Card_Technologies.png" width="101" height="101" alt="Smart Card Technologies" class="mb-3">
+                            <h3 class="fw-bold" style="font-size: 1.25rem;">Smart Card Technologies</h3>
                             <p class="text-muted">Turnkey contact and contactless chip card issuance, encoding, laser personalization, and reader ecosystems.</p>
                         </div>
                         <div class="pt-3 text-center">
-                            <a href="Smart_Card_Technologies.html" class="button">read more</a>
+                            <a href="Smart_Card_Technologies.html" class="button" aria-label="Explore Smart Card Technologies">Explore Solutions</a>
                         </div>
                     </div>
                 </div>
@@ -242,12 +261,12 @@ index_content = f"""<!DOCTYPE html>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="services-item p-4 d-flex flex-column justify-content-between h-100" style="background: #fff;">
                         <div>
-                            <img src="assets/img/icon_Artificial_Intelligence.png" alt="Artificial Intelligence" class="mb-3">
-                            <h4 class="fw-bold">Artificial Intelligence</h4>
+                            <img src="assets/img/icon_Artificial_Intelligence.png" width="101" height="101" alt="Artificial Intelligence" class="mb-3">
+                            <h3 class="fw-bold" style="font-size: 1.25rem;">Artificial Intelligence</h3>
                             <p class="text-muted">Machine learning models, facial recognition, computer vision, and cognitive document automation for enterprise scale.</p>
                         </div>
                         <div class="pt-3 text-center">
-                            <a href="Artificial_Intelligence.html" class="button">read more</a>
+                            <a href="Artificial_Intelligence.html" class="button" aria-label="Explore Artificial Intelligence services">Explore Solutions</a>
                         </div>
                     </div>
                 </div>
@@ -256,12 +275,12 @@ index_content = f"""<!DOCTYPE html>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="services-item p-4 d-flex flex-column justify-content-between h-100" style="background: #fff;">
                         <div>
-                            <img src="assets/img/icon_Biometric_Technologiest.png" alt="Biometric Technologies" class="mb-3">
-                            <h4 class="fw-bold">Biometric Technologies</h4>
+                            <img src="assets/img/icon_Biometric_Technologiest.png" width="101" height="101" alt="Biometric Technologies" class="mb-3">
+                            <h3 class="fw-bold" style="font-size: 1.25rem;">Biometric Technologies</h3>
                             <p class="text-muted">AFIS/ABIS integration, iris scanning, fingerprint identification, and multi-modal biometric authentication.</p>
                         </div>
                         <div class="pt-3 text-center">
-                            <a href="Digital_Identity_&_Security.html" class="button">read more</a>
+                            <a href="Digital_Identity_&_Security.html" class="button" aria-label="Explore Biometric Technologies">Explore Solutions</a>
                         </div>
                     </div>
                 </div>
@@ -270,12 +289,12 @@ index_content = f"""<!DOCTYPE html>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="services-item p-4 d-flex flex-column justify-content-between h-100" style="background: #fff;">
                         <div>
-                            <img src="assets/img/icon_Smart_Access_Control.png" alt="Smart Access Control" class="mb-3">
-                            <h4 class="fw-bold">Smart Access Control</h4>
+                            <img src="assets/img/icon_Smart_Access_Control.png" width="101" height="101" alt="Smart Access Control" class="mb-3">
+                            <h3 class="fw-bold" style="font-size: 1.25rem;">Smart Access Control</h3>
                             <p class="text-muted">Turnstiles, flap barriers, RFID gateways, and biometric access management systems for high-security facilities.</p>
                         </div>
                         <div class="pt-3 text-center">
-                            <a href="Digital_Identity_&_Security.html" class="button">read more</a>
+                            <a href="Digital_Identity_&_Security.html" class="button" aria-label="Explore Smart Access Control systems">Explore Solutions</a>
                         </div>
                     </div>
                 </div>
@@ -284,8 +303,8 @@ index_content = f"""<!DOCTYPE html>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="services-item_all p-4 d-flex flex-column justify-content-center align-items-center text-center h-100">
                         <p class="text-white mb-2" style="padding-top: 0;">Explore All Capabilities</p>
-                        <h5 class="text-white fw-bold mb-4">12+ Engineering Services</h5>
-                        <a href="services.html" class="btn btn-light fw-bold px-4 py-2" style="border-radius: 8px; color: #f26522;">View All Services</a>
+                        <h3 class="text-white fw-bold mb-4" style="font-size: 1.25rem;">12+ Engineering Services</h3>
+                        <a href="services.html" class="btn btn-light fw-bold px-4 py-2" style="border-radius: 8px; color: #9a3412;" aria-label="View all 12+ engineering services">View All Services</a>
                     </div>
                 </div>
             </div>
@@ -305,13 +324,13 @@ index_content = f"""<!DOCTYPE html>
                 <div class="col-lg-3 col-md-6 mb-4 reveal-on-scroll">
                     <div class="portfolio_image bg-white p-3 shadow-sm h-100 d-flex flex-column justify-content-between text-center align-items-center" style="border-radius: 12px; border: 1px solid #dee2e6;">
                         <div class="w-100 text-center">
-                            <picture class="mx-auto d-block"><source srcset="assets/img/project_1.webp" type="image/webp"><img src="assets/img/project_1.png" alt="TCB Smart Family Card Project" class="img-fluid mb-3 mx-auto d-block" loading="lazy" style="border-radius: 8px;"></picture>
+                            <picture class="mx-auto d-block"><source srcset="assets/img/project_1.webp" type="image/webp"><img src="assets/img/project_1.png" width="600" height="535" alt="TCB Smart Family Card Project" class="img-fluid mb-3 mx-auto d-block" loading="lazy" decoding="async" style="border-radius: 8px; aspect-ratio: 600/535;"></picture>
                             <div class="mb-2"><span class="badge bg-success">Digital Identity</span></div>
-                            <h5 class="fw-bold mb-2 text-center">TCB Smart Family Card</h5>
+                            <h3 class="fw-bold mb-2 text-center" style="font-size: 1.15rem;">TCB Smart Family Card</h3>
                             <p class="text-muted text-center mx-auto" style="font-size: 13px; line-height: 1.6;">Automated beneficiary identification platform managing over 10M citizen family records nationwide.</p>
                         </div>
                         <div class="pt-2 text-center w-100">
-                            <a href="case-study.html#tcb" class="button btn-sm d-inline-block">View Case Study</a>
+                            <a href="case-study.html#tcb" class="button btn-sm d-inline-block" aria-label="View case study on TCB Smart Family Card">View Case Study</a>
                         </div>
                     </div>
                 </div>
@@ -320,13 +339,13 @@ index_content = f"""<!DOCTYPE html>
                 <div class="col-lg-3 col-md-6 mb-4 reveal-on-scroll">
                     <div class="portfolio_image bg-white p-3 shadow-sm h-100 d-flex flex-column justify-content-between text-center align-items-center" style="border-radius: 12px; border: 1px solid #dee2e6;">
                         <div class="w-100 text-center">
-                            <picture class="mx-auto d-block"><source srcset="assets/img/project_2.webp" type="image/webp"><img src="assets/img/project_2.png" alt="Industrial e-Court Bangladesh" class="img-fluid mb-3 mx-auto d-block" loading="lazy" style="border-radius: 8px;"></picture>
+                            <picture class="mx-auto d-block"><source srcset="assets/img/project_2.webp" type="image/webp"><img src="assets/img/project_2.png" width="299" height="256" alt="Industrial e-Court Bangladesh" class="img-fluid mb-3 mx-auto d-block" loading="lazy" decoding="async" style="border-radius: 8px; aspect-ratio: 299/256;"></picture>
                             <div class="mb-2"><span class="badge bg-primary">Enterprise Software</span></div>
-                            <h5 class="fw-bold mb-2 text-center">Industrial e-Court BD</h5>
+                            <h3 class="fw-bold mb-2 text-center" style="font-size: 1.15rem;">Industrial e-Court BD</h3>
                             <p class="text-muted text-center mx-auto" style="font-size: 13px; line-height: 1.6;">Full digital judiciary automation, electronic case filing, cause list management, and summons tracking.</p>
                         </div>
                         <div class="pt-2 text-center w-100">
-                            <a href="case-study.html#ecourt" class="button btn-sm d-inline-block">View Case Study</a>
+                            <a href="case-study.html#ecourt" class="button btn-sm d-inline-block" aria-label="View case study on Industrial e-Court Bangladesh">View Case Study</a>
                         </div>
                     </div>
                 </div>
@@ -335,13 +354,13 @@ index_content = f"""<!DOCTYPE html>
                 <div class="col-lg-3 col-md-6 mb-4 reveal-on-scroll">
                     <div class="portfolio_image bg-white p-3 shadow-sm h-100 d-flex flex-column justify-content-between text-center align-items-center" style="border-radius: 12px; border: 1px solid #dee2e6;">
                         <div class="w-100 text-center">
-                            <picture class="mx-auto d-block"><source srcset="assets/img/project_3.webp" type="image/webp"><img src="assets/img/project_3.png" alt="Smart Card Issuance Platform" class="img-fluid mb-3 mx-auto d-block" loading="lazy" style="border-radius: 8px;"></picture>
+                            <picture class="mx-auto d-block"><source srcset="assets/img/project_3.webp" type="image/webp"><img src="assets/img/project_3.png" width="305" height="261" alt="Smart Card Issuance Platform" class="img-fluid mb-3 mx-auto d-block" loading="lazy" decoding="async" style="border-radius: 8px; aspect-ratio: 305/261;"></picture>
                             <div class="mb-2"><span class="badge bg-warning text-dark">Smart Card</span></div>
-                            <h5 class="fw-bold mb-2 text-center">Smart Card Platform</h5>
+                            <h3 class="fw-bold mb-2 text-center" style="font-size: 1.15rem;">Smart Card Platform</h3>
                             <p class="text-muted text-center mx-auto" style="font-size: 13px; line-height: 1.6;">Automated laser engraving and dual-interface smart card personalization architecture.</p>
                         </div>
                         <div class="pt-2 text-center w-100">
-                            <a href="case-study.html#smartcard" class="button btn-sm d-inline-block">View Case Study</a>
+                            <a href="case-study.html#smartcard" class="button btn-sm d-inline-block" aria-label="View case study on Smart Card Platform">View Case Study</a>
                         </div>
                     </div>
                 </div>
@@ -350,20 +369,20 @@ index_content = f"""<!DOCTYPE html>
                 <div class="col-lg-3 col-md-6 mb-4 reveal-on-scroll">
                     <div class="portfolio_image bg-white p-3 shadow-sm h-100 d-flex flex-column justify-content-between text-center align-items-center" style="border-radius: 12px; border: 1px solid #dee2e6;">
                         <div class="w-100 text-center">
-                            <picture class="mx-auto d-block"><source srcset="assets/img/project_4.webp" type="image/webp"><img src="assets/img/project_4.png" alt="National e-Licensing System" class="img-fluid mb-3 mx-auto d-block" loading="lazy" style="border-radius: 8px;"></picture>
+                            <picture class="mx-auto d-block"><source srcset="assets/img/project_4.webp" type="image/webp"><img src="assets/img/project_4.png" width="309" height="266" alt="National e-Licensing System" class="img-fluid mb-3 mx-auto d-block" loading="lazy" decoding="async" style="border-radius: 8px; aspect-ratio: 309/266;"></picture>
                             <div class="mb-2"><span class="badge bg-info text-dark">Government System</span></div>
-                            <h5 class="fw-bold mb-2 text-center">National e-Licensing</h5>
+                            <h3 class="fw-bold mb-2 text-center" style="font-size: 1.15rem;">National e-Licensing</h3>
                             <p class="text-muted text-center mx-auto" style="font-size: 13px; line-height: 1.6;">Paperless digital regulatory portal with payment gateway and automated certificate generation.</p>
                         </div>
                         <div class="pt-2 text-center w-100">
-                            <a href="case-study.html#licence" class="button btn-sm d-inline-block">View Case Study</a>
+                            <a href="case-study.html#licence" class="button btn-sm d-inline-block" aria-label="View case study on National e-Licensing Portal">View Case Study</a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="text-center mt-4">
-                <a href="projects.html" class="button">Explore All Projects</a>
+                <a href="projects.html" class="button" aria-label="Explore all sovereign enterprise projects and deployments">Explore All Projects</a>
             </div>
         </div>
     </div>
@@ -375,28 +394,28 @@ index_content = f"""<!DOCTYPE html>
                 <div class="col-lg-6">
                     <div class="working_process">
                         <h2 class="header_two" style="color: #2e3760;">Quality &amp; Standards</h2>
-                        <h3 class="header_one mb-4" style="color: #f26522;">Certified Software Engineering</h3>
+                        <h3 class="header_one mb-4" style="color: #c2410c;">Certified Software Engineering</h3>
                         <p class="text-muted">
                             We adhere to international best practices in software architecture, cybersecurity, and data protection.
                         </p>
                         <div class="steps">
                             <div class="steps_each pb-3">
-                                <h5 class="fw-bold"><i class="fas fa-check-circle text-success me-2"></i> ISO 9001:2015 Certified</h5>
+                                <h3 class="fw-bold" style="font-size: 1.15rem;"><i class="fas fa-check-circle text-success me-2" aria-hidden="true"></i> ISO 9001:2015 Certified</h3>
                                 <p class="text-muted">Rigorous quality management systems ensuring consistent delivery and client satisfaction.</p>
                             </div>
                             <div class="steps_each pb-3">
-                                <h5 class="fw-bold"><i class="fas fa-shield-alt text-success me-2"></i> ISO 27001:2013 Certified</h5>
+                                <h3 class="fw-bold" style="font-size: 1.15rem;"><i class="fas fa-shield-alt text-success me-2" aria-hidden="true"></i> ISO 27001:2013 Certified</h3>
                                 <p class="text-muted">Bank-grade information security management protecting sensitive national data assets.</p>
                             </div>
                             <div class="steps_each pb-3">
-                                <h5 class="fw-bold"><i class="fas fa-award text-success me-2"></i> BASIS Registered Member</h5>
+                                <h3 class="fw-bold" style="font-size: 1.15rem;"><i class="fas fa-award text-success me-2" aria-hidden="true"></i> BASIS Registered Member</h3>
                                 <p class="text-muted">Active member of Bangladesh Association of Software and Information Services (Company ID: 21-04-024).</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 text-center">
-                    <picture><source srcset="assets/img/working_process_2.webp" type="image/webp"><img src="assets/img/working_process_2.png" alt="Certified Working Process" class="img-fluid" loading="lazy" style="border-radius: 12px;"></picture>
+                <div class="col-lg-6 text-center d-none d-lg-block">
+                    <picture><source srcset="assets/img/working_process_2.webp" type="image/webp"><img src="assets/img/working_process_2.png" width="533" height="531" alt="Certified Working Process" class="img-fluid" loading="lazy" decoding="async" style="border-radius: 12px; aspect-ratio: 533/531;"></picture>
                 </div>
             </div>
         </div>
@@ -409,35 +428,35 @@ index_content = f"""<!DOCTYPE html>
                 <h2>Our Valued Clients &amp; Partners</h2>
                 <p>Trusted by premier government agencies and top corporate institutions across Bangladesh.</p>
             </div>
-            <div class="row text-center justify-content-center align-items-center">
-                <div class="col-4 col-md-2 mb-4">
-                    <div class="client_image p-2 bg-white rounded shadow-sm">
-                        <img src="assets/img/vlc_01.jpg" alt="Partner Client 1" class="img-fluid">
+            <div class="row g-4 text-center justify-content-center align-items-center">
+                <div class="col-6 col-md-4">
+                    <div class="client_image">
+                        <img src="assets/img/vlc_01.jpg" width="192" height="136" alt="Bangladesh Election Commission / Government Partner" class="img-fluid" loading="lazy" decoding="async" style="aspect-ratio: 192/136;">
                     </div>
                 </div>
-                <div class="col-4 col-md-2 mb-4">
-                    <div class="client_image p-2 bg-white rounded shadow-sm">
-                        <img src="assets/img/vlc_02.jpg" alt="Partner Client 2" class="img-fluid">
+                <div class="col-6 col-md-4">
+                    <div class="client_image">
+                        <img src="assets/img/vlc_02.jpg" width="192" height="136" alt="TCB Ministry of Commerce Client" class="img-fluid" loading="lazy" decoding="async" style="aspect-ratio: 192/136;">
                     </div>
                 </div>
-                <div class="col-4 col-md-2 mb-4">
-                    <div class="client_image p-2 bg-white rounded shadow-sm">
-                        <img src="assets/img/vlc_03.jpg" alt="Partner Client 3" class="img-fluid">
+                <div class="col-6 col-md-4">
+                    <div class="client_image">
+                        <img src="assets/img/vlc_03.jpg" width="192" height="136" alt="Judiciary e-Court Partner" class="img-fluid" loading="lazy" decoding="async" style="aspect-ratio: 192/136;">
                     </div>
                 </div>
-                <div class="col-4 col-md-2 mb-4">
-                    <div class="client_image p-2 bg-white rounded shadow-sm">
-                        <img src="assets/img/vlc_04.jpg" alt="Partner Client 4" class="img-fluid">
+                <div class="col-6 col-md-4">
+                    <div class="client_image">
+                        <img src="assets/img/vlc_04.jpg" width="192" height="136" alt="National Governance Partner" class="img-fluid" loading="lazy" decoding="async" style="aspect-ratio: 192/136;">
                     </div>
                 </div>
-                <div class="col-4 col-md-2 mb-4">
-                    <div class="client_image p-2 bg-white rounded shadow-sm">
-                        <img src="assets/img/vlc_05.jpg" alt="Partner Client 5" class="img-fluid">
+                <div class="col-6 col-md-4">
+                    <div class="client_image">
+                        <img src="assets/img/vlc_05.jpg" width="192" height="136" alt="Commercial Enterprise Partner" class="img-fluid" loading="lazy" decoding="async" style="aspect-ratio: 192/136;">
                     </div>
                 </div>
-                <div class="col-4 col-md-2 mb-4">
-                    <div class="client_image p-2 bg-white rounded shadow-sm">
-                        <img src="assets/img/vlc_06.jpg" alt="Partner Client 6" class="img-fluid">
+                <div class="col-6 col-md-4">
+                    <div class="client_image">
+                        <img src="assets/img/vlc_06.jpg" width="192" height="136" alt="Banking &amp; Financial Partner" class="img-fluid" loading="lazy" decoding="async" style="aspect-ratio: 192/136;">
                     </div>
                 </div>
             </div>
@@ -447,21 +466,22 @@ index_content = f"""<!DOCTYPE html>
     <!-- SECTION: CALL TO ACTION -->
     <div class="container-fluid py-5 cta-banner-section">
         <div class="container text-center py-4 position-relative" style="z-index: 2;">
-            <span class="badge px-3 py-2 rounded-pill fw-semibold mb-3" style="background: rgba(242, 101, 34, 0.2); color: #f26522; border: 1px solid rgba(242, 101, 34, 0.4); font-size: 13px;">Sovereign Digital Infrastructure</span>
+            <span class="badge px-3 py-2 rounded-pill fw-semibold mb-3" style="background: rgba(242, 101, 34, 0.2); color: #c2410c; border: 1px solid rgba(242, 101, 34, 0.4); font-size: 13px;">Sovereign Digital Infrastructure</span>
             <h2 class="display-6 fw-bold text-white mb-3">Ready to Transform Your Digital Infrastructure?</h2>
             <p class="text-light opacity-75 mx-auto mb-4" style="max-width: 650px; font-size: 16px; line-height: 1.7;">
                 Spectrum IT Solutions delivers turnkey sovereign identity, smart card architectures, and high-assurance software engineering.
             </p>
             <div class="d-flex justify-content-center align-items-center flex-wrap gap-3 pt-2">
-                <a href="contact.html" class="cta-primary-btn">
-                    <i class="fas fa-paper-plane me-2"></i> Contact Engineering
+                <a href="contact.html" class="cta-primary-btn" aria-label="Contact Engineering for project consultation">
+                    <i class="fas fa-paper-plane me-2" aria-hidden="true"></i> Contact Engineering
                 </a>
-                <a href="tel:+8801615900004" class="cta-secondary-btn">
-                    <i class="fas fa-phone-alt me-2 text-warning"></i> +8801615900004
+                <a href="tel:+8801615900004" class="cta-secondary-btn" aria-label="Call Spectrum IT Solutions at +8801615900004">
+                    <i class="fas fa-phone-alt me-2 text-warning" aria-hidden="true"></i> +8801615900004
                 </a>
             </div>
         </div>
     </div>
+    </main>
 
 {COMMON_FOOTER}
 </body>
@@ -816,26 +836,26 @@ projects_content = f"""<!DOCTYPE html>
 
     <!-- SECTION 1: DELIVERED PROJECTS GRID -->
     <div class="container py-5">
-        <div class="text-center mb-5 mx-auto" style="max-width: 750px;">
+        <div class="text-center mb-4 mx-auto" style="max-width: 800px;">
             <span class="badge px-3 py-2 rounded-pill fw-semibold mb-2 d-inline-block text-center" style="background: rgba(242, 101, 34, 0.1); color: #f26522; border: 1px solid rgba(242, 101, 34, 0.25); font-size: 13px;">Proven Deployments</span>
             <h2 class="header_two text-center" style="color: #2e3760; font-size: 36px; font-weight: 700; text-align: center !important;">Delivered Public &amp; <span style="color: #f26522;">Enterprise Systems</span></h2>
-            <p class="text-muted mx-auto text-center" style="max-width: 680px; font-size: 15px; text-align: center !important; line-height: 1.7;">Nationwide digital transformation initiatives delivering tangible socio-economic impact across government ministries and public service departments.</p>
-        </div>
+            <p class="text-muted mx-auto text-center mb-4" style="max-width: 680px; font-size: 15px; text-align: center !important; line-height: 1.7;">Nationwide digital transformation initiatives delivering tangible socio-economic impact across government ministries and public service departments.</p>
 
-        <!-- Interactive Category Filter Tabs -->
-        <div class="filter-nav-wrap mb-5">
-            <button class="filter-btn active" data-filter="all">
-                <i class="fas fa-layer-group"></i> All Deployments <span class="badge-count">6</span>
-            </button>
-            <button class="filter-btn" data-filter="identity">
-                <i class="fas fa-id-card"></i> Digital Identity &amp; Smart Cards <span class="badge-count">2</span>
-            </button>
-            <button class="filter-btn" data-filter="governance">
-                <i class="fas fa-balance-scale"></i> E-Governance &amp; Judicial <span class="badge-count">2</span>
-            </button>
-            <button class="filter-btn" data-filter="portal">
-                <i class="fas fa-ticket-alt"></i> Verification &amp; E-Ticketing <span class="badge-count">2</span>
-            </button>
+            <!-- Interactive Category Filter Tabs (2-Line Table-Cell Grid on Mobile, Single Line on Desktop) -->
+            <div class="filter-nav-wrap filter-nav-grid-2x2">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-layer-group"></i> All <span class="badge-count">6</span>
+                </button>
+                <button class="filter-btn" data-filter="identity">
+                    <i class="fas fa-id-card"></i> Identity &amp; Cards <span class="badge-count">2</span>
+                </button>
+                <button class="filter-btn" data-filter="governance">
+                    <i class="fas fa-balance-scale"></i> Governance <span class="badge-count">2</span>
+                </button>
+                <button class="filter-btn" data-filter="portal">
+                    <i class="fas fa-ticket-alt"></i> E-Ticketing <span class="badge-count">2</span>
+                </button>
+            </div>
         </div>
 
         <div class="row g-4">
@@ -1431,10 +1451,10 @@ dis_content = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 {get_head(
-    title="Digital Identity and Security | Spectrum IT Solutions",
-    description="Digital Identity & Security solutions by Spectrum IT Solutions Ltd., featuring national biometric deduplication, KYC engines, and the upcoming Upokari platform.",
+    title="Digital Identity & Security Solutions | SpectrumID Platform | Spectrum",
+    description="Verify identities in seconds with SpectrumID. Featuring 0.1s AI-OCR auto-fill, multimodal AFIS/ABIS biometric matching, certified 3D passive liveness detection, and 100% sovereign data residency.",
     canonical_slug="Digital_Identity_&_Security.html",
-    og_image="assets/img/Digital-Identity-&-Security.jpg"
+    og_image="assets/img/digital-identity/hero-biometric-verify.jpg"
 )}
 </head>
 <body>
@@ -1451,99 +1471,524 @@ dis_content = f"""<!DOCTYPE html>
                 <span class="opacity-50">/</span>
                 <span style="color: #f26522; font-weight: 600;">Digital Identity &amp; Security</span>
             </div>
-            <h1>Digital Identity &amp; <span>Security</span></h1>
+            <h1>Verify Identities in <span>Seconds</span>, Not Minutes</h1>
             <p class="hero-desc">
-                Sovereign trust infrastructure delivering cryptographic verification, national biometric registry scaling, and tamper-proof citizen credentials.
+                Sovereign trust infrastructure powered by the SpectrumID AI Engine. Combining 0.1-second dual-script AI-OCR, multimodal biometric deduplication (AFIS/ABIS), and certified 3D passive liveness detection.
             </p>
             <div class="hero-features">
                 <span class="hero-feature-item">
-                    <i class="fas fa-users" style="color: #4ade80;"></i> 10M+ Enrolled Households
+                    <i class="fas fa-users" style="color: #4ade80;"></i> 10M+ Enrolled Households (TCB)
                 </span>
                 <span class="hero-feature-item">
-                    <i class="fas fa-fingerprint" style="color: #f26522;"></i> Multimodal AFIS/ABIS
+                    <i class="fas fa-bolt" style="color: #fbbf24;"></i> 0.1s AI-OCR Auto-Fill
                 </span>
                 <span class="hero-feature-item">
-                    <i class="fas fa-shield-alt" style="color: #38bdf8;"></i> ISO 27001 Certified Security
+                    <i class="fas fa-fingerprint" style="color: #f26522;"></i> Multimodal AFIS/ABIS Matching
                 </span>
                 <span class="hero-feature-item">
-                    <i class="fas fa-headset" style="color: #fbbf24;"></i> 24/7 SLA Engineering
+                    <i class="fas fa-shield-alt" style="color: #38bdf8;"></i> 100% In-Country Data Residency
                 </span>
             </div>
         </div>
     </div>
 
-    <!-- Content Section -->
+    <!-- MAIN HERO SPOTLIGHT & INTRO -->
     <div class="container py-5">
-        <!-- Upokari Sub-service Feature -->
-        <div class="card mb-5 border-0 shadow-sm" style="border-radius: 14px; background: linear-gradient(135deg, #1e7e34 0%, #0d5220 100%); color: white;">
-            <div class="card-body p-4 p-md-5">
-                <div class="row align-items-center">
-                    <div class="col-lg-8">
-                        <span class="badge bg-warning text-dark px-3 py-1 mb-3" style="font-size: 13px; font-weight: 700;">Coming Soon</span>
-                        <h2 class="text-white fw-bold mb-2">Upokari (&zwnj;উপকারী&zwnj;) &mdash; Digital Citizen Subsidies Platform</h2>
-                        <p class="text-light mb-4" style="line-height: 1.7; font-size: 16px;">
-                            Spectrum's upcoming next-generation digital benefit distribution and direct subsidy disbursement ecosystem. Built specifically for sovereign transparency, real-time quota tracking, and multi-tier social safety nets.
-                        </p>
-                        <p class="mb-0 text-white-50" style="font-size: 13px;"><em>Detailed feature specifications and deployment documentation will be available soon.</em></p>
-                    </div>
-                    <div class="col-lg-4 text-center mt-4 mt-lg-0">
-                        <div class="p-4 bg-white rounded-3 shadow text-dark">
-                            <i class="fas fa-hand-holding-heart fa-3x text-success mb-3"></i>
-                            <h5 class="fw-bold mb-1">Upokari Platform</h5>
-                            <p class="text-muted small mb-0">Unified Citizen Benefit Infrastructure</p>
-                        </div>
-                    </div>
+        <div class="row align-items-center g-5 mb-5">
+            <div class="col-lg-6">
+                <div class="d-inline-flex align-items-center px-3 py-1 rounded-pill mb-3" style="background: rgba(2, 132, 199, 0.1); border: 1px solid rgba(2, 132, 199, 0.25); color: #0284c7; font-size: 13px; font-weight: 700;">
+                    <i class="fas fa-shield-virus me-2"></i> SPECTRUMID™ AI ENGINE
                 </div>
-            </div>
-        </div>
-
-        <div class="row align-items-center mb-5">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-                <h2 class="fw-bold mb-3" style="color: #2e3760;">National Biometric &amp; Identity Architecture</h2>
-                <p class="text-muted" style="line-height: 1.8;">
-                    Spectrum is at the forefront of digital identity in Bangladesh. Having engineered the nationwide TCB Smart Family Card platform managing over 10 million households, we provide sovereign-grade biometric enrollment, Automated Fingerprint &amp; Iris Identification Systems (AFIS/ABIS), and high-throughput KYC validation.
+                <h2 class="display-6 fw-bold mb-3" style="color: #2e3760; line-height: 1.25;">
+                    Establish Genuine Identity &amp; Prevent Fraud at National Scale
+                </h2>
+                <p class="text-muted" style="line-height: 1.8; font-size: 16px;">
+                    SpectrumID transforms identity verification from a friction-filled manual chore into a sub-second, frictionless digital experience. Engineered specifically for sovereign government institutions, tier-1 financial services, and telecom operators, our engine delivers automated 1:1 and 1:N biometric validation against trusted national registries with zero data leakage.
                 </p>
-                <div class="row pt-2">
-                    <div class="col-6 mb-3">
-                        <div class="p-3 border rounded bg-light text-center">
-                            <h4 class="fw-bold text-success mb-1">10M+</h4>
-                            <small class="text-muted">Enrolled Citizens</small>
+                <p class="text-muted" style="line-height: 1.8; font-size: 15px;">
+                    Whether verifying physical Smart NID cards in rural distribution centers or onboarding mobile banking customers via smartphone cameras, SpectrumID eliminates presentation attacks, deepfakes, and forged credentials before they enter your system.
+                </p>
+
+                <!-- Key Metrics Grid -->
+                <div class="row g-3 pt-2 mb-4">
+                    <div class="col-6 col-sm-3">
+                        <div class="dis-stat-card">
+                            <div class="dis-stat-num text-primary">10M+</div>
+                            <small class="text-muted fw-semibold">Citizens Enrolled</small>
                         </div>
                     </div>
-                    <div class="col-6 mb-3">
-                        <div class="p-3 border rounded bg-light text-center">
-                            <h4 class="fw-bold text-success mb-1">&lt; 100ms</h4>
-                            <small class="text-muted">Biometric Verification</small>
+                    <div class="col-6 col-sm-3">
+                        <div class="dis-stat-card">
+                            <div class="dis-stat-num text-success">0.1s</div>
+                            <small class="text-muted fw-semibold">AI-OCR Speed</small>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-3">
+                        <div class="dis-stat-card">
+                            <div class="dis-stat-num" style="color: #f26522;">&lt;100ms</div>
+                            <small class="text-muted fw-semibold">Biometric Match</small>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-3">
+                        <div class="dis-stat-card">
+                            <div class="dis-stat-num text-info">100%</div>
+                            <small class="text-muted fw-semibold">In-Country Privacy</small>
                         </div>
                     </div>
                 </div>
+
+                <!-- Call to action buttons -->
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="contact.html" class="btn btn-primary px-4 py-2 fw-semibold rounded-pill shadow-sm" style="background: #2e3760; border-color: #2e3760;">
+                        <i class="fas fa-calendar-check me-2"></i> Request Live Demo
+                    </a>
+                    <a href="#architecture" class="btn btn-outline-secondary px-4 py-2 fw-semibold rounded-pill">
+                        <i class="fas fa-sitemap me-2"></i> View System Architecture
+                    </a>
+                </div>
             </div>
-            <div class="col-lg-6 text-center">
-                <picture><source srcset="assets/img/sm-card-about.webp" type="image/webp"><img src="assets/img/sm-card-about.png" alt="Digital Identity Infrastructure" loading="lazy" class="img-fluid rounded shadow-sm" style="max-height: 380px;"></picture>
+
+            <!-- Hero Visual Showcase -->
+            <div class="col-lg-6">
+                <div class="dis-hero-card position-relative">
+                    <picture>
+                        <source srcset="assets/img/digital-identity/hero-biometric-verify.webp" type="image/webp">
+                        <img src="assets/img/digital-identity/hero-biometric-verify.jpg" alt="SpectrumID Biometric Face Verification" class="img-fluid w-100" style="object-fit: cover; max-height: 440px;" loading="eager">
+                    </picture>
+                    <div class="dis-hud-badge">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-check-circle text-success me-2 fa-lg"></i>
+                            <div>
+                                <div class="fw-bold text-white" style="font-size: 13px;">SpectrumID Biometric Enclave</div>
+                                <div class="text-white-50" style="font-size: 11px;">Passive 3D Liveness Verified &bull; Latency: 84ms</div>
+                            </div>
+                        </div>
+                        <span class="badge bg-success px-2 py-1 rounded-pill" style="font-size: 11px;">99.8% Confidence Match</span>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- Capability Cards -->
-        <div class="row pt-2">
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 p-4 border-0 shadow-sm" style="border-radius: 12px; border: 1px solid #e2e8f0 !important;">
-                    <div class="mb-3 text-warning"><i class="fas fa-fingerprint fa-2x"></i></div>
-                    <h5 class="fw-bold" style="color: #2e3760;">Biometric Deduplication</h5>
-                    <p class="text-muted small">Multi-modal biometric matching algorithms ensuring 1:N deduplication integrity across millions of enrolled records.</p>
+        <!-- SECTION: 3 CORE VALUE PILLARS (WHY SPECTRUMID?) -->
+        <div class="py-4 my-3 border-top border-bottom">
+            <div class="text-center mb-5">
+                <span class="badge bg-light text-dark px-3 py-2 rounded-pill fw-bold border text-uppercase" style="letter-spacing: 0.5px;">Why SpectrumID?</span>
+                <h3 class="fw-bold mt-2" style="color: #2e3760;">Establish Unquestioned Digital Trust</h3>
+                <p class="text-muted mx-auto" style="max-width: 650px;">
+                    Legacy verification relied on manual eyesight and error-prone document photocopies. SpectrumID automates the entire trust chain with sovereign precision.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="dis-feature-box">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 mb-3 p-3" style="background: rgba(2, 132, 199, 0.1); color: #0284c7;">
+                            <i class="fas fa-user-shield fa-2x"></i>
+                        </div>
+                        <h5 class="fw-bold" style="color: #2e3760;">Establish Genuine Identity</h5>
+                        <p class="text-muted small mb-0" style="line-height: 1.7;">
+                            Authenticate real human beings with mathematical certainty. Deflect synthetic identities, identity theft, and account takeover attacks before transactions occur.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="dis-feature-box">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 mb-3 p-3" style="background: rgba(16, 185, 129, 0.1); color: #10b981;">
+                            <i class="fas fa-id-card-alt fa-2x"></i>
+                        </div>
+                        <h5 class="fw-bold" style="color: #2e3760;">Verify National IDs in Real Time</h5>
+                        <p class="text-muted small mb-0" style="line-height: 1.7;">
+                            Directly validate government-issued ID documents including Bangladesh Smart NID, E-Passports, and Driving Licenses in sub-second automated cycles with zero manual backlog.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="dis-feature-box">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 mb-3 p-3" style="background: rgba(242, 101, 34, 0.1); color: #f26522;">
+                            <i class="fas fa-microscope fa-2x"></i>
+                        </div>
+                        <h5 class="fw-bold" style="color: #2e3760;">Forensic Tamper Detection</h5>
+                        <p class="text-muted small mb-0" style="line-height: 1.7;">
+                            Spot digital manipulations, font replacements, cloned pixel patches, photo substitutions, and hologram alterations using proprietary computer-vision models.
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 p-4 border-0 shadow-sm" style="border-radius: 12px; border: 1px solid #e2e8f0 !important;">
-                    <div class="mb-3 text-success"><i class="fas fa-id-card fa-2x"></i></div>
-                    <h5 class="fw-bold" style="color: #2e3760;">QR &amp; NFC Family Cards</h5>
-                    <p class="text-muted small">Tamper-proof physical cards embedded with encrypted cryptographic digital signatures for rapid offline/online validation.</p>
+        </div>
+
+        <!-- SECTION: SYSTEM ARCHITECTURE & ECOSYSTEM -->
+        <div id="architecture" class="py-5">
+            <div class="text-center mb-4">
+                <span class="badge px-3 py-1 rounded-pill fw-semibold text-uppercase" style="background: #e0f2fe; color: #0369a1; font-size: 12px;">End-to-End Enterprise Topology</span>
+                <h2 class="fw-bold mt-2" style="color: #2e3760;">SpectrumID Sovereign Ecosystem Architecture</h2>
+                <p class="text-muted mx-auto" style="max-width: 700px;">
+                    Engineered for zero-trust resilience. Client endpoints seamlessly stream encrypted biometric and document payloads into the SpectrumID AI Engine Enclave with direct sovereign vault integration.
+                </p>
+            </div>
+
+            <!-- Architecture Diagram Container -->
+            <div class="dis-arch-wrapper p-3 p-md-4 mb-4">
+                <div class="text-center">
+                    <picture>
+                        <source srcset="assets/img/digital-identity/architecture-ecosystem.webp" type="image/webp">
+                        <img src="assets/img/digital-identity/architecture-ecosystem.jpg" alt="SpectrumID AI Engine Architecture Diagram" class="img-fluid rounded-3" style="max-height: 520px; width: 100%; object-fit: contain;" loading="lazy">
+                    </picture>
+                </div>
+                <div class="row g-3 pt-4 text-light">
+                    <div class="col-md-4">
+                        <div class="p-3 rounded" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+                            <h6 class="fw-bold text-info mb-1"><i class="fas fa-mobile-alt me-2"></i> 1. Omnichannel Endpoints</h6>
+                            <p class="small text-white-50 mb-0">Smartphones, rugged POS terminals, biometric airport e-Gates, desktop enrollment scanners, and ATM kiosks.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-3 rounded" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+                            <h6 class="fw-bold text-warning mb-1"><i class="fas fa-brain me-2"></i> 2. SpectrumID AI Engine</h6>
+                            <p class="small text-white-50 mb-0">Air-gapped inference enclave running dual-script AI-OCR, 3D facial liveness, and ANSI/NIST AFIS biometric matching.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-3 rounded" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+                            <h6 class="fw-bold text-success mb-1"><i class="fas fa-database me-2"></i> 3. Sovereign Vault</h6>
+                            <p class="small text-white-50 mb-0">HSM-backed cryptographic key generation, SHA-256 tamper-evident audit logs, and 100% in-country data residency.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 p-4 border-0 shadow-sm" style="border-radius: 12px; border: 1px solid #e2e8f0 !important;">
-                    <div class="mb-3 text-primary"><i class="fas fa-shield-alt fa-2x"></i></div>
-                    <h5 class="fw-bold" style="color: #2e3760;">Enterprise Access Control</h5>
-                    <p class="text-muted small">Integrated biometric flap barriers, turnstiles, and RFID credentials for secure sovereign facilities.</p>
+        </div>
+
+        <!-- SECTION: THE 3-STEP VERIFICATION LIFECYCLE -->
+        <div class="py-4">
+            <div class="text-center mb-5">
+                <span class="badge px-3 py-1 rounded-pill fw-semibold text-uppercase" style="background: #fef3c7; color: #b45309; font-size: 12px;">Step-by-Step Engine Breakdown</span>
+                <h2 class="fw-bold mt-2" style="color: #2e3760;">The 3-Step Automated Verification Lifecycle</h2>
+                <p class="text-muted mx-auto" style="max-width: 680px;">
+                    From raw camera ingestion to cryptographic authorization in under 2 seconds. Every verification executes across three forensic defense rings.
+                </p>
+            </div>
+
+            <!-- STEP 1: SMART DOCUMENT ACQUISITION & 0.1S AI-OCR -->
+            <div class="dis-step-card p-4 p-md-5">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-6 order-2 order-lg-1">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="dis-step-num">1</span>
+                            <span class="badge bg-primary px-3 py-1 rounded-pill" style="font-size: 12px;">Step 01 &bull; Document Ingestion</span>
+                        </div>
+                        <h3 class="fw-bold mb-3" style="color: #2e3760;">Smart Document Capture &amp; 0.1s AI-OCR Auto-Fill</h3>
+                        <p class="text-muted" style="line-height: 1.8;">
+                            Our client capture SDK utilizes real-time optical frame guidance to automatically detect card edges, correct skew, and eliminate laminate flash glare.
+                        </p>
+                        <p class="text-muted" style="line-height: 1.8;">
+                            In just <strong>0.1 seconds</strong>, our proprietary neural OCR engine extracts 22+ discrete citizen fields across dual scripts without human touch:
+                        </p>
+                        <div class="row g-2 mb-3">
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled small text-muted mb-0">
+                                    <li class="mb-1"><i class="fas fa-check text-success me-2"></i> Name &amp; Bengali Name (&zwnj;নাম&zwnj;)</li>
+                                    <li class="mb-1"><i class="fas fa-check text-success me-2"></i> Father &amp; Mother Name</li>
+                                    <li class="mb-1"><i class="fas fa-check text-success me-2"></i> Date of Birth (DoB)</li>
+                                    <li class="mb-1"><i class="fas fa-check text-success me-2"></i> Personal ID / NID Number</li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled small text-muted mb-0">
+                                    <li class="mb-1"><i class="fas fa-check text-success me-2"></i> Nationality &amp; Gender</li>
+                                    <li class="mb-1"><i class="fas fa-check text-success me-2"></i> Document Number &amp; Expiry</li>
+                                    <li class="mb-1"><i class="fas fa-check text-success me-2"></i> Issuing Country &amp; Authority</li>
+                                    <li class="mb-1"><i class="fas fa-check text-success me-2"></i> 2D Barcode &amp; MRZ Decryption</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-1 order-lg-2 text-center">
+                        <picture>
+                            <source srcset="assets/img/digital-identity/step1-document-scan.webp" type="image/webp">
+                            <img src="assets/img/digital-identity/step1-document-scan.jpg" alt="Smart ID Document Scanning with AI-OCR" class="img-fluid rounded-3 shadow-sm" style="max-height: 340px; width: 100%; object-fit: cover;" loading="lazy">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 2: MULTI-LAYER FORENSIC & HOLOGRAM SECURITY -->
+            <div class="dis-step-card p-4 p-md-5">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-6 text-center">
+                        <picture>
+                            <source srcset="assets/img/digital-identity/step2-forensic-card-analysis.webp" type="image/webp">
+                            <img src="assets/img/digital-identity/step2-forensic-card-analysis.jpg" alt="Forensic Analysis of Smart ID Card Layers" class="img-fluid rounded-3 shadow-sm" style="max-height: 340px; width: 100%; object-fit: cover;" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="dis-step-num" style="background: linear-gradient(135deg, #f26522 0%, #c2410c 100%);">2</span>
+                            <span class="badge bg-warning text-dark px-3 py-1 rounded-pill" style="font-size: 12px;">Step 02 &bull; Forensic Authentication</span>
+                        </div>
+                        <h3 class="fw-bold mb-3" style="color: #2e3760;">Multi-Layer Forensic &amp; Hologram Security</h3>
+                        <p class="text-muted" style="line-height: 1.8;">
+                            Counterfeit IDs often use high-resolution color printing on PVC. SpectrumID inspects the physical artifact across three deep forensic layers to guarantee physical authenticity:
+                        </p>
+                        <div class="d-flex mb-3">
+                            <div class="me-3 text-warning"><i class="fas fa-layer-group fa-lg"></i></div>
+                            <div>
+                                <h6 class="fw-bold mb-1" style="color: #2e3760;">Microprint &amp; Guilloche Pattern Validation</h6>
+                                <p class="text-muted small mb-0">Analyzes fine security vector lines and micro-lettering that blur when re-scanned or photocopied.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div class="me-3 text-warning"><i class="fas fa-gem fa-lg"></i></div>
+                            <div>
+                                <h6 class="fw-bold mb-1" style="color: #2e3760;">Holographic &amp; Optical Reflectance Check</h6>
+                                <p class="text-muted small mb-0">Measures dynamic light diffraction across national security holograms to spot flat paper prints.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="me-3 text-warning"><i class="fas fa-microchip fa-lg"></i></div>
+                            <div>
+                                <h6 class="fw-bold mb-1" style="color: #2e3760;">Cryptographic Smart Chip Cross-Check</h6>
+                                <p class="text-muted small mb-0">Verifies data consistency between physical laser engraving, 2D PDF417 barcodes, and embedded smart chips.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 3: MULTIMODAL BIOMETRICS & 3D PASSIVE LIVENESS -->
+            <div class="dis-step-card p-4 p-md-5">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-6 order-2 order-lg-1">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="dis-step-num" style="background: linear-gradient(135deg, #10b981 0%, #047857 100%);">3</span>
+                            <span class="badge bg-success px-3 py-1 rounded-pill" style="font-size: 12px;">Step 03 &bull; Biometric Verification</span>
+                        </div>
+                        <h3 class="fw-bold mb-3" style="color: #2e3760;">Multimodal Biometrics &amp; 3D Passive Liveness</h3>
+                        <p class="text-muted" style="line-height: 1.8;">
+                            SpectrumID provides certified <strong>iBeta Level 1 &amp; 2 compliant</strong> 3D passive liveness detection. Users don't need to blink or turn their heads—our models detect sub-millimeter depth contours in a fraction of a second.
+                        </p>
+                        <div class="p-3 rounded mb-3" style="background: #f8fafc; border-left: 4px solid #10b981;">
+                            <h6 class="fw-bold text-success mb-1"><i class="fas fa-shield-alt me-1"></i> 100% Anti-Spoof Interception</h6>
+                            <p class="small text-muted mb-0">Instantly intercepts high-definition printed masks, video replays on iPad/monitors, 3D silicone molds, and generative AI deepfakes.</p>
+                        </div>
+                        <div class="d-flex align-items-center gap-3 pt-1">
+                            <div class="badge bg-light text-dark border px-3 py-2">
+                                <i class="fas fa-fingerprint text-success me-1"></i> AFIS/ABIS Minutiae Match
+                            </div>
+                            <div class="badge bg-light text-dark border px-3 py-2">
+                                <i class="fas fa-eye text-primary me-1"></i> Iris Biometric Ready
+                            </div>
+                            <div class="badge bg-light text-dark border px-3 py-2">
+                                <i class="fas fa-lock text-warning me-1"></i> SHA-256 Audit Seal
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-1 order-lg-2 text-center">
+                        <picture>
+                            <source srcset="assets/img/digital-identity/step3-biometric-liveness-antispoof.webp" type="image/webp">
+                            <img src="assets/img/digital-identity/step3-biometric-liveness-antispoof.jpg" alt="Biometric Liveness vs Deepfake Interception" class="img-fluid rounded-3 shadow-sm" style="max-height: 340px; width: 100%; object-fit: cover;" loading="lazy">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION: PRODUCT HIGHLIGHTS (THE 8 ENTERPRISE ADVANTAGES) -->
+        <div class="py-5">
+            <div class="text-center mb-5">
+                <span class="badge px-3 py-1 rounded-pill fw-semibold text-uppercase" style="background: #e0e7ff; color: #4338ca; font-size: 12px;">Enterprise Platform Highlights</span>
+                <h2 class="fw-bold mt-2" style="color: #2e3760;">Built for Sovereign Security &amp; Seamless Growth</h2>
+                <p class="text-muted mx-auto" style="max-width: 650px;">
+                    Designed from the ground up to solve enterprise fraud, satisfy stringent central bank compliance mandates, and maximize customer conversion.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="dis-feature-box">
+                        <div class="mb-3 text-danger"><i class="fas fa-ban fa-2x"></i></div>
+                        <h6 class="fw-bold" style="color: #2e3760;">Catch Fake IDs</h6>
+                        <p class="text-muted small mb-0">Spot camouflaged, forged, and synthetic credentials before they compromise your ecosystem.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="dis-feature-box">
+                        <div class="mb-3 text-primary"><i class="fas fa-file-contract fa-2x"></i></div>
+                        <h6 class="fw-bold" style="color: #2e3760;">Meet Compliance Mandates</h6>
+                        <p class="text-muted small mb-0">Automate strict compliance with AML, KYC, GDPR, PSD2, and Bangladesh Bank ICT security directives.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="dis-feature-box">
+                        <div class="mb-3 text-success"><i class="fas fa-user-plus fa-2x"></i></div>
+                        <h6 class="fw-bold" style="color: #2e3760;">Frictionless Onboarding</h6>
+                        <p class="text-muted small mb-0">Eliminate onboarding fatigue. Verify real users in seconds and increase digital conversion rates by over 35%.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="dis-feature-box">
+                        <div class="mb-3 text-warning"><i class="fas fa-bullseye fa-2x"></i></div>
+                        <h6 class="fw-bold" style="color: #2e3760;">100% Extraction Accuracy</h6>
+                        <p class="text-muted small mb-0">Dual-script neural OCR accurately processes complex Bengali ligatures and weathered ID cards.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="dis-feature-box">
+                        <div class="mb-3 text-info"><i class="fas fa-cubes fa-2x"></i></div>
+                        <h6 class="fw-bold" style="color: #2e3760;">Omnichannel Verification</h6>
+                        <p class="text-muted small mb-0">Embed via iOS, Android, Flutter, React Native SDKs, REST APIs, webcams, and SMS verification links.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="dis-feature-box">
+                        <div class="mb-3 text-secondary"><i class="fas fa-cogs fa-2x"></i></div>
+                        <h6 class="fw-bold" style="color: #2e3760;">Automate Manual Tasks</h6>
+                        <p class="text-muted small mb-0">Dramatically reduce operational overhead and eliminate expensive manual back-office document review.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="dis-feature-box">
+                        <div class="mb-3 text-dark"><i class="fas fa-shield-virus fa-2x"></i></div>
+                        <h6 class="fw-bold" style="color: #2e3760;">Anti-Spoof Defense</h6>
+                        <p class="text-muted small mb-0">Certified liveness detection neutralizes generative AI deepfakes, video injection, and print attacks.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="dis-feature-box">
+                        <div class="mb-3 text-success"><i class="fas fa-file-invoice fa-2x"></i></div>
+                        <h6 class="fw-bold" style="color: #2e3760;">Cryptographic Audit Trail</h6>
+                        <p class="text-muted small mb-0">Immutable SHA-256 hash chains provide tamper-evident records ready for external and state audits.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION: SOVEREIGN CITIZEN SUBSIDIES PLATFORM (UPOKARI & TCB PROOF) -->
+        <div class="card mb-5 border-0 shadow-sm" style="border-radius: 16px; background: linear-gradient(135deg, #064e3b 0%, #0f172a 100%); color: white;">
+            <div class="card-body p-4 p-md-5">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-8">
+                        <div class="d-inline-flex align-items-center px-3 py-1 rounded-pill mb-3" style="background: rgba(16, 185, 129, 0.2); border: 1px solid rgba(16, 185, 129, 0.4); color: #34d399; font-size: 13px; font-weight: 700;">
+                            <i class="fas fa-landmark me-2"></i> SOVEREIGN SOCIAL IMPACT
+                        </div>
+                        <h2 class="text-white fw-bold mb-3">Upokari (&zwnj;উপকারী&zwnj;) &amp; The 10M+ TCB Family Card Platform</h2>
+                        <p class="text-light opacity-90 mb-4" style="line-height: 1.8; font-size: 16px;">
+                            Spectrum engineered Bangladesh's largest digital social safety net platform for the <strong>Trading Corporation of Bangladesh (TCB)</strong>, enrolling and issuing smart biometric family cards to over <strong>10 Million beneficiary households (covering 50M+ citizens)</strong>. 
+                        </p>
+                        <p class="text-light opacity-75 mb-4" style="line-height: 1.7; font-size: 14px;">
+                            Building on this national milestone, our upcoming <strong>Upokari</strong> platform delivers unified benefit distribution, real-time subsidy quota management, and duplicate-free biometric authentication on offline-capable POS terminals in remote areas.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="case-study.html" class="btn btn-warning px-4 py-2 fw-bold text-dark rounded-pill shadow-sm">
+                                <i class="fas fa-file-alt me-2"></i> Read TCB National Case Study
+                            </a>
+                            <a href="contact.html" class="btn btn-outline-light px-4 py-2 rounded-pill fw-semibold">
+                                <i class="fas fa-envelope me-2"></i> Inquire About Upokari
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <div class="p-4 bg-white rounded-3 shadow text-dark">
+                            <div class="p-3 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="background: rgba(16, 185, 129, 0.1); width: 80px; height: 80px;">
+                                <i class="fas fa-hands-helping fa-3x text-success"></i>
+                            </div>
+                            <h4 class="fw-bold mb-1" style="color: #2e3760;">10,000,000+</h4>
+                            <p class="text-muted fw-semibold small mb-2">Households Authenticated</p>
+                            <span class="badge bg-success-subtle text-success border border-success-subtle px-3 py-1 rounded-pill" style="font-size: 11px;">Zero Duplicate Beneficiaries</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION: TARGET INDUSTRIES -->
+        <div class="py-4">
+            <div class="text-center mb-5">
+                <span class="badge px-3 py-1 rounded-pill fw-semibold text-uppercase" style="background: #e2e8f0; color: #334155; font-size: 12px;">Sector Solutions</span>
+                <h2 class="fw-bold mt-2" style="color: #2e3760;">Industries Empowered by SpectrumID</h2>
+                <p class="text-muted mx-auto" style="max-width: 650px;">
+                    Tailored biometric and document verification engines tuned to the regulatory and workflow demands of major economic sectors.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="dis-industry-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="me-3 text-primary"><i class="fas fa-university fa-2x"></i></div>
+                            <h5 class="fw-bold mb-0" style="color: #2e3760;">Banking &amp; FinTech (e-KYC)</h5>
+                        </div>
+                        <p class="text-muted small mb-0" style="line-height: 1.7;">
+                            Instant paperless account opening, credit card origination, loan onboarding, and MFS wallet KYC compliant with central bank regulatory directives.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="dis-industry-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="me-3 text-danger"><i class="fas fa-shield-alt fa-2x"></i></div>
+                            <h5 class="fw-bold mb-0" style="color: #2e3760;">Public Security &amp; Law</h5>
+                        </div>
+                        <p class="text-muted small mb-0" style="line-height: 1.7;">
+                            Automated Fingerprint &amp; Iris Identification Systems (AFIS/ABIS), forensic crime scene matching, watch-list alerts, and secure border checkpoints.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="dis-industry-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="me-3 text-success"><i class="fas fa-landmark fa-2x"></i></div>
+                            <h5 class="fw-bold mb-0" style="color: #2e3760;">Enterprise &amp; Government</h5>
+                        </div>
+                        <p class="text-muted small mb-0" style="line-height: 1.7;">
+                            Civil servant master registries, national election integrity, smart civil registry infrastructure, and high-security physical facility access turnstiles.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="dis-industry-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="me-3 text-info"><i class="fas fa-broadcast-tower fa-2x"></i></div>
+                            <h5 class="fw-bold mb-0" style="color: #2e3760;">Telecommunications</h5>
+                        </div>
+                        <p class="text-muted small mb-0" style="line-height: 1.7;">
+                            High-throughput biometrically verified SIM card registration, eSIM provisioning, and customer lifecycle ownership verification at retail counters.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="dis-industry-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="me-3 text-warning"><i class="fas fa-hospital-user fa-2x"></i></div>
+                            <h5 class="fw-bold mb-0" style="color: #2e3760;">Healthcare &amp; Education</h5>
+                        </div>
+                        <p class="text-muted small mb-0" style="line-height: 1.7;">
+                            Patient master index deduplication, secure health insurance claim authorization, and student identity verification for national exams.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="dis-industry-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="me-3 text-secondary"><i class="fas fa-hand-holding-heart fa-2x"></i></div>
+                            <h5 class="fw-bold mb-0" style="color: #2e3760;">NGOs &amp; Social Safety Nets</h5>
+                        </div>
+                        <p class="text-muted small mb-0" style="line-height: 1.7;">
+                            Duplicate-free humanitarian food rationing, emergency disaster relief disbursement, and transparent biometric aid tracking for non-profits.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1553,16 +1998,16 @@ dis_content = f"""<!DOCTYPE html>
     <div class="container-fluid py-5 cta-banner-section">
         <div class="container text-center py-4 position-relative" style="z-index: 2;">
             <span class="badge px-3 py-2 rounded-pill fw-semibold mb-3" style="background: rgba(242, 101, 34, 0.2); color: #f26522; border: 1px solid rgba(242, 101, 34, 0.4); font-size: 13px;">Sovereign Trust Architecture</span>
-            <h2 class="display-6 fw-bold text-white mb-3">Ready to Deploy Sovereign Identity Systems?</h2>
+            <h2 class="display-6 fw-bold text-white mb-3">Ready to Deploy SpectrumID in Your Enterprise?</h2>
             <p class="text-light opacity-75 mx-auto mb-4" style="max-width: 650px; font-size: 16px; line-height: 1.7;">
-                Consult with our cryptographic and biometric engineers to design high-assurance citizen registries, KYC platforms, and automated social safety net distribution.
+                Consult with our cryptographic and biometric engineers to design high-assurance citizen registries, e-KYC pipelines, or on-premise air-gapped verification platforms.
             </p>
             <div class="d-flex justify-content-center align-items-center flex-wrap gap-3 pt-2">
                 <a href="contact.html" class="cta-primary-btn">
                     <i class="fas fa-paper-plane me-2"></i> Contact Identity Engineering
                 </a>
                 <a href="case-study.html" class="cta-secondary-btn">
-                    <i class="fas fa-folder-open me-2"></i> View TCB Case Study
+                    <i class="fas fa-folder-open me-2"></i> View TCB National Case Study
                 </a>
             </div>
         </div>
@@ -2324,33 +2769,33 @@ about_content = f"""<!DOCTYPE html>
     <div class="container py-5 text-center">
         <span class="badge px-3 py-2 rounded-pill fw-semibold mb-2 d-inline-block text-center" style="background: rgba(30, 126, 52, 0.1); color: #1e7e34; border: 1px solid rgba(30, 126, 52, 0.25); font-size: 13px;">Trusted Partnerships</span>
         <h2 class="header_two mb-4 text-center" style="color: #2e3760; font-size: 34px; font-weight: 700; text-align: center !important;">Our Valuable Clients</h2>
-        <div class="row g-3 justify-content-center pt-2">
-            <div class="col-lg-2 col-md-4 col-6">
+        <div class="row g-4 justify-content-center pt-2">
+            <div class="col-lg-4 col-md-4 col-6">
                 <div class="client-logo-card">
                     <img src="assets/img/vlc_01.jpg" alt="Valuable Client 1">
                 </div>
             </div>
-            <div class="col-lg-2 col-md-4 col-6">
+            <div class="col-lg-4 col-md-4 col-6">
                 <div class="client-logo-card">
                     <img src="assets/img/vlc_02.jpg" alt="Valuable Client 2">
                 </div>
             </div>
-            <div class="col-lg-2 col-md-4 col-6">
+            <div class="col-lg-4 col-md-4 col-6">
                 <div class="client-logo-card">
                     <img src="assets/img/vlc_03.jpg" alt="Valuable Client 3">
                 </div>
             </div>
-            <div class="col-lg-2 col-md-4 col-6">
+            <div class="col-lg-4 col-md-4 col-6">
                 <div class="client-logo-card">
                     <img src="assets/img/vlc_04.jpg" alt="Valuable Client 4">
                 </div>
             </div>
-            <div class="col-lg-2 col-md-4 col-6">
+            <div class="col-lg-4 col-md-4 col-6">
                 <div class="client-logo-card">
                     <img src="assets/img/vlc_05.jpg" alt="Valuable Client 5">
                 </div>
             </div>
-            <div class="col-lg-2 col-md-4 col-6">
+            <div class="col-lg-4 col-md-4 col-6">
                 <div class="client-logo-card">
                     <img src="assets/img/vlc_06.jpg" alt="Valuable Client 6">
                 </div>
@@ -2435,26 +2880,28 @@ products_content = f"""<!DOCTYPE html>
     </div>
 
     <!-- SECTION 1: TURNKEY HARDWARE & SPECIALIZED SYSTEMS (8 CORE PRODUCTS) -->
-    <div class="container py-5 filter-section">
-        <!-- Interactive Category Filter Tabs -->
-        <div class="filter-nav-wrap mb-5">
-            <button class="filter-btn active" data-filter="all">
-                <i class="fas fa-cubes"></i> All Solutions <span class="badge-count">12</span>
-            </button>
-            <button class="filter-btn" data-filter="hardware">
-                <i class="fas fa-microchip"></i> Hardware &amp; Specialized Devices <span class="badge-count">8</span>
-            </button>
-            <button class="filter-btn" data-filter="software">
-                <i class="fas fa-laptop-code"></i> Enterprise Software Suites <span class="badge-count">4</span>
-            </button>
-        </div>
-
-        <div class="text-center mb-5">
+    <div class="container pt-5 pb-3">
+        <div class="text-center mb-4">
             <span class="badge px-3 py-2 rounded-pill fw-semibold mb-2" style="background: rgba(242, 101, 34, 0.1); color: #f26522; border: 1px solid rgba(242, 101, 34, 0.25); font-size: 13px;">Turnkey Hardware Systems</span>
             <h2 class="header_two" style="color: #2e3760; font-size: 36px; font-weight: 700;">Hardware &amp; <span style="color: #f26522;">Specialized Devices</span></h2>
-            <p class="text-muted mx-auto" style="max-width: 680px; font-size: 15px;">Industrial-grade, ruggedized hardware solutions deployed across national governance platforms, financial institutions, and enterprise facilities.</p>
-        </div>
+            <p class="text-muted mx-auto mb-4" style="max-width: 680px; font-size: 15px;">Industrial-grade, ruggedized hardware solutions deployed across national governance platforms, financial institutions, and enterprise facilities.</p>
 
+            <!-- Interactive Category Filter Tabs (Single Line Segmented Group) -->
+            <div class="filter-nav-wrap">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-layer-group"></i> All <span class="badge-count">12</span>
+                </button>
+                <button class="filter-btn" data-filter="hardware">
+                    <i class="fas fa-microchip"></i> Hardware <span class="badge-count">8</span>
+                </button>
+                <button class="filter-btn" data-filter="software">
+                    <i class="fas fa-code"></i> Software <span class="badge-count">4</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container pb-5 filter-section">
         <div class="row g-4">
             <!-- Product 1: Smart Card & Printer -->
             <div class="col-lg-3 col-md-6 col-sm-6 filter-item reveal-on-scroll" data-category="hardware">

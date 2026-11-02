@@ -1,0 +1,49 @@
+{
+  "$schema": "https://agenticresourcediscovery.org/spec/v1/schema.json",
+  "name": "Spectrum IT Solutions Ltd.",
+  "description": "Premier Bangladeshi software and IT services company engineering sovereign digital identity, biometric verification, smart card technologies, and mission-critical enterprise systems.",
+  "url": "https://spectrum.com.bd/",
+  "documentation": "https://spectrum.com.bd/llms.txt",
+  "contact": {
+    "email": "contact@spectrum.com.bd",
+    "phone": "+8801615900004"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:spectrum.com.bd:identity:verification-service",
+      "displayName": "Digital Identity & Security",
+      "type": "application/ai-catalog+json",
+      "url": "https://spectrum.com.bd/Digital_Identity_&_Security.html",
+      "description": "Biometric verification, ABIS/AFIS, e-KYC, and multi-modal authentication infrastructure",
+      "representativeQueries": [
+        "digital identity bangladesh",
+        "biometric verification system",
+        "national e-kyc infrastructure"
+      ]
+    },
+    {
+      "identifier": "urn:air:spectrum.com.bd:products:hardware-catalog",
+      "displayName": "Products & Industrial Hardware",
+      "type": "application/ai-catalog+json",
+      "url": "https://spectrum.com.bd/products.html",
+      "description": "Industrial kiosks, biometric scanners, laser smart card printers, and access control hardware",
+      "representativeQueries": [
+        "smart card printer bangladesh",
+        "biometric scanner kiosk",
+        "turnstile flap barrier hardware"
+      ]
+    },
+    {
+      "identifier": "urn:air:spectrum.com.bd:projects:enterprise-deployments",
+      "displayName": "National Enterprise Projects",
+      "type": "application/ai-catalog+json",
+      "url": "https://spectrum.com.bd/projects.html",
+      "description": "Proven national-scale implementations including TCB Smart Family Card, e-Court, and Licensing platforms",
+      "representativeQueries": [
+        "TCB smart family card project",
+        "judiciary ecourt software",
+        "national elicensing portal"
+      ]
+    }
+  ]
+}
