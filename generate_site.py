@@ -37,7 +37,7 @@ index_content = f"""<!DOCTYPE html>
             <!-- Slide 1: Digital Identity (banner_img_03.webp) -->
             <div class="carousel-item active sld-slide sld-slide-1">
                 <picture class="hero-bg-picture">
-                    <img src="assets/img/banner_img_03.webp" alt="Digital Identity" class="hero-bg-img" loading="lazy" decoding="async">
+                    <img src="assets/img/banner_img_03.webp" alt="Digital Identity" class="hero-bg-img" fetchpriority="high" decoding="async">
                 </picture>
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">

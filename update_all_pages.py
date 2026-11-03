@@ -2,8 +2,14 @@ import os
 
 DIR = '/home/newadmin/Projects/Spectrum/plain-html'
 
+PRE_HERO = """    <link rel="preload" as="image" href="assets/img/banner_img_03.webp" type="image/webp" fetchpriority="high">
+"""
+
+
 def get_head(title, description, canonical_slug, og_image="assets/img/banner_img_01.jpg"):
     canonical_url = f"https://spectrum.com.bd/{canonical_slug}"
+    # Homepage only: the hero banner is the mobile and desktop LCP image
+    hero_preload = PRE_HERO if canonical_slug == "index.html" else ""
     og_image_url = f"https://spectrum.com.bd/{og_image}" if not og_image.startswith("http") else og_image
     return f"""    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,8 +43,7 @@ def get_head(title, description, canonical_slug, og_image="assets/img/banner_img
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preload" as="image" href="assets/img/banner_img_03.webp" type="image/webp" media="(min-width: 768px)" fetchpriority="high">
-    <!-- Google Fonts & FontAwesome -->
+{hero_preload}    <!-- Google Fonts & FontAwesome -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"></noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" media="print" onload="this.media='all'">
@@ -95,7 +100,6 @@ COMMON_HEAD = """    <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preload" as="image" href="assets/img/banner_img_03.webp" type="image/webp" media="(min-width: 768px)" fetchpriority="high">
     <!-- Google Fonts & FontAwesome -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"></noscript>
