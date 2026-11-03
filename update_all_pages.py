@@ -51,7 +51,7 @@ def get_head(title, description, canonical_slug, og_image="assets/img/banner_img
     <!-- Bootstrap & Site Styles -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.min.css">
-    <link rel="stylesheet" href="assets/css/responsive-fixes.min.css?v=20261102c">
+    <link rel="stylesheet" href="assets/css/responsive-fixes.min.css?v=20261103a">
     <!-- Structured Data (JSON-LD Organization & WebPage) -->
     <script type="application/ld+json">
     [
@@ -108,7 +108,7 @@ COMMON_HEAD = """    <meta charset="UTF-8">
     <!-- Bootstrap & Site Styles -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.min.css">
-    <link rel="stylesheet" href="assets/css/responsive-fixes.min.css?v=20261102c">
+    <link rel="stylesheet" href="assets/css/responsive-fixes.min.css?v=20261103a">
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
