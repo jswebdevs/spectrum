@@ -3,11 +3,11 @@
 
 ## Key pages
 - [Home](https://spectrum.com.bd/index.html): Homepage with overview of capabilities
-- [About](https://spectrum.com.bd/about_us.html): Company background, 12+ years experience, ISO 9001 & ISO 27001
+- [About](https://spectrum.com.bd/about-us.html): Company background, 12+ years experience, ISO 9001 & ISO 27001
 - [Services](https://spectrum.com.bd/services.html): Digital identity, smart cards, AI, cybersecurity, ERP
-- [Digital Identity & Security](https://spectrum.com.bd/Digital_Identity_&_Security.html): National biometric identity and automated ID verification
-- [Smart Card Technologies](https://spectrum.com.bd/Smart_Card_Technologies.html): Turnkey smart card personalization, encoding & kiosks
-- [Artificial Intelligence](https://spectrum.com.bd/Artificial_Intelligence.html): Computer vision, cognitive OCR, and decision models
+- [Digital Identity & Security](https://spectrum.com.bd/digital-identity-security.html): National biometric identity and automated ID verification
+- [Smart Card Technologies](https://spectrum.com.bd/smart-card-technologies.html): Turnkey smart card personalization, encoding & kiosks
+- [Artificial Intelligence](https://spectrum.com.bd/artificial-intelligence.html): Computer vision, cognitive OCR, and decision models
 - [Products](https://spectrum.com.bd/products.html): Enterprise hardware and software products
 - [Projects](https://spectrum.com.bd/projects.html): Delivered government and corporate projects
 - [Case Studies](https://spectrum.com.bd/case-study.html): TCB Smart Family Card, Industrial e-Court BD

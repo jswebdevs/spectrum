@@ -13,7 +13,7 @@
       "identifier": "urn:air:spectrum.com.bd:identity:verification-service",
       "displayName": "Digital Identity & Security",
       "type": "application/ai-catalog+json",
-      "url": "https://spectrum.com.bd/Digital_Identity_&_Security.html",
+      "url": "https://spectrum.com.bd/digital-identity-security.html",
       "description": "Biometric verification, ABIS/AFIS, e-KYC, and multi-modal authentication infrastructure",
       "representativeQueries": [
         "digital identity bangladesh",

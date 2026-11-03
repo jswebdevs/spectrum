@@ -40,12 +40,13 @@ A 100% pure, framework-free implementation of the **Spectrum IT Solutions Ltd.**
 - [`services.html`](services.html) — Services with Digital Identity #1
 - [`projects.html`](projects.html) — Projects with Digital Identity #1
 - [`case-study.html`](case-study.html) — Case Studies (linked from menu bar)
-- [`dis.html`](dis.html) — Digital Identity & Security (automated ID verification)
-- [`about_us.html`](about_us.html) — About Us
+- [`digital-identity-security.html`](digital-identity-security.html) — Digital Identity & Security (automated ID verification)
+- [`about-us.html`](about-us.html) — About Us
 - [`products.html`](products.html) — Products
-- [`contact.html`](contact.html) — Contact form (repaired)
-- [`ai.html`](ai.html) — Artificial Intelligence
-- [`sct.html`](sct.html) — Smart Card Technologies
+- [`contact.html`](contact.html) — Contact form (sends through Formspree)
+- [`artificial-intelligence.html`](artificial-intelligence.html) — Artificial Intelligence
+- [`smart-card-technologies.html`](smart-card-technologies.html) — Smart Card Technologies
+- Old names (`dis.html`, `ai.html`, `sct.html`, `about_us.html`, `Contact.html` and other capitalised copies) are redirect pages to the clean URLs above.
 - [`assets/css/style.css`](assets/css/style.css) — Original site styles & colors
 - [`assets/css/responsive-fixes.css`](assets/css/responsive-fixes.css) — Responsive bug fixes
 

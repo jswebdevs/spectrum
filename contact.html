@@ -41,7 +41,7 @@
     <!-- Bootstrap & Site Styles -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.min.css">
-    <link rel="stylesheet" href="assets/css/responsive-fixes.min.css?v=20261103b">
+    <link rel="stylesheet" href="assets/css/responsive-fixes.min.css?v=20261103c">
     <!-- Structured Data (JSON-LD Organization & WebPage) -->
     <script type="application/ld+json">
     [
@@ -82,6 +82,8 @@
     </script>
 </head>
 <body>
+    <a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
+    <header>
     <!-- Start Top bar -->
     <div class="container-fluid bg-dark pt-2 pb-2 top_bar">
         <div class="container text-light d-flex justify-content-between align-items-center">
@@ -122,7 +124,7 @@
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex menu_list justify-content-center">
                         <li class="nav-item">
-                            <a class="nav-link" href="about_us.html">About Us</a>
+                            <a class="nav-link" href="about-us.html">About Us</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="services.html">Services</a>
@@ -162,12 +164,15 @@
                 </div>
 
                 <div class="d-lg-none text-center pt-3 pb-2 border-top mt-3">
-                    <img src="assets/img/ISO_9001.png" alt="ISO 9001:2015" class="me-2" style="height: 28px;" loading="lazy">
-                    <img src="assets/img/ISO_27001.png" alt="ISO 27001:2013" style="height: 28px;" loading="lazy">
+                    <img width="26" height="28" src="assets/img/ISO_9001.png" alt="ISO 9001:2015" class="me-2" style="height: 28px;" loading="lazy">
+                    <img width="26" height="28" src="assets/img/ISO_27001.png" alt="ISO 27001:2013" style="height: 28px;" loading="lazy">
                 </div>
             </div>
         </div>
     </nav>
+    </header>
+
+    <main id="main-content">
 
     <!-- Page Hero Banner -->
     <div class="page-hero-banner">
@@ -206,7 +211,7 @@
                     <div class="icon-box" style="background: rgba(46, 55, 96, 0.08); color: #2e3760;">
                         <i class="fas fa-briefcase"></i>
                     </div>
-                    <h5 class="fw-bold mb-2" style="color: #2e3760;">Enterprise Inquiries</h5>
+                    <h5 aria-level="2" class="fw-bold mb-2" style="color: #2e3760;">Enterprise Inquiries</h5>
                     <p class="text-muted small mb-3">Sovereign identity, civil registries, smart card systems, and government tender / RFP inquiries.</p>
                     <a href="mailto:contact@spectrum.com.bd" class="text-decoration-none fw-bold" style="color: #f26522; font-size: 14px;">
                         contact@spectrum.com.bd <i class="fas fa-arrow-right ms-1 small"></i>
@@ -218,7 +223,7 @@
                     <div class="icon-box" style="background: rgba(242, 101, 34, 0.1); color: #f26522;">
                         <i class="fas fa-headset"></i>
                     </div>
-                    <h5 class="fw-bold mb-2" style="color: #2e3760;">Direct Support Desk</h5>
+                    <h5 aria-level="2" class="fw-bold mb-2" style="color: #2e3760;">Direct Support Desk</h5>
                     <p class="text-muted small mb-3">Dedicated SLA technical assistance, operational maintenance, and deployed system support.</p>
                     <a href="tel:+8801615900004" class="text-decoration-none fw-bold" style="color: #f26522; font-size: 14px;">
                         +880 1615 900 004 <i class="fas fa-arrow-right ms-1 small"></i>
@@ -230,7 +235,7 @@
                     <div class="icon-box" style="background: rgba(30, 126, 52, 0.1); color: #1e7e34;">
                         <i class="fas fa-handshake"></i>
                     </div>
-                    <h5 class="fw-bold mb-2" style="color: #2e3760;">Strategic Alliances</h5>
+                    <h5 aria-level="2" class="fw-bold mb-2" style="color: #2e3760;">Strategic Alliances</h5>
                     <p class="text-muted small mb-3">OEM hardware integrations, technological consortiums, and joint digital transformation programs.</p>
                     <a href="#contact-form-section" class="text-decoration-none fw-bold" style="color: #1e7e34; font-size: 14px;">
                         Partner With Us <i class="fas fa-arrow-right ms-1 small"></i>
@@ -255,11 +260,11 @@
                 <div class="contact-info-block h-100 d-flex flex-column justify-content-between">
                     <div>
                         <div class="overflow-hidden rounded-3 mb-4 shadow-sm text-center bg-light">
-                            <picture><source srcset="assets/img/contact_img.webp" type="image/webp"><img src="assets/img/contact_img.png" alt="Spectrum IT Solutions Headquarters Dhaka" loading="lazy" class="img-fluid w-100" style="height: auto; display: block; object-fit: contain;"></picture>
+                            <picture><source srcset="assets/img/contact_img.webp" type="image/webp"><img width="605" height="586" src="assets/img/contact_img.png" alt="Spectrum IT Solutions Headquarters Dhaka" loading="lazy" class="img-fluid w-100" style="height: auto; display: block; object-fit: contain;"></picture>
                         </div>
                         
                         <div class="d-flex align-items-center justify-content-between mb-3">
-                            <h4 class="fw-bold mb-0" style="color: #2e3760; font-size: 20px;">Corporate Headquarters</h4>
+                            <h4 aria-level="3" class="fw-bold mb-0" style="color: #2e3760; font-size: 20px;">Corporate Headquarters</h4>
                             <span class="badge bg-success-subtle text-success border border-success-subtle px-2 py-1 rounded-pill small">
                                 <i class="fas fa-check-circle me-1"></i> Verified
                             </span>
@@ -271,7 +276,7 @@
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div class="contact-channel-info">
-                                <h6>Registered Office Address</h6>
+                                <h6 aria-level="4">Registered Office Address</h6>
                                 <p>52/1, New Eskaton Road (Hasan Holdings Ltd., 12th Floor), Dhaka-1000, Bangladesh</p>
                             </div>
                         </div>
@@ -281,7 +286,7 @@
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div class="contact-channel-info">
-                                <h6>Official Communications</h6>
+                                <h6 aria-level="4">Official Communications</h6>
                                 <a href="mailto:contact@spectrum.com.bd">contact@spectrum.com.bd</a>
                             </div>
                         </div>
@@ -291,7 +296,7 @@
                                 <i class="fas fa-phone-alt"></i>
                             </div>
                             <div class="contact-channel-info">
-                                <h6>Voice &amp; WhatsApp Hotline</h6>
+                                <h6 aria-level="4">Voice &amp; WhatsApp Hotline</h6>
                                 <a href="tel:+8801615900004">+880 1615-900004</a>
                             </div>
                         </div>
@@ -301,7 +306,7 @@
                                 <i class="fas fa-clock"></i>
                             </div>
                             <div class="contact-channel-info">
-                                <h6>Operational Hours</h6>
+                                <h6 aria-level="4">Operational Hours</h6>
                                 <p>Sunday &ndash; Thursday: 9:00 AM &ndash; 6:00 PM (BST / UTC+6)</p>
                             </div>
                         </div>
@@ -328,7 +333,7 @@
                         <div class="d-flex align-items-center">
                             <i class="fas fa-check-circle fs-3 me-3 text-success"></i>
                             <div>
-                                <h6 class="alert-heading fw-bold mb-1">Message Submitted Successfully!</h6>
+                                <h6 aria-level="4" class="alert-heading fw-bold mb-1">Message Submitted Successfully!</h6>
                                 <p class="mb-0 small">Thank you for getting in touch with Spectrum IT Solutions. An enterprise solution architect will respond within 24 business hours.</p>
                             </div>
                         </div>
@@ -339,7 +344,7 @@
                         <div class="d-flex align-items-center">
                             <i class="fas fa-exclamation-circle fs-3 me-3 text-danger"></i>
                             <div>
-                                <h6 class="alert-heading fw-bold mb-1">Message Not Sent</h6>
+                                <h6 aria-level="4" class="alert-heading fw-bold mb-1">Message Not Sent</h6>
                                 <p class="mb-0 small">Something went wrong. Please try again, or email us at <a href="mailto:contact@spectrum.com.bd">contact@spectrum.com.bd</a>.</p>
                             </div>
                         </div>
@@ -415,7 +420,7 @@
                     <div class="icon-wrap" style="background: rgba(13, 110, 253, 0.1); color: #0d6efd;">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h5 class="fw-bold mb-1" style="color: #2e3760; font-size: 17px;">ISO 9001:2015</h5>
+                    <h5 aria-level="4" class="fw-bold mb-1" style="color: #2e3760; font-size: 17px;">ISO 9001:2015</h5>
                     <p class="text-muted small mb-0">Quality Management Systems Certified for Sovereign IT Infrastructure</p>
                 </div>
             </div>
@@ -424,7 +429,7 @@
                     <div class="icon-wrap" style="background: rgba(25, 135, 84, 0.1); color: #198754;">
                         <i class="fas fa-lock"></i>
                     </div>
-                    <h5 class="fw-bold mb-1" style="color: #2e3760; font-size: 17px;">ISO 27001:2013</h5>
+                    <h5 aria-level="4" class="fw-bold mb-1" style="color: #2e3760; font-size: 17px;">ISO 27001:2013</h5>
                     <p class="text-muted small mb-0">Information Security Management &amp; Cryptographic Data Protection</p>
                 </div>
             </div>
@@ -433,7 +438,7 @@
                     <div class="icon-wrap" style="background: rgba(242, 101, 34, 0.1); color: #f26522;">
                         <i class="fas fa-award"></i>
                     </div>
-                    <h5 class="fw-bold mb-1" style="color: #2e3760; font-size: 17px;">BASIS Member</h5>
+                    <h5 aria-level="4" class="fw-bold mb-1" style="color: #2e3760; font-size: 17px;">BASIS Member</h5>
                     <p class="text-muted small mb-0">Bangladesh Association of Software &amp; Information Services (Member #21-04-024)</p>
                 </div>
             </div>
@@ -442,7 +447,7 @@
                     <div class="icon-wrap" style="background: rgba(13, 202, 240, 0.15); color: #0891b2;">
                         <i class="fas fa-network-wired"></i>
                     </div>
-                    <h5 class="fw-bold mb-1" style="color: #2e3760; font-size: 17px;">BCS Member</h5>
+                    <h5 aria-level="4" class="fw-bold mb-1" style="color: #2e3760; font-size: 17px;">BCS Member</h5>
                     <p class="text-muted small mb-0">Bangladesh Computer Samity National ICT Industry Association</p>
                 </div>
             </div>
@@ -514,7 +519,10 @@
     });
     </script>
 
+    </main>
+
     <!-- Footer start -->
+    <footer>
     <div class="footer-wrapper">
         <div class="container">
             <div class="row">
@@ -545,10 +553,10 @@
                 <div class="col-lg-3 col-sm-6 mb-4">
                     <h3 class="text-white mb-3" style="font-size: 1.25rem;">Quick Link</h3>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="Artificial_Intelligence.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Artificial Intelligence</a></li>
-                        <li class="mb-2"><a href="Digital_Identity_&_Security.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Digital Identity &amp; Security</a></li>
-                        <li class="mb-2"><a href="Smart_Card_Technologies.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Smart Card Technologies</a></li>
-                        <li class="mb-2"><a href="about_us.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> About Us</a></li>
+                        <li class="mb-2"><a href="artificial-intelligence.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Artificial Intelligence</a></li>
+                        <li class="mb-2"><a href="digital-identity-security.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Digital Identity &amp; Security</a></li>
+                        <li class="mb-2"><a href="smart-card-technologies.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Smart Card Technologies</a></li>
+                        <li class="mb-2"><a href="about-us.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> About Us</a></li>
                         <li class="mb-2"><a href="services.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Our Services</a></li>
                         <li class="mb-2"><a href="products.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Our Products</a></li>
                         <li class="mb-2"><a href="contact.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Contact Us</a></li>
@@ -569,6 +577,7 @@
             </div>
         </div>
     </div>
+    </footer>
     <!-- Footer end -->
 
     <!-- Scripts -->

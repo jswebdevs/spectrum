@@ -51,7 +51,7 @@ def get_head(title, description, canonical_slug, og_image="assets/img/banner_img
     <!-- Bootstrap & Site Styles -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.min.css">
-    <link rel="stylesheet" href="assets/css/responsive-fixes.min.css?v=20261103b">
+    <link rel="stylesheet" href="assets/css/responsive-fixes.min.css?v=20261103c">
     <!-- Structured Data (JSON-LD Organization & WebPage) -->
     <script type="application/ld+json">
     [
@@ -108,7 +108,7 @@ COMMON_HEAD = """    <meta charset="UTF-8">
     <!-- Bootstrap & Site Styles -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.min.css">
-    <link rel="stylesheet" href="assets/css/responsive-fixes.min.css?v=20261103b">
+    <link rel="stylesheet" href="assets/css/responsive-fixes.min.css?v=20261103c">
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
@@ -134,7 +134,8 @@ COMMON_HEAD = """    <meta charset="UTF-8">
     }
     </script>"""
 
-COMMON_TOP_BAR = """    <!-- Start Top bar -->
+COMMON_TOP_BAR = """    <header>
+    <!-- Start Top bar -->
     <div class="container-fluid bg-dark pt-2 pb-2 top_bar">
         <div class="container text-light d-flex justify-content-between align-items-center">
             <div class="top_social d-flex align-items-center">
@@ -179,7 +180,7 @@ def get_navbar(active_page=''):
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex menu_list justify-content-center">
                         <li class="nav-item">
-                            <a class="nav-link{is_active('about')}" href="about_us.html">About Us</a>
+                            <a class="nav-link{is_active('about')}" href="about-us.html">About Us</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link{is_active('services')}" href="services.html">Services</a>
@@ -227,6 +228,7 @@ def get_navbar(active_page=''):
     </nav>"""
 
 COMMON_FOOTER = """    <!-- Footer start -->
+    <footer>
     <div class="footer-wrapper">
         <div class="container">
             <div class="row">
@@ -257,10 +259,10 @@ COMMON_FOOTER = """    <!-- Footer start -->
                 <div class="col-lg-3 col-sm-6 mb-4">
                     <h3 class="text-white mb-3" style="font-size: 1.25rem;">Quick Link</h3>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="Artificial_Intelligence.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Artificial Intelligence</a></li>
-                        <li class="mb-2"><a href="Digital_Identity_&_Security.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Digital Identity &amp; Security</a></li>
-                        <li class="mb-2"><a href="Smart_Card_Technologies.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Smart Card Technologies</a></li>
-                        <li class="mb-2"><a href="about_us.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> About Us</a></li>
+                        <li class="mb-2"><a href="artificial-intelligence.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Artificial Intelligence</a></li>
+                        <li class="mb-2"><a href="digital-identity-security.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Digital Identity &amp; Security</a></li>
+                        <li class="mb-2"><a href="smart-card-technologies.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Smart Card Technologies</a></li>
+                        <li class="mb-2"><a href="about-us.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> About Us</a></li>
                         <li class="mb-2"><a href="services.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Our Services</a></li>
                         <li class="mb-2"><a href="products.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Our Products</a></li>
                         <li class="mb-2"><a href="contact.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Contact Us</a></li>
@@ -281,6 +283,7 @@ COMMON_FOOTER = """    <!-- Footer start -->
             </div>
         </div>
     </div>
+    </footer>
     <!-- Footer end -->
 
     <!-- Scripts -->

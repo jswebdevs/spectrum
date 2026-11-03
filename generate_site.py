@@ -3,6 +3,27 @@ import shutil
 
 DIR = '/home/newadmin/Projects/Spectrum/plain-html'
 
+
+def redirect_stub(target):
+    """Small page that sends old or duplicate URLs to the clean canonical page."""
+    url = 'https://spectrum.com.bd/' + target
+    return ('<!DOCTYPE html>\n<html lang="en">\n<head>\n'
+            '    <meta charset="utf-8">\n'
+            '    <title>Redirecting | Spectrum IT Solutions</title>\n'
+            '    <meta name="robots" content="noindex, follow">\n'
+            f'    <link rel="canonical" href="{url}">\n'
+            f'    <meta http-equiv="refresh" content="0; url={target}">\n'
+            f'    <script>location.replace("{target}" + location.search + location.hash);</script>\n'
+            '</head>\n<body>\n'
+            f'    <p>This page has moved to <a href="{target}">{url}</a>.</p>\n'
+            '</body>\n</html>\n')
+
+
+def write_redirects(target, *old_names):
+    for name in old_names:
+        with open(os.path.join(DIR, name), 'w', encoding='utf-8') as f:
+            f.write(redirect_stub(target))
+
 from update_all_pages import get_head, COMMON_HEAD, COMMON_TOP_BAR, get_navbar, COMMON_FOOTER
 
 # 1. GENERATE INDEX.HTML (HOMEPAGE)
@@ -20,6 +41,7 @@ index_content = f"""<!DOCTYPE html>
     <a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
 {COMMON_TOP_BAR}
 {get_navbar('home')}
+    </header>
 
     <main id="main-content">
     <!-- Start Banner / Hero Slider -->
@@ -37,7 +59,7 @@ index_content = f"""<!DOCTYPE html>
             <!-- Slide 1: Digital Identity (banner_img_03.webp) -->
             <div class="carousel-item active sld-slide sld-slide-1">
                 <picture class="hero-bg-picture">
-                    <img src="assets/img/banner_img_03.webp" alt="Digital Identity" class="hero-bg-img" loading="lazy" decoding="async">
+                    <img width="1924" height="570" src="assets/img/banner_img_03.webp" alt="Digital Identity" class="hero-bg-img" fetchpriority="high" decoding="async">
                 </picture>
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
@@ -46,12 +68,12 @@ index_content = f"""<!DOCTYPE html>
                             <h1 class="header_thr">Digital Identity</h1>
                             <p>Digital Identity enables secure, verified access to services, protecting user data and simplifying online interactions globally.</p>
                             <div class="hero_icons d-flex align-items-center my-3">
-                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_leadership.png" width="28" height="42" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> LEADERSHIP WORK</span>
-                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_qwork.png" width="39" height="38" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> QUALITY WORK</span>
+                                <span class="hero_icon d-inline-flex align-items-center"><img loading="lazy" src="assets/img/icon_leadership.png" width="28" height="42" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> LEADERSHIP WORK</span>
+                                <span class="hero_icon d-inline-flex align-items-center"><img loading="lazy" src="assets/img/icon_qwork.png" width="39" height="38" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> QUALITY WORK</span>
                             </div>
                             <div class="hero_buttons d-flex align-items-center mt-4">
-                                <a href="Digital_Identity_&_Security.html" class="hero_button" aria-label="Explore Digital Identity and Security solutions">Explore Solution</a>
-                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center" aria-label="Watch video about Digital Identity on YouTube"><img src="assets/img/icon_video.png" width="38" height="38" class="me-2" alt="" aria-hidden="true"> Watch Video</a>
+                                <a href="digital-identity-security.html" class="hero_button" aria-label="Explore Digital Identity and Security solutions">Explore Solution</a>
+                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center" aria-label="Watch video about Digital Identity on YouTube"><img loading="lazy" src="assets/img/icon_video.png" width="38" height="38" class="me-2" alt="" aria-hidden="true"> Watch Video</a>
                             </div>
                         </div>
                     </div>
@@ -61,21 +83,21 @@ index_content = f"""<!DOCTYPE html>
             <!-- Slide 2: Blockchain Technology (banner_img_05.webp) -->
             <div class="carousel-item sld-slide sld-slide-2">
                 <picture class="hero-bg-picture">
-                    <img src="assets/img/banner_img_05.webp" alt="Blockchain Technology" class="hero-bg-img" loading="lazy" decoding="async">
+                    <img width="1924" height="570" src="assets/img/banner_img_05.webp" alt="Blockchain Technology" class="hero-bg-img" loading="lazy" decoding="async">
                 </picture>
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <div class="col-lg-6 col-md-7 hero_text">
                             <p class="header_two mb-1">Future of Digital Trust Lies in</p>
-                            <h1 class="header_thr">Blockchain Technology</h1>
+                            <h2 class="header_thr">Blockchain Technology</h2>
                             <p>Blockchain Technology ensures secure, transparent, and tamper-proof data exchange through decentralized networks.</p>
                             <div class="hero_icons d-flex align-items-center my-3">
-                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_leadership.png" width="28" height="42" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> LEADERSHIP WORK</span>
-                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_qwork.png" width="39" height="38" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> QUALITY WORK</span>
+                                <span class="hero_icon d-inline-flex align-items-center"><img loading="lazy" src="assets/img/icon_leadership.png" width="28" height="42" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> LEADERSHIP WORK</span>
+                                <span class="hero_icon d-inline-flex align-items-center"><img loading="lazy" src="assets/img/icon_qwork.png" width="39" height="38" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> QUALITY WORK</span>
                             </div>
                             <div class="hero_buttons d-flex align-items-center mt-4">
                                 <a href="services.html" class="hero_button" aria-label="Explore Blockchain Technology implementations">Explore Solution</a>
-                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center" aria-label="Watch video about Blockchain Technology on YouTube"><img src="assets/img/icon_video.png" width="38" height="38" class="me-2" alt="" aria-hidden="true"> Watch Video</a>
+                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center" aria-label="Watch video about Blockchain Technology on YouTube"><img loading="lazy" src="assets/img/icon_video.png" width="38" height="38" class="me-2" alt="" aria-hidden="true"> Watch Video</a>
                             </div>
                         </div>
                     </div>
@@ -85,21 +107,21 @@ index_content = f"""<!DOCTYPE html>
             <!-- Slide 3: Artificial Intelligence (banner_img_01.webp) -->
             <div class="carousel-item sld-slide sld-slide-3">
                 <picture class="hero-bg-picture">
-                    <img src="assets/img/banner_img_01.webp" alt="Artificial Intelligence" class="hero-bg-img" loading="lazy" decoding="async">
+                    <img width="1920" height="570" src="assets/img/banner_img_01.webp" alt="Artificial Intelligence" class="hero-bg-img" loading="lazy" decoding="async">
                 </picture>
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <div class="col-lg-6 col-md-7 hero_text">
                             <p class="header_two mb-1">Revolutionizing Your World with</p>
-                            <h1 class="header_thr">Artificial Intelligence</h1>
+                            <h2 class="header_thr">Artificial Intelligence</h2>
                             <p>Transforming Industries, Enhancing Human Capabilities, Automating Tasks, and Shaping the Future of Technology.</p>
                             <div class="hero_icons d-flex align-items-center my-3">
-                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_leadership.png" width="28" height="42" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> LEADERSHIP WORK</span>
-                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_qwork.png" width="39" height="38" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> QUALITY WORK</span>
+                                <span class="hero_icon d-inline-flex align-items-center"><img loading="lazy" src="assets/img/icon_leadership.png" width="28" height="42" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> LEADERSHIP WORK</span>
+                                <span class="hero_icon d-inline-flex align-items-center"><img loading="lazy" src="assets/img/icon_qwork.png" width="39" height="38" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> QUALITY WORK</span>
                             </div>
                             <div class="hero_buttons d-flex align-items-center mt-4">
-                                <a href="Artificial_Intelligence.html" class="hero_button" aria-label="Explore Artificial Intelligence services">Explore Solution</a>
-                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center" aria-label="Watch video about Artificial Intelligence on YouTube"><img src="assets/img/icon_video.png" width="38" height="38" class="me-2" alt="" aria-hidden="true"> Watch Video</a>
+                                <a href="artificial-intelligence.html" class="hero_button" aria-label="Explore Artificial Intelligence services">Explore Solution</a>
+                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center" aria-label="Watch video about Artificial Intelligence on YouTube"><img loading="lazy" src="assets/img/icon_video.png" width="38" height="38" class="me-2" alt="" aria-hidden="true"> Watch Video</a>
                             </div>
                         </div>
                     </div>
@@ -109,21 +131,21 @@ index_content = f"""<!DOCTYPE html>
             <!-- Slide 4: Smart Card Technologies (banner_img_04.webp) -->
             <div class="carousel-item sld-slide sld-slide-4">
                 <picture class="hero-bg-picture">
-                    <img src="assets/img/banner_img_04.webp" alt="Smart Card Technologies" class="hero-bg-img" loading="lazy" decoding="async">
+                    <img width="1924" height="570" src="assets/img/banner_img_04.webp" alt="Smart Card Technologies" class="hero-bg-img" loading="lazy" decoding="async">
                 </picture>
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <div class="col-lg-6 col-md-7 hero_text">
                             <p class="header_two mb-1">Secure Personal Identification with</p>
-                            <h1 class="header_thr">Smart Card Technologies</h1>
+                            <h2 class="header_thr">Smart Card Technologies</h2>
                             <p>Smart cards store data securely for identification and authentication, powering national citizen registry and ID programs.</p>
                             <div class="hero_icons d-flex align-items-center my-3">
-                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_leadership.png" width="28" height="42" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> LEADERSHIP WORK</span>
-                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_qwork.png" width="39" height="38" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> QUALITY WORK</span>
+                                <span class="hero_icon d-inline-flex align-items-center"><img loading="lazy" src="assets/img/icon_leadership.png" width="28" height="42" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> LEADERSHIP WORK</span>
+                                <span class="hero_icon d-inline-flex align-items-center"><img loading="lazy" src="assets/img/icon_qwork.png" width="39" height="38" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> QUALITY WORK</span>
                             </div>
                             <div class="hero_buttons d-flex align-items-center mt-4">
-                                <a href="Smart_Card_Technologies.html" class="hero_button" aria-label="Explore Smart Card Technologies">Explore Solution</a>
-                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center" aria-label="Watch video about Smart Card Technologies on YouTube"><img src="assets/img/icon_video.png" width="38" height="38" class="me-2" alt="" aria-hidden="true"> Watch Video</a>
+                                <a href="smart-card-technologies.html" class="hero_button" aria-label="Explore Smart Card Technologies">Explore Solution</a>
+                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center" aria-label="Watch video about Smart Card Technologies on YouTube"><img loading="lazy" src="assets/img/icon_video.png" width="38" height="38" class="me-2" alt="" aria-hidden="true"> Watch Video</a>
                             </div>
                         </div>
                     </div>
@@ -133,21 +155,21 @@ index_content = f"""<!DOCTYPE html>
             <!-- Slide 5: Software & IT Solutions (banner_img_02.webp) -->
             <div class="carousel-item sld-slide sld-slide-5">
                 <picture class="hero-bg-picture">
-                    <img src="assets/img/banner_img_02.webp" alt="Software and IT Solutions" class="hero-bg-img" loading="lazy" decoding="async">
+                    <img width="1924" height="570" src="assets/img/banner_img_02.webp" alt="Software and IT Solutions" class="hero-bg-img" loading="lazy" decoding="async">
                 </picture>
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <div class="col-lg-6 col-md-7 hero_text">
                             <p class="header_two mb-1">Leading Software &amp; IT Services</p>
-                            <h1 class="header_thr">IT Solutions</h1>
+                            <h2 class="header_thr">IT Solutions</h2>
                             <p>We are a software development company delivering splendid business IT Solutions and related services to customers home &amp; abroad.</p>
                             <div class="hero_icons d-flex align-items-center my-3">
-                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_leadership.png" width="28" height="42" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> LEADERSHIP WORK</span>
-                                <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_qwork.png" width="39" height="38" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> QUALITY WORK</span>
+                                <span class="hero_icon d-inline-flex align-items-center"><img loading="lazy" src="assets/img/icon_leadership.png" width="28" height="42" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> LEADERSHIP WORK</span>
+                                <span class="hero_icon d-inline-flex align-items-center"><img loading="lazy" src="assets/img/icon_qwork.png" width="39" height="38" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> QUALITY WORK</span>
                             </div>
                             <div class="hero_buttons d-flex align-items-center mt-4">
                                 <a href="services.html" class="hero_button" aria-label="Explore Software and IT Solutions">Explore Solution</a>
-                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center" aria-label="Watch video about Software and IT Solutions on YouTube"><img src="assets/img/icon_video.png" width="38" height="38" class="me-2" alt="" aria-hidden="true"> Watch Video</a>
+                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center" aria-label="Watch video about Software and IT Solutions on YouTube"><img loading="lazy" src="assets/img/icon_video.png" width="38" height="38" class="me-2" alt="" aria-hidden="true"> Watch Video</a>
                             </div>
                         </div>
                     </div>
@@ -212,7 +234,7 @@ index_content = f"""<!DOCTYPE html>
                         </div>
 
                         <div class="read-more-homepage">
-                            <a href="about_us.html" class="button" aria-label="Read more about Spectrum IT Solutions Ltd. and company profile">Read More About Us</a>
+                            <a href="about-us.html" class="button" aria-label="Read more about Spectrum IT Solutions Ltd. and company profile">Read More About Us</a>
                         </div>
                     </div>
                 </div>
@@ -238,7 +260,7 @@ index_content = f"""<!DOCTYPE html>
                             <p class="text-muted">High-security biometric identity management, KYC infrastructure, national family cards, and verification engines.</p>
                         </div>
                         <div class="pt-3 text-center">
-                            <a href="Digital_Identity_&_Security.html" class="button" aria-label="Explore Digital Identity and Security solutions">Explore Solutions</a>
+                            <a href="digital-identity-security.html" class="button" aria-label="Explore Digital Identity and Security solutions">Explore Solutions</a>
                         </div>
                     </div>
                 </div>
@@ -252,7 +274,7 @@ index_content = f"""<!DOCTYPE html>
                             <p class="text-muted">Turnkey contact and contactless chip card issuance, encoding, laser personalization, and reader ecosystems.</p>
                         </div>
                         <div class="pt-3 text-center">
-                            <a href="Smart_Card_Technologies.html" class="button" aria-label="Explore Smart Card Technologies">Explore Solutions</a>
+                            <a href="smart-card-technologies.html" class="button" aria-label="Explore Smart Card Technologies">Explore Solutions</a>
                         </div>
                     </div>
                 </div>
@@ -266,7 +288,7 @@ index_content = f"""<!DOCTYPE html>
                             <p class="text-muted">Machine learning models, facial recognition, computer vision, and cognitive document automation for enterprise scale.</p>
                         </div>
                         <div class="pt-3 text-center">
-                            <a href="Artificial_Intelligence.html" class="button" aria-label="Explore Artificial Intelligence services">Explore Solutions</a>
+                            <a href="artificial-intelligence.html" class="button" aria-label="Explore Artificial Intelligence services">Explore Solutions</a>
                         </div>
                     </div>
                 </div>
@@ -280,7 +302,7 @@ index_content = f"""<!DOCTYPE html>
                             <p class="text-muted">AFIS/ABIS integration, iris scanning, fingerprint identification, and multi-modal biometric authentication.</p>
                         </div>
                         <div class="pt-3 text-center">
-                            <a href="Digital_Identity_&_Security.html" class="button" aria-label="Explore Biometric Technologies">Explore Solutions</a>
+                            <a href="digital-identity-security.html" class="button" aria-label="Explore Biometric Technologies">Explore Solutions</a>
                         </div>
                     </div>
                 </div>
@@ -294,7 +316,7 @@ index_content = f"""<!DOCTYPE html>
                             <p class="text-muted">Turnstiles, flap barriers, RFID gateways, and biometric access management systems for high-security facilities.</p>
                         </div>
                         <div class="pt-3 text-center">
-                            <a href="Digital_Identity_&_Security.html" class="button" aria-label="Explore Smart Access Control systems">Explore Solutions</a>
+                            <a href="digital-identity-security.html" class="button" aria-label="Explore Smart Access Control systems">Explore Solutions</a>
                         </div>
                     </div>
                 </div>
@@ -504,8 +526,12 @@ services_content = f"""<!DOCTYPE html>
 )}
 </head>
 <body>
+    <a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
 {COMMON_TOP_BAR}
 {get_navbar('services')}
+    </header>
+
+    <main id="main-content">
 
     <!-- Page Hero Banner -->
     <div class="page-hero-banner">
@@ -544,15 +570,15 @@ services_content = f"""<!DOCTYPE html>
                 <div class="services-item_pg p-4 h-100 d-flex flex-column justify-content-between shadow-sm bg-white" style="border-radius: 12px; border: 1px solid #dee2e6;">
                     <div>
                         <div class="text-center mb-3">
-                            <img src="assets/img/icon_Digital_Identity_Security.png" alt="Digital Identity &amp; Security">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_Digital_Identity_Security.png" alt="Digital Identity &amp; Security">
                         </div>
-                        <h4 class="fw-bold mb-3" style="color: #f26522;">Digital Identity &amp; Security</h4>
+                        <h4 aria-level="2" class="fw-bold mb-3" style="color: #f26522;">Digital Identity &amp; Security</h4>
                         <p class="text-muted" style="font-size: 14px; line-height: 1.6;">
                             Comprehensive national identity verification, biometric registry, and family card platforms. Engineered with end-to-end cryptographic safeguards and multi-factor validation.
                         </p>
                     </div>
                     <div class="pt-3 text-center">
-                        <a href="Digital_Identity_&_Security.html" class="button">read more</a>
+                        <a href="digital-identity-security.html" class="button">read more</a>
                     </div>
                 </div>
             </div>
@@ -562,15 +588,15 @@ services_content = f"""<!DOCTYPE html>
                 <div class="services-item_pg p-4 h-100 d-flex flex-column justify-content-between shadow-sm bg-white" style="border-radius: 12px; border: 1px solid #dee2e6;">
                     <div>
                         <div class="text-center mb-3">
-                            <img src="assets/img/icon_Smart_Card_Technologies.png" alt="Smart Card Technologies">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_Smart_Card_Technologies.png" alt="Smart Card Technologies">
                         </div>
-                        <h4 class="fw-bold mb-3" style="color: #f26522;">Smart Card Technologies</h4>
+                        <h4 aria-level="2" class="fw-bold mb-3" style="color: #f26522;">Smart Card Technologies</h4>
                         <p class="text-muted" style="font-size: 14px; line-height: 1.6;">
                             Turnkey contact and contactless smart card issuance platforms, secure chip personalization, laser engraving, cryptographic keys, and automated self-service kiosks.
                         </p>
                     </div>
                     <div class="pt-3 text-center">
-                        <a href="Smart_Card_Technologies.html" class="button">read more</a>
+                        <a href="smart-card-technologies.html" class="button">read more</a>
                     </div>
                 </div>
             </div>
@@ -580,15 +606,15 @@ services_content = f"""<!DOCTYPE html>
                 <div class="services-item_pg p-4 h-100 d-flex flex-column justify-content-between shadow-sm bg-white" style="border-radius: 12px; border: 1px solid #dee2e6;">
                     <div>
                         <div class="text-center mb-3">
-                            <img src="assets/img/icon_Artificial_Intelligence.png" alt="Artificial Intelligence">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_Artificial_Intelligence.png" alt="Artificial Intelligence">
                         </div>
-                        <h4 class="fw-bold mb-3" style="color: #f26522;">Artificial Intelligence</h4>
+                        <h4 aria-level="2" class="fw-bold mb-3" style="color: #f26522;">Artificial Intelligence</h4>
                         <p class="text-muted" style="font-size: 14px; line-height: 1.6;">
                             Computer vision, facial recognition, automated cognitive document parsing, predictive models, and machine learning architectures custom-trained for sovereign requirements.
                         </p>
                     </div>
                     <div class="pt-3 text-center">
-                        <a href="Artificial_Intelligence.html" class="button">read more</a>
+                        <a href="artificial-intelligence.html" class="button">read more</a>
                     </div>
                 </div>
             </div>
@@ -598,15 +624,15 @@ services_content = f"""<!DOCTYPE html>
                 <div class="services-item_pg p-4 h-100 d-flex flex-column justify-content-between shadow-sm bg-white" style="border-radius: 12px; border: 1px solid #dee2e6;">
                     <div>
                         <div class="text-center mb-3">
-                            <img src="assets/img/icon_Biometric_Technologiest.png" alt="Biometric Technologies">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_Biometric_Technologiest.png" alt="Biometric Technologies">
                         </div>
-                        <h4 class="fw-bold mb-3" style="color: #f26522;">Biometric Technologies</h4>
+                        <h4 aria-level="2" class="fw-bold mb-3" style="color: #f26522;">Biometric Technologies</h4>
                         <p class="text-muted" style="font-size: 14px; line-height: 1.6;">
                             Automated Fingerprint &amp; Iris Identification Systems (AFIS/ABIS), multi-modal biometric sensors, and high-throughput real-time identity deduplication matching engines.
                         </p>
                     </div>
                     <div class="pt-3 text-center">
-                        <a href="Digital_Identity_&_Security.html" class="button">read more</a>
+                        <a href="digital-identity-security.html" class="button">read more</a>
                     </div>
                 </div>
             </div>
@@ -616,15 +642,15 @@ services_content = f"""<!DOCTYPE html>
                 <div class="services-item_pg p-4 h-100 d-flex flex-column justify-content-between shadow-sm bg-white" style="border-radius: 12px; border: 1px solid #dee2e6;">
                     <div>
                         <div class="text-center mb-3">
-                            <img src="assets/img/icon_Smart_Access_Control.png" alt="Smart Access Control">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_Smart_Access_Control.png" alt="Smart Access Control">
                         </div>
-                        <h4 class="fw-bold mb-3" style="color: #f26522;">Smart Access Control</h4>
+                        <h4 aria-level="2" class="fw-bold mb-3" style="color: #f26522;">Smart Access Control</h4>
                         <p class="text-muted" style="font-size: 14px; line-height: 1.6;">
                             High-security entry management integrating optical flap barriers, full-height turnstiles, UHF RFID, and biometric readers for ministries and enterprise headquarters.
                         </p>
                     </div>
                     <div class="pt-3 text-center">
-                        <a href="Digital_Identity_&_Security.html" class="button">read more</a>
+                        <a href="digital-identity-security.html" class="button">read more</a>
                     </div>
                 </div>
             </div>
@@ -634,15 +660,15 @@ services_content = f"""<!DOCTYPE html>
                 <div class="services-item_pg p-4 h-100 d-flex flex-column justify-content-between shadow-sm bg-white" style="border-radius: 12px; border: 1px solid #dee2e6;">
                     <div>
                         <div class="text-center mb-3">
-                            <img src="assets/img/icon_Cyber_Security.png" alt="Cyber Security">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_Cyber_Security.png" alt="Cyber Security">
                         </div>
-                        <h4 class="fw-bold mb-3" style="color: #f26522;">Cyber Security</h4>
+                        <h4 aria-level="2" class="fw-bold mb-3" style="color: #f26522;">Cyber Security</h4>
                         <p class="text-muted" style="font-size: 14px; line-height: 1.6;">
                             Vulnerability assessment, penetration testing, security operations, ISO 27001 advisory, and cryptographic defense protecting mission-critical government networks.
                         </p>
                     </div>
                     <div class="pt-3 text-center">
-                        <a href="Digital_Identity_&_Security.html" class="button">read more</a>
+                        <a href="digital-identity-security.html" class="button">read more</a>
                     </div>
                 </div>
             </div>
@@ -652,9 +678,9 @@ services_content = f"""<!DOCTYPE html>
                 <div class="services-item_pg p-4 h-100 d-flex flex-column justify-content-between shadow-sm bg-white" style="border-radius: 12px; border: 1px solid #dee2e6;">
                     <div>
                         <div class="text-center mb-3">
-                            <img src="assets/img/icon_ERP.png" alt="Enterprise Resource Planning">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_ERP.png" alt="Enterprise Resource Planning">
                         </div>
-                        <h4 class="fw-bold mb-3" style="color: #f26522;">ERP Solutions</h4>
+                        <h4 aria-level="2" class="fw-bold mb-3" style="color: #f26522;">ERP Solutions</h4>
                         <p class="text-muted" style="font-size: 14px; line-height: 1.6;">
                             Comprehensive enterprise resource planning covering financials, procurement, human resources, inventory, and cross-departmental digitized operational workflows.
                         </p>
@@ -670,9 +696,9 @@ services_content = f"""<!DOCTYPE html>
                 <div class="services-item_pg p-4 h-100 d-flex flex-column justify-content-between shadow-sm bg-white" style="border-radius: 12px; border: 1px solid #dee2e6;">
                     <div>
                         <div class="text-center mb-3">
-                            <img src="assets/img/icon_Smart_City_Solutions.png" alt="Smart City Solutions">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_Smart_City_Solutions.png" alt="Smart City Solutions">
                         </div>
-                        <h4 class="fw-bold mb-3" style="color: #f26522;">Smart City Solutions</h4>
+                        <h4 aria-level="2" class="fw-bold mb-3" style="color: #f26522;">Smart City Solutions</h4>
                         <p class="text-muted" style="font-size: 14px; line-height: 1.6;">
                             Intelligent municipal traffic surveillance, sensor networks, centralized control rooms, automated toll collection, and citizen utility integration portals.
                         </p>
@@ -688,15 +714,15 @@ services_content = f"""<!DOCTYPE html>
                 <div class="services-item_pg p-4 h-100 d-flex flex-column justify-content-between shadow-sm bg-white" style="border-radius: 12px; border: 1px solid #dee2e6;">
                     <div>
                         <div class="text-center mb-3">
-                            <img src="assets/img/icon_Time_Attendance.png" alt="Time Attendance Systems">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_Time_Attendance.png" alt="Time Attendance Systems">
                         </div>
-                        <h4 class="fw-bold mb-3" style="color: #f26522;">Time Attendance Systems</h4>
+                        <h4 aria-level="2" class="fw-bold mb-3" style="color: #f26522;">Time Attendance Systems</h4>
                         <p class="text-muted" style="font-size: 14px; line-height: 1.6;">
                             Cloud-synchronized employee attendance monitoring, roster management, shift tracking, and automated payroll software integration with biometric hardware.
                         </p>
                     </div>
                     <div class="pt-3 text-center">
-                        <a href="Smart_Card_Technologies.html" class="button">read more</a>
+                        <a href="smart-card-technologies.html" class="button">read more</a>
                     </div>
                 </div>
             </div>
@@ -706,15 +732,15 @@ services_content = f"""<!DOCTYPE html>
                 <div class="services-item_pg p-4 h-100 d-flex flex-column justify-content-between shadow-sm bg-white" style="border-radius: 12px; border: 1px solid #dee2e6;">
                     <div>
                         <div class="text-center mb-3">
-                            <img src="assets/img/icon_Kiosk.png" alt="Kiosk Solutions">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_Kiosk.png" alt="Kiosk Solutions">
                         </div>
-                        <h4 class="fw-bold mb-3" style="color: #f26522;">Self-Service Kiosks</h4>
+                        <h4 aria-level="2" class="fw-bold mb-3" style="color: #f26522;">Self-Service Kiosks</h4>
                         <p class="text-muted" style="font-size: 14px; line-height: 1.6;">
                             Rugged interactive kiosks for automated bill payment, digital certificate printing, queue management, and sovereign public service delivery.
                         </p>
                     </div>
                     <div class="pt-3 text-center">
-                        <a href="Smart_Card_Technologies.html" class="button">read more</a>
+                        <a href="smart-card-technologies.html" class="button">read more</a>
                     </div>
                 </div>
             </div>
@@ -724,15 +750,15 @@ services_content = f"""<!DOCTYPE html>
                 <div class="services-item_pg p-4 h-100 d-flex flex-column justify-content-between shadow-sm bg-white" style="border-radius: 12px; border: 1px solid #dee2e6;">
                     <div>
                         <div class="text-center mb-3">
-                            <img src="assets/img/icon_Tracking.png" alt="Asset &amp; Vehicle Tracking">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_Tracking.png" alt="Asset &amp; Vehicle Tracking">
                         </div>
-                        <h4 class="fw-bold mb-3" style="color: #f26522;">Tracking Solutions</h4>
+                        <h4 aria-level="2" class="fw-bold mb-3" style="color: #f26522;">Tracking Solutions</h4>
                         <p class="text-muted" style="font-size: 14px; line-height: 1.6;">
                             Real-time GPS vehicle tracking, geofencing, fuel monitoring, refrigerated supply chain telematics, and heavy equipment management.
                         </p>
                     </div>
                     <div class="pt-3 text-center">
-                        <a href="Smart_Card_Technologies.html" class="button">read more</a>
+                        <a href="smart-card-technologies.html" class="button">read more</a>
                     </div>
                 </div>
             </div>
@@ -742,15 +768,15 @@ services_content = f"""<!DOCTYPE html>
                 <div class="services-item_pg p-4 h-100 d-flex flex-column justify-content-between shadow-sm bg-white" style="border-radius: 12px; border: 1px solid #dee2e6;">
                     <div>
                         <div class="text-center mb-3">
-                            <img src="assets/img/icon_Business_Security_System.png" alt="Business Security System">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_Business_Security_System.png" alt="Business Security System">
                         </div>
-                        <h4 class="fw-bold mb-3" style="color: #f26522;">Business Security System</h4>
+                        <h4 aria-level="2" class="fw-bold mb-3" style="color: #f26522;">Business Security System</h4>
                         <p class="text-muted" style="font-size: 14px; line-height: 1.6;">
                             Integrated IP video surveillance, CCTV telemetry, alarm automation, server room environmental monitoring, and perimeter defense systems.
                         </p>
                     </div>
                     <div class="pt-3 text-center">
-                        <a href="Digital_Identity_&_Security.html" class="button">read more</a>
+                        <a href="digital-identity-security.html" class="button">read more</a>
                     </div>
                 </div>
             </div>
@@ -776,14 +802,15 @@ services_content = f"""<!DOCTYPE html>
         </div>
     </div>
 
+    </main>
+
 {COMMON_FOOTER}
 </body>
 </html>"""
 
 with open(os.path.join(DIR, 'services.html'), 'w', encoding='utf-8') as f:
     f.write(services_content)
-with open(os.path.join(DIR, 'Services.html'), 'w', encoding='utf-8') as f:
-    f.write(services_content)
+write_redirects('services.html', 'Services.html')
 print("services.html & Services.html updated.")
 
 
@@ -799,8 +826,12 @@ projects_content = f"""<!DOCTYPE html>
 )}
 </head>
 <body>
+    <a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
 {COMMON_TOP_BAR}
 {get_navbar('projects')}
+    </header>
+
+    <main id="main-content">
 
     <!-- Page Hero Banner -->
     <div class="page-hero-banner">
@@ -864,13 +895,13 @@ projects_content = f"""<!DOCTYPE html>
                 <div class="project-card-modern" style="border: 2px solid #f26522;">
                     <div>
                         <div class="project-icon-wrap">
-                            <img src="assets/img/icon_Digital_Identity_Security.png" alt="TCB Smart Family Card">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_Digital_Identity_Security.png" alt="TCB Smart Family Card">
                         </div>
                         <div class="text-center">
                             <span class="project-badge-pill">Digital Identity &amp; Safety Net</span>
                             <span class="project-client-name"><i class="fas fa-building me-1"></i> Trading Corporation of Bangladesh (TCB)</span>
                         </div>
-                        <h4 class="text-center">TCB Smart Family Card</h4>
+                        <h4 aria-level="3" class="text-center">TCB Smart Family Card</h4>
                         <p class="text-center">Nationwide digital beneficiary platform issuing biometric smart family cards to 10+ million households, eliminating ghost claimants and streamlining subsidized food distribution.</p>
                         <div class="project-tech-tags">
                             <span>Digital Identity</span>
@@ -891,13 +922,13 @@ projects_content = f"""<!DOCTYPE html>
                 <div class="project-card-modern">
                     <div>
                         <div class="project-icon-wrap">
-                            <img src="assets/img/icon_ERP.png" alt="Industrial e-Court System">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_ERP.png" alt="Industrial e-Court System">
                         </div>
                         <div class="text-center">
                             <span class="project-badge-pill">Judicial Automation</span>
                             <span class="project-client-name"><i class="fas fa-building me-1"></i> Judiciary &amp; Ministry of Law</span>
                         </div>
-                        <h4 class="text-center">Industrial e-Court BD</h4>
+                        <h4 aria-level="3" class="text-center">Industrial e-Court BD</h4>
                         <p class="text-center">Pioneering digital judicial workflow platform for Bangladesh Labour Courts, automating case filing, daily cause list publishing, digital summonses, and real-time case tracking.</p>
                         <div class="project-tech-tags">
                             <span>Workflow Automation</span>
@@ -918,13 +949,13 @@ projects_content = f"""<!DOCTYPE html>
                 <div class="project-card-modern">
                     <div>
                         <div class="project-icon-wrap">
-                            <img src="assets/img/icon_Smart_Card_Technologies.png" alt="Smart Card Issuance">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_Smart_Card_Technologies.png" alt="Smart Card Issuance">
                         </div>
                         <div class="text-center">
                             <span class="project-badge-pill">Smart Card Architecture</span>
                             <span class="project-client-name"><i class="fas fa-building me-1"></i> National Transport Authorities</span>
                         </div>
-                        <h4 class="text-center">Smart Card &amp; License Issuance</h4>
+                        <h4 aria-level="3" class="text-center">Smart Card &amp; License Issuance</h4>
                         <p class="text-center">High-throughput dual-interface ISO 7816/14443 contactless smart card personalization architecture featuring laser engraving, cryptographic verification, and kiosk printing.</p>
                         <div class="project-tech-tags">
                             <span>ISO 7816 / 14443</span>
@@ -935,7 +966,7 @@ projects_content = f"""<!DOCTYPE html>
                     </div>
                     <div class="pt-3 d-flex justify-content-center align-items-center gap-2 flex-wrap">
                         <a href="case-study.html#smartcard" class="button">Read Case Study</a>
-                        <a href="sct.html" class="project-btn-portal"><i class="fas fa-microchip me-1 text-warning"></i> Card Tech</a>
+                        <a href="smart-card-technologies.html" class="project-btn-portal"><i class="fas fa-microchip me-1 text-warning"></i> Card Tech</a>
                     </div>
                 </div>
             </div>
@@ -945,13 +976,13 @@ projects_content = f"""<!DOCTYPE html>
                 <div class="project-card-modern">
                     <div>
                         <div class="project-icon-wrap">
-                            <img src="assets/img/icon_eSign_Solutions.png" alt="National e-Licensing">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_eSign_Solutions.png" alt="National e-Licensing">
                         </div>
                         <div class="text-center">
                             <span class="project-badge-pill">Regulatory Single-Window</span>
                             <span class="project-client-name"><i class="fas fa-building me-1"></i> Government Regulatory Agencies</span>
                         </div>
-                        <h4 class="text-center">National e-Licensing Portal</h4>
+                        <h4 aria-level="3" class="text-center">National e-Licensing Portal</h4>
                         <p class="text-center">Single-window regulatory portal for license issuance, renewals, digital fee payment processing, and automated verification across multiple state departments.</p>
                         <div class="project-tech-tags">
                             <span>Single-Window</span>
@@ -972,13 +1003,13 @@ projects_content = f"""<!DOCTYPE html>
                 <div class="project-card-modern">
                     <div>
                         <div class="project-icon-wrap">
-                            <img src="assets/img/icon_Cyber_Security.png" alt="OCD Portal">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_Cyber_Security.png" alt="OCD Portal">
                         </div>
                         <div class="text-center">
                             <span class="project-badge-pill">Certificate Security</span>
                             <span class="project-client-name"><i class="fas fa-building me-1"></i> Chief Controller of Imports &amp; Exports</span>
                         </div>
-                        <h4 class="text-center">OCD Verification Portal</h4>
+                        <h4 aria-level="3" class="text-center">OCD Verification Portal</h4>
                         <p class="text-center">Instant online certificate verification and authentic document management infrastructure with QR verification, PKI digital signatures, and anti-fraud encryption.</p>
                         <div class="project-tech-tags">
                             <span>QR Code Auth</span>
@@ -999,13 +1030,13 @@ projects_content = f"""<!DOCTYPE html>
                 <div class="project-card-modern">
                     <div>
                         <div class="project-icon-wrap">
-                            <img src="assets/img/icon_Smart_Access_Control.png" alt="Novo Theatre Ticketing">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_Smart_Access_Control.png" alt="Novo Theatre Ticketing">
                         </div>
                         <div class="text-center">
                             <span class="project-badge-pill">Smart Access &amp; Ticketing</span>
                             <span class="project-client-name"><i class="fas fa-building me-1"></i> BSM Novo Theatre</span>
                         </div>
-                        <h4 class="text-center">Novo Theatre e-Ticketing</h4>
+                        <h4 aria-level="3" class="text-center">Novo Theatre e-Ticketing</h4>
                         <p class="text-center">Turnkey online booking, ticket reservation, and automated turnstile barcode access system for Bangabandhu Sheikh Mujibur Rahman Novo Theatre.</p>
                         <div class="project-tech-tags">
                             <span>Online Reservation</span>
@@ -1035,7 +1066,7 @@ projects_content = f"""<!DOCTYPE html>
             <div class="row g-4 justify-content-center">
                 <div class="col-lg-3 col-sm-6 text-center">
                     <div class="counter-stat-card text-center">
-                        <img src="assets/img/icon_1.png" alt="Beneficiaries Verified">
+                        <img loading="lazy" width="46" height="46" src="assets/img/icon_1.png" alt="Beneficiaries Verified">
                         <div class="text-center w-100">
                             <h3 class="text-center">10M+</h3>
                             <span class="text-center">Citizens Verified</span>
@@ -1044,7 +1075,7 @@ projects_content = f"""<!DOCTYPE html>
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center">
                     <div class="counter-stat-card text-center">
-                        <img src="assets/img/icon_2.png" alt="Districts Covered">
+                        <img loading="lazy" width="42" height="48" src="assets/img/icon_2.png" alt="Districts Covered">
                         <div class="text-center w-100">
                             <h3 class="text-center">64</h3>
                             <span class="text-center">Districts Covered</span>
@@ -1053,7 +1084,7 @@ projects_content = f"""<!DOCTYPE html>
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center">
                     <div class="counter-stat-card text-center">
-                        <img src="assets/img/icon_3.png" alt="Platform Uptime">
+                        <img loading="lazy" width="47" height="47" src="assets/img/icon_3.png" alt="Platform Uptime">
                         <div class="text-center w-100">
                             <h3 class="text-center">99.98%</h3>
                             <span class="text-center">System Uptime SLA</span>
@@ -1062,7 +1093,7 @@ projects_content = f"""<!DOCTYPE html>
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center">
                     <div class="counter-stat-card text-center">
-                        <img src="assets/img/icon_4.png" alt="Zero Counterfeit">
+                        <img loading="lazy" width="48" height="42" src="assets/img/icon_4.png" alt="Zero Counterfeit">
                         <div class="text-center w-100">
                             <h3 class="text-center">100%</h3>
                             <span class="text-center">Sovereign Security</span>
@@ -1092,14 +1123,15 @@ projects_content = f"""<!DOCTYPE html>
         </div>
     </div>
 
+    </main>
+
 {COMMON_FOOTER}
 </body>
 </html>"""
 
 with open(os.path.join(DIR, 'projects.html'), 'w', encoding='utf-8') as f:
     f.write(projects_content)
-with open(os.path.join(DIR, 'Projects.html'), 'w', encoding='utf-8') as f:
-    f.write(projects_content)
+write_redirects('projects.html', 'Projects.html')
 print("projects.html & Projects.html updated.")
 
 # 4. GENERATE CASE-STUDY.HTML
@@ -1114,8 +1146,12 @@ case_study_content = f"""<!DOCTYPE html>
 )}
 </head>
 <body>
+    <a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
 {COMMON_TOP_BAR}
 {get_navbar('case-study')}
+    </header>
+
+    <main id="main-content">
 
     <!-- Page Hero Banner -->
     <div class="page-hero-banner">
@@ -1159,7 +1195,7 @@ case_study_content = f"""<!DOCTYPE html>
             <div class="row g-0 align-items-center">
                 <div class="col-lg-5">
                     <div class="case-study-img-wrap">
-                        <img src="assets/img/project_1.png" alt="TCB Smart Family Card Case Study" class="img-fluid">
+                        <img loading="lazy" width="600" height="535" src="assets/img/project_1.png" alt="TCB Smart Family Card Case Study" class="img-fluid">
                         <div class="text-center mt-3">
                             <span class="badge rounded-pill px-3 py-1 text-white fw-semibold" style="background: #1e7e34; font-size: 12px;"><i class="fas fa-check-circle me-1"></i> 10M+ Households Enrolled</span>
                         </div>
@@ -1212,7 +1248,7 @@ case_study_content = f"""<!DOCTYPE html>
             <div class="row g-0 align-items-center">
                 <div class="col-lg-5">
                     <div class="case-study-img-wrap">
-                        <img src="assets/img/project_2.png" alt="Industrial e-Court Bangladesh" class="img-fluid">
+                        <img loading="lazy" width="299" height="256" src="assets/img/project_2.png" alt="Industrial e-Court Bangladesh" class="img-fluid">
                         <div class="text-center mt-3">
                             <span class="badge rounded-pill px-3 py-1 text-white fw-semibold" style="background: #2e3760; font-size: 12px;"><i class="fas fa-gavel me-1"></i> Paperless Judicial Workflow</span>
                         </div>
@@ -1265,7 +1301,7 @@ case_study_content = f"""<!DOCTYPE html>
             <div class="row g-0 align-items-center">
                 <div class="col-lg-5">
                     <div class="case-study-img-wrap">
-                        <img src="assets/img/project_3.png" alt="Smart Card Issuance Architecture" class="img-fluid">
+                        <img loading="lazy" width="305" height="261" src="assets/img/project_3.png" alt="Smart Card Issuance Architecture" class="img-fluid">
                         <div class="text-center mt-3">
                             <span class="badge rounded-pill px-3 py-1 text-dark fw-semibold" style="background: #ffc107; font-size: 12px;"><i class="fas fa-microchip me-1"></i> ISO 7816 / 14443 Type A/B</span>
                         </div>
@@ -1305,7 +1341,7 @@ case_study_content = f"""<!DOCTYPE html>
                         </div>
 
                         <div class="pt-3 text-center d-flex justify-content-center align-items-center gap-3 flex-wrap">
-                            <a href="Smart_Card_Technologies.html" class="button">Explore Smart Card Tech</a>
+                            <a href="smart-card-technologies.html" class="button">Explore Smart Card Tech</a>
                             <a href="contact.html" class="project-btn-portal"><i class="fas fa-paper-plane me-1 text-warning"></i> Inquire About Architecture</a>
                         </div>
                     </div>
@@ -1318,7 +1354,7 @@ case_study_content = f"""<!DOCTYPE html>
             <div class="row g-0 align-items-center">
                 <div class="col-lg-5">
                     <div class="case-study-img-wrap">
-                        <img src="assets/img/project_4.png" alt="National e-Licensing" class="img-fluid">
+                        <img loading="lazy" width="309" height="266" src="assets/img/project_4.png" alt="National e-Licensing" class="img-fluid">
                         <div class="text-center mt-3">
                             <span class="badge rounded-pill px-3 py-1 text-white fw-semibold" style="background: #0284c7; font-size: 12px;"><i class="fas fa-stamp me-1"></i> Single-Window Regulatory Portal</span>
                         </div>
@@ -1379,7 +1415,7 @@ case_study_content = f"""<!DOCTYPE html>
             <div class="row g-4 justify-content-center">
                 <div class="col-lg-3 col-sm-6 text-center">
                     <div class="counter-stat-card text-center">
-                        <img src="assets/img/icon_ERP.png" alt="High Concurrency">
+                        <img loading="lazy" width="101" height="101" src="assets/img/icon_ERP.png" alt="High Concurrency">
                         <div class="text-center w-100">
                             <h3 class="text-center" style="font-size: 22px;">High Concurrency</h3>
                             <span class="text-center">Elastic microservices tested for 50,000+ requests/sec</span>
@@ -1388,7 +1424,7 @@ case_study_content = f"""<!DOCTYPE html>
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center">
                     <div class="counter-stat-card text-center">
-                        <img src="assets/img/icon_Digital_Identity_Security.png" alt="Biometrics">
+                        <img loading="lazy" width="101" height="101" src="assets/img/icon_Digital_Identity_Security.png" alt="Biometrics">
                         <div class="text-center w-100">
                             <h3 class="text-center" style="font-size: 22px;">Multi-Biometrics</h3>
                             <span class="text-center">NID, fingerprint, face &amp; iris deduplication</span>
@@ -1397,7 +1433,7 @@ case_study_content = f"""<!DOCTYPE html>
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center">
                     <div class="counter-stat-card text-center">
-                        <img src="assets/img/icon_Cyber_Security.png" alt="PKI Cryptography">
+                        <img loading="lazy" width="101" height="101" src="assets/img/icon_Cyber_Security.png" alt="PKI Cryptography">
                         <div class="text-center w-100">
                             <h3 class="text-center" style="font-size: 22px;">PKI Cryptography</h3>
                             <span class="text-center">HSM key management &amp; anti-tamper verification</span>
@@ -1406,7 +1442,7 @@ case_study_content = f"""<!DOCTYPE html>
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center">
                     <div class="counter-stat-card text-center">
-                        <img src="assets/img/icon_Business_Security_System.png" alt="SLA Maintenance">
+                        <img loading="lazy" width="101" height="101" src="assets/img/icon_Business_Security_System.png" alt="SLA Maintenance">
                         <div class="text-center w-100">
                             <h3 class="text-center" style="font-size: 22px;">24/7 SLA Support</h3>
                             <span class="text-center">Nationwide field support across all 64 districts</span>
@@ -1436,14 +1472,15 @@ case_study_content = f"""<!DOCTYPE html>
         </div>
     </div>
 
+    </main>
+
 {COMMON_FOOTER}
 </body>
 </html>"""
 
 with open(os.path.join(DIR, 'case-study.html'), 'w', encoding='utf-8') as f:
     f.write(case_study_content)
-with open(os.path.join(DIR, 'Case-study.html'), 'w', encoding='utf-8') as f:
-    f.write(case_study_content)
+write_redirects('case-study.html', 'Case-study.html')
 print("case-study.html & Case-study.html updated.")
 
 # 5. GENERATE DIGITAL IDENTITY & SECURITY PAGE (FULL SLUG & PADDED CTA)
@@ -1453,13 +1490,17 @@ dis_content = f"""<!DOCTYPE html>
 {get_head(
     title="Digital Identity & Security Solutions | Automated ID Verification | Spectrum",
     description="Spectrum's automated ID verification reads Bangla and English NID cards, spots forged IDs, confirms a live person and matches face or fingerprint in seconds. Data stays in Bangladesh.",
-    canonical_slug="Digital_Identity_&_Security.html",
+    canonical_slug="digital-identity-security.html",
     og_image="assets/img/digital-identity/hero-biometric-verify.jpg"
 )}
 </head>
 <body>
+    <a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
 {COMMON_TOP_BAR}
 {get_navbar('services')}
+    </header>
+
+    <main id="main-content">
 
     <!-- Page Hero Banner -->
     <div class="page-hero-banner">
@@ -1553,7 +1594,7 @@ dis_content = f"""<!DOCTYPE html>
                 <div class="dis-hero-card position-relative">
                     <picture>
                         <source srcset="assets/img/digital-identity/hero-biometric-verify.webp" type="image/webp">
-                        <img src="assets/img/digital-identity/hero-biometric-verify.jpg" alt="Customer in a Dhaka bank branch verifies her face on a phone, with a SPECIMEN national ID card on the desk" class="img-fluid w-100" style="object-fit: cover; max-height: 440px;" loading="eager">
+                        <img width="1376" height="768" src="assets/img/digital-identity/hero-biometric-verify.jpg" alt="Customer in a Dhaka bank branch verifies her face on a phone, with a SPECIMEN national ID card on the desk" class="img-fluid w-100" style="object-fit: cover; max-height: 440px;" loading="eager">
                     </picture>
                     <div class="dis-hud-badge">
                         <div class="d-flex align-items-center">
@@ -1585,7 +1626,7 @@ dis_content = f"""<!DOCTYPE html>
                         <div class="d-inline-flex align-items-center justify-content-center rounded-3 mb-3 p-3" style="background: rgba(2, 132, 199, 0.1); color: #0284c7;">
                             <i class="fas fa-user-shield fa-2x"></i>
                         </div>
-                        <h5 class="fw-bold" style="color: #2e3760;">Is This a Real Person?</h5>
+                        <h5 aria-level="4" class="fw-bold" style="color: #2e3760;">Is This a Real Person?</h5>
                         <p class="text-muted small mb-0" style="line-height: 1.7;">
                             Stops fake profiles, stolen identities and people pretending to be someone else, before any account is opened or payment is made.
                         </p>
@@ -1597,7 +1638,7 @@ dis_content = f"""<!DOCTYPE html>
                         <div class="d-inline-flex align-items-center justify-content-center rounded-3 mb-3 p-3" style="background: rgba(16, 185, 129, 0.1); color: #10b981;">
                             <i class="fas fa-id-card-alt fa-2x"></i>
                         </div>
-                        <h5 class="fw-bold" style="color: #2e3760;">Is the ID Genuine?</h5>
+                        <h5 aria-level="4" class="fw-bold" style="color: #2e3760;">Is the ID Genuine?</h5>
                         <p class="text-muted small mb-0" style="line-height: 1.7;">
                             Reads and checks the Smart NID, older NID cards, e-Passports and driving licences automatically. No staff member has to type anything.
                         </p>
@@ -1609,7 +1650,7 @@ dis_content = f"""<!DOCTYPE html>
                         <div class="d-inline-flex align-items-center justify-content-center rounded-3 mb-3 p-3" style="background: rgba(242, 101, 34, 0.1); color: #f26522;">
                             <i class="fas fa-microscope fa-2x"></i>
                         </div>
-                        <h5 class="fw-bold" style="color: #2e3760;">Has the Card Been Changed?</h5>
+                        <h5 aria-level="4" class="fw-bold" style="color: #2e3760;">Has the Card Been Changed?</h5>
                         <p class="text-muted small mb-0" style="line-height: 1.7;">
                             Spots swapped photos, edited text, copied holograms and colour printouts made to look like real cards.
                         </p>
@@ -1665,7 +1706,7 @@ dis_content = f"""<!DOCTYPE html>
                     <div class="col-lg-6 order-1 order-lg-2 text-center">
                         <picture>
                             <source srcset="assets/img/digital-identity/step1-document-scan.webp" type="image/webp">
-                            <img src="assets/img/digital-identity/step1-document-scan.jpg" alt="SPECIMEN national ID card on a bank counter next to a phone showing Card scanned in 0.1 s" class="img-fluid rounded-3 shadow-sm" style="max-height: 340px; width: 100%; object-fit: cover;" loading="lazy">
+                            <img width="1200" height="896" src="assets/img/digital-identity/step1-document-scan.jpg" alt="SPECIMEN national ID card on a bank counter next to a phone showing Card scanned in 0.1 s" class="img-fluid rounded-3 shadow-sm" style="max-height: 340px; width: 100%; object-fit: cover;" loading="lazy">
                         </picture>
                     </div>
                 </div>
@@ -1677,7 +1718,7 @@ dis_content = f"""<!DOCTYPE html>
                     <div class="col-lg-6 text-center">
                         <picture>
                             <source srcset="assets/img/digital-identity/step2-forensic-card-analysis.webp" type="image/webp">
-                            <img src="assets/img/digital-identity/step2-forensic-card-analysis.jpg" alt="SPECIMEN national ID card under a magnifier lamp, with a checklist for microprint, hologram and chip data" class="img-fluid rounded-3 shadow-sm" style="max-height: 340px; width: 100%; object-fit: cover;" loading="lazy">
+                            <img width="1200" height="896" src="assets/img/digital-identity/step2-forensic-card-analysis.jpg" alt="SPECIMEN national ID card under a magnifier lamp, with a checklist for microprint, hologram and chip data" class="img-fluid rounded-3 shadow-sm" style="max-height: 340px; width: 100%; object-fit: cover;" loading="lazy">
                         </picture>
                     </div>
                     <div class="col-lg-6">
@@ -1692,21 +1733,21 @@ dis_content = f"""<!DOCTYPE html>
                         <div class="d-flex mb-3">
                             <div class="me-3 text-warning"><i class="fas fa-layer-group fa-lg"></i></div>
                             <div>
-                                <h6 class="fw-bold mb-1" style="color: #2e3760;">Fine Print and Line Patterns</h6>
+                                <h6 aria-level="4" class="fw-bold mb-1" style="color: #2e3760;">Fine Print and Line Patterns</h6>
                                 <p class="text-muted small mb-0">Real cards carry tiny text and fine lines that blur when a card is copied or reprinted.</p>
                             </div>
                         </div>
                         <div class="d-flex mb-3">
                             <div class="me-3 text-warning"><i class="fas fa-gem fa-lg"></i></div>
                             <div>
-                                <h6 class="fw-bold mb-1" style="color: #2e3760;">Hologram</h6>
+                                <h6 aria-level="4" class="fw-bold mb-1" style="color: #2e3760;">Hologram</h6>
                                 <p class="text-muted small mb-0">A real hologram changes colour as the light moves. A flat print does not.</p>
                             </div>
                         </div>
                         <div class="d-flex">
                             <div class="me-3 text-warning"><i class="fas fa-microchip fa-lg"></i></div>
                             <div>
-                                <h6 class="fw-bold mb-1" style="color: #2e3760;">Chip and Barcode</h6>
+                                <h6 aria-level="4" class="fw-bold mb-1" style="color: #2e3760;">Chip and Barcode</h6>
                                 <p class="text-muted small mb-0">The data stored in the chip and barcode must match the printed details exactly.</p>
                             </div>
                         </div>
@@ -1727,7 +1768,7 @@ dis_content = f"""<!DOCTYPE html>
                             The customer looks at the camera for a moment. They do not need to blink, smile or turn their head. The system checks that the face has real depth, then matches it with the photo on the card.
                         </p>
                         <div class="p-3 rounded mb-3" style="background: #f8fafc; border-left: 4px solid #10b981;">
-                            <h6 class="fw-bold text-success mb-1"><i class="fas fa-shield-alt me-1"></i> Blocks Common Tricks</h6>
+                            <h6 aria-level="4" class="fw-bold text-success mb-1"><i class="fas fa-shield-alt me-1"></i> Blocks Common Tricks</h6>
                             <p class="small text-muted mb-0">Printed photos, videos played on a phone or tablet, masks and AI-generated deepfakes.</p>
                         </div>
                         <div class="d-flex flex-wrap align-items-center gap-2 pt-2">
@@ -1745,7 +1786,7 @@ dis_content = f"""<!DOCTYPE html>
                     <div class="col-lg-6 order-1 order-lg-2 text-center">
                         <picture>
                             <source srcset="assets/img/digital-identity/step3-biometric-liveness-antispoof.webp" type="image/webp">
-                            <img src="assets/img/digital-identity/step3-biometric-liveness-antispoof.jpg" alt="A live person passes the face check, while a printed photo held to the camera is blocked as a spoof" class="img-fluid rounded-3 shadow-sm" style="max-height: 340px; width: 100%; object-fit: cover;" loading="lazy">
+                            <img width="1200" height="896" src="assets/img/digital-identity/step3-biometric-liveness-antispoof.jpg" alt="A live person passes the face check, while a printed photo held to the camera is blocked as a spoof" class="img-fluid rounded-3 shadow-sm" style="max-height: 340px; width: 100%; object-fit: cover;" loading="lazy">
                         </picture>
                     </div>
                 </div>
@@ -1767,25 +1808,25 @@ dis_content = f"""<!DOCTYPE html>
                 <div class="text-center">
                     <picture>
                         <source srcset="assets/img/digital-identity/architecture-ecosystem.webp" type="image/webp">
-                        <img src="assets/img/digital-identity/architecture-ecosystem.jpg" alt="How the ID verification system works: capture devices send encrypted data to the verification engine, which keeps keys and audit logs in a secure vault inside Bangladesh" class="img-fluid rounded-3" style="max-height: 520px; width: 100%; object-fit: contain;" loading="lazy">
+                        <img width="1376" height="768" src="assets/img/digital-identity/architecture-ecosystem.jpg" alt="How the ID verification system works: capture devices send encrypted data to the verification engine, which keeps keys and audit logs in a secure vault inside Bangladesh" class="img-fluid rounded-3" style="max-height: 520px; width: 100%; object-fit: contain;" loading="lazy">
                     </picture>
                 </div>
                 <div class="row g-3 pt-4 text-light">
                     <div class="col-md-4">
                         <div class="p-3 rounded" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
-                            <h6 class="fw-bold text-info mb-1"><i class="fas fa-mobile-alt me-2"></i> 1. Capture</h6>
+                            <h6 aria-level="3" class="fw-bold text-info mb-1"><i class="fas fa-mobile-alt me-2"></i> 1. Capture</h6>
                             <p class="small text-white-50 mb-0">Phones, tablets, POS terminals, fingerprint scanners and kiosks collect the card image, face and fingerprints.</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="p-3 rounded" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
-                            <h6 class="fw-bold text-warning mb-1"><i class="fas fa-brain me-2"></i> 2. Verification Engine</h6>
+                            <h6 aria-level="3" class="fw-bold text-warning mb-1"><i class="fas fa-brain me-2"></i> 2. Verification Engine</h6>
                             <p class="small text-white-50 mb-0">Runs on your own servers or a local data centre. It reads cards, checks for forgery, tests liveness and matches faces and fingerprints.</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="p-3 rounded" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
-                            <h6 class="fw-bold text-success mb-1"><i class="fas fa-database me-2"></i> 3. Secure Vault</h6>
+                            <h6 aria-level="3" class="fw-bold text-success mb-1"><i class="fas fa-database me-2"></i> 3. Secure Vault</h6>
                             <p class="small text-white-50 mb-0">Keeps encryption keys in a hardware security module (HSM) and records every check in an audit log that cannot be altered.</p>
                         </div>
                     </div>
@@ -1807,7 +1848,7 @@ dis_content = f"""<!DOCTYPE html>
                 <div class="col-md-6 col-lg-3">
                     <div class="dis-feature-box">
                         <div class="mb-3 text-danger"><i class="fas fa-ban fa-2x"></i></div>
-                        <h6 class="fw-bold" style="color: #2e3760;">Catch Fake IDs</h6>
+                        <h6 aria-level="3" class="fw-bold" style="color: #2e3760;">Catch Fake IDs</h6>
                         <p class="text-muted small mb-0">Forged, edited and borrowed cards are flagged before an account is opened.</p>
                     </div>
                 </div>
@@ -1815,7 +1856,7 @@ dis_content = f"""<!DOCTYPE html>
                 <div class="col-md-6 col-lg-3">
                     <div class="dis-feature-box">
                         <div class="mb-3 text-primary"><i class="fas fa-file-contract fa-2x"></i></div>
-                        <h6 class="fw-bold" style="color: #2e3760;">Meet KYC Rules</h6>
+                        <h6 aria-level="3" class="fw-bold" style="color: #2e3760;">Meet KYC Rules</h6>
                         <p class="text-muted small mb-0">Supports Bangladesh Bank e-KYC guidelines and AML checks, with records ready for audit.</p>
                     </div>
                 </div>
@@ -1823,7 +1864,7 @@ dis_content = f"""<!DOCTYPE html>
                 <div class="col-md-6 col-lg-3">
                     <div class="dis-feature-box">
                         <div class="mb-3 text-success"><i class="fas fa-user-plus fa-2x"></i></div>
-                        <h6 class="fw-bold" style="color: #2e3760;">Faster Sign-Up</h6>
+                        <h6 aria-level="3" class="fw-bold" style="color: #2e3760;">Faster Sign-Up</h6>
                         <p class="text-muted small mb-0">Customers finish verification in seconds, so fewer give up halfway.</p>
                     </div>
                 </div>
@@ -1831,7 +1872,7 @@ dis_content = f"""<!DOCTYPE html>
                 <div class="col-md-6 col-lg-3">
                     <div class="dis-feature-box">
                         <div class="mb-3 text-warning"><i class="fas fa-bullseye fa-2x"></i></div>
-                        <h6 class="fw-bold" style="color: #2e3760;">Reads Bangla Properly</h6>
+                        <h6 aria-level="3" class="fw-bold" style="color: #2e3760;">Reads Bangla Properly</h6>
                         <p class="text-muted small mb-0">Built for Bangla script, including joined letters and worn, older cards.</p>
                     </div>
                 </div>
@@ -1839,7 +1880,7 @@ dis_content = f"""<!DOCTYPE html>
                 <div class="col-md-6 col-lg-3">
                     <div class="dis-feature-box">
                         <div class="mb-3 text-info"><i class="fas fa-cubes fa-2x"></i></div>
-                        <h6 class="fw-bold" style="color: #2e3760;">Works on Any Channel</h6>
+                        <h6 aria-level="3" class="fw-bold" style="color: #2e3760;">Works on Any Channel</h6>
                         <p class="text-muted small mb-0">Android and iOS SDKs, Flutter, React Native, web camera, REST API and SMS links.</p>
                     </div>
                 </div>
@@ -1847,7 +1888,7 @@ dis_content = f"""<!DOCTYPE html>
                 <div class="col-md-6 col-lg-3">
                     <div class="dis-feature-box">
                         <div class="mb-3 text-secondary"><i class="fas fa-cogs fa-2x"></i></div>
-                        <h6 class="fw-bold" style="color: #2e3760;">Less Paperwork</h6>
+                        <h6 aria-level="3" class="fw-bold" style="color: #2e3760;">Less Paperwork</h6>
                         <p class="text-muted small mb-0">Staff no longer type card details or file photocopies.</p>
                     </div>
                 </div>
@@ -1855,7 +1896,7 @@ dis_content = f"""<!DOCTYPE html>
                 <div class="col-md-6 col-lg-3">
                     <div class="dis-feature-box">
                         <div class="mb-3 text-dark"><i class="fas fa-shield-virus fa-2x"></i></div>
-                        <h6 class="fw-bold" style="color: #2e3760;">Stops Spoofing</h6>
+                        <h6 aria-level="3" class="fw-bold" style="color: #2e3760;">Stops Spoofing</h6>
                         <p class="text-muted small mb-0">Photos, screen replays, masks and deepfakes are blocked at the camera.</p>
                     </div>
                 </div>
@@ -1863,7 +1904,7 @@ dis_content = f"""<!DOCTYPE html>
                 <div class="col-md-6 col-lg-3">
                     <div class="dis-feature-box">
                         <div class="mb-3 text-success"><i class="fas fa-file-invoice fa-2x"></i></div>
-                        <h6 class="fw-bold" style="color: #2e3760;">Full Audit Trail</h6>
+                        <h6 aria-level="3" class="fw-bold" style="color: #2e3760;">Full Audit Trail</h6>
                         <p class="text-muted small mb-0">Every check is logged and sealed, so the record cannot be changed later.</p>
                     </div>
                 </div>
@@ -1896,7 +1937,7 @@ dis_content = f"""<!DOCTYPE html>
                             <div class="p-3 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="background: rgba(16, 185, 129, 0.1); width: 80px; height: 80px;">
                                 <i class="fas fa-hands-helping fa-3x text-success"></i>
                             </div>
-                            <h4 class="fw-bold mb-1" style="color: #2e3760;">10,000,000+</h4>
+                            <h4 aria-level="3" class="fw-bold mb-1" style="color: #2e3760;">10,000,000+</h4>
                             <p class="text-muted fw-semibold small mb-2">Families Enrolled</p>
                             <span class="badge bg-success-subtle text-success border border-success-subtle px-3 py-1 rounded-pill" style="font-size: 11px;">One Card per Family</span>
                         </div>
@@ -1920,7 +1961,7 @@ dis_content = f"""<!DOCTYPE html>
                     <div class="dis-industry-card">
                         <div class="d-flex align-items-center mb-3">
                             <div class="me-3 text-primary"><i class="fas fa-university fa-2x"></i></div>
-                            <h5 class="fw-bold mb-0" style="color: #2e3760;">Banks &amp; Mobile Financial Services</h5>
+                            <h5 aria-level="3" class="fw-bold mb-0" style="color: #2e3760;">Banks &amp; Mobile Financial Services</h5>
                         </div>
                         <p class="text-muted small mb-0" style="line-height: 1.7;">
                             Open accounts, issue cards and approve loans with e-KYC, in a branch or on the customer's own phone.
@@ -1932,7 +1973,7 @@ dis_content = f"""<!DOCTYPE html>
                     <div class="dis-industry-card">
                         <div class="d-flex align-items-center mb-3">
                             <div class="me-3 text-info"><i class="fas fa-broadcast-tower fa-2x"></i></div>
-                            <h5 class="fw-bold mb-0" style="color: #2e3760;">Telecom</h5>
+                            <h5 aria-level="3" class="fw-bold mb-0" style="color: #2e3760;">Telecom</h5>
                         </div>
                         <p class="text-muted small mb-0" style="line-height: 1.7;">
                             Register SIM cards and eSIMs with a fingerprint check at the retail counter, in seconds.
@@ -1944,7 +1985,7 @@ dis_content = f"""<!DOCTYPE html>
                     <div class="dis-industry-card">
                         <div class="d-flex align-items-center mb-3">
                             <div class="me-3 text-success"><i class="fas fa-landmark fa-2x"></i></div>
-                            <h5 class="fw-bold mb-0" style="color: #2e3760;">Government</h5>
+                            <h5 aria-level="3" class="fw-bold mb-0" style="color: #2e3760;">Government</h5>
                         </div>
                         <p class="text-muted small mb-0" style="line-height: 1.7;">
                             Civil service records, voter lists, civil registration and secure access to government buildings.
@@ -1956,7 +1997,7 @@ dis_content = f"""<!DOCTYPE html>
                     <div class="dis-industry-card">
                         <div class="d-flex align-items-center mb-3">
                             <div class="me-3 text-danger"><i class="fas fa-shield-alt fa-2x"></i></div>
-                            <h5 class="fw-bold mb-0" style="color: #2e3760;">Police &amp; Border Control</h5>
+                            <h5 aria-level="3" class="fw-bold mb-0" style="color: #2e3760;">Police &amp; Border Control</h5>
                         </div>
                         <p class="text-muted small mb-0" style="line-height: 1.7;">
                             Fingerprint and face search (AFIS/ABIS), watch-list alerts and identity checks at border points.
@@ -1968,7 +2009,7 @@ dis_content = f"""<!DOCTYPE html>
                     <div class="dis-industry-card">
                         <div class="d-flex align-items-center mb-3">
                             <div class="me-3 text-warning"><i class="fas fa-hospital-user fa-2x"></i></div>
-                            <h5 class="fw-bold mb-0" style="color: #2e3760;">Healthcare &amp; Education</h5>
+                            <h5 aria-level="3" class="fw-bold mb-0" style="color: #2e3760;">Healthcare &amp; Education</h5>
                         </div>
                         <p class="text-muted small mb-0" style="line-height: 1.7;">
                             One record per patient, faster insurance claim checks, and verified candidates at national exams.
@@ -1980,7 +2021,7 @@ dis_content = f"""<!DOCTYPE html>
                     <div class="dis-industry-card">
                         <div class="d-flex align-items-center mb-3">
                             <div class="me-3 text-secondary"><i class="fas fa-hand-holding-heart fa-2x"></i></div>
-                            <h5 class="fw-bold mb-0" style="color: #2e3760;">NGOs &amp; Social Safety Nets</h5>
+                            <h5 aria-level="3" class="fw-bold mb-0" style="color: #2e3760;">NGOs &amp; Social Safety Nets</h5>
                         </div>
                         <p class="text-muted small mb-0" style="line-height: 1.7;">
                             Food aid, relief payments and other benefits reach each person once, with a clear record of who received what.
@@ -2010,17 +2051,19 @@ dis_content = f"""<!DOCTYPE html>
         </div>
     </div>
 
+    </main>
+
 {COMMON_FOOTER}
 </body>
 </html>"""
 
-with open(os.path.join(DIR, 'Digital_Identity_&_Security.html'), 'w', encoding='utf-8') as f:
+with open(os.path.join(DIR, 'digital-identity-security.html'), 'w', encoding='utf-8') as f:
     f.write(dis_content)
-with open(os.path.join(DIR, 'Digital_Identity_ & Security.html'), 'w', encoding='utf-8') as f:
-    f.write(dis_content)
-with open(os.path.join(DIR, 'dis.html'), 'w', encoding='utf-8') as f:
-    f.write(dis_content)
-print("Digital_Identity_&_Security.html & aliases updated.")
+write_redirects('digital-identity-security.html', 'Digital_Identity_&_Security.html')
+write_redirects('digital-identity-security.html', 'Digital_Identity_ & Security.html')
+write_redirects('digital-identity-security.html', 'dis.html')
+write_redirects('digital-identity-security.html', 'Digital_Identity_ &_Security.html')
+print("digital-identity-security.html & aliases updated.")
 
 # 6. GENERATE CONTACT.HTML (MODERNIZED EXECUTIVE DESIGN)
 contact_content = f"""<!DOCTYPE html>
@@ -2034,8 +2077,12 @@ contact_content = f"""<!DOCTYPE html>
 )}
 </head>
 <body>
+    <a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
 {COMMON_TOP_BAR}
 {get_navbar('contact')}
+    </header>
+
+    <main id="main-content">
 
     <!-- Page Hero Banner -->
     <div class="page-hero-banner">
@@ -2074,7 +2121,7 @@ contact_content = f"""<!DOCTYPE html>
                     <div class="icon-box" style="background: rgba(46, 55, 96, 0.08); color: #2e3760;">
                         <i class="fas fa-briefcase"></i>
                     </div>
-                    <h5 class="fw-bold mb-2" style="color: #2e3760;">Enterprise Inquiries</h5>
+                    <h5 aria-level="2" class="fw-bold mb-2" style="color: #2e3760;">Enterprise Inquiries</h5>
                     <p class="text-muted small mb-3">Sovereign identity, civil registries, smart card systems, and government tender / RFP inquiries.</p>
                     <a href="mailto:contact@spectrum.com.bd" class="text-decoration-none fw-bold" style="color: #f26522; font-size: 14px;">
                         contact@spectrum.com.bd <i class="fas fa-arrow-right ms-1 small"></i>
@@ -2086,7 +2133,7 @@ contact_content = f"""<!DOCTYPE html>
                     <div class="icon-box" style="background: rgba(242, 101, 34, 0.1); color: #f26522;">
                         <i class="fas fa-headset"></i>
                     </div>
-                    <h5 class="fw-bold mb-2" style="color: #2e3760;">Direct Support Desk</h5>
+                    <h5 aria-level="2" class="fw-bold mb-2" style="color: #2e3760;">Direct Support Desk</h5>
                     <p class="text-muted small mb-3">Dedicated SLA technical assistance, operational maintenance, and deployed system support.</p>
                     <a href="tel:+8801615900004" class="text-decoration-none fw-bold" style="color: #f26522; font-size: 14px;">
                         +880 1615 900 004 <i class="fas fa-arrow-right ms-1 small"></i>
@@ -2098,7 +2145,7 @@ contact_content = f"""<!DOCTYPE html>
                     <div class="icon-box" style="background: rgba(30, 126, 52, 0.1); color: #1e7e34;">
                         <i class="fas fa-handshake"></i>
                     </div>
-                    <h5 class="fw-bold mb-2" style="color: #2e3760;">Strategic Alliances</h5>
+                    <h5 aria-level="2" class="fw-bold mb-2" style="color: #2e3760;">Strategic Alliances</h5>
                     <p class="text-muted small mb-3">OEM hardware integrations, technological consortiums, and joint digital transformation programs.</p>
                     <a href="#contact-form-section" class="text-decoration-none fw-bold" style="color: #1e7e34; font-size: 14px;">
                         Partner With Us <i class="fas fa-arrow-right ms-1 small"></i>
@@ -2123,11 +2170,11 @@ contact_content = f"""<!DOCTYPE html>
                 <div class="contact-info-block h-100 d-flex flex-column justify-content-between">
                     <div>
                         <div class="overflow-hidden rounded-3 mb-4 shadow-sm text-center bg-light">
-                            <picture><source srcset="assets/img/contact_img.webp" type="image/webp"><img src="assets/img/contact_img.png" alt="Spectrum IT Solutions Headquarters Dhaka" loading="lazy" class="img-fluid w-100" style="height: auto; display: block; object-fit: contain;"></picture>
+                            <picture><source srcset="assets/img/contact_img.webp" type="image/webp"><img width="605" height="586" src="assets/img/contact_img.png" alt="Spectrum IT Solutions Headquarters Dhaka" loading="lazy" class="img-fluid w-100" style="height: auto; display: block; object-fit: contain;"></picture>
                         </div>
                         
                         <div class="d-flex align-items-center justify-content-between mb-3">
-                            <h4 class="fw-bold mb-0" style="color: #2e3760; font-size: 20px;">Corporate Headquarters</h4>
+                            <h4 aria-level="3" class="fw-bold mb-0" style="color: #2e3760; font-size: 20px;">Corporate Headquarters</h4>
                             <span class="badge bg-success-subtle text-success border border-success-subtle px-2 py-1 rounded-pill small">
                                 <i class="fas fa-check-circle me-1"></i> Verified
                             </span>
@@ -2139,7 +2186,7 @@ contact_content = f"""<!DOCTYPE html>
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div class="contact-channel-info">
-                                <h6>Registered Office Address</h6>
+                                <h6 aria-level="4">Registered Office Address</h6>
                                 <p>52/1, New Eskaton Road (Hasan Holdings Ltd., 12th Floor), Dhaka-1000, Bangladesh</p>
                             </div>
                         </div>
@@ -2149,7 +2196,7 @@ contact_content = f"""<!DOCTYPE html>
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div class="contact-channel-info">
-                                <h6>Official Communications</h6>
+                                <h6 aria-level="4">Official Communications</h6>
                                 <a href="mailto:contact@spectrum.com.bd">contact@spectrum.com.bd</a>
                             </div>
                         </div>
@@ -2159,7 +2206,7 @@ contact_content = f"""<!DOCTYPE html>
                                 <i class="fas fa-phone-alt"></i>
                             </div>
                             <div class="contact-channel-info">
-                                <h6>Voice &amp; WhatsApp Hotline</h6>
+                                <h6 aria-level="4">Voice &amp; WhatsApp Hotline</h6>
                                 <a href="tel:+8801615900004">+880 1615-900004</a>
                             </div>
                         </div>
@@ -2169,7 +2216,7 @@ contact_content = f"""<!DOCTYPE html>
                                 <i class="fas fa-clock"></i>
                             </div>
                             <div class="contact-channel-info">
-                                <h6>Operational Hours</h6>
+                                <h6 aria-level="4">Operational Hours</h6>
                                 <p>Sunday &ndash; Thursday: 9:00 AM &ndash; 6:00 PM (BST / UTC+6)</p>
                             </div>
                         </div>
@@ -2196,7 +2243,7 @@ contact_content = f"""<!DOCTYPE html>
                         <div class="d-flex align-items-center">
                             <i class="fas fa-check-circle fs-3 me-3 text-success"></i>
                             <div>
-                                <h6 class="alert-heading fw-bold mb-1">Message Submitted Successfully!</h6>
+                                <h6 aria-level="4" class="alert-heading fw-bold mb-1">Message Submitted Successfully!</h6>
                                 <p class="mb-0 small">Thank you for getting in touch with Spectrum IT Solutions. An enterprise solution architect will respond within 24 business hours.</p>
                             </div>
                         </div>
@@ -2207,7 +2254,7 @@ contact_content = f"""<!DOCTYPE html>
                         <div class="d-flex align-items-center">
                             <i class="fas fa-exclamation-circle fs-3 me-3 text-danger"></i>
                             <div>
-                                <h6 class="alert-heading fw-bold mb-1">Message Not Sent</h6>
+                                <h6 aria-level="4" class="alert-heading fw-bold mb-1">Message Not Sent</h6>
                                 <p class="mb-0 small">Something went wrong. Please try again, or email us at <a href="mailto:contact@spectrum.com.bd">contact@spectrum.com.bd</a>.</p>
                             </div>
                         </div>
@@ -2283,7 +2330,7 @@ contact_content = f"""<!DOCTYPE html>
                     <div class="icon-wrap" style="background: rgba(13, 110, 253, 0.1); color: #0d6efd;">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h5 class="fw-bold mb-1" style="color: #2e3760; font-size: 17px;">ISO 9001:2015</h5>
+                    <h5 aria-level="4" class="fw-bold mb-1" style="color: #2e3760; font-size: 17px;">ISO 9001:2015</h5>
                     <p class="text-muted small mb-0">Quality Management Systems Certified for Sovereign IT Infrastructure</p>
                 </div>
             </div>
@@ -2292,7 +2339,7 @@ contact_content = f"""<!DOCTYPE html>
                     <div class="icon-wrap" style="background: rgba(25, 135, 84, 0.1); color: #198754;">
                         <i class="fas fa-lock"></i>
                     </div>
-                    <h5 class="fw-bold mb-1" style="color: #2e3760; font-size: 17px;">ISO 27001:2013</h5>
+                    <h5 aria-level="4" class="fw-bold mb-1" style="color: #2e3760; font-size: 17px;">ISO 27001:2013</h5>
                     <p class="text-muted small mb-0">Information Security Management &amp; Cryptographic Data Protection</p>
                 </div>
             </div>
@@ -2301,7 +2348,7 @@ contact_content = f"""<!DOCTYPE html>
                     <div class="icon-wrap" style="background: rgba(242, 101, 34, 0.1); color: #f26522;">
                         <i class="fas fa-award"></i>
                     </div>
-                    <h5 class="fw-bold mb-1" style="color: #2e3760; font-size: 17px;">BASIS Member</h5>
+                    <h5 aria-level="4" class="fw-bold mb-1" style="color: #2e3760; font-size: 17px;">BASIS Member</h5>
                     <p class="text-muted small mb-0">Bangladesh Association of Software &amp; Information Services (Member #21-04-024)</p>
                 </div>
             </div>
@@ -2310,7 +2357,7 @@ contact_content = f"""<!DOCTYPE html>
                     <div class="icon-wrap" style="background: rgba(13, 202, 240, 0.15); color: #0891b2;">
                         <i class="fas fa-network-wired"></i>
                     </div>
-                    <h5 class="fw-bold mb-1" style="color: #2e3760; font-size: 17px;">BCS Member</h5>
+                    <h5 aria-level="4" class="fw-bold mb-1" style="color: #2e3760; font-size: 17px;">BCS Member</h5>
                     <p class="text-muted small mb-0">Bangladesh Computer Samity National ICT Industry Association</p>
                 </div>
             </div>
@@ -2382,14 +2429,15 @@ contact_content = f"""<!DOCTYPE html>
     }});
     </script>
 
+    </main>
+
 {COMMON_FOOTER}
 </body>
 </html>"""
 
 with open(os.path.join(DIR, 'contact.html'), 'w', encoding='utf-8') as f:
     f.write(contact_content)
-with open(os.path.join(DIR, 'Contact.html'), 'w', encoding='utf-8') as f:
-    f.write(contact_content)
+write_redirects('contact.html', 'Contact.html')
 print("contact.html & Contact.html updated.")
 
 # 7. GENERATE ARTIFICIAL INTELLIGENCE PAGE (FULL SLUG & PADDED CTA)
@@ -2399,13 +2447,17 @@ ai_content = f"""<!DOCTYPE html>
 {get_head(
     title="Artificial Intelligence Solutions | Spectrum IT Solutions",
     description="Artificial Intelligence and machine learning engineering by Spectrum IT Solutions: computer vision, automated document parsing, and enterprise cognitive systems.",
-    canonical_slug="Artificial_Intelligence.html",
+    canonical_slug="artificial-intelligence.html",
     og_image="assets/img/Artificial_Intelligence.png"
 )}
 </head>
 <body>
+    <a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
 {COMMON_TOP_BAR}
 {get_navbar('services')}
+    </header>
+
+    <main id="main-content">
 
     <!-- Page Hero Banner -->
     <div class="page-hero-banner">
@@ -2464,7 +2516,7 @@ ai_content = f"""<!DOCTYPE html>
                 </div>
             </div>
             <div class="col-lg-6 text-center">
-                <img src="assets/img/Artificial_Intelligence_2.jpg" alt="Artificial Intelligence Bangladesh" class="img-fluid rounded shadow-sm" style="max-height: 400px;">
+                <img loading="lazy" width="1024" height="1024" src="assets/img/Artificial_Intelligence_2.jpg" alt="Artificial Intelligence Bangladesh" class="img-fluid rounded shadow-sm" style="max-height: 400px; width: auto;">
             </div>
         </div>
 
@@ -2473,21 +2525,21 @@ ai_content = f"""<!DOCTYPE html>
             <div class="col-md-4 mb-4">
                 <div class="card h-100 p-4 border-0 shadow-sm" style="border-radius: 12px; border: 1px solid #e2e8f0 !important;">
                     <div class="mb-3 text-info"><i class="fas fa-video fa-2x"></i></div>
-                    <h5 class="fw-bold" style="color: #2e3760;">Computer Vision &amp; CCTV</h5>
+                    <h5 aria-level="3" class="fw-bold" style="color: #2e3760;">Computer Vision &amp; CCTV</h5>
                     <p class="text-muted small">Edge video telemetry for crowd analysis, perimeter boundary breach detection, and automated vehicle license plate recognition (ANPR).</p>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card h-100 p-4 border-0 shadow-sm" style="border-radius: 12px; border: 1px solid #e2e8f0 !important;">
                     <div class="mb-3 text-success"><i class="fas fa-file-invoice fa-2x"></i></div>
-                    <h5 class="fw-bold" style="color: #2e3760;">Automated Document OCR</h5>
+                    <h5 aria-level="3" class="fw-bold" style="color: #2e3760;">Automated Document OCR</h5>
                     <p class="text-muted small">Intelligent character recognition for Bengali and English scripts, extracting structured metadata from citizen applications and court records.</p>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card h-100 p-4 border-0 shadow-sm" style="border-radius: 12px; border: 1px solid #e2e8f0 !important;">
                     <div class="mb-3 text-warning"><i class="fas fa-chart-line fa-2x"></i></div>
-                    <h5 class="fw-bold" style="color: #2e3760;">Anomaly Detection Engines</h5>
+                    <h5 aria-level="3" class="fw-bold" style="color: #2e3760;">Anomaly Detection Engines</h5>
                     <p class="text-muted small">Real-time fraud detection, duplicate subsidy claim auditing, and statistical risk modeling across nationwide registries.</p>
                 </div>
             </div>
@@ -2513,15 +2565,17 @@ ai_content = f"""<!DOCTYPE html>
         </div>
     </div>
 
+    </main>
+
 {COMMON_FOOTER}
 </body>
 </html>"""
 
-with open(os.path.join(DIR, 'Artificial_Intelligence.html'), 'w', encoding='utf-8') as f:
+with open(os.path.join(DIR, 'artificial-intelligence.html'), 'w', encoding='utf-8') as f:
     f.write(ai_content)
-with open(os.path.join(DIR, 'ai.html'), 'w', encoding='utf-8') as f:
-    f.write(ai_content)
-print("Artificial_Intelligence.html & ai.html updated.")
+write_redirects('artificial-intelligence.html', 'Artificial_Intelligence.html')
+write_redirects('artificial-intelligence.html', 'ai.html')
+print("artificial-intelligence.html & ai.html updated.")
 
 # 8. GENERATE ABOUT_US.HTML (FULL CHAIRMAN SPEECH ON TOP, MISSION/VISION, PRESERVED ALL DETAILS)
 about_content = f"""<!DOCTYPE html>
@@ -2530,13 +2584,17 @@ about_content = f"""<!DOCTYPE html>
 {get_head(
     title="About Spectrum IT Solutions Ltd., Dhaka | Executive Leadership &amp; History",
     description="Discover Spectrum IT Solutions Ltd. - Over 12+ years delivering sovereign digital transformation, biometric identity, and mission-critical software engineering. Meet our Chairman Kabir Ahmed Bhuiyan.",
-    canonical_slug="about_us.html",
+    canonical_slug="about-us.html",
     og_image="assets/img/chairman_Sir.png"
 )}
 </head>
 <body>
+    <a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
 {COMMON_TOP_BAR}
 {get_navbar('about')}
+    </header>
+
+    <main id="main-content">
 
     <!-- Page Hero Banner -->
     <div class="page-hero-banner">
@@ -2572,7 +2630,7 @@ about_content = f"""<!DOCTYPE html>
         <div class="text-center mb-5">
             <span class="badge px-3 py-2 rounded-pill fw-semibold mb-2" style="background: rgba(242, 101, 34, 0.1); color: #f26522; border: 1px solid rgba(242, 101, 34, 0.25); font-size: 13px;">Corporate Leadership</span>
             <h2 class="header_two" style="color: #2e3760; font-size: 38px; font-weight: 700;">Meet Our <span style="color: #f26522;">Chairman</span></h2>
-            <h4 class="fw-bold text-dark mt-1" style="font-size: 26px;">Kabir Ahmed Bhuiyan</h4>
+            <h4 aria-level="3" class="fw-bold text-dark mt-1" style="font-size: 26px;">Kabir Ahmed Bhuiyan</h4>
             <p class="text-muted mx-auto" style="max-width: 650px;">Visionary Leader in Technology, Humanity, and Global Development</p>
         </div>
 
@@ -2580,7 +2638,7 @@ about_content = f"""<!DOCTYPE html>
             <!-- Left: Profile & Credentials -->
             <div class="col-lg-4 col-md-5 mb-4 mb-lg-0">
                 <div class="chairman-profile-card text-center">
-                    <picture><source srcset="assets/img/chairman_Sir.webp" type="image/webp"><img src="assets/img/chairman_Sir.png" alt="Kabir Ahmed Bhuiyan, Chairman" loading="lazy" class="img-fluid mb-3"></picture>
+                    <picture><source srcset="assets/img/chairman_Sir.webp" type="image/webp"><img width="447" height="451" src="assets/img/chairman_Sir.png" alt="Kabir Ahmed Bhuiyan, Chairman" loading="lazy" class="img-fluid mb-3"></picture>
                     <h4 class="fw-bold mb-1" style="color: #2e3760;">Kabir Ahmed Bhuiyan</h4>
                     <p class="text-muted small mb-2">Chairman, Spectrum IT Solutions Ltd.</p>
                     <span class="chairman-badge"><i class="fas fa-globe-americas me-1"></i> International Envoy of Humanity</span>
@@ -2681,7 +2739,7 @@ about_content = f"""<!DOCTYPE html>
                             <div class="mission-icon-wrap me-3">
                                 <picture>
                                     <source srcset="assets/img/mission.webp" type="image/webp">
-                                    <img src="assets/img/mission.png" alt="Our Mission">
+                                    <img loading="lazy" width="240" height="250" src="assets/img/mission.png" alt="Our Mission">
                                 </picture>
                             </div>
                             <h3 class="mb-0">Our Mission</h3>
@@ -2699,7 +2757,7 @@ about_content = f"""<!DOCTYPE html>
                             <div class="mission-icon-wrap me-3">
                                 <picture>
                                     <source srcset="assets/img/vission.webp" type="image/webp">
-                                    <img src="assets/img/vission.png" alt="Our Vision">
+                                    <img loading="lazy" width="240" height="250" src="assets/img/vission.png" alt="Our Vision">
                                 </picture>
                             </div>
                             <h3 class="mb-0">Our Vision</h3>
@@ -2719,12 +2777,12 @@ about_content = f"""<!DOCTYPE html>
         <!-- About Us Detail -->
         <div class="row align-items-center mb-5 pb-5 border-bottom">
             <div class="col-lg-6 mb-4 mb-lg-0 text-center">
-                <img src="assets/img/about_us_3.png" alt="Spectrum Technology Expertise" class="img-fluid rounded-3 shadow-sm" style="max-height: 420px;">
+                <img loading="lazy" width="594" height="563" src="assets/img/about_us_3.png" alt="Spectrum Technology Expertise" class="img-fluid rounded-3 shadow-sm" style="max-height: 420px; width: auto;">
             </div>
             <div class="col-lg-6">
                 <span class="badge px-3 py-2 rounded-pill fw-semibold mb-2" style="background: rgba(30, 126, 52, 0.1); color: #1e7e34; border: 1px solid rgba(30, 126, 52, 0.25); font-size: 13px;">Corporate Overview</span>
                 <h2 class="header_two" style="color: #2e3760; font-size: 34px; font-weight: 700;">About Us</h2>
-                <h5 class="fw-bold mb-3" style="color: #f26522;">Highly Tailored Technology, Development &amp; Support Services</h5>
+                <h5 aria-level="3" class="fw-bold mb-3" style="color: #f26522;">Highly Tailored Technology, Development &amp; Support Services</h5>
                 <p class="text-muted" style="line-height: 1.8; font-size: 15px;">
                     We are a software development company delivering splendid business IT Solutions and related services to customers at home &amp; abroad. Our development services are led by our dedicated and passionate team to provide the best industry practices combined with technology expertise and business knowledge to drive the digital transformation. Founded in 2012 on a solid foundation of honest family values, we have built lasting relationships that have kept us on the cutting edge of innovation ever since.
                 </p>
@@ -2737,12 +2795,12 @@ about_content = f"""<!DOCTYPE html>
         <!-- What We Do Detail -->
         <div class="row align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0 order-lg-last text-center">
-                <picture><source srcset="assets/img/about_us_office.webp" type="image/webp"><img src="assets/img/about_us_office.png" alt="Spectrum Engineering Headquarters" loading="lazy" class="img-fluid rounded-3 shadow-sm" style="max-height: 400px;"></picture>
+                <picture><source srcset="assets/img/about_us_office.webp" type="image/webp"><img width="605" height="586" src="assets/img/about_us_office.png" alt="Spectrum Engineering Headquarters" loading="lazy" class="img-fluid rounded-3 shadow-sm" style="max-height: 400px; width: auto;"></picture>
             </div>
             <div class="col-lg-6">
                 <span class="badge px-3 py-2 rounded-pill fw-semibold mb-2" style="background: rgba(242, 101, 34, 0.1); color: #f26522; border: 1px solid rgba(242, 101, 34, 0.25); font-size: 13px;">Operational Capabilities</span>
                 <h2 class="header_two" style="color: #2e3760; font-size: 34px; font-weight: 700;">What We Do</h2>
-                <h5 class="fw-bold mb-3" style="color: #f26522;">Building Value Through Collaboration, Insight &amp; Expertise</h5>
+                <h5 aria-level="3" class="fw-bold mb-3" style="color: #f26522;">Building Value Through Collaboration, Insight &amp; Expertise</h5>
                 <p class="text-muted" style="line-height: 1.8; font-size: 15px;">
                     <strong>Spectrum IT Solutions Limited</strong> is a leading technology firm based in Dhaka, Bangladesh, dedicated to delivering innovative and secure IT solutions across government, non-government, and private sectors. With a strong focus on national development and digital transformation, Spectrum specializes in developing scalable software applications, biometric authentication systems, and smart card-based platforms. Their expertise spans web and mobile app development, ERP systems, IoT integration, secure database management, cloud-based infrastructure, and custom e-Governance platforms.
                 </p>
@@ -2759,7 +2817,7 @@ about_content = f"""<!DOCTYPE html>
             <div class="row g-4 justify-content-center">
                 <div class="col-lg-3 col-sm-6 text-center">
                     <div class="counter-stat-card text-center">
-                        <img src="assets/img/icon_1.png" alt="Projects Completed">
+                        <img loading="lazy" width="46" height="46" src="assets/img/icon_1.png" alt="Projects Completed">
                         <div class="text-center w-100">
                             <h3 class="text-center">118</h3>
                             <span class="text-center">Projects Completed</span>
@@ -2768,7 +2826,7 @@ about_content = f"""<!DOCTYPE html>
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center">
                     <div class="counter-stat-card text-center">
-                        <img src="assets/img/icon_2.png" alt="Happy Clients">
+                        <img loading="lazy" width="42" height="48" src="assets/img/icon_2.png" alt="Happy Clients">
                         <div class="text-center w-100">
                             <h3 class="text-center">115</h3>
                             <span class="text-center">Happy Clients</span>
@@ -2777,7 +2835,7 @@ about_content = f"""<!DOCTYPE html>
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center">
                     <div class="counter-stat-card text-center">
-                        <img src="assets/img/icon_3.png" alt="Business Partners">
+                        <img loading="lazy" width="47" height="47" src="assets/img/icon_3.png" alt="Business Partners">
                         <div class="text-center w-100">
                             <h3 class="text-center">23</h3>
                             <span class="text-center">Business Partners</span>
@@ -2786,7 +2844,7 @@ about_content = f"""<!DOCTYPE html>
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center">
                     <div class="counter-stat-card text-center">
-                        <img src="assets/img/icon_4.png" alt="IT Consultants">
+                        <img loading="lazy" width="48" height="42" src="assets/img/icon_4.png" alt="IT Consultants">
                         <div class="text-center w-100">
                             <h3 class="text-center">21</h3>
                             <span class="text-center">IT Consultants</span>
@@ -2804,32 +2862,32 @@ about_content = f"""<!DOCTYPE html>
         <div class="row g-4 justify-content-center pt-2">
             <div class="col-lg-4 col-md-4 col-6">
                 <div class="client-logo-card">
-                    <img src="assets/img/vlc_01.jpg" alt="Valuable Client 1">
+                    <img loading="lazy" width="192" height="136" src="assets/img/vlc_01.jpg" alt="Valuable Client 1">
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-6">
                 <div class="client-logo-card">
-                    <img src="assets/img/vlc_02.jpg" alt="Valuable Client 2">
+                    <img loading="lazy" width="192" height="136" src="assets/img/vlc_02.jpg" alt="Valuable Client 2">
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-6">
                 <div class="client-logo-card">
-                    <img src="assets/img/vlc_03.jpg" alt="Valuable Client 3">
+                    <img loading="lazy" width="192" height="136" src="assets/img/vlc_03.jpg" alt="Valuable Client 3">
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-6">
                 <div class="client-logo-card">
-                    <img src="assets/img/vlc_04.jpg" alt="Valuable Client 4">
+                    <img loading="lazy" width="192" height="136" src="assets/img/vlc_04.jpg" alt="Valuable Client 4">
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-6">
                 <div class="client-logo-card">
-                    <img src="assets/img/vlc_05.jpg" alt="Valuable Client 5">
+                    <img loading="lazy" width="192" height="136" src="assets/img/vlc_05.jpg" alt="Valuable Client 5">
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-6">
                 <div class="client-logo-card">
-                    <img src="assets/img/vlc_06.jpg" alt="Valuable Client 6">
+                    <img loading="lazy" width="192" height="136" src="assets/img/vlc_06.jpg" alt="Valuable Client 6">
                 </div>
             </div>
         </div>
@@ -2854,15 +2912,17 @@ about_content = f"""<!DOCTYPE html>
         </div>
     </div>
 
+    </main>
+
 {COMMON_FOOTER}
 </body>
 </html>"""
 
-with open(os.path.join(DIR, 'about_us.html'), 'w', encoding='utf-8') as f:
+with open(os.path.join(DIR, 'about-us.html'), 'w', encoding='utf-8') as f:
     f.write(about_content)
-with open(os.path.join(DIR, 'About Us.html'), 'w', encoding='utf-8') as f:
-    f.write(about_content)
-print("about_us.html & About Us.html updated.")
+write_redirects('about-us.html', 'about_us.html')
+write_redirects('about-us.html', 'About Us.html')
+print("about-us.html & About Us.html updated.")
 
 # 9. GENERATE PRODUCTS.HTML & SCT.HTML
 products_content = f"""<!DOCTYPE html>
@@ -2876,8 +2936,12 @@ products_content = f"""<!DOCTYPE html>
 )}
 </head>
 <body>
+    <a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
 {COMMON_TOP_BAR}
 {get_navbar('products')}
+    </header>
+
+    <main id="main-content">
 
     <!-- Page Hero Banner -->
     <div class="page-hero-banner">
@@ -2940,12 +3004,12 @@ products_content = f"""<!DOCTYPE html>
                 <div class="product-card-modern">
                     <div>
                         <div class="product-icon-wrap">
-                            <img src="assets/img/icon_Smart_Card_Technologies.png" alt="Smart Card &amp; Printer">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_Smart_Card_Technologies.png" alt="Smart Card &amp; Printer">
                         </div>
                         <div class="text-center">
                             <span class="product-cat">Personalization</span>
                         </div>
-                        <h4>Smart Card &amp; Printer</h4>
+                        <h4 aria-level="3">Smart Card &amp; Printer</h4>
                         <p>High-definition retransfer and direct-to-card smart card printers, dual-interface chip encoding, and secure holographic lamination.</p>
                         <ul class="product-specs-list">
                             <li><i class="fas fa-check-circle"></i> Retransfer &amp; Direct-to-Card</li>
@@ -2954,7 +3018,7 @@ products_content = f"""<!DOCTYPE html>
                         </ul>
                     </div>
                     <div class="pt-3 text-center">
-                        <a href="Smart_Card_Technologies.html" class="button">read more</a>
+                        <a href="smart-card-technologies.html" class="button">read more</a>
                     </div>
                 </div>
             </div>
@@ -2964,12 +3028,12 @@ products_content = f"""<!DOCTYPE html>
                 <div class="product-card-modern">
                     <div>
                         <div class="product-icon-wrap">
-                            <img src="assets/img/icon_Time_Attendance.png" alt="Time Attendance Systems">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_Time_Attendance.png" alt="Time Attendance Systems">
                         </div>
                         <div class="text-center">
                             <span class="product-cat">Workforce Security</span>
                         </div>
-                        <h4>Time Attendance</h4>
+                        <h4 aria-level="3">Time Attendance</h4>
                         <p>Optical fingerprint and AI facial recognition terminals featuring standalone operation, battery backup, and encrypted cloud sync.</p>
                         <ul class="product-specs-list">
                             <li><i class="fas fa-check-circle"></i> Face &amp; Fingerprint Auth</li>
@@ -2988,12 +3052,12 @@ products_content = f"""<!DOCTYPE html>
                 <div class="product-card-modern">
                     <div>
                         <div class="product-icon-wrap">
-                            <img src="assets/img/icon_Smart_Access_Control.png" alt="Access Control Solutions">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_Smart_Access_Control.png" alt="Access Control Solutions">
                         </div>
                         <div class="text-center">
                             <span class="product-cat">Physical Security</span>
                         </div>
-                        <h4>Access Control</h4>
+                        <h4 aria-level="3">Access Control</h4>
                         <p>Smart turnstiles, optical flap barriers, electromagnetic locks, and multi-factor biometric/RFID facility controllers.</p>
                         <ul class="product-specs-list">
                             <li><i class="fas fa-check-circle"></i> Anti-Tailgating Speed Gates</li>
@@ -3012,12 +3076,12 @@ products_content = f"""<!DOCTYPE html>
                 <div class="product-card-modern">
                     <div>
                         <div class="product-icon-wrap">
-                            <img src="assets/img/icon_eSign_Solutions.png" alt="Digital Signage">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_eSign_Solutions.png" alt="Digital Signage">
                         </div>
                         <div class="text-center">
                             <span class="product-cat">Display Solutions</span>
                         </div>
-                        <h4>Digital Signage</h4>
+                        <h4 aria-level="3">Digital Signage</h4>
                         <p>Centralized networked signage systems with ultra-HD commercial displays, remote content scheduling, and multi-zone split playback.</p>
                         <ul class="product-specs-list">
                             <li><i class="fas fa-check-circle"></i> 4K Commercial Grade Displays</li>
@@ -3036,12 +3100,12 @@ products_content = f"""<!DOCTYPE html>
                 <div class="product-card-modern">
                     <div>
                         <div class="product-icon-wrap">
-                            <img src="assets/img/icon_Kiosk.png" alt="Self-Service Kiosk">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_Kiosk.png" alt="Self-Service Kiosk">
                         </div>
                         <div class="text-center">
                             <span class="product-cat">Interactive Terminals</span>
                         </div>
-                        <h4>Self-Service Kiosk</h4>
+                        <h4 aria-level="3">Self-Service Kiosk</h4>
                         <p>Rugged interactive touch kiosks equipped with industrial thermal ticket printers, QR scanners, payment readers, and fingerprint sensors.</p>
                         <ul class="product-specs-list">
                             <li><i class="fas fa-check-circle"></i> Capacitive Multi-Touch Screen</li>
@@ -3060,12 +3124,12 @@ products_content = f"""<!DOCTYPE html>
                 <div class="product-card-modern">
                     <div>
                         <div class="product-icon-wrap">
-                            <img src="assets/img/icon_Biometric_Technologiest.png" alt="Biometric Devices">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_Biometric_Technologiest.png" alt="Biometric Devices">
                         </div>
                         <div class="text-center">
                             <span class="product-cat">Identity Hardware</span>
                         </div>
-                        <h4>Biometric Devices</h4>
+                        <h4 aria-level="3">Biometric Devices</h4>
                         <p>FBI PIV and STQC certified USB optical &amp; capacitive fingerprint scanners, dual-iris cameras, live-finger detection, and NID readers.</p>
                         <ul class="product-specs-list">
                             <li><i class="fas fa-check-circle"></i> FBI PIV &amp; STQC Certified</li>
@@ -3074,7 +3138,7 @@ products_content = f"""<!DOCTYPE html>
                         </ul>
                     </div>
                     <div class="pt-3 text-center">
-                        <a href="Digital_Identity_&_Security.html" class="button">read more</a>
+                        <a href="digital-identity-security.html" class="button">read more</a>
                     </div>
                 </div>
             </div>
@@ -3084,12 +3148,12 @@ products_content = f"""<!DOCTYPE html>
                 <div class="product-card-modern">
                     <div>
                         <div class="product-icon-wrap">
-                            <img src="assets/img/icon_cc_camera.png" alt="CCTV &amp; Surveillance Cameras">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_cc_camera.png" alt="CCTV &amp; Surveillance Cameras">
                         </div>
                         <div class="text-center">
                             <span class="product-cat">Perimeter Security</span>
                         </div>
-                        <h4>CCTV Camera</h4>
+                        <h4 aria-level="3">CCTV Camera</h4>
                         <p>High-definition IP surveillance cameras with starlight night vision, motorized optical zoom, vandal-proof IP67 domes, and AI analytics.</p>
                         <ul class="product-specs-list">
                             <li><i class="fas fa-check-circle"></i> 4K UHD Starlight Imaging</li>
@@ -3108,12 +3172,12 @@ products_content = f"""<!DOCTYPE html>
                 <div class="product-card-modern">
                     <div>
                         <div class="product-icon-wrap">
-                            <img src="assets/img/icon_Tracking.png" alt="GPS &amp; IoT Tracker">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_Tracking.png" alt="GPS &amp; IoT Tracker">
                         </div>
                         <div class="text-center">
                             <span class="product-cat">Telemetry Hardware</span>
                         </div>
-                        <h4>Tracker</h4>
+                        <h4 aria-level="3">Tracker</h4>
                         <p>Real-time vehicle and mobile asset tracking units featuring GSM/GPS dual-satellite positioning, anti-jamming, and remote engine cut-off.</p>
                         <ul class="product-specs-list">
                             <li><i class="fas fa-check-circle"></i> High-Precision GPS/GLONASS</li>
@@ -3144,12 +3208,12 @@ products_content = f"""<!DOCTYPE html>
                     <div class="product-card-modern">
                         <div>
                             <div class="product-icon-wrap">
-                                <img src="assets/img/icon_ERP.png" alt="Enterprise ERP">
+                                <img loading="lazy" width="101" height="101" src="assets/img/icon_ERP.png" alt="Enterprise ERP">
                             </div>
                             <div class="text-center">
                                 <span class="product-cat">Operations &amp; ERP</span>
                             </div>
-                            <h4>Enterprise ERP</h4>
+                            <h4 aria-level="3">Enterprise ERP</h4>
                             <p>Integrated financial accounting, procurement, HR, payroll, supply chain, and asset management suite designed for corporate and institutional scale.</p>
                             <ul class="product-specs-list">
                                 <li><i class="fas fa-check-circle"></i> Financials &amp; Double-Entry Audit</li>
@@ -3168,12 +3232,12 @@ products_content = f"""<!DOCTYPE html>
                     <div class="product-card-modern">
                         <div>
                             <div class="product-icon-wrap">
-                                <img src="assets/img/icon_Digital_Identity_Security.png" alt="e-KYC Suite">
+                                <img loading="lazy" width="101" height="101" src="assets/img/icon_Digital_Identity_Security.png" alt="e-KYC Suite">
                             </div>
                             <div class="text-center">
                                 <span class="product-cat">Digital Trust</span>
                             </div>
-                            <h4>Spectrum e-KYC</h4>
+                            <h4 aria-level="3">Spectrum e-KYC</h4>
                             <p>Instant citizen verification and NID validation SDK with biometric facial match, passive liveness detection, and Porichoy API interoperability.</p>
                             <ul class="product-specs-list">
                                 <li><i class="fas fa-check-circle"></i> Instant National NID Verification</li>
@@ -3182,7 +3246,7 @@ products_content = f"""<!DOCTYPE html>
                             </ul>
                         </div>
                         <div class="pt-3 text-center">
-                            <a href="Digital_Identity_&_Security.html" class="button">read more</a>
+                            <a href="digital-identity-security.html" class="button">read more</a>
                         </div>
                     </div>
                 </div>
@@ -3192,12 +3256,12 @@ products_content = f"""<!DOCTYPE html>
                     <div class="product-card-modern">
                         <div>
                             <div class="product-icon-wrap">
-                                <img src="assets/img/icon_Smart_City_Solutions.png" alt="Smart City &amp; IoT Platform">
+                                <img loading="lazy" width="101" height="101" src="assets/img/icon_Smart_City_Solutions.png" alt="Smart City &amp; IoT Platform">
                             </div>
                             <div class="text-center">
                                 <span class="product-cat">Urban Infrastructure</span>
                             </div>
-                            <h4>Smart City IoT</h4>
+                            <h4 aria-level="3">Smart City IoT</h4>
                             <p>Centralized municipal command and control platform integrating smart street lighting, traffic telemetry, environmental sensors, and incident dispatching.</p>
                             <ul class="product-specs-list">
                                 <li><i class="fas fa-check-circle"></i> GIS Real-Time Sensor Telemetry</li>
@@ -3216,12 +3280,12 @@ products_content = f"""<!DOCTYPE html>
                     <div class="product-card-modern">
                         <div>
                             <div class="product-icon-wrap">
-                                <img src="assets/img/icon_Artificial_Intelligence.png" alt="AI Computer Vision Suite">
+                                <img loading="lazy" width="101" height="101" src="assets/img/icon_Artificial_Intelligence.png" alt="AI Computer Vision Suite">
                             </div>
                             <div class="text-center">
                                 <span class="product-cat">Applied AI</span>
                             </div>
-                            <h4>AI Vision Suite</h4>
+                            <h4 aria-level="3">AI Vision Suite</h4>
                             <p>Deep-learning video analytics engine for real-time crowd density estimation, automated license plate recognition (ALPR), and perimeter breach alerts.</p>
                             <ul class="product-specs-list">
                                 <li><i class="fas fa-check-circle"></i> License Plate Recognition (ALPR)</li>
@@ -3230,7 +3294,7 @@ products_content = f"""<!DOCTYPE html>
                             </ul>
                         </div>
                         <div class="pt-3 text-center">
-                            <a href="Artificial_Intelligence.html" class="button">read more</a>
+                            <a href="artificial-intelligence.html" class="button">read more</a>
                         </div>
                     </div>
                 </div>
@@ -3259,7 +3323,7 @@ products_content = f"""<!DOCTYPE html>
                                 <div class="rounded-circle p-3 me-3 d-flex align-items-center justify-content-center" style="background: rgba(30, 126, 52, 0.1); width: 50px; height: 50px;">
                                     <i class="fas fa-certificate text-success fa-lg"></i>
                                 </div>
-                                <h5 class="fw-bold mb-0" style="color: #2e3760; font-size: 17px;">Certified Compliance</h5>
+                                <h5 aria-level="3" class="fw-bold mb-0" style="color: #2e3760; font-size: 17px;">Certified Compliance</h5>
                             </div>
                             <p class="text-muted small mb-0">ISO 9001:2015 and ISO 27001:2013 certified processes. Hardware meets CE, FCC, and FBI PIV standards.</p>
                         </div>
@@ -3270,7 +3334,7 @@ products_content = f"""<!DOCTYPE html>
                                 <div class="rounded-circle p-3 me-3 d-flex align-items-center justify-content-center" style="background: rgba(242, 101, 34, 0.1); width: 50px; height: 50px;">
                                     <i class="fas fa-tools text-warning fa-lg"></i>
                                 </div>
-                                <h5 class="fw-bold mb-0" style="color: #2e3760; font-size: 17px;">24/7 SLA Support</h5>
+                                <h5 aria-level="3" class="fw-bold mb-0" style="color: #2e3760; font-size: 17px;">24/7 SLA Support</h5>
                             </div>
                             <p class="text-muted small mb-0">Dedicated Dhaka technical lab, ready replacement units, and nationwide SLA maintenance engineers.</p>
                         </div>
@@ -3281,7 +3345,7 @@ products_content = f"""<!DOCTYPE html>
                                 <div class="rounded-circle p-3 me-3 d-flex align-items-center justify-content-center" style="background: rgba(59, 130, 246, 0.1); width: 50px; height: 50px;">
                                     <i class="fas fa-code text-primary fa-lg"></i>
                                 </div>
-                                <h5 class="fw-bold mb-0" style="color: #2e3760; font-size: 17px;">SDK &amp; Driver Support</h5>
+                                <h5 aria-level="3" class="fw-bold mb-0" style="color: #2e3760; font-size: 17px;">SDK &amp; Driver Support</h5>
                             </div>
                             <p class="text-muted small mb-0">Comprehensive SDKs, REST APIs, and native drivers for seamless integration with existing software.</p>
                         </div>
@@ -3292,7 +3356,7 @@ products_content = f"""<!DOCTYPE html>
                                 <div class="rounded-circle p-3 me-3 d-flex align-items-center justify-content-center" style="background: rgba(168, 85, 247, 0.1); width: 50px; height: 50px;">
                                     <i class="fas fa-shield-alt text-purple fa-lg" style="color: #8b5cf6;"></i>
                                 </div>
-                                <h5 class="fw-bold mb-0" style="color: #2e3760; font-size: 17px;">Sovereign Security</h5>
+                                <h5 aria-level="3" class="fw-bold mb-0" style="color: #2e3760; font-size: 17px;">Sovereign Security</h5>
                             </div>
                             <p class="text-muted small mb-0">Air-gapped deployment, local data residency, and zero foreign cloud dependencies for sensitive data.</p>
                         </div>
@@ -3321,14 +3385,15 @@ products_content = f"""<!DOCTYPE html>
         </div>
     </div>
 
+    </main>
+
 {COMMON_FOOTER}
 </body>
 </html>"""
 
 with open(os.path.join(DIR, 'products.html'), 'w', encoding='utf-8') as f:
     f.write(products_content)
-with open(os.path.join(DIR, 'Products.html'), 'w', encoding='utf-8') as f:
-    f.write(products_content)
+write_redirects('products.html', 'Products.html')
 print("products.html & Products.html updated.")
 
 sct_content = f"""<!DOCTYPE html>
@@ -3337,13 +3402,17 @@ sct_content = f"""<!DOCTYPE html>
 {get_head(
     title="Smart Card Technologies &amp; Personalization | Spectrum IT Solutions",
     description="Turnkey smart card personalization, dual-interface chip encoding, laser engraving, and automated kiosk platforms by Spectrum IT Solutions.",
-    canonical_slug="Smart_Card_Technologies.html",
+    canonical_slug="smart-card-technologies.html",
     og_image="assets/img/banner_img_03.jpg"
 )}
 </head>
 <body>
+    <a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
 {COMMON_TOP_BAR}
 {get_navbar('services')}
+    </header>
+
+    <main id="main-content">
 
     <!-- Page Hero Banner -->
     <div class="page-hero-banner">
@@ -3387,20 +3456,20 @@ sct_content = f"""<!DOCTYPE html>
                 <div class="row pt-2">
                     <div class="col-6 mb-3">
                         <div class="p-3 border rounded bg-light text-center">
-                            <h4 class="fw-bold text-success mb-1">ISO 7816</h4>
+                            <h4 aria-level="3" class="fw-bold text-success mb-1">ISO 7816</h4>
                             <small class="text-muted">Contact Chip Standard</small>
                         </div>
                     </div>
                     <div class="col-6 mb-3">
                         <div class="p-3 border rounded bg-light text-center">
-                            <h4 class="fw-bold text-success mb-1">ISO 14443</h4>
+                            <h4 aria-level="3" class="fw-bold text-success mb-1">ISO 14443</h4>
                             <small class="text-muted">Contactless RFID/NFC</small>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 text-center">
-                <picture><source srcset="assets/img/sm-card-about.webp" type="image/webp"><img src="assets/img/sm-card-about.png" alt="Smart Card Personalization" loading="lazy" class="img-fluid rounded shadow-sm" style="max-height: 380px;"></picture>
+                <picture><source srcset="assets/img/sm-card-about.webp" type="image/webp"><img width="707" height="567" src="assets/img/sm-card-about.png" alt="Smart Card Personalization" loading="lazy" class="img-fluid rounded shadow-sm" style="max-height: 380px; width: auto;"></picture>
             </div>
         </div>
 
@@ -3409,21 +3478,21 @@ sct_content = f"""<!DOCTYPE html>
             <div class="col-md-4 mb-4">
                 <div class="card h-100 p-4 border-0 shadow-sm" style="border-radius: 12px; border: 1px solid #e2e8f0 !important;">
                     <div class="mb-3 text-warning"><i class="fas fa-microchip fa-2x"></i></div>
-                    <h5 class="fw-bold" style="color: #2e3760;">Chip Encoding &amp; SAM</h5>
+                    <h5 aria-level="4" class="fw-bold" style="color: #2e3760;">Chip Encoding &amp; SAM</h5>
                     <p class="text-muted small">High-speed dual-interface encoding with Hardware Security Module (HSM) integration for cryptographic key generation and PKI signing.</p>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card h-100 p-4 border-0 shadow-sm" style="border-radius: 12px; border: 1px solid #e2e8f0 !important;">
                     <div class="mb-3 text-success"><i class="fas fa-award fa-2x"></i></div>
-                    <h5 class="fw-bold" style="color: #2e3760;">Laser &amp; Tactile Engraving</h5>
+                    <h5 aria-level="4" class="fw-bold" style="color: #2e3760;">Laser &amp; Tactile Engraving</h5>
                     <p class="text-muted small">Sub-surface fiber laser marking, tactile relief, and MLI/CLI optical variable devices ensuring physical anti-counterfeiting.</p>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card h-100 p-4 border-0 shadow-sm" style="border-radius: 12px; border: 1px solid #e2e8f0 !important;">
                     <div class="mb-3 text-primary"><i class="fas fa-desktop fa-2x"></i></div>
-                    <h5 class="fw-bold" style="color: #2e3760;">Automated Issuance Kiosks</h5>
+                    <h5 aria-level="4" class="fw-bold" style="color: #2e3760;">Automated Issuance Kiosks</h5>
                     <p class="text-muted small">Unattended instant card delivery kiosks with integrated biometrics, document scanners, payment POS, and audit logs.</p>
                 </div>
             </div>
@@ -3449,15 +3518,17 @@ sct_content = f"""<!DOCTYPE html>
         </div>
     </div>
 
+    </main>
+
 {COMMON_FOOTER}
 </body>
 </html>"""
 
-with open(os.path.join(DIR, 'Smart_Card_Technologies.html'), 'w', encoding='utf-8') as f:
+with open(os.path.join(DIR, 'smart-card-technologies.html'), 'w', encoding='utf-8') as f:
     f.write(sct_content)
-with open(os.path.join(DIR, 'sct.html'), 'w', encoding='utf-8') as f:
-    f.write(sct_content)
-print("Smart_Card_Technologies.html & sct.html updated.")
+write_redirects('smart-card-technologies.html', 'Smart_Card_Technologies.html')
+write_redirects('smart-card-technologies.html', 'sct.html')
+print("smart-card-technologies.html & sct.html updated.")
 
 
 # 10. GENERATE 404.HTML (BRANDED ERROR PAGE)
@@ -3472,8 +3543,12 @@ error_404_content = f"""<!DOCTYPE html>
 )}
 </head>
 <body>
+    <a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
 {COMMON_TOP_BAR}
 {get_navbar()}
+    </header>
+
+    <main id="main-content">
 
     <!-- Page Hero Banner -->
     <div class="page-hero-banner">
@@ -3500,7 +3575,7 @@ error_404_content = f"""<!DOCTYPE html>
 
         <!-- Quick Navigation Cards -->
         <div class="error-quick-links reveal-on-scroll">
-            <h5 class="fw-bold mb-3" style="color: #2e3760;">Popular Destinations</h5>
+            <h5 aria-level="3" class="fw-bold mb-3" style="color: #2e3760;">Popular Destinations</h5>
             <div class="row g-3 justify-content-center text-start">
                 <div class="col-md-4 col-sm-6">
                     <a href="index.html" class="d-flex align-items-center p-3 rounded text-decoration-none" style="background: #f8fafc; border: 1px solid #e2e8f0; transition: all 0.2s ease;">
@@ -3512,7 +3587,7 @@ error_404_content = f"""<!DOCTYPE html>
                     </a>
                 </div>
                 <div class="col-md-4 col-sm-6">
-                    <a href="Artificial_Intelligence.html" class="d-flex align-items-center p-3 rounded text-decoration-none" style="background: #f8fafc; border: 1px solid #e2e8f0; transition: all 0.2s ease;">
+                    <a href="artificial-intelligence.html" class="d-flex align-items-center p-3 rounded text-decoration-none" style="background: #f8fafc; border: 1px solid #e2e8f0; transition: all 0.2s ease;">
                         <i class="fas fa-brain text-success fa-lg me-3"></i>
                         <div>
                             <div class="fw-bold text-dark" style="font-size: 14px;">Artificial Intelligence</div>
@@ -3521,7 +3596,7 @@ error_404_content = f"""<!DOCTYPE html>
                     </a>
                 </div>
                 <div class="col-md-4 col-sm-6">
-                    <a href="Digital_Identity_&_Security.html" class="d-flex align-items-center p-3 rounded text-decoration-none" style="background: #f8fafc; border: 1px solid #e2e8f0; transition: all 0.2s ease;">
+                    <a href="digital-identity-security.html" class="d-flex align-items-center p-3 rounded text-decoration-none" style="background: #f8fafc; border: 1px solid #e2e8f0; transition: all 0.2s ease;">
                         <i class="fas fa-fingerprint text-primary fa-lg me-3"></i>
                         <div>
                             <div class="fw-bold text-dark" style="font-size: 14px;">Digital Identity</div>
@@ -3530,7 +3605,7 @@ error_404_content = f"""<!DOCTYPE html>
                     </a>
                 </div>
                 <div class="col-md-4 col-sm-6">
-                    <a href="Smart_Card_Technologies.html" class="d-flex align-items-center p-3 rounded text-decoration-none" style="background: #f8fafc; border: 1px solid #e2e8f0; transition: all 0.2s ease;">
+                    <a href="smart-card-technologies.html" class="d-flex align-items-center p-3 rounded text-decoration-none" style="background: #f8fafc; border: 1px solid #e2e8f0; transition: all 0.2s ease;">
                         <i class="fas fa-id-card text-warning fa-lg me-3"></i>
                         <div>
                             <div class="fw-bold text-dark" style="font-size: 14px;">Smart Cards</div>
@@ -3569,6 +3644,8 @@ error_404_content = f"""<!DOCTYPE html>
         </div>
     </div>
 
+    </main>
+
 {COMMON_FOOTER}
 </body>
 </html>"""
@@ -3581,15 +3658,15 @@ print("404.html created.")
 sitemap_content = """<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://spectrum.com.bd/index.html</loc><priority>1.0</priority></url>
-  <url><loc>https://spectrum.com.bd/about_us.html</loc><priority>0.8</priority></url>
+  <url><loc>https://spectrum.com.bd/about-us.html</loc><priority>0.8</priority></url>
   <url><loc>https://spectrum.com.bd/services.html</loc><priority>0.9</priority></url>
   <url><loc>https://spectrum.com.bd/products.html</loc><priority>0.8</priority></url>
   <url><loc>https://spectrum.com.bd/projects.html</loc><priority>0.8</priority></url>
   <url><loc>https://spectrum.com.bd/case-study.html</loc><priority>0.8</priority></url>
   <url><loc>https://spectrum.com.bd/contact.html</loc><priority>0.8</priority></url>
-  <url><loc>https://spectrum.com.bd/Digital_Identity_&amp;_Security.html</loc><priority>0.7</priority></url>
-  <url><loc>https://spectrum.com.bd/Smart_Card_Technologies.html</loc><priority>0.7</priority></url>
-  <url><loc>https://spectrum.com.bd/Artificial_Intelligence.html</loc><priority>0.7</priority></url>
+  <url><loc>https://spectrum.com.bd/digital-identity-security.html</loc><priority>0.7</priority></url>
+  <url><loc>https://spectrum.com.bd/smart-card-technologies.html</loc><priority>0.7</priority></url>
+  <url><loc>https://spectrum.com.bd/artificial-intelligence.html</loc><priority>0.7</priority></url>
 </urlset>"""
 
 with open(os.path.join(DIR, 'sitemap.xml'), 'w', encoding='utf-8') as f:
@@ -3608,11 +3685,11 @@ llms_content = """# Spectrum IT Solutions Ltd.
 
 ## Key pages
 - [Home](https://spectrum.com.bd/index.html): Homepage with overview of capabilities
-- [About](https://spectrum.com.bd/about_us.html): Company background, 12+ years experience, ISO 9001 & ISO 27001
+- [About](https://spectrum.com.bd/about-us.html): Company background, 12+ years experience, ISO 9001 & ISO 27001
 - [Services](https://spectrum.com.bd/services.html): Digital identity, smart cards, AI, cybersecurity, ERP
-- [Digital Identity & Security](https://spectrum.com.bd/Digital_Identity_&_Security.html): National biometric identity and automated ID verification
-- [Smart Card Technologies](https://spectrum.com.bd/Smart_Card_Technologies.html): Turnkey smart card personalization, encoding & kiosks
-- [Artificial Intelligence](https://spectrum.com.bd/Artificial_Intelligence.html): Computer vision, cognitive OCR, and decision models
+- [Digital Identity & Security](https://spectrum.com.bd/digital-identity-security.html): National biometric identity and automated ID verification
+- [Smart Card Technologies](https://spectrum.com.bd/smart-card-technologies.html): Turnkey smart card personalization, encoding & kiosks
+- [Artificial Intelligence](https://spectrum.com.bd/artificial-intelligence.html): Computer vision, cognitive OCR, and decision models
 - [Products](https://spectrum.com.bd/products.html): Enterprise hardware and software products
 - [Projects](https://spectrum.com.bd/projects.html): Delivered government and corporate projects
 - [Case Studies](https://spectrum.com.bd/case-study.html): TCB Smart Family Card, Industrial e-Court BD

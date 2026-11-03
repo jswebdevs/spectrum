@@ -41,7 +41,7 @@
     <!-- Bootstrap & Site Styles -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.min.css">
-    <link rel="stylesheet" href="assets/css/responsive-fixes.min.css?v=20261103b">
+    <link rel="stylesheet" href="assets/css/responsive-fixes.min.css?v=20261103c">
     <!-- Structured Data (JSON-LD Organization & WebPage) -->
     <script type="application/ld+json">
     [
@@ -82,6 +82,8 @@
     </script>
 </head>
 <body>
+    <a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
+    <header>
     <!-- Start Top bar -->
     <div class="container-fluid bg-dark pt-2 pb-2 top_bar">
         <div class="container text-light d-flex justify-content-between align-items-center">
@@ -122,7 +124,7 @@
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex menu_list justify-content-center">
                         <li class="nav-item">
-                            <a class="nav-link" href="about_us.html">About Us</a>
+                            <a class="nav-link" href="about-us.html">About Us</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="services.html">Services</a>
@@ -162,12 +164,15 @@
                 </div>
 
                 <div class="d-lg-none text-center pt-3 pb-2 border-top mt-3">
-                    <img src="assets/img/ISO_9001.png" alt="ISO 9001:2015" class="me-2" style="height: 28px;" loading="lazy">
-                    <img src="assets/img/ISO_27001.png" alt="ISO 27001:2013" style="height: 28px;" loading="lazy">
+                    <img width="26" height="28" src="assets/img/ISO_9001.png" alt="ISO 9001:2015" class="me-2" style="height: 28px;" loading="lazy">
+                    <img width="26" height="28" src="assets/img/ISO_27001.png" alt="ISO 27001:2013" style="height: 28px;" loading="lazy">
                 </div>
             </div>
         </div>
     </nav>
+    </header>
+
+    <main id="main-content">
 
     <!-- Page Hero Banner -->
     <div class="page-hero-banner">
@@ -206,15 +211,15 @@
                 <div class="services-item_pg p-4 h-100 d-flex flex-column justify-content-between shadow-sm bg-white" style="border-radius: 12px; border: 1px solid #dee2e6;">
                     <div>
                         <div class="text-center mb-3">
-                            <img src="assets/img/icon_Digital_Identity_Security.png" alt="Digital Identity &amp; Security">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_Digital_Identity_Security.png" alt="Digital Identity &amp; Security">
                         </div>
-                        <h4 class="fw-bold mb-3" style="color: #f26522;">Digital Identity &amp; Security</h4>
+                        <h4 aria-level="2" class="fw-bold mb-3" style="color: #f26522;">Digital Identity &amp; Security</h4>
                         <p class="text-muted" style="font-size: 14px; line-height: 1.6;">
                             Comprehensive national identity verification, biometric registry, and family card platforms. Engineered with end-to-end cryptographic safeguards and multi-factor validation.
                         </p>
                     </div>
                     <div class="pt-3 text-center">
-                        <a href="Digital_Identity_&_Security.html" class="button">read more</a>
+                        <a href="digital-identity-security.html" class="button">read more</a>
                     </div>
                 </div>
             </div>
@@ -224,15 +229,15 @@
                 <div class="services-item_pg p-4 h-100 d-flex flex-column justify-content-between shadow-sm bg-white" style="border-radius: 12px; border: 1px solid #dee2e6;">
                     <div>
                         <div class="text-center mb-3">
-                            <img src="assets/img/icon_Smart_Card_Technologies.png" alt="Smart Card Technologies">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_Smart_Card_Technologies.png" alt="Smart Card Technologies">
                         </div>
-                        <h4 class="fw-bold mb-3" style="color: #f26522;">Smart Card Technologies</h4>
+                        <h4 aria-level="2" class="fw-bold mb-3" style="color: #f26522;">Smart Card Technologies</h4>
                         <p class="text-muted" style="font-size: 14px; line-height: 1.6;">
                             Turnkey contact and contactless smart card issuance platforms, secure chip personalization, laser engraving, cryptographic keys, and automated self-service kiosks.
                         </p>
                     </div>
                     <div class="pt-3 text-center">
-                        <a href="Smart_Card_Technologies.html" class="button">read more</a>
+                        <a href="smart-card-technologies.html" class="button">read more</a>
                     </div>
                 </div>
             </div>
@@ -242,15 +247,15 @@
                 <div class="services-item_pg p-4 h-100 d-flex flex-column justify-content-between shadow-sm bg-white" style="border-radius: 12px; border: 1px solid #dee2e6;">
                     <div>
                         <div class="text-center mb-3">
-                            <img src="assets/img/icon_Artificial_Intelligence.png" alt="Artificial Intelligence">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_Artificial_Intelligence.png" alt="Artificial Intelligence">
                         </div>
-                        <h4 class="fw-bold mb-3" style="color: #f26522;">Artificial Intelligence</h4>
+                        <h4 aria-level="2" class="fw-bold mb-3" style="color: #f26522;">Artificial Intelligence</h4>
                         <p class="text-muted" style="font-size: 14px; line-height: 1.6;">
                             Computer vision, facial recognition, automated cognitive document parsing, predictive models, and machine learning architectures custom-trained for sovereign requirements.
                         </p>
                     </div>
                     <div class="pt-3 text-center">
-                        <a href="Artificial_Intelligence.html" class="button">read more</a>
+                        <a href="artificial-intelligence.html" class="button">read more</a>
                     </div>
                 </div>
             </div>
@@ -260,15 +265,15 @@
                 <div class="services-item_pg p-4 h-100 d-flex flex-column justify-content-between shadow-sm bg-white" style="border-radius: 12px; border: 1px solid #dee2e6;">
                     <div>
                         <div class="text-center mb-3">
-                            <img src="assets/img/icon_Biometric_Technologiest.png" alt="Biometric Technologies">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_Biometric_Technologiest.png" alt="Biometric Technologies">
                         </div>
-                        <h4 class="fw-bold mb-3" style="color: #f26522;">Biometric Technologies</h4>
+                        <h4 aria-level="2" class="fw-bold mb-3" style="color: #f26522;">Biometric Technologies</h4>
                         <p class="text-muted" style="font-size: 14px; line-height: 1.6;">
                             Automated Fingerprint &amp; Iris Identification Systems (AFIS/ABIS), multi-modal biometric sensors, and high-throughput real-time identity deduplication matching engines.
                         </p>
                     </div>
                     <div class="pt-3 text-center">
-                        <a href="Digital_Identity_&_Security.html" class="button">read more</a>
+                        <a href="digital-identity-security.html" class="button">read more</a>
                     </div>
                 </div>
             </div>
@@ -278,15 +283,15 @@
                 <div class="services-item_pg p-4 h-100 d-flex flex-column justify-content-between shadow-sm bg-white" style="border-radius: 12px; border: 1px solid #dee2e6;">
                     <div>
                         <div class="text-center mb-3">
-                            <img src="assets/img/icon_Smart_Access_Control.png" alt="Smart Access Control">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_Smart_Access_Control.png" alt="Smart Access Control">
                         </div>
-                        <h4 class="fw-bold mb-3" style="color: #f26522;">Smart Access Control</h4>
+                        <h4 aria-level="2" class="fw-bold mb-3" style="color: #f26522;">Smart Access Control</h4>
                         <p class="text-muted" style="font-size: 14px; line-height: 1.6;">
                             High-security entry management integrating optical flap barriers, full-height turnstiles, UHF RFID, and biometric readers for ministries and enterprise headquarters.
                         </p>
                     </div>
                     <div class="pt-3 text-center">
-                        <a href="Digital_Identity_&_Security.html" class="button">read more</a>
+                        <a href="digital-identity-security.html" class="button">read more</a>
                     </div>
                 </div>
             </div>
@@ -296,15 +301,15 @@
                 <div class="services-item_pg p-4 h-100 d-flex flex-column justify-content-between shadow-sm bg-white" style="border-radius: 12px; border: 1px solid #dee2e6;">
                     <div>
                         <div class="text-center mb-3">
-                            <img src="assets/img/icon_Cyber_Security.png" alt="Cyber Security">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_Cyber_Security.png" alt="Cyber Security">
                         </div>
-                        <h4 class="fw-bold mb-3" style="color: #f26522;">Cyber Security</h4>
+                        <h4 aria-level="2" class="fw-bold mb-3" style="color: #f26522;">Cyber Security</h4>
                         <p class="text-muted" style="font-size: 14px; line-height: 1.6;">
                             Vulnerability assessment, penetration testing, security operations, ISO 27001 advisory, and cryptographic defense protecting mission-critical government networks.
                         </p>
                     </div>
                     <div class="pt-3 text-center">
-                        <a href="Digital_Identity_&_Security.html" class="button">read more</a>
+                        <a href="digital-identity-security.html" class="button">read more</a>
                     </div>
                 </div>
             </div>
@@ -314,9 +319,9 @@
                 <div class="services-item_pg p-4 h-100 d-flex flex-column justify-content-between shadow-sm bg-white" style="border-radius: 12px; border: 1px solid #dee2e6;">
                     <div>
                         <div class="text-center mb-3">
-                            <img src="assets/img/icon_ERP.png" alt="Enterprise Resource Planning">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_ERP.png" alt="Enterprise Resource Planning">
                         </div>
-                        <h4 class="fw-bold mb-3" style="color: #f26522;">ERP Solutions</h4>
+                        <h4 aria-level="2" class="fw-bold mb-3" style="color: #f26522;">ERP Solutions</h4>
                         <p class="text-muted" style="font-size: 14px; line-height: 1.6;">
                             Comprehensive enterprise resource planning covering financials, procurement, human resources, inventory, and cross-departmental digitized operational workflows.
                         </p>
@@ -332,9 +337,9 @@
                 <div class="services-item_pg p-4 h-100 d-flex flex-column justify-content-between shadow-sm bg-white" style="border-radius: 12px; border: 1px solid #dee2e6;">
                     <div>
                         <div class="text-center mb-3">
-                            <img src="assets/img/icon_Smart_City_Solutions.png" alt="Smart City Solutions">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_Smart_City_Solutions.png" alt="Smart City Solutions">
                         </div>
-                        <h4 class="fw-bold mb-3" style="color: #f26522;">Smart City Solutions</h4>
+                        <h4 aria-level="2" class="fw-bold mb-3" style="color: #f26522;">Smart City Solutions</h4>
                         <p class="text-muted" style="font-size: 14px; line-height: 1.6;">
                             Intelligent municipal traffic surveillance, sensor networks, centralized control rooms, automated toll collection, and citizen utility integration portals.
                         </p>
@@ -350,15 +355,15 @@
                 <div class="services-item_pg p-4 h-100 d-flex flex-column justify-content-between shadow-sm bg-white" style="border-radius: 12px; border: 1px solid #dee2e6;">
                     <div>
                         <div class="text-center mb-3">
-                            <img src="assets/img/icon_Time_Attendance.png" alt="Time Attendance Systems">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_Time_Attendance.png" alt="Time Attendance Systems">
                         </div>
-                        <h4 class="fw-bold mb-3" style="color: #f26522;">Time Attendance Systems</h4>
+                        <h4 aria-level="2" class="fw-bold mb-3" style="color: #f26522;">Time Attendance Systems</h4>
                         <p class="text-muted" style="font-size: 14px; line-height: 1.6;">
                             Cloud-synchronized employee attendance monitoring, roster management, shift tracking, and automated payroll software integration with biometric hardware.
                         </p>
                     </div>
                     <div class="pt-3 text-center">
-                        <a href="Smart_Card_Technologies.html" class="button">read more</a>
+                        <a href="smart-card-technologies.html" class="button">read more</a>
                     </div>
                 </div>
             </div>
@@ -368,15 +373,15 @@
                 <div class="services-item_pg p-4 h-100 d-flex flex-column justify-content-between shadow-sm bg-white" style="border-radius: 12px; border: 1px solid #dee2e6;">
                     <div>
                         <div class="text-center mb-3">
-                            <img src="assets/img/icon_Kiosk.png" alt="Kiosk Solutions">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_Kiosk.png" alt="Kiosk Solutions">
                         </div>
-                        <h4 class="fw-bold mb-3" style="color: #f26522;">Self-Service Kiosks</h4>
+                        <h4 aria-level="2" class="fw-bold mb-3" style="color: #f26522;">Self-Service Kiosks</h4>
                         <p class="text-muted" style="font-size: 14px; line-height: 1.6;">
                             Rugged interactive kiosks for automated bill payment, digital certificate printing, queue management, and sovereign public service delivery.
                         </p>
                     </div>
                     <div class="pt-3 text-center">
-                        <a href="Smart_Card_Technologies.html" class="button">read more</a>
+                        <a href="smart-card-technologies.html" class="button">read more</a>
                     </div>
                 </div>
             </div>
@@ -386,15 +391,15 @@
                 <div class="services-item_pg p-4 h-100 d-flex flex-column justify-content-between shadow-sm bg-white" style="border-radius: 12px; border: 1px solid #dee2e6;">
                     <div>
                         <div class="text-center mb-3">
-                            <img src="assets/img/icon_Tracking.png" alt="Asset &amp; Vehicle Tracking">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_Tracking.png" alt="Asset &amp; Vehicle Tracking">
                         </div>
-                        <h4 class="fw-bold mb-3" style="color: #f26522;">Tracking Solutions</h4>
+                        <h4 aria-level="2" class="fw-bold mb-3" style="color: #f26522;">Tracking Solutions</h4>
                         <p class="text-muted" style="font-size: 14px; line-height: 1.6;">
                             Real-time GPS vehicle tracking, geofencing, fuel monitoring, refrigerated supply chain telematics, and heavy equipment management.
                         </p>
                     </div>
                     <div class="pt-3 text-center">
-                        <a href="Smart_Card_Technologies.html" class="button">read more</a>
+                        <a href="smart-card-technologies.html" class="button">read more</a>
                     </div>
                 </div>
             </div>
@@ -404,15 +409,15 @@
                 <div class="services-item_pg p-4 h-100 d-flex flex-column justify-content-between shadow-sm bg-white" style="border-radius: 12px; border: 1px solid #dee2e6;">
                     <div>
                         <div class="text-center mb-3">
-                            <img src="assets/img/icon_Business_Security_System.png" alt="Business Security System">
+                            <img loading="lazy" width="101" height="101" src="assets/img/icon_Business_Security_System.png" alt="Business Security System">
                         </div>
-                        <h4 class="fw-bold mb-3" style="color: #f26522;">Business Security System</h4>
+                        <h4 aria-level="2" class="fw-bold mb-3" style="color: #f26522;">Business Security System</h4>
                         <p class="text-muted" style="font-size: 14px; line-height: 1.6;">
                             Integrated IP video surveillance, CCTV telemetry, alarm automation, server room environmental monitoring, and perimeter defense systems.
                         </p>
                     </div>
                     <div class="pt-3 text-center">
-                        <a href="Digital_Identity_&_Security.html" class="button">read more</a>
+                        <a href="digital-identity-security.html" class="button">read more</a>
                     </div>
                 </div>
             </div>
@@ -438,7 +443,10 @@
         </div>
     </div>
 
+    </main>
+
     <!-- Footer start -->
+    <footer>
     <div class="footer-wrapper">
         <div class="container">
             <div class="row">
@@ -469,10 +477,10 @@
                 <div class="col-lg-3 col-sm-6 mb-4">
                     <h3 class="text-white mb-3" style="font-size: 1.25rem;">Quick Link</h3>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="Artificial_Intelligence.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Artificial Intelligence</a></li>
-                        <li class="mb-2"><a href="Digital_Identity_&_Security.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Digital Identity &amp; Security</a></li>
-                        <li class="mb-2"><a href="Smart_Card_Technologies.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Smart Card Technologies</a></li>
-                        <li class="mb-2"><a href="about_us.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> About Us</a></li>
+                        <li class="mb-2"><a href="artificial-intelligence.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Artificial Intelligence</a></li>
+                        <li class="mb-2"><a href="digital-identity-security.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Digital Identity &amp; Security</a></li>
+                        <li class="mb-2"><a href="smart-card-technologies.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Smart Card Technologies</a></li>
+                        <li class="mb-2"><a href="about-us.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> About Us</a></li>
                         <li class="mb-2"><a href="services.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Our Services</a></li>
                         <li class="mb-2"><a href="products.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Our Products</a></li>
                         <li class="mb-2"><a href="contact.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Contact Us</a></li>
@@ -493,6 +501,7 @@
             </div>
         </div>
     </div>
+    </footer>
     <!-- Footer end -->
 
     <!-- Scripts -->

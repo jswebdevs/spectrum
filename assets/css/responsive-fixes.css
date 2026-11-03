@@ -2204,7 +2204,7 @@ h2.header_two.text-center {
 }
 
 .filter-btn.active .badge-count {
-  background: #f26522 !important;
+  background: #c2410c !important;
   color: #ffffff !important;
 }
 
@@ -2691,4 +2691,43 @@ body.mobile-menu-open > *:not(nav.navbar):not(.top_bar) {
 #template-mo-zay-hero-carousel .container {
   position: relative;
   z-index: 2;
+}
+
+/* WCAG AA text contrast (axe color-contrast): darker shades of the brand colours
+   for small text on white or tinted backgrounds. Inline colours need !important. */
+.badge[style*="color: #f26522"],
+.chairman-badge,
+.case-study-section-title,
+#main-content a.fw-bold[style*="color: #f26522"],
+#main-content .text-uppercase[style*="color: #f26522"],
+.dis-stat-num[style*="color: #f26522"] {
+  color: #c2410c !important;
+}
+.badge[style*="color: #1e7e34"] {
+  color: #166534 !important;
+}
+.badge-count {
+  background: #c2410c !important;
+}
+.badge[style*="background: #0284c7"] {
+  background: #0369a1 !important;
+}
+.rounded-pill[style*="color: #0284c7"] {
+  color: #0369a1 !important;
+}
+#main-content .text-success {
+  color: #166534 !important;
+}
+/* Keep the lighter green on the dark architecture cards */
+#main-content [style*="rgba(255,255,255,0.05)"] .text-success {
+  color: #59ab6e !important;
+}
+#main-content .bg-success {
+  background-color: #15803d !important;
+}
+.dis-stat-num.text-info {
+  color: #0369a1 !important;
+}
+.dis-stat-num.text-primary {
+  color: #0a58ca !important;
 }
