@@ -233,7 +233,7 @@ index_content = f"""<!DOCTYPE html>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="services-item p-4 d-flex flex-column justify-content-between h-100" style="border: 2px solid #c2410c; background: #fff;">
                         <div>
-                            <img src="assets/img/icon_Digital_Identity_Security.png" width="101" height="101" alt="Digital Identity &amp; Security" class="mb-3">
+                            <img src="assets/img/icon_Digital_Identity_Security.png" width="101" height="101" alt="Digital Identity &amp; Security" class="mb-3" loading="lazy">
                             <h3 class="fw-bold" style="font-size: 1.25rem;">Digital Identity &amp; Security</h3>
                             <p class="text-muted">High-security biometric identity management, KYC infrastructure, national family cards, and verification engines.</p>
                         </div>
@@ -247,7 +247,7 @@ index_content = f"""<!DOCTYPE html>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="services-item p-4 d-flex flex-column justify-content-between h-100" style="background: #fff;">
                         <div>
-                            <img src="assets/img/icon_Smart_Card_Technologies.png" width="101" height="101" alt="Smart Card Technologies" class="mb-3">
+                            <img src="assets/img/icon_Smart_Card_Technologies.png" width="101" height="101" alt="Smart Card Technologies" class="mb-3" loading="lazy">
                             <h3 class="fw-bold" style="font-size: 1.25rem;">Smart Card Technologies</h3>
                             <p class="text-muted">Turnkey contact and contactless chip card issuance, encoding, laser personalization, and reader ecosystems.</p>
                         </div>
@@ -261,7 +261,7 @@ index_content = f"""<!DOCTYPE html>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="services-item p-4 d-flex flex-column justify-content-between h-100" style="background: #fff;">
                         <div>
-                            <img src="assets/img/icon_Artificial_Intelligence.png" width="101" height="101" alt="Artificial Intelligence" class="mb-3">
+                            <img src="assets/img/icon_Artificial_Intelligence.png" width="101" height="101" alt="Artificial Intelligence" class="mb-3" loading="lazy">
                             <h3 class="fw-bold" style="font-size: 1.25rem;">Artificial Intelligence</h3>
                             <p class="text-muted">Machine learning models, facial recognition, computer vision, and cognitive document automation for enterprise scale.</p>
                         </div>
@@ -275,7 +275,7 @@ index_content = f"""<!DOCTYPE html>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="services-item p-4 d-flex flex-column justify-content-between h-100" style="background: #fff;">
                         <div>
-                            <img src="assets/img/icon_Biometric_Technologiest.png" width="101" height="101" alt="Biometric Technologies" class="mb-3">
+                            <img src="assets/img/icon_Biometric_Technologiest.png" width="101" height="101" alt="Biometric Technologies" class="mb-3" loading="lazy">
                             <h3 class="fw-bold" style="font-size: 1.25rem;">Biometric Technologies</h3>
                             <p class="text-muted">AFIS/ABIS integration, iris scanning, fingerprint identification, and multi-modal biometric authentication.</p>
                         </div>
@@ -289,7 +289,7 @@ index_content = f"""<!DOCTYPE html>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="services-item p-4 d-flex flex-column justify-content-between h-100" style="background: #fff;">
                         <div>
-                            <img src="assets/img/icon_Smart_Access_Control.png" width="101" height="101" alt="Smart Access Control" class="mb-3">
+                            <img src="assets/img/icon_Smart_Access_Control.png" width="101" height="101" alt="Smart Access Control" class="mb-3" loading="lazy">
                             <h3 class="fw-bold" style="font-size: 1.25rem;">Smart Access Control</h3>
                             <p class="text-muted">Turnstiles, flap barriers, RFID gateways, and biometric access management systems for high-security facilities.</p>
                         </div>
