@@ -1451,8 +1451,8 @@ dis_content = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 {get_head(
-    title="Digital Identity & Security Solutions | SpectrumID Platform | Spectrum",
-    description="SpectrumID reads Bangla and English NID cards, spots forged IDs, confirms a live person and matches face or fingerprint in seconds. Data stays in Bangladesh.",
+    title="Digital Identity & Security Solutions | Automated ID Verification | Spectrum",
+    description="Spectrum's automated ID verification reads Bangla and English NID cards, spots forged IDs, confirms a live person and matches face or fingerprint in seconds. Data stays in Bangladesh.",
     canonical_slug="Digital_Identity_&_Security.html",
     og_image="assets/img/digital-identity/hero-biometric-verify.jpg"
 )}
@@ -1473,7 +1473,7 @@ dis_content = f"""<!DOCTYPE html>
             </div>
             <h1>Verify a Person in <span>Seconds</span>, Not Minutes</h1>
             <p class="hero-desc">
-                SpectrumID reads a national ID card, checks that it is genuine, and confirms the person holding it is real and matches the card. It all happens in a few seconds, and the data stays in Bangladesh.
+                Our automated ID verification solution reads a national ID card, checks that it is genuine, and confirms the person holding it is real and matches the card. It all happens in a few seconds, and the data stays in Bangladesh.
             </p>
             <div class="hero-features">
                 <span class="hero-feature-item">
@@ -1492,18 +1492,18 @@ dis_content = f"""<!DOCTYPE html>
         </div>
     </div>
 
-    <!-- INTRO: WHAT SPECTRUMID DOES -->
+    <!-- INTRO: WHAT THE SOLUTION DOES -->
     <div class="container py-5">
         <div class="row align-items-center g-5 mb-5">
             <div class="col-lg-6">
                 <div class="d-inline-flex align-items-center px-3 py-1 rounded-pill mb-3" style="background: rgba(2, 132, 199, 0.1); border: 1px solid rgba(2, 132, 199, 0.25); color: #0284c7; font-size: 13px; font-weight: 700;">
-                    <i class="fas fa-shield-virus me-2"></i> SPECTRUMID PLATFORM
+                    <i class="fas fa-shield-virus me-2"></i> AUTOMATED ID VERIFICATION
                 </div>
                 <h2 class="display-6 fw-bold mb-3" style="color: #2e3760; line-height: 1.25;">
                     Know Exactly Who You Are Dealing With
                 </h2>
                 <p class="text-muted" style="line-height: 1.8; font-size: 16px;">
-                    Manual ID checks are slow, and photocopies are easy to fake. SpectrumID replaces them with one automated check that runs on a phone, a tablet or a counter terminal.
+                    Manual ID checks are slow, and photocopies are easy to fake. Our solution replaces them with one automated check that runs on a phone, a tablet or a counter terminal.
                 </p>
                 <p class="text-muted" style="line-height: 1.8; font-size: 15px;">
                     Banks, telecom operators and government programmes use it to open accounts, register SIM cards and deliver benefits. It stops fake cards, borrowed IDs and photo tricks before they reach your system.
@@ -1575,7 +1575,7 @@ dis_content = f"""<!DOCTYPE html>
                 <span class="badge bg-light text-dark px-3 py-2 rounded-pill fw-bold border text-uppercase" style="letter-spacing: 0.5px;">What It Solves</span>
                 <h3 class="fw-bold mt-2" style="color: #2e3760;">Three Questions, Answered Every Time</h3>
                 <p class="text-muted mx-auto" style="max-width: 650px;">
-                    Most identity fraud comes down to three questions. SpectrumID answers all three in a single check.
+                    Most identity fraud comes down to three questions. Our solution answers all three in a single check.
                 </p>
             </div>
 
@@ -1641,7 +1641,7 @@ dis_content = f"""<!DOCTYPE html>
                             The customer or officer points a phone camera at the card. The app finds the card edges, straightens the image and removes glare by itself.
                         </p>
                         <p class="text-muted" style="line-height: 1.8;">
-                            In about <strong>0.1 seconds</strong>, SpectrumID reads the card in Bangla and English and fills in the form:
+                            In about <strong>0.1 seconds</strong>, the system reads the card in Bangla and English and fills in the form:
                         </p>
                         <div class="row g-2 mb-3">
                             <div class="col-sm-6">
@@ -1687,7 +1687,7 @@ dis_content = f"""<!DOCTYPE html>
                         </div>
                         <h3 class="fw-bold mb-3" style="color: #2e3760;">Make Sure the Card Is Genuine</h3>
                         <p class="text-muted" style="line-height: 1.8;">
-                            A good colour printout on plastic can fool the eye. SpectrumID looks closer, at three layers a fake rarely gets right:
+                            A good colour printout on plastic can fool the eye. The system looks closer, at three layers a fake rarely gets right:
                         </p>
                         <div class="d-flex mb-3">
                             <div class="me-3 text-warning"><i class="fas fa-layer-group fa-lg"></i></div>
@@ -1724,7 +1724,7 @@ dis_content = f"""<!DOCTYPE html>
                         </div>
                         <h3 class="fw-bold mb-3" style="color: #2e3760;">Confirm a Real, Live Person</h3>
                         <p class="text-muted" style="line-height: 1.8;">
-                            The customer looks at the camera for a moment. They do not need to blink, smile or turn their head. SpectrumID checks that the face has real depth, then matches it with the photo on the card.
+                            The customer looks at the camera for a moment. They do not need to blink, smile or turn their head. The system checks that the face has real depth, then matches it with the photo on the card.
                         </p>
                         <div class="p-3 rounded mb-3" style="background: #f8fafc; border-left: 4px solid #10b981;">
                             <h6 class="fw-bold text-success mb-1"><i class="fas fa-shield-alt me-1"></i> Blocks Common Tricks</h6>
@@ -1767,7 +1767,7 @@ dis_content = f"""<!DOCTYPE html>
                 <div class="text-center">
                     <picture>
                         <source srcset="assets/img/digital-identity/architecture-ecosystem.webp" type="image/webp">
-                        <img src="assets/img/digital-identity/architecture-ecosystem.jpg" alt="How SpectrumID works: capture devices send encrypted data to the SpectrumID engine, which keeps keys and audit logs in a secure vault inside Bangladesh" class="img-fluid rounded-3" style="max-height: 520px; width: 100%; object-fit: contain;" loading="lazy">
+                        <img src="assets/img/digital-identity/architecture-ecosystem.jpg" alt="How the ID verification system works: capture devices send encrypted data to the verification engine, which keeps keys and audit logs in a secure vault inside Bangladesh" class="img-fluid rounded-3" style="max-height: 520px; width: 100%; object-fit: contain;" loading="lazy">
                     </picture>
                 </div>
                 <div class="row g-3 pt-4 text-light">
@@ -1779,7 +1779,7 @@ dis_content = f"""<!DOCTYPE html>
                     </div>
                     <div class="col-md-4">
                         <div class="p-3 rounded" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
-                            <h6 class="fw-bold text-warning mb-1"><i class="fas fa-brain me-2"></i> 2. SpectrumID Engine</h6>
+                            <h6 class="fw-bold text-warning mb-1"><i class="fas fa-brain me-2"></i> 2. Verification Engine</h6>
                             <p class="small text-white-50 mb-0">Runs on your own servers or a local data centre. It reads cards, checks for forgery, tests liveness and matches faces and fingerprints.</p>
                         </div>
                     </div>
@@ -1870,7 +1870,7 @@ dis_content = f"""<!DOCTYPE html>
             </div>
         </div>
 
-        <!-- SECTION: PROOF AT NATIONAL SCALE (TCB & UPOKARI) -->
+        <!-- SECTION: PROOF AT NATIONAL SCALE (TCB) -->
         <div class="card mb-5 border-0 shadow-sm" style="border-radius: 16px; background: linear-gradient(135deg, #064e3b 0%, #0f172a 100%); color: white;">
             <div class="card-body p-4 p-md-5">
                 <div class="row align-items-center g-4">
@@ -1882,15 +1882,12 @@ dis_content = f"""<!DOCTYPE html>
                         <p class="text-light opacity-90 mb-4" style="line-height: 1.8; font-size: 16px;">
                             For the <strong>Trading Corporation of Bangladesh (TCB)</strong>, Spectrum enrolled more than <strong>10 million low-income families</strong>, about 50 million people, and issued each family a smart card. Each family is registered only once, so subsidised goods reach the right people.
                         </p>
-                        <p class="text-light opacity-75 mb-4" style="line-height: 1.7; font-size: 14px;">
-                            Our next platform, <strong>Upokari (&zwnj;উপকারী&zwnj;)</strong>, builds on this work. It manages benefit quotas in real time and checks fingerprints on POS terminals that keep working offline in remote areas.
-                        </p>
                         <div class="d-flex flex-wrap gap-3">
                             <a href="case-study.html" class="btn btn-warning px-4 py-2 fw-bold text-dark rounded-pill shadow-sm">
                                 <i class="fas fa-file-alt me-2"></i> Read the TCB Case Study
                             </a>
                             <a href="contact.html" class="btn btn-outline-light px-4 py-2 rounded-pill fw-semibold">
-                                <i class="fas fa-envelope me-2"></i> Ask About Upokari
+                                <i class="fas fa-envelope me-2"></i> Talk to Our Team
                             </a>
                         </div>
                     </div>
@@ -1998,7 +1995,7 @@ dis_content = f"""<!DOCTYPE html>
     <div class="container-fluid py-5 cta-banner-section">
         <div class="container text-center py-4 position-relative" style="z-index: 2;">
             <span class="badge px-3 py-2 rounded-pill fw-semibold mb-3" style="background: rgba(242, 101, 34, 0.2); color: #f26522; border: 1px solid rgba(242, 101, 34, 0.4); font-size: 13px;">Talk to Our Team</span>
-            <h2 class="display-6 fw-bold text-white mb-3">See SpectrumID Check Your Own Cards</h2>
+            <h2 class="display-6 fw-bold text-white mb-3">See Our ID Verification Check Your Own Cards</h2>
             <p class="text-light opacity-75 mx-auto mb-4" style="max-width: 650px; font-size: 16px; line-height: 1.7;">
                 Book a demo. We will run a live check and talk through what you need, whether that is e-KYC, a citizen registry or a system that runs fully on your own site.
             </p>
@@ -3578,7 +3575,7 @@ llms_content = """# Spectrum IT Solutions Ltd.
 - [Home](https://spectrum.com.bd/index.html): Homepage with overview of capabilities
 - [About](https://spectrum.com.bd/about_us.html): Company background, 12+ years experience, ISO 9001 & ISO 27001
 - [Services](https://spectrum.com.bd/services.html): Digital identity, smart cards, AI, cybersecurity, ERP
-- [Digital Identity & Security](https://spectrum.com.bd/Digital_Identity_&_Security.html): National biometric identity architecture & Upokari platform
+- [Digital Identity & Security](https://spectrum.com.bd/Digital_Identity_&_Security.html): National biometric identity and automated ID verification
 - [Smart Card Technologies](https://spectrum.com.bd/Smart_Card_Technologies.html): Turnkey smart card personalization, encoding & kiosks
 - [Artificial Intelligence](https://spectrum.com.bd/Artificial_Intelligence.html): Computer vision, cognitive OCR, and decision models
 - [Products](https://spectrum.com.bd/products.html): Enterprise hardware and software products

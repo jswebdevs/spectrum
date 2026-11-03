@@ -91,7 +91,7 @@ code = code.replace(old_cs_head, new_cs_head, 1)
 # 6. Update DIS Head
 old_dis_head = """<head>
     <title>Digital Identity and Security | Spectrum IT Solutions</title>
-    <meta name="description" content="Digital Identity &amp; Security solutions by Spectrum IT Solutions Ltd., featuring national biometric deduplication, KYC engines, and the upcoming Upokari platform.">
+    <meta name="description" content="Digital Identity &amp; Security solutions by Spectrum IT Solutions Ltd., featuring national biometric deduplication, KYC engines, and automated ID verification.">
     <link rel="canonical" href="Digital_Identity_&_Security.html">
 {COMMON_HEAD}
 </head>"""
@@ -99,7 +99,7 @@ old_dis_head = """<head>
 new_dis_head = """<head>
 {get_head(
     title="Digital Identity and Security | Spectrum IT Solutions",
-    description="Digital Identity & Security solutions by Spectrum IT Solutions Ltd., featuring national biometric deduplication, KYC engines, and the upcoming Upokari platform.",
+    description="Digital Identity & Security solutions by Spectrum IT Solutions Ltd., featuring national biometric deduplication, KYC engines, and automated ID verification.",
     canonical_slug="Digital_Identity_&_Security.html",
     og_image="assets/img/Digital-Identity-&-Security.jpg"
 )}

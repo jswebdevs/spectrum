@@ -15,7 +15,6 @@ A 100% pure, framework-free implementation of the **Spectrum IT Solutions Ltd.**
 1. **Digital Identity Priority (#1 at first):**
    - In [`services.html`](services.html): **Digital Identity & Security** is displayed as Card #1 at the top-left of the services grid.
    - In [`projects.html`](projects.html): **TCB Smart Family Card (Digital Identity)** is displayed as Project #1 at the top-left.
-   - In [`dis.html`](dis.html): Added the **"Upokari"** sub-service block with a `Coming Soon` badge, ready for the upcoming content.
 
 2. **Case Studies in Main Menu Bar:**
    - Added **Case Studies** as a standard navigation item across all pages:
@@ -41,7 +40,7 @@ A 100% pure, framework-free implementation of the **Spectrum IT Solutions Ltd.**
 - [`services.html`](services.html) — Services with Digital Identity #1
 - [`projects.html`](projects.html) — Projects with Digital Identity #1
 - [`case-study.html`](case-study.html) — Case Studies (linked from menu bar)
-- [`dis.html`](dis.html) — Digital Identity & Security (featuring **Upokari**)
+- [`dis.html`](dis.html) — Digital Identity & Security (automated ID verification)
 - [`about_us.html`](about_us.html) — About Us
 - [`products.html`](products.html) — Products
 - [`contact.html`](contact.html) — Contact form (repaired)
