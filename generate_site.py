@@ -1503,7 +1503,7 @@ dis_content = f"""<!DOCTYPE html>
                     Know Exactly Who You Are Dealing With
                 </h2>
                 <p class="text-muted" style="line-height: 1.8; font-size: 16px;">
-                    Manual ID checks are slow, and photocopies are easy to fake. Our solution replaces them with one automated check that runs on a phone, a tablet or a counter terminal.
+                    Manual ID checks are slow, and photocopies are easy to fake. Our solution replaces them with one automated check that runs on a phone, a tablet or a POS terminal at the counter.
                 </p>
                 <p class="text-muted" style="line-height: 1.8; font-size: 15px;">
                     Banks, telecom operators and government programmes use it to open accounts, register SIM cards and deliver benefits. It stops fake cards, borrowed IDs and photo tricks before they reach your system.
