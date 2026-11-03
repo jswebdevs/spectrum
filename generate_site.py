@@ -1767,7 +1767,7 @@ dis_content = f"""<!DOCTYPE html>
                 <div class="text-center">
                     <picture>
                         <source srcset="assets/img/digital-identity/architecture-ecosystem.webp" type="image/webp">
-                        <img src="assets/img/digital-identity/architecture-ecosystem.jpg" alt="Capture devices, the SpectrumID engine server and a secure vault, connected left to right" class="img-fluid rounded-3" style="max-height: 520px; width: 100%; object-fit: contain;" loading="lazy">
+                        <img src="assets/img/digital-identity/architecture-ecosystem.jpg" alt="How SpectrumID works: capture devices send encrypted data to the SpectrumID engine, which keeps keys and audit logs in a secure vault inside Bangladesh" class="img-fluid rounded-3" style="max-height: 520px; width: 100%; object-fit: contain;" loading="lazy">
                     </picture>
                 </div>
                 <div class="row g-3 pt-4 text-light">
