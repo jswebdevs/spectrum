@@ -32,7 +32,7 @@ def get_head(title, description, canonical_slug, og_image="assets/img/banner_img
 
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
-    <link rel="ard" href="/.well-known/ard.json">
+    <link rel="ard" href=".well-known/ard.json">
     <!-- Resource Hints & Preloads -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -90,7 +90,7 @@ COMMON_HEAD = """    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
-    <link rel="ard" href="/.well-known/ard.json">
+    <link rel="ard" href=".well-known/ard.json">
     <!-- Resource Hints & Preloads -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
