@@ -2202,7 +2202,19 @@ contact_content = f"""<!DOCTYPE html>
                         </div>
                     </div>
 
-                    <form id="contact-form" action="#" method="post">
+
+                    <div id="contact-error-alert" class="alert alert-danger d-none mb-4" role="alert">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-exclamation-circle fs-3 me-3 text-danger"></i>
+                            <div>
+                                <h6 class="alert-heading fw-bold mb-1">Message Not Sent</h6>
+                                <p class="mb-0 small">Something went wrong. Please try again, or email us at <a href="mailto:contact@spectrum.com.bd">contact@spectrum.com.bd</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <input type="hidden" name="_subject" value="New website enquiry (Contact page)">
+                        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;" title="Leave this field empty">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <label for="name" class="form-label">Full Name <span class="text-danger">*</span></label>
@@ -2210,7 +2222,7 @@ contact_content = f"""<!DOCTYPE html>
                             </div>
                             <div class="col-md-6">
                                 <label for="sname" class="form-label">Company / Institution <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="sname" name="sname" placeholder="Organization / Ministry" required autocomplete="organization">
+                                <input type="text" class="form-control" id="sname" name="company" placeholder="Organization / Ministry" required autocomplete="organization">
                             </div>
                             <div class="col-md-6">
                                 <label for="email" class="form-label">Email Address <span class="text-danger">*</span></label>
@@ -2218,15 +2230,15 @@ contact_content = f"""<!DOCTYPE html>
                             </div>
                             <div class="col-md-6">
                                 <label for="Phone" class="form-label">Phone / Mobile Number <span class="text-danger">*</span></label>
-                                <input type="tel" class="form-control" id="Phone" name="Phone" placeholder="+880 1XXXXXXXXX" required autocomplete="tel">
+                                <input type="tel" class="form-control" id="Phone" name="phone" placeholder="+880 1XXXXXXXXX" required autocomplete="tel">
                             </div>
                             <div class="col-md-6">
                                 <label for="Country" class="form-label">Country / Region</label>
-                                <input type="text" class="form-control" id="Country" name="Country" placeholder="Bangladesh" autocomplete="country-name">
+                                <input type="text" class="form-control" id="Country" name="country" placeholder="Bangladesh" autocomplete="country-name">
                             </div>
                             <div class="col-md-6">
                                 <label for="aboutUs" class="form-label">How Did You Hear About Us?</label>
-                                <input type="text" class="form-control" id="aboutUs" name="aboutUs" placeholder="Referral, Exhibition, Web Search, etc.">
+                                <input type="text" class="form-control" id="aboutUs" name="heard_about" placeholder="Referral, Exhibition, Web Search, etc.">
                             </div>
                             <div class="col-12">
                                 <label for="service_interest" class="form-label">Area of Interest</label>
@@ -2244,7 +2256,7 @@ contact_content = f"""<!DOCTYPE html>
                                 <textarea class="form-control" id="subject" name="message" rows="4" placeholder="Briefly outline your objectives, project scope, technical specifications, or timeline..." required></textarea>
                             </div>
                             <div class="col-12 pt-2 text-center">
-                                <button type="submit" class="cta-primary-btn w-100" style="padding: 14px 28px; font-size: 16px; border: none; cursor: pointer; justify-content: center;">
+                                <button type="submit" id="contact-submit" class="cta-primary-btn w-100" style="padding: 14px 28px; font-size: 16px; border: none; cursor: pointer; justify-content: center;">
                                     <i class="fas fa-paper-plane me-2"></i> Submit Inquiry
                                 </button>
                                 <p class="text-muted mt-2 mb-0" style="font-size: 12px;">
@@ -2331,19 +2343,42 @@ contact_content = f"""<!DOCTYPE html>
         </div>
     </div>
 
-    <!-- Contact Form Feedback Script -->
+    <!-- Contact Form Submit Script (Formspree) -->
     <script>
     document.addEventListener('DOMContentLoaded', function() {{
         var form = document.getElementById('contact-form');
-        var alertBox = document.getElementById('contact-success-alert');
-        if (form) {{
-            form.addEventListener('submit', function(e) {{
-                e.preventDefault();
-                alertBox.classList.remove('d-none');
-                form.reset();
-                alertBox.scrollIntoView({{ behavior: 'smooth', block: 'center' }});
-            }});
-        }}
+        var okBox = document.getElementById('contact-success-alert');
+        var errBox = document.getElementById('contact-error-alert');
+        var btn = document.getElementById('contact-submit');
+        if (!form) return;
+        form.addEventListener('submit', function(e) {{
+            e.preventDefault();
+            okBox.classList.add('d-none');
+            errBox.classList.add('d-none');
+            if (form.action.indexOf('YOUR_FORM_ID') !== -1) {{
+                errBox.classList.remove('d-none');
+                errBox.scrollIntoView({{ behavior: 'smooth', block: 'center' }});
+                return;
+            }}
+            var label = btn.innerHTML;
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Sending...';
+            fetch(form.action, {{ method: 'POST', body: new FormData(form), headers: {{ 'Accept': 'application/json' }} }})
+                .then(function(res) {{
+                    if (!res.ok) throw new Error('HTTP ' + res.status);
+                    okBox.classList.remove('d-none');
+                    form.reset();
+                    okBox.scrollIntoView({{ behavior: 'smooth', block: 'center' }});
+                }})
+                .catch(function() {{
+                    errBox.classList.remove('d-none');
+                    errBox.scrollIntoView({{ behavior: 'smooth', block: 'center' }});
+                }})
+                .finally(function() {{
+                    btn.disabled = false;
+                    btn.innerHTML = label;
+                }});
+        }});
     }});
     </script>
 

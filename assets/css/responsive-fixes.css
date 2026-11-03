@@ -222,6 +222,11 @@ nav.navbar .logo img {
   transform: translateY(-1px);
 }
 
+.top_bar .top_email a:hover span,
+.top_bar .top_email_badge:hover span {
+  color: #1e7e34 !important; /* beats .top_bar span white so text shows on white hover */
+}
+
 .top_bar .top_email a:hover i,
 .top_bar .top_email_badge:hover i {
   color: #1e7e34 !important;
