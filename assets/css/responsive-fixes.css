@@ -2747,3 +2747,69 @@ body.mobile-menu-open > *:not(nav.navbar):not(.top_bar) {
     justify-content: center;
   }
 }
+
+/* DIS step circles stand alone (no "Step N" pill), so give them more presence */
+.dis-step-num {
+  width: 44px;
+  height: 44px;
+  font-size: 19px;
+}
+
+
+/* DIS feature cards (What It Solves + Benefits): body text was forced to 18px,
+   larger than the card titles */
+.dis-feature-box p {
+  font-size: 15px !important;
+  line-height: 1.65 !important;
+}
+.dis-feature-box h6 {
+  font-size: 17px;
+}
+
+/* DIS TCB proof: three stacked stats */
+.dis-tcb-stats {
+  padding: 8px 24px;
+}
+.dis-tcb-stats li {
+  padding: 16px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+.dis-tcb-stats li:last-child {
+  border-bottom: 0;
+}
+.dis-tcb-num {
+  display: block;
+  font-size: 30px !important;
+  font-weight: 800 !important;
+  line-height: 1.1;
+  color: #047857;
+}
+.dis-tcb-label {
+  display: block;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: #475569;
+  margin-top: 4px;
+}
+
+/* DIS sector cards: tinted icon squares and readable body text */
+.dis-industry-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  font-size: 22px;
+}
+.dis-industry-card h5 {
+  font-size: 18px;
+}
+.dis-industry-card p {
+  font-size: 15px !important;
+  line-height: 1.65 !important;
+}
+.dis-industry-icon i {
+  font-size: 22px;
+}
