@@ -2731,3 +2731,19 @@ body.mobile-menu-open > *:not(nav.navbar):not(.top_bar) {
 .dis-stat-num.text-primary {
   color: #0a58ca !important;
 }
+
+/* DIS intro stats: style.min.css forces div{font-size:18px;font-weight:300} with !important */
+.dis-stat-num {
+  font-size: 30px !important;
+  font-weight: 800 !important;
+  line-height: 1.1 !important;
+}
+
+/* Hero with exactly 4 badges: keep a clean 2x2 grid until all 4 fit on one row */
+@media (min-width: 768px) and (max-width: 1399.98px) {
+  .page-hero-banner .hero-features:has(> .hero-feature-item:nth-child(4):last-child) {
+    display: grid;
+    grid-template-columns: repeat(2, 220px);
+    justify-content: center;
+  }
+}
