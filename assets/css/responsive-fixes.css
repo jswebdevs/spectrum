@@ -2994,3 +2994,11 @@ body.mobile-menu-open > *:not(nav.navbar):not(.top_bar) {
 @media (max-width: 575.98px) {
   .dis-article .dis-article-title { font-size: 28px; }
 }
+
+/* DIS article: justified body paragraphs */
+.dis-article > p,
+.dis-article section > p,
+.dis-faq details p {
+  text-align: justify;
+  hyphens: auto;
+}
