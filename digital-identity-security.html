@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>What Is Digital Identity? A Guide, Plus ID Verification | Spectrum</title>
+    <title>Digital Identity and Security | Spectrum</title>
     <meta name="description" content="A plain guide to digital identity in Bangladesh: what it is, how ID verification works, the NID and e-KYC, risks and safety tips. Plus Spectrum's automated ID verification.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://spectrum.com.bd/digital-identity-security.html">
@@ -11,7 +11,7 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Spectrum IT Solutions Ltd.">
-    <meta property="og:title" content="What Is Digital Identity? A Guide, Plus ID Verification | Spectrum">
+    <meta property="og:title" content="Digital Identity and Security | Spectrum">
     <meta property="og:description" content="A plain guide to digital identity in Bangladesh: what it is, how ID verification works, the NID and e-KYC, risks and safety tips. Plus Spectrum's automated ID verification.">
     <meta property="og:url" content="https://spectrum.com.bd/digital-identity-security.html">
     <meta property="og:image" content="https://spectrum.com.bd/assets/img/digital-identity/hero-biometric-verify.jpg">
@@ -22,7 +22,7 @@
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@SpectrumITSolutions">
-    <meta name="twitter:title" content="What Is Digital Identity? A Guide, Plus ID Verification | Spectrum">
+    <meta name="twitter:title" content="Digital Identity and Security | Spectrum">
     <meta name="twitter:description" content="A plain guide to digital identity in Bangladesh: what it is, how ID verification works, the NID and e-KYC, risks and safety tips. Plus Spectrum's automated ID verification.">
     <meta name="twitter:image" content="https://spectrum.com.bd/assets/img/digital-identity/hero-biometric-verify.jpg">
 
@@ -41,7 +41,7 @@
     <!-- Bootstrap & Site Styles -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.min.css">
-    <link rel="stylesheet" href="assets/css/responsive-fixes.min.css?v=20261105n">
+    <link rel="stylesheet" href="assets/css/responsive-fixes.min.css?v=20261105p">
     <!-- Structured Data (JSON-LD Organization & WebPage) -->
     <script type="application/ld+json">
     [
@@ -69,7 +69,7 @@
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "What Is Digital Identity? A Guide, Plus ID Verification | Spectrum",
+        "name": "Digital Identity and Security | Spectrum",
         "description": "A plain guide to digital identity in Bangladesh: what it is, how ID verification works, the NID and e-KYC, risks and safety tips. Plus Spectrum's automated ID verification.",
         "url": "https://spectrum.com.bd/digital-identity-security.html",
         "isPartOf": {
@@ -98,6 +98,7 @@
           { "@type": "Question", "name": "What is e-KYC?", "acceptedAnswer": { "@type": "Answer", "text": "e-KYC means electronic Know Your Customer. It lets banks, mobile financial services and other organisations confirm your identity digitally instead of with paper forms and photocopies." } },
           { "@type": "Question", "name": "Can a photo or video of my face fool a verification system?", "acceptedAnswer": { "@type": "Answer", "text": "A good system blocks this with a liveness check, which confirms that a real person is in front of the camera and not a printed photo, a screen or a mask." } },
           { "@type": "Question", "name": "What if my fingerprints are worn?", "acceptedAnswer": { "@type": "Answer", "text": "This is common among older people and manual workers. A well-designed system falls back to face matching or a review by staff, so nobody is turned away for it." } },
+          { "@type": "Question", "name": "How accurate are automated identity checks?", "acceptedAnswer": { "@type": "Answer", "text": "Accuracy is measured with two numbers. The false accept rate is how often a fake gets through, and the false reject rate is how often a genuine person is wrongly turned away. Lowering one tends to raise the other, so a good system is tuned for its use and always offers a review by staff when it is unsure." } },
           { "@type": "Question", "name": "Does identity verification need the internet?", "acceptedAnswer": { "@type": "Answer", "text": "In Bangladesh, most checks do today, because the details are confirmed against NID records online. Offline verification is being developed, but it has to be done carefully because of the size of the records." } }
         ]
       }
@@ -207,9 +208,9 @@
                 <span class="opacity-50">/</span>
                 <span style="color: #f26522; font-weight: 600;">Digital Identity &amp; Security</span>
             </div>
-            <h1>Verify a Person in <span>Seconds</span>, Not Minutes</h1>
+            <h1>Digital Identity <span>and Security</span></h1>
             <p class="hero-desc">
-                Our automated ID verification solution reads a national ID card, checks that it is genuine, and confirms the person holding it is real and matches the card. It all happens in a few seconds, and the data stays on your own servers.
+                What digital identity is, how it works in Bangladesh and how to keep it safe. Then, how our automated ID verification checks a card and the person holding it in seconds, with the data on your own servers.
             </p>
             <div class="hero-features">
                 <span class="hero-feature-item">
@@ -235,7 +236,7 @@
             <p class="dis-article-updated">Last updated <time datetime="2026-11-05">5 November 2026</time></p>
         </header>
         <p class="dis-article-lead">
-            Every time you open a bank account, buy a SIM card or collect a government benefit, someone has to answer one simple question: are you really who you say you are? For a long time the answer was a paper document and a person looking at it. Today, more and more of that check happens digitally. This guide explains what digital identity is, how it is checked, how it works in Bangladesh, and how to keep it safe.
+            Every time you open a bank account, buy a SIM card or collect a government benefit, someone has to answer one simple question: are you really who you say you are? For a long time the answer was a paper document and a person looking at it. Today, more and more of that check happens digitally. This guide explains what digital identity is, how it is checked, how it works in Bangladesh, how it protects important documents, and how to keep it safe.
         </p>
 
         <nav class="dis-toc" aria-label="In this article">
@@ -245,6 +246,7 @@
                 <li><a href="#parts">What a digital identity is made of</a></li>
                 <li><a href="#verification">How identity is verified</a></li>
                 <li><a href="#bangladesh">Digital identity in Bangladesh</a></li>
+                <li><a href="#documents">Beyond ID cards: documents that depend on identity</a></li>
                 <li><a href="#benefits-risks">Benefits and risks</a></li>
                 <li><a href="#safety">Keeping digital identity safe</a></li>
                 <li><a href="#future">What comes next</a></li>
@@ -332,6 +334,14 @@
             <p>
                 In Bangladesh, one more step makes verification much stronger: checking the details against the official <strong>NID records</strong>. A fake card can look convincing, but its details will not match the national record.
             </p>
+            <h3>Common ways documents are faked</h3>
+            <p>Most forgeries fall into one of four types. A good check is built to catch each of them:</p>
+            <ul class="dis-article-list">
+                <li><strong>Counterfeit.</strong> A new card or document made from scratch to look like the real one. The fonts, layout and fine line patterns are usually slightly wrong.</li>
+                <li><strong>Photocopy or scan.</strong> A copy passed off as the original. Copying blurs fine print, shifts colours and softens edges.</li>
+                <li><strong>Screen replay.</strong> A photo of a card shown on another phone or monitor. The screen leaves tell-tale stripes, glare and pixel patterns.</li>
+                <li><strong>Edited genuine document.</strong> The most dangerous kind: a real card or record with a swapped photo or changed details. It passes a quick look, so the details must be checked against the official record.</li>
+            </ul>
         </section>
 
         <section id="bangladesh">
@@ -345,6 +355,21 @@
                 <li><strong>Social safety nets.</strong> Food and cash support programmes use NID checks so that each family registers only once and help reaches the people it is meant for.</li>
             </ul>
             <p>Together, these make the NID the backbone of identity in the country. That is also why protecting it matters so much.</p>
+        </section>
+
+        <section id="documents">
+            <h2>Beyond ID cards: documents that depend on identity</h2>
+            <p>
+                Digital identity is not only about ID cards. Many important documents are only worth something because they are tied to a real person, and they are forged for the same reasons.
+            </p>
+            <ul class="dis-article-list">
+                <li><strong>Land records.</strong> In Bangladesh, land documents such as the Nokol, Khatian and deeds are among the most forged papers. A fake or edited record can be used to sell land that the seller does not own.</li>
+                <li><strong>Benefit cards.</strong> Cards such as the TCB family card decide who receives subsidised goods. Cloned or altered cards take help away from the families it is meant for.</li>
+                <li><strong>Licences and certificates.</strong> Driving licences, trade licences, and birth and death certificates are checked by banks, employers and government offices every day.</li>
+            </ul>
+            <p>
+                A strong way to protect such documents is to <strong>seal</strong> them when they are issued. Each page gets a digital fingerprint, called a hash, calculated from its exact contents. Change a single letter or number and the fingerprint no longer matches, so anyone checking the document can see straight away whether it has been altered, and on which page.
+            </p>
         </section>
 
         <section id="benefits-risks">
@@ -388,6 +413,7 @@
                 <li><strong>Never share an OTP or PIN,</strong> even with someone who says they are calling from your bank or mobile operator.</li>
                 <li><strong>Be careful with apps that ask for a photo of your NID and a selfie.</strong> Use only official apps from organisations you trust.</li>
                 <li><strong>Report a lost or stolen card quickly,</strong> so it cannot be used in your name.</li>
+                <li><strong>Before buying land, verify the documents</strong> with the official registry, not just the copies the seller gives you.</li>
             </ul>
         </section>
 
@@ -424,6 +450,10 @@
                     <p>This is common among older people and manual workers. A well-designed system falls back to face matching or a review by staff, so nobody is turned away for it.</p>
                 </details>
                 <details>
+                    <summary>How accurate are automated identity checks?</summary>
+                    <p>Accuracy is measured with two numbers. The false accept rate is how often a fake gets through, and the false reject rate is how often a genuine person is wrongly turned away. Lowering one tends to raise the other, so a good system is tuned for its use and always offers a review by staff when it is unsure.</p>
+                </details>
+                <details>
                     <summary>Does identity verification need the internet?</summary>
                     <p>In Bangladesh, most checks do today, because the details are confirmed against NID records online. Offline verification is being developed, but it has to be done carefully because of the size of the records.</p>
                 </details>
@@ -439,7 +469,7 @@
     </div>
 
     <!-- INTRO: WHAT THE SOLUTION DOES -->
-    <div class="container py-5">
+    <div class="container py-5 dis-service">
         <div class="row align-items-center g-5 mb-5">
             <div class="col-lg-6">
                 <div class="d-inline-flex align-items-center px-3 py-1 rounded-pill mb-3" style="background: rgba(2, 132, 199, 0.1); border: 1px solid rgba(2, 132, 199, 0.25); color: #0284c7; font-size: 13px; font-weight: 700;">
@@ -785,6 +815,44 @@
                             <li>
                                 <span class="dis-tcb-num">99.8%</span>
                                 <span class="dis-tcb-label">Fewer duplicate claims</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION: UPOKARI (LIVE PRODUCT) -->
+        <div class="card mb-5 border-0 shadow-sm" style="border-radius: 16px; background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%); color: white;">
+            <div class="card-body p-4 p-md-5">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-8">
+                        <div class="d-inline-flex align-items-center px-3 py-1 rounded-pill mb-3" style="background: rgba(129, 140, 248, 0.2); border: 1px solid rgba(129, 140, 248, 0.45); color: #a5b4fc; font-size: 13px; font-weight: 700;">
+                            <i class="fas fa-robot me-2"></i> LIVE NOW &middot; UPOKARI.AI
+                        </div>
+                        <h2 class="text-white fw-bold mb-3">Upokari: Spot Forged Documents in Seconds</h2>
+                        <p class="text-light opacity-90 mb-4" style="line-height: 1.8; font-size: 16px;">
+                            <strong>Upokari</strong> is Spectrum's AI verification engine for the documents people are most often cheated with: <strong>land records</strong> (Nokol, Khatian and deeds), <strong>TCB family cards</strong> and <strong>NID cards</strong>. It catches counterfeits, photocopies, photos taken of a screen and edited genuine cards, then cross-checks each document against the issuing registry. Land records are sealed page by page, so even one altered page is caught.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="https://upokari.ai/" target="_blank" rel="noopener" class="btn btn-warning px-4 py-2 fw-bold text-dark rounded-pill shadow-sm">
+                                <i class="fas fa-external-link-alt me-2"></i> Visit Upokari.ai
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <ul class="dis-tcb-stats dis-upokari-stats list-unstyled bg-white rounded-3 shadow text-dark text-start mb-0">
+                            <li>
+                                <span class="dis-tcb-num">3</span>
+                                <span class="dis-tcb-label">Document types live: land records, TCB cards and NID</span>
+                            </li>
+                            <li>
+                                <span class="dis-tcb-num">&lt;0.1%</span>
+                                <span class="dis-tcb-label">False accept rate</span>
+                            </li>
+                            <li>
+                                <span class="dis-tcb-num">5</span>
+                                <span class="dis-tcb-label">Clear verdicts: genuine, counterfeit, screen replay, copy or spoof</span>
                             </li>
                         </ul>
                     </div>

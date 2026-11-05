@@ -3010,3 +3010,17 @@ body.mobile-menu-open > *:not(nav.navbar):not(.top_bar) {
   margin: 8px 0 0;
   text-align: left;
 }
+
+/* DIS page on phones: a little more side padding for the article and service text */
+@media (max-width: 575.98px) {
+  .dis-article.container,
+  .dis-service.container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* DIS Upokari card: indigo numbers instead of TCB green */
+.dis-upokari-stats .dis-tcb-num {
+  color: #4338ca;
+}
