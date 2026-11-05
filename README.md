@@ -1,54 +1,53 @@
-# Spectrum Plain HTML & CSS Website (`plain-html/`)
+# Spectrum IT Solutions Ltd. — Website
 
-A 100% pure, framework-free implementation of the **Spectrum IT Solutions Ltd.** website. Built with native HTML5, CSS3, and standard Bootstrap styling matching the original site's layout, colors, and structure.
+Static website for [Spectrum IT Solutions Ltd.](https://spectrum.com.bd/), Dhaka. Plain HTML, CSS and JavaScript with Bootstrap 5. No build step.
 
----
+## Pages
 
-## Zero Framework & Zero Dependencies
-- No Node.js, React, Next.js, or build tools required.
-- Double-click any `.html` file or deploy directly to any web server (cPanel, Apache, Nginx, or GitHub Pages).
+| Page | File |
+|---|---|
+| Home | `index.html` |
+| About Us | `about-us.html` |
+| Services | `services.html` |
+| Products | `products.html` |
+| Projects | `projects.html` |
+| Case Studies | `case-study.html` |
+| Contact | `contact.html` |
+| Digital Identity and Security | `digital-identity-security.html` |
+| Smart Card Technologies | `smart-card-technologies.html` |
+| Artificial Intelligence | `artificial-intelligence.html` |
+| Blockchain Technology | `blockchain-technology.html` |
+| Not found | `404.html` |
 
----
+The four service pages follow the same layout: a plain-language article first (with contents, FAQ and Article/FAQ structured data), then the Spectrum service section.
 
-## Fixes & Updates Implemented
+The small files with old names (`dis.html`, `sct.html`, `ai.html`, `About Us.html`, `Digital_Identity_&_Security.html` and so on) are redirects from the previous site's addresses. Keep them so old links and search results still work.
 
-1. **Digital Identity Priority (#1 at first):**
-   - In [`services.html`](services.html): **Digital Identity & Security** is displayed as Card #1 at the top-left of the services grid.
-   - In [`projects.html`](projects.html): **TCB Smart Family Card (Digital Identity)** is displayed as Project #1 at the top-left.
+## Folders
 
-2. **Case Studies in Main Menu Bar:**
-   - Added **Case Studies** as a standard navigation item across all pages:
-     `About Us` | `Services` | `Products` | `Projects` | `Case Studies` | `Contact`
-   - In [`case-study.html`](case-study.html): Fixed the previous incorrect title and replaced duplicate products with real enterprise case studies (TCB Smart Family Card, Industrial e-Court BD, National e-Licensing, OCD Portal).
+- `assets/css/` — `bootstrap.min.css`, the theme (`style.min.css`), site fixes (`responsive-fixes.css` and its minified copy), and `fontawesome-subset.min.css`.
+- `assets/webfonts/` — Font Awesome subset fonts (only the icons the site uses).
+- `assets/js/` — Bootstrap bundle and `custom.js`.
+- `assets/img/` — images. `og/` holds the 1200×630 social share images, `pages/` the service page visuals, `digital-identity/` the Digital Identity page images.
+- `sitemap.xml`, `robots.txt`, `llms.txt`, `.well-known/ard.json` — search and AI discovery files.
 
-3. **Responsive Bug Fixes (No Layout or Color Changes):**
-   - [`assets/css/responsive-fixes.css`](assets/css/responsive-fixes.css): Eliminates the 400px header padding horizontal overflow on laptops and optimizes mobile header height.
-   - Fixed mobile menu tap sizing.
+## Run locally
 
-4. **Contact Form Fixed:**
-   - In [`contact.html`](contact.html): Replaced the non-functional `<a>` tag with `<button type="submit">`, changed phone input to `type="tel"` (preserving `+880`), and added a submission confirmation notice.
+```bash
+python3 -m http.server 5000 --bind 127.0.0.1
+```
 
-5. **Header & Footer Polish:**
-   - Wrapped header phone numbers in `<a href="tel:+8801615900004">` so visitors can tap to call.
-   - Fixed footer typo ("home & aboard" $\to$ "home & abroad") and updated copyright year to 2026.
+Then open http://127.0.0.1:5000/.
 
----
+## Editing conventions
 
-## File Directory
+- **CSS changes** go in both `assets/css/responsive-fixes.css` (readable) and `assets/css/responsive-fixes.min.css` (loaded by the pages). After a change, bump the `?v=` version on `responsive-fixes.min.css` in every page so browsers fetch the new file.
+- The theme forces `font-size: 18px !important` on `p`, `li` and `div`. Overrides need a more specific selector with `!important`.
+- **Images:** add a `.webp` next to each `.jpg`/`.png` and use `<picture>` with the WebP as the first source. Always set `width` and `height`.
+- **New icons:** the site loads a Font Awesome 5.15.4 subset. If you use an icon that is not in `assets/css/fontawesome-subset.min.css`, add its rule and rebuild the subset fonts, or it will show as a blank square.
+- **New page:** copy the head, header and footer from an existing page, add it to `sitemap.xml`, `llms.txt` and the footer Quick Links, and create a share image in `assets/img/og/`.
+- Phone numbers are shown as `+880 1615-900004`; `tel:` links use `+8801615900004`.
 
-- [`index.html`](index.html) — Homepage with Hero Banner & Services
-- [`services.html`](services.html) — Services with Digital Identity #1
-- [`projects.html`](projects.html) — Projects with Digital Identity #1
-- [`case-study.html`](case-study.html) — Case Studies (linked from menu bar)
-- [`digital-identity-security.html`](digital-identity-security.html) — Digital Identity & Security (automated ID verification)
-- [`about-us.html`](about-us.html) — About Us
-- [`products.html`](products.html) — Products
-- [`contact.html`](contact.html) — Contact form (sends through Formspree)
-- [`artificial-intelligence.html`](artificial-intelligence.html) — Artificial Intelligence
-- [`smart-card-technologies.html`](smart-card-technologies.html) — Smart Card Technologies
-- Old names (`dis.html`, `ai.html`, `sct.html`, `about_us.html`, `Contact.html` and other capitalised copies) are redirect pages to the clean URLs above.
-- [`assets/css/style.css`](assets/css/style.css) — Original site styles & colors
-- [`assets/css/responsive-fixes.css`](assets/css/responsive-fixes.css) — Responsive bug fixes
+## Deploy
 
-# spectrum
-# spectrum
+The site is served as static files (currently GitHub Pages). Canonical URLs, the sitemap and structured data already point to `https://spectrum.com.bd/`.

@@ -22,6 +22,42 @@
       ]
     },
     {
+      "identifier": "urn:air:spectrum.com.bd:smartcard:card-programmes",
+      "displayName": "Smart Card Technologies",
+      "type": "application/ai-catalog+json",
+      "url": "https://spectrum.com.bd/smart-card-technologies.html",
+      "description": "Smart card design, personalisation, issuance and verification at national scale",
+      "representativeQueries": [
+        "smart card issuance bangladesh",
+        "card personalization",
+        "tcb family card"
+      ]
+    },
+    {
+      "identifier": "urn:air:spectrum.com.bd:ai:applied-ai",
+      "displayName": "Artificial Intelligence",
+      "type": "application/ai-catalog+json",
+      "url": "https://spectrum.com.bd/artificial-intelligence.html",
+      "description": "Forged document detection, Bangla document reading, face matching and fraud detection",
+      "representativeQueries": [
+        "forged document detection bangladesh",
+        "bangla ocr",
+        "ai fraud detection"
+      ]
+    },
+    {
+      "identifier": "urn:air:spectrum.com.bd:blockchain:tamper-proof-records",
+      "displayName": "Blockchain Technology",
+      "type": "application/ai-catalog+json",
+      "url": "https://spectrum.com.bd/blockchain-technology.html",
+      "description": "Tamper-proof record systems: document sealing, signed QR certificates and private blockchain networks",
+      "representativeQueries": [
+        "blockchain land records bangladesh",
+        "certificate verification qr code",
+        "private blockchain network"
+      ]
+    },
+    {
       "identifier": "urn:air:spectrum.com.bd:products:hardware-catalog",
       "displayName": "Products & Industrial Hardware",
       "type": "application/ai-catalog+json",

@@ -3024,3 +3024,16 @@ body.mobile-menu-open > *:not(nav.navbar):not(.top_bar) {
 .dis-upokari-stats .dis-tcb-num {
   color: #4338ca;
 }
+
+/* Homepage hero: on tablet and desktop the photo reaches behind the text.
+   A light fade on the left keeps the heading and copy readable at every width. */
+@media (min-width: 768px) {
+  #template-mo-zay-hero-carousel .sld-slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(90deg, rgba(246, 246, 246, 0.97) 0%, rgba(246, 246, 246, 0.93) 46%, rgba(246, 246, 246, 0.55) 60%, rgba(246, 246, 246, 0) 74%);
+  }
+}

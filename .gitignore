@@ -7,6 +7,7 @@ __pycache__/
 
 # Docs and notes (kept locally, not published)
 *.md
+!README.md
 *.pdf
 
 # Source maps
