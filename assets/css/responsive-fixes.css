@@ -3002,3 +3002,11 @@ body.mobile-menu-open > *:not(nav.navbar):not(.top_bar) {
   text-align: justify;
   hyphens: auto;
 }
+
+/* DIS article: last-updated line under the title */
+.dis-article .dis-article-updated {
+  font-size: 14px !important;
+  color: #64748b;
+  margin: 8px 0 0;
+  text-align: left;
+}
