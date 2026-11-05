@@ -1,5 +1,21 @@
-__pycache__/
+# Only the static site (HTML, CSS, JS, images, SEO files) belongs in git.
+
+# Python / tooling
+*.py
 *.pyc
+__pycache__/
+
+# Docs and notes (kept locally, not published)
+*.md
+*.pdf
+
+# Source maps
+*.map
+
+# Local tool output and editor config
+graphify-out/
+.claude/
+
+# OS files
 .DS_Store
 Thumbs.db
-
