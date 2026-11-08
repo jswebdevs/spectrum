@@ -2390,7 +2390,7 @@ body.mobile-menu-open {
   height: 100dvh !important;
 }
 
-body.mobile-menu-open > *:not(nav.navbar):not(.top_bar) {
+body.mobile-menu-open > *:not(nav.navbar):not(.top_bar):not(header) {
   pointer-events: none !important;
   user-select: none !important;
 }
@@ -2400,7 +2400,7 @@ body.mobile-menu-open > *:not(nav.navbar):not(.top_bar) {
     overflow: visible !important;
     height: auto !important;
   }
-  body.mobile-menu-open > *:not(nav.navbar):not(.top_bar) {
+  body.mobile-menu-open > *:not(nav.navbar):not(.top_bar):not(header) {
     pointer-events: auto !important;
     user-select: auto !important;
   }
@@ -3025,9 +3025,9 @@ body.mobile-menu-open > *:not(nav.navbar):not(.top_bar) {
   color: #4338ca;
 }
 
-/* Homepage hero: on tablet and desktop the photo reaches behind the text.
-   A light fade on the left keeps the heading and copy readable at every width. */
-@media (min-width: 768px) {
+/* Homepage hero: on tablet the photo reaches behind the text, so a light fade
+   on the left keeps it readable. Desktop (992px and up) has no overlay. */
+@media (min-width: 768px) and (max-width: 991.98px) {
   #template-mo-zay-hero-carousel .sld-slide::after {
     content: "";
     position: absolute;
@@ -3048,3 +3048,15 @@ body.mobile-menu-open > *:not(nav.navbar):not(.top_bar) {
 @media (max-width: 991.98px) {
   .contact-info-block picture img { max-width: 340px; margin: 0 auto; }
 }
+
+/* Products: digital icon tiles */
+.product-icon-wrap{background:linear-gradient(135deg,#2e3760 0%,#1e293b 100%) !important;border:1px solid rgba(56,189,248,0.35) !important;box-shadow:0 6px 16px rgba(46,55,96,0.25),inset 0 0 0 1px rgba(255,255,255,0.05);}
+.product-icon-wrap i{font-size:28px;color:#38bdf8;text-shadow:0 0 12px rgba(56,189,248,0.55);transition:color 0.3s ease,text-shadow 0.3s ease;}
+.product-card-modern:hover .product-icon-wrap{background:linear-gradient(135deg,#f26522 0%,#c2410c 100%) !important;border-color:rgba(242,101,34,0.6) !important;}
+.product-card-modern:hover .product-icon-wrap i{color:#fff;text-shadow:0 0 12px rgba(255,255,255,0.6);}
+
+/* Hero slider: finger-following swipe (custom.js) */
+#template-mo-zay-hero-carousel .carousel-inner { touch-action: pan-y; }
+#template-mo-zay-hero-carousel .carousel-item.sld-drag-peek { display: block; position: absolute; top: 0; left: 0; width: 100%; }
+#template-mo-zay-hero-carousel .carousel-inner { cursor: grab; }
+#template-mo-zay-hero-carousel.sld-dragging .carousel-inner { cursor: grabbing; user-select: none; -webkit-user-select: none; }

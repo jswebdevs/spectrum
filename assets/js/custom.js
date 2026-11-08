@@ -156,3 +156,119 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(updateNavBottom, 150);
     });
 });
+
+// -------------------------------------------------------------------------
+// Hero slider: finger- and mouse-following swipe.
+// The slide moves with the finger and can be held halfway. On release it
+// moves on to the next/previous slide if dragged past half the width (or
+// flicked quickly), otherwise it springs back.
+// -------------------------------------------------------------------------
+document.addEventListener('DOMContentLoaded', function () {
+    const carousel = document.getElementById('template-mo-zay-hero-carousel');
+    if (!carousel) return;
+    const inner = carousel.querySelector('.carousel-inner');
+    const items = Array.from(inner.querySelectorAll('.carousel-item'));
+    const dots = Array.from(carousel.querySelectorAll('.carousel-indicators [data-bs-slide-to]'));
+    if (items.length < 2) return;
+
+    const DURATION = 350;
+    let startX = 0, startY = 0, startT = 0, dx = 0;
+    let pointerId = null, dragging = false, animating = false;
+    let current = null, neighbour = null, dir = 0, width = 0;
+
+    function idxOf(el) { return items.indexOf(el); }
+    function neighbourFor(d) {
+        const i = idxOf(current);
+        return items[(i + (d > 0 ? -1 : 1) + items.length) % items.length];
+    }
+    function place(el, x, withTransition) {
+        el.style.transition = withTransition ? 'transform ' + DURATION + 'ms ease-out' : 'none';
+        el.style.transform = 'translateX(' + x + 'px)';
+    }
+    function showNeighbour(d) {
+        if (neighbour && dir === d) return;
+        if (neighbour) clearEl(neighbour);
+        dir = d;
+        neighbour = neighbourFor(d);
+        neighbour.classList.add('sld-drag-peek');
+    }
+    function clearEl(el) {
+        el.classList.remove('sld-drag-peek');
+        el.style.transition = '';
+        el.style.transform = '';
+    }
+    function setActive(next) {
+        current.classList.remove('active');
+        next.classList.add('active');
+        const n = idxOf(next);
+        dots.forEach(function (d, i) {
+            d.classList.toggle('active', i === n);
+            if (i === n) d.setAttribute('aria-current', 'true'); else d.removeAttribute('aria-current');
+        });
+    }
+
+    inner.addEventListener('pointerdown', function (e) {
+        if (animating || pointerId !== null) return;
+        if (e.pointerType === 'mouse') {
+            if (e.button !== 0) return;
+            // No text selection while dragging with the mouse; links and buttons still get clicks.
+            if (!e.target.closest('a, button, input, textarea, select')) e.preventDefault();
+        }
+        if (inner.querySelector('.carousel-item-next, .carousel-item-prev')) return; // Bootstrap is mid-slide
+        pointerId = e.pointerId;
+        startX = e.clientX; startY = e.clientY; startT = Date.now(); dx = 0;
+        dragging = false; dir = 0; neighbour = null;
+        current = inner.querySelector('.carousel-item.active');
+        width = inner.clientWidth;
+    });
+
+    inner.addEventListener('pointermove', function (e) {
+        if (e.pointerId !== pointerId) return;
+        const mx = e.clientX - startX, my = e.clientY - startY;
+        if (!dragging) {
+            if (Math.abs(mx) < 8 || Math.abs(mx) < Math.abs(my)) return;
+            dragging = true;
+            carousel.classList.add('sld-dragging');
+            try { inner.setPointerCapture(e.pointerId); } catch (err) {}
+        }
+        dx = Math.max(-width, Math.min(width, mx));
+        if (dx === 0) return;
+        showNeighbour(dx > 0 ? 1 : -1);
+        place(current, dx, false);
+        place(neighbour, dx - dir * width, false);
+    });
+
+    function finish(e) {
+        if (e.pointerId !== pointerId) return;
+        pointerId = null;
+        carousel.classList.remove('sld-dragging');
+        if (!dragging || !neighbour) { dragging = false; return; }
+        dragging = false;
+        const fast = Math.abs(dx) > 40 && Math.abs(dx) / Math.max(1, Date.now() - startT) > 0.5;
+        const go = e.type !== 'pointercancel' && (Math.abs(dx) > width / 2 || fast);
+        const cur = current, nb = neighbour, d = dir;
+        animating = true;
+        if (go) {
+            place(cur, d * width, true);
+            place(nb, 0, true);
+        } else {
+            place(cur, 0, true);
+            place(nb, -d * width, true);
+        }
+        setTimeout(function () {
+            if (go) setActive(nb);
+            clearEl(cur); clearEl(nb);
+            neighbour = null; animating = false;
+        }, DURATION + 20);
+    }
+    inner.addEventListener('pointerup', finish);
+    inner.addEventListener('pointercancel', finish);
+
+    // Stop the browser's own image/link drag so the mouse can swipe slides.
+    inner.addEventListener('dragstart', function (e) { e.preventDefault(); });
+
+    // A drag should not count as a tap on a button or link inside the slide.
+    inner.addEventListener('click', function (e) {
+        if (Math.abs(dx) > 8) { e.preventDefault(); e.stopPropagation(); dx = 0; }
+    }, true);
+});
