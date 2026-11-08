@@ -3037,3 +3037,14 @@ body.mobile-menu-open > *:not(nav.navbar):not(.top_bar) {
     background: linear-gradient(90deg, rgba(246, 246, 246, 0.97) 0%, rgba(246, 246, 246, 0.93) 46%, rgba(246, 246, 246, 0.55) 60%, rgba(246, 246, 246, 0) 74%);
   }
 }
+
+/* Contact page: channel headings are now h4.h6; links stack; WhatsApp link; email-or-phone hint */
+.contact-channel-info .h6 { font-size: 14px; font-weight: 700; color: #2e3760; margin-bottom: 3px; }
+.contact-channel-info a { display: block; }
+.contact-channel-info .contact-whatsapp-link { color: #15803d; font-weight: 600; margin-top: 2px; }
+.contact-channel-info .contact-whatsapp-link:hover { color: #166534; }
+.contact-reach-hint { font-size: 13px !important; color: #64748b !important; margin-top: -6px; }
+.contact-reach-hint.is-invalid { color: #b91c1c !important; font-weight: 600 !important; }
+@media (max-width: 991.98px) {
+  .contact-info-block picture img { max-width: 340px; margin: 0 auto; }
+}
