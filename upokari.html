@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Upokari: Verification Engine, App and eCom | Spectrum</title>
+    <meta name="description" content="Upokari by Spectrum: an AI engine that catches forged land records, TCB cards and NIDs, a secure mailbox and vault app (10K+ downloads), and an eCom seller app.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://spectrum.com.bd/upokari.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Spectrum IT Solutions Ltd.">
+    <meta property="og:title" content="Upokari: Verification Engine, App and eCom | Spectrum">
+    <meta property="og:description" content="Upokari by Spectrum: an AI engine that catches forged land records, TCB cards and NIDs, a secure mailbox and vault app (10K+ downloads), and an eCom seller app.">
+    <meta property="og:url" content="https://spectrum.com.bd/upokari.html">
+    <meta property="og:image" content="https://spectrum.com.bd/assets/img/og/upokari.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@SpectrumITSolutions">
+    <meta name="twitter:title" content="Upokari: Verification Engine, App and eCom | Spectrum">
+    <meta name="twitter:description" content="Upokari by Spectrum: an AI engine that catches forged land records, TCB cards and NIDs, a secure mailbox and vault app (10K+ downloads), and an eCom seller app.">
+    <meta name="twitter:image" content="https://spectrum.com.bd/assets/img/og/upokari.jpg">
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="ard" href=".well-known/ard.json">
+    <!-- Resource Hints & Preloads -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"></noscript>
+    <link rel="preload" href="assets/webfonts/fa-solid-900.woff2?v=3" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/css/fontawesome-subset.min.css?v=3">
+    <!-- Bootstrap & Site Styles -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="stylesheet" href="assets/css/responsive-fixes.min.css?v=20261109z">
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Spectrum IT Solutions Ltd.",
+        "url": "https://spectrum.com.bd/",
+        "logo": "https://spectrum.com.bd/assets/img/logo.png",
+        "telephone": "+8801615900004",
+        "email": "contact@spectrum.com.bd",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "52/1, New Eskaton Road (Hasan Holdings Ltd., 12th Floor)",
+          "addressLocality": "Dhaka",
+          "postalCode": "1000",
+          "addressCountry": "BD"
+        },
+        "sameAs": [
+          "https://www.facebook.com/myspectrumit",
+          "https://www.linkedin.com/company/spectrum-it-solutions-limited",
+          "https://www.youtube.com/@SpectrumITSolutionsbdLtd"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Upokari by Spectrum",
+        "url": "https://spectrum.com.bd/upokari.html",
+        "description": "Upokari: Spectrum's AI document verification engine, secure mailbox and vault app, and eCom seller app."
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Upokari",
+        "operatingSystem": "Android, iOS",
+        "applicationCategory": "UtilitiesApplication",
+        "url": "https://spectrum.com.bd/upokari.html",
+        "softwareVersion": "4.6.28",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Spectrum IT Solutions Ltd."
+        },
+        "downloadUrl": [
+          "https://play.google.com/store/apps/details?id=com.spectrum.upokari",
+          "https://apps.apple.com/app/upokari/id6822746182"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Upokari eCom Seller",
+        "operatingSystem": "Android",
+        "applicationCategory": "BusinessApplication",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Spectrum IT Solutions Ltd."
+        },
+        "downloadUrl": "https://play.google.com/store/apps/details?id=com.spectrum.ecom_seller_app"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Upokari Verification Engine",
+        "url": "https://upokari.ai/",
+        "applicationCategory": "SecurityApplication",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Spectrum IT Solutions Ltd."
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is upokari.ai the same as the Upokari app?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "They are part of the same family but do different jobs. upokari.ai is the verification engine that checks whether a document is genuine. The Upokari app is a secure mailbox and document vault on your phone. Upokari eCom is an online marketplace with its own seller app."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which documents can the Verification Engine check?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Land documents (Nokol, Khatian, Dag and plot sheets, CS and RS records, mutation and deed copies), TCB cards and National ID cards are live now. e-Passports and travel documents, and licences and certificates such as driving and trade licences, are rolling out."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does it tell a fake from a real card?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It compares fonts, layout, fine background patterns, microprint, holograms and the MRZ checksum with the genuine template, looks for signs of a photo of a screen or a photocopy, and then matches the card details with the issuing registry before giving a verdict."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the Upokari app available in Bangla?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. You can switch between Bangla and English anywhere in the app."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is my information protected in the app?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Documents are kept in an encrypted vault with access control, and you can lock the app with Face ID, fingerprint or a PIN."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can our organisation send notices or invoices through Upokari?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Upokari is built as a platform shared by many organisations. Approved organisations connect as senders and deliver digitally signed, QR-coded notices and invoices to people’s wallets. Contact us to discuss connecting your organisation."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://spectrum.com.bd/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Products",
+            "item": "https://spectrum.com.bd/products.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Upokari",
+            "item": "https://spectrum.com.bd/upokari.html"
+          }
+        ]
+      }
+    ]
+    </script>
+</head>
+<body>
+    <a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
+    <header>
+    <!-- Start Top bar -->
+    <div class="container-fluid bg-dark pt-2 pb-2 top_bar">
+        <div class="container text-light d-flex justify-content-between align-items-center">
+            <div class="top_social d-flex align-items-center">
+                <a class="text-light me-3" href="https://www.facebook.com/myspectrumit" target="_blank" rel="noopener" aria-label="Spectrum Facebook"><i class="fab fa-facebook-f fa-sm fa-fw"></i></a>
+                <a class="text-light me-3" href="https://www.linkedin.com/company/spectrum-it-solutions-limited" target="_blank" rel="noopener" aria-label="Spectrum LinkedIn"><i class="fab fa-linkedin fa-sm fa-fw"></i></a>
+                <a class="text-light" href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" aria-label="Spectrum YouTube"><i class="fab fa-youtube fa-sm fa-fw"></i></a>
+            </div>
+            <div class="top_email d-flex align-items-center">
+                <a class="top_email_badge text-decoration-none" href="mailto:contact@spectrum.com.bd">
+                    <i class="fa fa-envelope"></i>
+                    <span>contact@spectrum.com.bd</span>
+                </a>
+            </div>
+        </div> 
+    </div>
+    <!-- Close Top bar -->
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow sticky-top pt-3 pb-3">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+                <div class="logo">
+                    <a class="navbar-brand text-success align-self-center m-0 p-0" href="index.html">
+                        <img src="assets/img/logo.png" width="165" height="60" alt="Spectrum IT Solutions Logo">
+                    </a>
+                </div>
+                <div class="iso d-none d-lg-flex align-items-center ms-3">
+                    <img src="assets/img/ISO_9001.png" width="70" height="75" alt="ISO 9001:2015" class="me-1">
+                    <img src="assets/img/ISO_27001.png" width="70" height="75" alt="ISO 27001:2022">
+                </div>
+            </div>
+
+            <button class="navbar-toggler d-lg-none border-0 ms-auto collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="templatemo_main_nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex menu_list justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="about-us.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="projects.html">Projects</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="case-study.html" id="caseStudyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Case Study
+                            </a>
+                            <ul class="dropdown-menu shadow-sm" aria-labelledby="caseStudyDropdown">
+                                <li><a class="dropdown-item" href="case-study.html"><i class="fas fa-layer-group me-2 text-warning"></i> All Case Studies</a></li>
+                                <li><hr class="dropdown-divider my-1"></li>
+                                <li><a class="dropdown-item" href="case-study-tcb.html"><i class="fas fa-id-card me-2 text-success"></i> TCB Smart Family Card</a></li>
+                                <li class="d-none"><!-- Hidden while ecourt.gov.bd is offline (not deleted). Remove "d-none" to show it again. --><a class="dropdown-item" href="case-study-e-court.html"><i class="fas fa-gavel me-2 text-primary"></i> Industrial e-Court</a></li>
+                                <li><a class="dropdown-item" href="case-study-e-licensing.html"><i class="fas fa-file-contract me-2 text-info"></i> National e-Licensing</a></li>
+                                <li><a class="dropdown-item" href="case-study-smart-card.html"><i class="fas fa-print me-2 text-warning"></i> Smart Card Issuance</a></li>
+                                <li><a class="dropdown-item" href="case-study-ocd.html"><i class="fas fa-calendar-check me-2 text-info"></i> Officers’ Club Dhaka</a></li>
+                                <li><a class="dropdown-item" href="case-study-tcb-contact-center.html"><i class="fas fa-headset me-2 text-success"></i> TCB AI Contact Center</a></li>
+                                <li><a class="dropdown-item" href="case-study-novotheatre.html"><i class="fas fa-ticket-alt me-2 text-warning"></i> Novotheatre eTicket</a></li>
+                                <li><a class="dropdown-item" href="case-study-gcc.html"><i class="fas fa-landmark me-2 text-success"></i> Gazipur City Corporation</a></li>
+                                <li><a class="dropdown-item" href="case-study-apfs.html"><i class="fas fa-user-clock me-2 text-primary"></i> Automated Presence &amp; Feedback</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="ms-lg-3">
+                    <div class="free_con d-flex align-items-center">
+                        <i class="fa fa-phone-alt mx-2 text-warning"></i>
+                        <div>
+                            <span>Free Consultant</span><br>
+                            <a href="tel:+8801615900004" style="color: inherit; text-decoration: none;"><strong>+880 1615-900004</strong></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-lg-none text-center pt-3 pb-2 border-top mt-3">
+                    <img width="26" height="28" src="assets/img/ISO_9001.png" alt="ISO 9001:2015" class="me-2" style="height: 28px;" loading="lazy">
+                    <img width="26" height="28" src="assets/img/ISO_27001.png" alt="ISO 27001:2022" style="height: 28px;" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </nav>
+    </header>
+
+    <main id="main-content">
+
+    <!-- Page Hero Banner -->
+    <div class="page-hero-banner">
+        <div class="container position-relative text-center">
+            <div class="breadcrumb-pill">
+                <a href="index.html"><i class="fas fa-home me-1"></i> Home</a>
+                <span class="opacity-50">/</span>
+                <a href="products.html">Products</a>
+                <span class="opacity-50">/</span>
+                <span style="color: #f26522; font-weight: 600;">Upokari</span>
+            </div>
+            <h1>Upokari <span>by Spectrum</span></h1>
+            <p class="hero-desc">
+                Spectrum&rsquo;s own product family: an AI engine that catches forged documents, a secure app that delivers signed notices and keeps your documents safe, and an online marketplace with a seller app.
+            </p>
+            <div class="hero-features">
+                <span class="hero-feature-item">
+                    <i class="fas fa-shield-alt" style="color: #4ade80;"></i> AI Document Verification
+                </span>
+                <span class="hero-feature-item">
+                    <i class="fas fa-mobile-alt" style="color: #38bdf8;"></i> 10K+ App Downloads
+                </span>
+                <span class="hero-feature-item">
+                    <i class="fas fa-lock" style="color: #f26522;"></i> Encrypted Document Vault
+                </span>
+                <span class="hero-feature-item">
+                    <i class="fas fa-cash-register" style="color: #fbbf24;"></i> eCom Seller App
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAMILY -->
+    <section class="container py-5" aria-labelledby="family-title">
+        <div class="text-center mb-5">
+            <span class="abt-eyebrow">One Brand, Three Products</span>
+            <h2 id="family-title" class="abt-title text-center">One Verified Identity, <span>Infinite Applications</span></h2>
+            <p class="abt-sub">Upokari (উপকারী) means &ldquo;helpful&rdquo;. It is the name of Spectrum&rsquo;s own products for trust: checking documents, delivering official information safely, and selling online.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <a class="abt-link-card" href="#engine">
+                    <span class="abt-link-icon"><i class="fas fa-shield-alt" aria-hidden="true"></i></span>
+                    <h3>Upokari Verification Engine</h3>
+                    <p>AI that checks land documents, TCB cards and NIDs in seconds, and catches fakes, copies and edits.</p>
+                    <span class="abt-link-more">Read more <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="abt-link-card" href="#app">
+                    <span class="abt-link-icon"><i class="fas fa-mobile-alt" aria-hidden="true"></i></span>
+                    <h3>Upokari App</h3>
+                    <p>A secure mailbox and document vault on your phone, for signed notices, invoices and your important papers.</p>
+                    <span class="abt-link-more">Read more <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="abt-link-card" href="#ecom">
+                    <span class="abt-link-icon"><i class="fas fa-cash-register" aria-hidden="true"></i></span>
+                    <h3>Upokari eCom</h3>
+                    <p>An online marketplace, with a seller app to run a shop from your phone.</p>
+                    <span class="abt-link-more">Read more <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- VERIFICATION ENGINE -->
+    <section class="prod-block" id="engine" aria-labelledby="engine-title">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-7">
+                    <span class="abt-eyebrow">Upokari Verification Engine</span>
+            <h2 id="engine-title" class="abt-title">Catch Forged Documents <span>in Seconds</span></h2>
+                    <p class="lead-text">The engine at <a href="https://upokari.ai/" target="_blank" rel="noopener">upokari.ai</a> checks the documents people are most often cheated with: land records, TCB cards and National IDs. It catches counterfeit cards, photos of screens, photocopies and edited genuine originals, then checks the details against the issuing record. No paperwork and no office visit.</p>
+                    <p class="lead-text">Each check ends with a clear verdict: <strong>Genuine</strong>, <strong>Counterfeit</strong>, <strong>Replay</strong> (a photo of a screen), <strong>Copy</strong> or <strong>Spoof</strong>.</p>
+                    <div class="d-flex flex-wrap gap-3 pt-2">
+                        <a href="https://upokari.ai/" target="_blank" rel="noopener" class="btn btn-primary px-4 py-2 fw-semibold rounded-pill" style="background: #2e3760; border-color: #2e3760;"><i class="fas fa-external-link-alt me-2" aria-hidden="true"></i> Visit upokari.ai</a>
+                        <a href="anti-counterfeit.html" class="btn btn-outline-secondary px-4 py-2 fw-semibold rounded-pill"><i class="fas fa-shield-alt me-2" aria-hidden="true"></i> About anti-counterfeit</a>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <ul class="dis-tcb-stats dis-upokari-stats list-unstyled bg-white rounded-3 shadow text-dark text-start mb-0">
+                        <li><span class="dis-tcb-num">3</span><span class="dis-tcb-label">Document types live: land records, TCB cards and NID</span></li>
+                        <li><span class="dis-tcb-num">5</span><span class="dis-tcb-label">Verdicts: Genuine, Counterfeit, Replay, Copy, Spoof</span></li>
+                        <li><span class="dis-tcb-num">&lt;0.1%</span><span class="dis-tcb-label">False accept rate, as published on upokari.ai</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 class="h4 fw-bold mt-5 mb-3" style="color: #2e3760;">What it checks</h3>
+            <div class="dis-table-wrap"><table class="dis-table"><thead><tr><th scope="col">Document</th><th scope="col">Status</th><th scope="col">What is checked</th></tr></thead><tbody><tr><th scope="row">Land documents</th><td data-label="Status"><span class="status-pill status-live">Live now</span></td><td data-label="What is checked">Nokol, Khatian, Dag and plot sheets, CS&ndash;RS records, mutation and deed copies. Each is sealed, then checked page by page.</td></tr><tr><th scope="row">TCB cards</th><td data-label="Status"><span class="status-pill status-live">Live now</span></td><td data-label="What is checked">Counterfeit, cloned and altered TCB beneficiary cards, caught before any goods are handed over.</td></tr><tr><th scope="row">National ID (NID)</th><td data-label="Status"><span class="status-pill status-live">Live now</span></td><td data-label="What is checked">Smart NID cards and printed NID copies: layout, background pattern, MRZ checksum and the holder&rsquo;s photo.</td></tr><tr><th scope="row">e-Passport and travel documents</th><td data-label="Status"><span class="status-pill status-soon">Rolling out</span></td><td data-label="What is checked">Chip data, MRZ lines, laminate and holograms, compared with the sealed issuing record.</td></tr><tr><th scope="row">Licences and certificates</th><td data-label="Status"><span class="status-pill status-soon">Rolling out</span></td><td data-label="What is checked">Driving and trade licences, birth and death certificates, land-related approvals and other smart-card credentials.</td></tr></tbody></table></div>
+
+            <h3 class="h4 fw-bold mt-5 mb-3" style="color: #2e3760;">Six checks on every card</h3>
+            <div class="dis-article-tiles">
+                <div class="dis-article-tile">
+                    <i class="fas fa-id-card" aria-hidden="true"></i>
+                    <h3>Counterfeit cards</h3>
+                    <p>Fonts, layout, fine patterns, microprint, hologram and MRZ checksum compared with the genuine template.</p>
+                </div>
+                <div class="dis-article-tile">
+                    <i class="fas fa-tv" aria-hidden="true"></i>
+                    <h3>Photos of screens</h3>
+                    <p>Spots cards captured from a phone or monitor screen by the tell-tale patterns and glare they leave.</p>
+                </div>
+                <div class="dis-article-tile">
+                    <i class="fas fa-clone" aria-hidden="true"></i>
+                    <h3>Photocopies and scans</h3>
+                    <p>Finds the toner dots, soft edges and lost detail that give away a copy.</p>
+                </div>
+                <div class="dis-article-tile">
+                    <i class="fas fa-user-shield" aria-hidden="true"></i>
+                    <h3>Edited genuine cards</h3>
+                    <p>Catches a real card with a swapped photo, laid-over details or a laminated edit.</p>
+                </div>
+                <div class="dis-article-tile">
+                    <i class="fas fa-star" aria-hidden="true"></i>
+                    <h3>Holograms</h3>
+                    <p>Checks holograms and colour-shifting features across angles.</p>
+                </div>
+                <div class="dis-article-tile">
+                    <i class="fas fa-database" aria-hidden="true"></i>
+                    <h3>Registry check</h3>
+                    <p>Matches the card number, holder details and seal with the issuing registry before giving a verdict.</p>
+                </div>
+            </div>
+
+            <h3 class="h4 fw-bold mt-5 mb-3" style="color: #2e3760;">How land records are sealed: seven steps</h3>
+            <p class="text-muted mb-4">From fragile registry paper to a certified copy that anyone can check.</p>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-3">
+                    <div class="dis-feature-box">
+                        <span class="dis-step-num mb-3"><span class="visually-hidden">Step </span>1</span>
+                        <h3 class="h6 fw-bold" style="color: #2e3760;">Archival scan</h3>
+                        <p class="text-muted small mb-0">Registry paper is scanned at 300 to 600 DPI on scanners suited to bound or fragile records.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="dis-feature-box">
+                        <span class="dis-step-num mb-3" style="background: linear-gradient(135deg, #f26522 0%, #c2410c 100%);"><span class="visually-hidden">Step </span>2</span>
+                        <h3 class="h6 fw-bold" style="color: #2e3760;">Reading the fields</h3>
+                        <p class="text-muted small mb-0">Software tuned for Bangla and English reads the Mouza, Khatian and Dag numbers, owner names, land area and dates.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="dis-feature-box">
+                        <span class="dis-step-num mb-3" style="background: linear-gradient(135deg, #10b981 0%, #047857 100%);"><span class="visually-hidden">Step </span>3</span>
+                        <h3 class="h6 fw-bold" style="color: #2e3760;">Officer review</h3>
+                        <p class="text-muted small mb-0">A registry officer checks the reading side by side with the scan. Nothing is approved automatically.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="dis-feature-box">
+                        <span class="dis-step-num mb-3" style="background: linear-gradient(135deg, #0284c7 0%, #075985 100%);"><span class="visually-hidden">Step </span>4</span>
+                        <h3 class="h6 fw-bold" style="color: #2e3760;">Sealing</h3>
+                        <p class="text-muted small mb-0">Each page gets a digital fingerprint (SHA-256), chained page to page into one fingerprint for the whole document.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="dis-feature-box">
+                        <span class="dis-step-num mb-3"><span class="visually-hidden">Step </span>5</span>
+                        <h3 class="h6 fw-bold" style="color: #2e3760;">Watermark and QR</h3>
+                        <p class="text-muted small mb-0">A watermark and a QR code on every page carry the document ID, page number and page fingerprint.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="dis-feature-box">
+                        <span class="dis-step-num mb-3" style="background: linear-gradient(135deg, #f26522 0%, #c2410c 100%);"><span class="visually-hidden">Step </span>6</span>
+                        <h3 class="h6 fw-bold" style="color: #2e3760;">Stamp and copy code</h3>
+                        <p class="text-muted small mb-0">A unique ID and an anti-copy micro-pattern are printed over the official stamp on the last page.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="dis-feature-box">
+                        <span class="dis-step-num mb-3" style="background: linear-gradient(135deg, #10b981 0%, #047857 100%);"><span class="visually-hidden">Step </span>7</span>
+                        <h3 class="h6 fw-bold" style="color: #2e3760;">Issue and verify</h3>
+                        <p class="text-muted small mb-0">The certified Nokol is printed from the sealed master. Anyone can scan it or upload a photo for a Genuine, Tampered or Copy verdict.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="h4 fw-bold mt-5 mb-3" style="color: #2e3760;">Built so no one can quietly change a record</h3>
+            <ul class="dis-article-list">
+                <li><strong>Page-by-page fingerprints:</strong> every page&rsquo;s SHA-256 fingerprint is chained to the next, so changing one page breaks the chain.</li>
+                <li><strong>Anchored on a private blockchain:</strong> document fingerprints are recorded on Hyperledger Fabric, so even a database administrator cannot alter them unnoticed. <a href="blockchain-technology.html">What is a blockchain?</a></li>
+                <li><strong>Keys in secure hardware:</strong> the signing keys are sealed in a FIPS 140-3 hardware security module.</li>
+                <li><strong>People stay in charge:</strong> a registry officer approves every reading before a record is sealed.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- UPOKARI APP -->
+    <section class="prod-block" id="app" aria-labelledby="app-title">
+        <div class="container">
+            <span class="abt-eyebrow abt-eyebrow-green">Upokari App</span>
+            <h2 id="app-title" class="abt-title">Your Notices and Documents, <span>Safe on Your Phone</span></h2>
+            <div class="app-head">
+                <picture><source srcset="assets/img/apps/upokari-icon.webp" type="image/webp"><img src="assets/img/apps/upokari-icon.png" width="256" height="256" alt="Upokari app icon" loading="lazy"></picture>
+                <div><h3>Upokari</h3><div class="app-meta"><span class="">Android and iOS</span><span class="">10K+ downloads</span><span class="app-meta-star">3.6★ from 81 reviews on Google Play</span><span class="">Version 4.6.28</span></div></div>
+            </div>
+            <p class="lead-text">The Upokari app is a secure digital mailbox and document vault. Approved organisations send digitally signed, encrypted QR-coded invoices, notices and other important information straight to a person&rsquo;s digital wallet, and people keep their own documents safe in the same app.</p>
+            <div class="store-btns"><a class="store-btn" href="https://play.google.com/store/apps/details?id=com.spectrum.upokari" target="_blank" rel="noopener"><i class="fas fa-mobile-alt" aria-hidden="true"></i><span class="store-btn-text"><small>Get it on</small>Google Play</span></a><a class="store-btn" href="https://apps.apple.com/app/upokari/id6822746182" target="_blank" rel="noopener"><i class="fas fa-mobile-alt" aria-hidden="true"></i><span class="store-btn-text"><small>Download on the</small>App Store</span></a></div>
+
+            <h3 class="h4 fw-bold mt-5 mb-3" style="color: #2e3760;">Inside the app</h3>
+            <div class="app-gallery" role="list">
+                <figure role="listitem">
+                    <picture><source srcset="assets/img/apps/upokari/screen-1.webp" type="image/webp"><img src="assets/img/apps/upokari/screen-1.jpg" width="332" height="720" alt="Upokari app screen: Your profile and NID check" loading="lazy"></picture>
+                    <figcaption>Your profile and NID check</figcaption>
+                </figure>
+                <figure role="listitem">
+                    <picture><source srcset="assets/img/apps/upokari/screen-2.webp" type="image/webp"><img src="assets/img/apps/upokari/screen-2.jpg" width="332" height="720" alt="Upokari app screen: Menu and services" loading="lazy"></picture>
+                    <figcaption>Menu and services</figcaption>
+                </figure>
+                <figure role="listitem">
+                    <picture><source srcset="assets/img/apps/upokari/screen-3.webp" type="image/webp"><img src="assets/img/apps/upokari/screen-3.jpg" width="332" height="720" alt="Upokari app screen: Citizen dashboard" loading="lazy"></picture>
+                    <figcaption>Citizen dashboard</figcaption>
+                </figure>
+                <figure role="listitem">
+                    <picture><source srcset="assets/img/apps/upokari/screen-4.webp" type="image/webp"><img src="assets/img/apps/upokari/screen-4.jpg" width="332" height="720" alt="Upokari app screen: Secure document vault" loading="lazy"></picture>
+                    <figcaption>Secure document vault</figcaption>
+                </figure>
+            </div>
+
+            <h3 class="h4 fw-bold mt-5 mb-3" style="color: #2e3760;">Features</h3>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="dis-feature-box">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 mb-3 p-3" style="background: rgba(242, 101, 34, 0.1); color: #c2410c;">
+                            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="h6 fw-bold" style="color: #2e3760;">Digital mailbox</h3>
+                        <p class="text-muted small mb-0">Receive official letters, service announcements and notices in a secure inbox.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="dis-feature-box">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 mb-3 p-3" style="background: rgba(2, 132, 199, 0.1); color: #0284c7;">
+                            <i class="fas fa-history fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="h6 fw-bold" style="color: #2e3760;">Delivery receipts</h3>
+                        <p class="text-muted small mb-0">See delivery receipts, timestamps and dispatch records for every item.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="dis-feature-box">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 mb-3 p-3" style="background: rgba(16, 185, 129, 0.1); color: #047857;">
+                            <i class="fas fa-folder-open fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="h6 fw-bold" style="color: #2e3760;">Search and archive</h3>
+                        <p class="text-muted small mb-0">Search, organise and archive your correspondence history.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="dis-feature-box">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 mb-3 p-3" style="background: rgba(242, 101, 34, 0.1); color: #c2410c;">
+                            <i class="fas fa-lock fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="h6 fw-bold" style="color: #2e3760;">Encrypted vault</h3>
+                        <p class="text-muted small mb-0">Store ID documents, cards and certificates. Only you control who sees them.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="dis-feature-box">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 mb-3 p-3" style="background: rgba(2, 132, 199, 0.1); color: #0284c7;">
+                            <i class="fas fa-fingerprint fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="h6 fw-bold" style="color: #2e3760;">Face ID, fingerprint and PIN</h3>
+                        <p class="text-muted small mb-0">Lock the app with biometrics or a PIN. Checks happen on your device.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="dis-feature-box">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 mb-3 p-3" style="background: rgba(16, 185, 129, 0.1); color: #047857;">
+                            <i class="fas fa-language fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="h6 fw-bold" style="color: #2e3760;">Bangla and English</h3>
+                        <p class="text-muted small mb-0">Switch language anywhere in the app.</p>
+                    </div>
+                </div>
+            </div>
+            <p class="text-muted mt-4 mb-0"><i class="fas fa-users me-2" aria-hidden="true"></i> Upokari is built as a platform shared by many organisations, so each approved sender delivers to the same trusted wallet.</p>
+        </div>
+    </section>
+
+    <!-- UPOKARI ECOM -->
+    <section class="prod-block" id="ecom" aria-labelledby="ecom-title">
+        <div class="container">
+            <span class="abt-eyebrow">Upokari eCom</span>
+            <h2 id="ecom-title" class="abt-title">Run Your Online Shop <span>from Your Phone</span></h2>
+            <div class="app-head">
+                <picture><source srcset="assets/img/apps/upokari-ecom-seller-icon.webp" type="image/webp"><img src="assets/img/apps/upokari-ecom-seller-icon.png" width="256" height="256" alt="Upokari eCom Seller app icon" loading="lazy"></picture>
+                <div><h3>Upokari eCom Seller</h3><div class="app-meta"><span class="">Android</span><span class="">50+ downloads</span><span class="app-meta-star">4.2★ on Google Play</span></div></div>
+            </div>
+            <p class="lead-text">Upokari eCom is an online marketplace. Its seller app lets vendors manage their store from a phone: add, update or remove products, keep stock up to date, take orders and track the shop&rsquo;s performance as it happens.</p>
+            <div class="store-btns"><a class="store-btn" href="https://play.google.com/store/apps/details?id=com.spectrum.ecom_seller_app" target="_blank" rel="noopener"><i class="fas fa-mobile-alt" aria-hidden="true"></i><span class="store-btn-text"><small>Get it on</small>Google Play</span></a></div>
+
+            <h3 class="h4 fw-bold mt-5 mb-3" style="color: #2e3760;">Inside the seller app</h3>
+            <div class="app-gallery" role="list">
+                <figure role="listitem">
+                    <picture><source srcset="assets/img/apps/upokari-ecom-seller/screen-1.webp" type="image/webp"><img src="assets/img/apps/upokari-ecom-seller/screen-1.jpg" width="358" height="720" alt="Upokari eCom Seller app screen: Sales dashboard: products, orders, rating and total sales" loading="lazy"></picture>
+                    <figcaption>Sales dashboard: products, orders, rating and total sales</figcaption>
+                </figure>
+                <figure role="listitem">
+                    <picture><source srcset="assets/img/apps/upokari-ecom-seller/screen-2.webp" type="image/webp"><img src="assets/img/apps/upokari-ecom-seller/screen-2.jpg" width="358" height="720" alt="Upokari eCom Seller app screen: Product list with stock" loading="lazy"></picture>
+                    <figcaption>Product list with stock</figcaption>
+                </figure>
+                <figure role="listitem">
+                    <picture><source srcset="assets/img/apps/upokari-ecom-seller/screen-3.webp" type="image/webp"><img src="assets/img/apps/upokari-ecom-seller/screen-3.jpg" width="358" height="720" alt="Upokari eCom Seller app screen: Point of sale for walk-in customers" loading="lazy"></picture>
+                    <figcaption>Point of sale for walk-in customers</figcaption>
+                </figure>
+                <figure role="listitem">
+                    <picture><source srcset="assets/img/apps/upokari-ecom-seller/screen-4.webp" type="image/webp"><img src="assets/img/apps/upokari-ecom-seller/screen-4.jpg" width="358" height="720" alt="Upokari eCom Seller app screen: Adding a new product" loading="lazy"></picture>
+                    <figcaption>Adding a new product</figcaption>
+                </figure>
+                <figure role="listitem">
+                    <picture><source srcset="assets/img/apps/upokari-ecom-seller/screen-5.webp" type="image/webp"><img src="assets/img/apps/upokari-ecom-seller/screen-5.jpg" width="358" height="720" alt="Upokari eCom Seller app screen: Orders with payment and delivery status" loading="lazy"></picture>
+                    <figcaption>Orders with payment and delivery status</figcaption>
+                </figure>
+                <figure role="listitem">
+                    <picture><source srcset="assets/img/apps/upokari-ecom-seller/screen-6.webp" type="image/webp"><img src="assets/img/apps/upokari-ecom-seller/screen-6.jpg" width="358" height="720" alt="Upokari eCom Seller app screen: Seller menu: vendors, orders, shop settings and more" loading="lazy"></picture>
+                    <figcaption>Seller menu: vendors, orders, shop settings and more</figcaption>
+                </figure>
+            </div>
+
+            <h3 class="h4 fw-bold mt-5 mb-3" style="color: #2e3760;">Features</h3>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="dis-feature-box">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 mb-3 p-3" style="background: rgba(242, 101, 34, 0.1); color: #c2410c;">
+                            <i class="fas fa-chart-line fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="h6 fw-bold" style="color: #2e3760;">Sales dashboard</h3>
+                        <p class="text-muted small mb-0">Products, total orders, rating and total sales, with a daily sales chart.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="dis-feature-box">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 mb-3 p-3" style="background: rgba(2, 132, 199, 0.1); color: #0284c7;">
+                            <i class="fas fa-cubes fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="h6 fw-bold" style="color: #2e3760;">Products and stock</h3>
+                        <p class="text-muted small mb-0">Add products with categories, photos, price and stock, then publish or unpublish them.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="dis-feature-box">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 mb-3 p-3" style="background: rgba(16, 185, 129, 0.1); color: #047857;">
+                            <i class="fas fa-cash-register fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="h6 fw-bold" style="color: #2e3760;">Point of sale</h3>
+                        <p class="text-muted small mb-0">Sell to walk-in customers with tax, shipping and discount worked out.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="dis-feature-box">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 mb-3 p-3" style="background: rgba(242, 101, 34, 0.1); color: #c2410c;">
+                            <i class="fas fa-tasks fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="h6 fw-bold" style="color: #2e3760;">Orders</h3>
+                        <p class="text-muted small mb-0">Every order with its payment status and delivery status.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="dis-feature-box">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 mb-3 p-3" style="background: rgba(2, 132, 199, 0.1); color: #0284c7;">
+                            <i class="fas fa-users fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="h6 fw-bold" style="color: #2e3760;">Vendors and shop settings</h3>
+                        <p class="text-muted small mb-0">Manage vendors, digital products, uploads and shop configuration.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="dis-feature-box">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 mb-3 p-3" style="background: rgba(16, 185, 129, 0.1); color: #047857;">
+                            <i class="fas fa-comments fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="h6 fw-bold" style="color: #2e3760;">Customer chat and queries</h3>
+                        <p class="text-muted small mb-0">Answer product questions, handle refunds and offer coupons.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHO IT HELPS -->
+    <section class="container py-5" aria-labelledby="who-title">
+        <div class="text-center mb-5">
+            <span class="abt-eyebrow">Who It Helps</span>
+            <h2 id="who-title" class="abt-title text-center">Built for <span>Bangladesh</span></h2>
+        </div>
+        <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="dis-industry-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="dis-industry-icon me-3" style="background: rgba(242, 101, 34, 0.1); color: #c2410c;"><i class="fas fa-map-marked-alt" aria-hidden="true"></i></div>
+                            <h3 class="h5 fw-bold mb-0" style="color: #2e3760;">Land buyers and land offices</h3>
+                        </div>
+                        <p class="text-muted small mb-0" style="line-height: 1.7;">Check a Nokol, Khatian or deed before money changes hands.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="dis-industry-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="dis-industry-icon me-3" style="background: rgba(2, 132, 199, 0.1); color: #0284c7;"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i></div>
+                            <h3 class="h5 fw-bold mb-0" style="color: #2e3760;">TCB and benefit programmes</h3>
+                        </div>
+                        <p class="text-muted small mb-0" style="line-height: 1.7;">Stop fake and cloned cards before goods are handed over.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="dis-industry-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="dis-industry-icon me-3" style="background: rgba(16, 185, 129, 0.1); color: #047857;"><i class="fas fa-university" aria-hidden="true"></i></div>
+                            <h3 class="h5 fw-bold mb-0" style="color: #2e3760;">Banks</h3>
+                        </div>
+                        <p class="text-muted small mb-0" style="line-height: 1.7;">Check NIDs and documents before opening accounts or giving loans.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="dis-industry-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="dis-industry-icon me-3" style="background: rgba(242, 101, 34, 0.1); color: #c2410c;"><i class="fas fa-landmark" aria-hidden="true"></i></div>
+                            <h3 class="h5 fw-bold mb-0" style="color: #2e3760;">Government offices</h3>
+                        </div>
+                        <p class="text-muted small mb-0" style="line-height: 1.7;">Send signed notices that people receive safely on their phone.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="dis-industry-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="dis-industry-icon me-3" style="background: rgba(2, 132, 199, 0.1); color: #0284c7;"><i class="fas fa-file-contract" aria-hidden="true"></i></div>
+                            <h3 class="h5 fw-bold mb-0" style="color: #2e3760;">Service providers</h3>
+                        </div>
+                        <p class="text-muted small mb-0" style="line-height: 1.7;">Deliver invoices and statements that cannot be faked.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="dis-industry-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="dis-industry-icon me-3" style="background: rgba(16, 185, 129, 0.1); color: #047857;"><i class="fas fa-cash-register" aria-hidden="true"></i></div>
+                            <h3 class="h5 fw-bold mb-0" style="color: #2e3760;">Online sellers</h3>
+                        </div>
+                        <p class="text-muted small mb-0" style="line-height: 1.7;">Run a shop on Upokari eCom from a phone.</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="container pb-5" aria-labelledby="faq-title" style="max-width: 900px;">
+        <h2 id="faq-title" class="abt-title text-center mb-4">Frequently Asked <span>Questions</span></h2>
+        <div class="dis-faq">
+                <details>
+                    <summary>Is upokari.ai the same as the Upokari app?</summary>
+                    <p>They are part of the same family but do different jobs. upokari.ai is the verification engine that checks whether a document is genuine. The Upokari app is a secure mailbox and document vault on your phone. Upokari eCom is an online marketplace with its own seller app.</p>
+                </details>
+                <details>
+                    <summary>Which documents can the Verification Engine check?</summary>
+                    <p>Land documents (Nokol, Khatian, Dag and plot sheets, CS and RS records, mutation and deed copies), TCB cards and National ID cards are live now. e-Passports and travel documents, and licences and certificates such as driving and trade licences, are rolling out.</p>
+                </details>
+                <details>
+                    <summary>How does it tell a fake from a real card?</summary>
+                    <p>It compares fonts, layout, fine background patterns, microprint, holograms and the MRZ checksum with the genuine template, looks for signs of a photo of a screen or a photocopy, and then matches the card details with the issuing registry before giving a verdict.</p>
+                </details>
+                <details>
+                    <summary>Is the Upokari app available in Bangla?</summary>
+                    <p>Yes. You can switch between Bangla and English anywhere in the app.</p>
+                </details>
+                <details>
+                    <summary>How is my information protected in the app?</summary>
+                    <p>Documents are kept in an encrypted vault with access control, and you can lock the app with Face ID, fingerprint or a PIN.</p>
+                </details>
+                <details>
+                    <summary>Can our organisation send notices or invoices through Upokari?</summary>
+                    <p>Upokari is built as a platform shared by many organisations. Approved organisations connect as senders and deliver digitally signed, QR-coded notices and invoices to people&rsquo;s wallets. Contact us to discuss connecting your organisation.</p>
+                </details>
+            </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <div class="container-fluid py-5 cta-banner-section">
+        <div class="container text-center py-4 position-relative" style="z-index: 2;">
+            <h2 class="display-6 fw-bold text-white mb-3">Want to Use Upokari?</h2>
+            <p class="mx-auto mb-4" style="max-width: 650px; font-size: 16px; line-height: 1.7; color: rgba(255, 255, 255, 0.85);">
+                Tell us whether you want to verify documents, send signed notices, or sell online. We will show you how Upokari fits.
+            </p>
+            <div class="d-flex justify-content-center align-items-center flex-wrap gap-3 pt-2">
+                <a href="contact.html?product=Upokari#contact-form-section" class="cta-primary-btn">
+                    <i class="fas fa-paper-plane me-2"></i> Talk to Our Team
+                </a>
+                <a href="tel:+8801615900004" class="cta-secondary-btn">
+                    <i class="fas fa-phone-alt me-2"></i> Call +880 1615-900004
+                </a>
+            </div>
+        </div>
+    </div>
+
+    </main>
+
+    <!-- Footer start -->
+    <footer>
+    <div class="footer-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 mb-4 footer-col-about">
+                    <div class="footer-about">
+                        <a href="index.html"><img src="assets/img/logo.png" width="165" height="60" class="img-fluid mb-3" alt="Spectrum IT Solutions Logo" loading="lazy"></a>
+                        <p>A Dhaka software company building secure digital services for government and business since 2012.</p>
+                        <div class="mt-3 footer-social-icons">
+                            <a class="text-light" href="https://www.facebook.com/myspectrumit" target="_blank" rel="noopener" aria-label="Spectrum Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a class="text-light" href="https://www.linkedin.com/company/spectrum-it-solutions-limited" target="_blank" rel="noopener" aria-label="Spectrum LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a class="text-light" href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" aria-label="Spectrum YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <a href="https://basis.org.bd/company-profile/21-04-024" target="_blank" rel="noopener"><img src="assets/img/basis_logo.png" width="214" height="54" class="img-fluid" style="padding-top: 30px; padding-bottom: 30px;" alt="BASIS Member" loading="lazy"></a>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 mb-4">
+                    <h3 class="text-white mb-3" style="font-size: 1.25rem;">Valuable Projects</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="https://licence.gov.bd/" target="_blank" rel="noopener" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> www.licence.gov.bd</a></li>
+                        <li class="mb-2"><a href="https://ocd.org.bd/" target="_blank" rel="noopener" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> www.ocd.org.bd</a></li>
+                        <li class="mb-2"><a href="http://www.tcbsheba.com/" target="_blank" rel="noopener" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> www.tcbsheba.com</a></li>
+                        <li class="mb-2 d-none"><!-- Hidden while ecourt.gov.bd is offline (not deleted). Remove "d-none" to show it again. --><a href="http://www.ecourt.gov.bd/" target="_blank" rel="noopener" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> www.ecourt.gov.bd</a></li>
+                        <li class="mb-2"><a href="https://novo.spectrum.com.bd/" target="_blank" rel="noopener" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> www.sobticket.com</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 mb-4 footer-col-links">
+                    <h3 class="text-white mb-3" style="font-size: 1.25rem;">Quick Link</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="artificial-intelligence.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Artificial Intelligence</a></li>
+                        <li class="mb-2"><a href="digital-identity-security.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Digital Identity &amp; Security</a></li>
+                        <li class="mb-2"><a href="smart-card-technologies.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Smart Card Technologies</a></li>
+                        <li class="mb-2"><a href="blockchain-technology.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Blockchain Technology</a></li>
+                        <li class="mb-2"><a href="about-us.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> About Us</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Our Services</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Our Products</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 mb-4 footer-col-contact">
+                    <h3 class="text-white mb-3" style="font-size: 1.25rem;">Contact Us</h3>
+                    <p class="text-light mb-2"><i class="fas fa-map-marker-alt me-2 text-warning"></i> 52/1, New Eskaton Road (Hasan Holdings Ltd., 12th Floor), Dhaka-1000, Bangladesh</p>
+                    <p class="text-light mb-2"><i class="fas fa-envelope me-2 text-warning"></i> <a href="mailto:contact@spectrum.com.bd" class="text-light text-decoration-none">contact@spectrum.com.bd</a></p>
+                    <p class="text-light mb-2"><i class="fas fa-phone-alt me-2 text-warning"></i> <a href="tel:+8801615900004" class="text-light text-decoration-none">+880 1615-900004</a></p>
+                </div>
+            </div>
+
+            <!-- Copyright section with same background inside footer-wrapper -->
+            <div class="footer-copyright">
+                <p class="mb-0">Copyright &copy; 2026 <a href="index.html" style="color: #f26522; text-decoration: none;"><strong>Spectrum IT Solutions Ltd.</strong></a> All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+    </footer>
+    <!-- Footer end -->
+
+    <!-- Scripts -->
+    <script src="assets/js/bootstrap.bundle.min.js" defer></script>
+    <script src="assets/js/custom.js?v=20261109i" defer></script>
+</body>
+</html>

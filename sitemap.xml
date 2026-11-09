@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://spectrum.com.bd/index.html</loc><lastmod>2026-11-05</lastmod><priority>1.0</priority></url>
-  <url><loc>https://spectrum.com.bd/about-us.html</loc><lastmod>2026-11-05</lastmod><priority>0.8</priority></url>
-  <url><loc>https://spectrum.com.bd/services.html</loc><lastmod>2026-11-05</lastmod><priority>0.9</priority></url>
-  <url><loc>https://spectrum.com.bd/products.html</loc><lastmod>2026-11-05</lastmod><priority>0.8</priority></url>
-  <url><loc>https://spectrum.com.bd/projects.html</loc><lastmod>2026-11-05</lastmod><priority>0.8</priority></url>
-  <url><loc>https://spectrum.com.bd/case-study.html</loc><lastmod>2026-11-05</lastmod><priority>0.8</priority></url>
-  <url><loc>https://spectrum.com.bd/contact.html</loc><lastmod>2026-11-08</lastmod><priority>0.8</priority></url>
+  <url><loc>https://spectrum.com.bd/index.html</loc><lastmod>2026-11-09</lastmod><priority>1.0</priority></url>
+  <url><loc>https://spectrum.com.bd/about-us.html</loc><lastmod>2026-11-09</lastmod><priority>0.8</priority></url>
+  <url><loc>https://spectrum.com.bd/services.html</loc><lastmod>2026-11-09</lastmod><priority>0.9</priority></url>
+  <url><loc>https://spectrum.com.bd/products.html</loc><lastmod>2026-11-09</lastmod><priority>0.8</priority></url>
+  <url><loc>https://spectrum.com.bd/projects.html</loc><lastmod>2026-11-09</lastmod><priority>0.8</priority></url>
+  <url><loc>https://spectrum.com.bd/case-study.html</loc><lastmod>2026-11-09</lastmod><priority>0.8</priority></url>
+  <url><loc>https://spectrum.com.bd/case-study-tcb.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://spectrum.com.bd/case-study-e-licensing.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://spectrum.com.bd/case-study-smart-card.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://spectrum.com.bd/case-study-ocd.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://spectrum.com.bd/case-study-tcb-contact-center.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://spectrum.com.bd/contact.html</loc><lastmod>2026-11-09</lastmod><priority>0.8</priority></url>
   <url><loc>https://spectrum.com.bd/digital-identity-security.html</loc><lastmod>2026-11-05</lastmod><priority>0.9</priority></url>
   <url><loc>https://spectrum.com.bd/smart-card-technologies.html</loc><lastmod>2026-11-05</lastmod><priority>0.9</priority></url>
   <url><loc>https://spectrum.com.bd/artificial-intelligence.html</loc><lastmod>2026-11-05</lastmod><priority>0.9</priority></url>
   <url><loc>https://spectrum.com.bd/blockchain-technology.html</loc><lastmod>2026-11-05</lastmod><priority>0.9</priority></url>
+  <url><loc>https://spectrum.com.bd/anti-counterfeit.html</loc><lastmod>2026-11-09</lastmod><priority>0.9</priority></url>
+  <url><loc>https://spectrum.com.bd/brand-protection.html</loc><lastmod>2026-11-09</lastmod><priority>0.9</priority></url>
+  <url><loc>https://spectrum.com.bd/business-automation.html</loc><lastmod>2026-11-09</lastmod><priority>0.9</priority></url>
+  <url><loc>https://spectrum.com.bd/ai-contact-center.html</loc><lastmod>2026-11-09</lastmod><priority>0.9</priority></url>
+  <url><loc>https://spectrum.com.bd/upokari.html</loc><lastmod>2026-11-09</lastmod><priority>0.9</priority></url>
+  <url><loc>https://spectrum.com.bd/mobile-apps.html</loc><lastmod>2026-11-09</lastmod><priority>0.8</priority></url>
+  <url><loc>https://spectrum.com.bd/case-study-novotheatre.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://spectrum.com.bd/case-study-gcc.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://spectrum.com.bd/case-study-apfs.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
 </urlset>

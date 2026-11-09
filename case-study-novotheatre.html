@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Novotheatre eTicket: Case Study | Spectrum</title>
+    <meta name="description" content="How Spectrum built online ticketing for Novotheatre: a web portal and an Android app where visitors pick a date and show, buy a ticket and enter with a barcode.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://spectrum.com.bd/case-study-novotheatre.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Spectrum IT Solutions Ltd.">
+    <meta property="og:title" content="Novotheatre eTicket: Case Study | Spectrum">
+    <meta property="og:description" content="How Spectrum built online ticketing for Novotheatre: a web portal and an Android app where visitors pick a date and show, buy a ticket and enter with a barcode.">
+    <meta property="og:url" content="https://spectrum.com.bd/case-study-novotheatre.html">
+    <meta property="og:image" content="https://spectrum.com.bd/assets/img/og/cs-novotheatre.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@SpectrumITSolutions">
+    <meta name="twitter:title" content="Novotheatre eTicket: Case Study | Spectrum">
+    <meta name="twitter:description" content="How Spectrum built online ticketing for Novotheatre: a web portal and an Android app where visitors pick a date and show, buy a ticket and enter with a barcode.">
+    <meta name="twitter:image" content="https://spectrum.com.bd/assets/img/og/cs-novotheatre.jpg">
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="ard" href=".well-known/ard.json">
+    <!-- Resource Hints & Preloads -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"></noscript>
+    <link rel="preload" href="assets/webfonts/fa-solid-900.woff2?v=3" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/css/fontawesome-subset.min.css?v=3">
+    <!-- Bootstrap & Site Styles -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="stylesheet" href="assets/css/responsive-fixes.min.css?v=20261109z">
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Spectrum IT Solutions Ltd.",
+        "url": "https://spectrum.com.bd/",
+        "logo": "https://spectrum.com.bd/assets/img/logo.png",
+        "telephone": "+8801615900004",
+        "email": "contact@spectrum.com.bd",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "52/1, New Eskaton Road (Hasan Holdings Ltd., 12th Floor)",
+          "addressLocality": "Dhaka",
+          "postalCode": "1000",
+          "addressCountry": "BD"
+        },
+        "sameAs": [
+          "https://www.facebook.com/myspectrumit",
+          "https://www.linkedin.com/company/spectrum-it-solutions-limited",
+          "https://www.youtube.com/@SpectrumITSolutionsbdLtd"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Novotheatre eTicket: Case Study",
+        "description": "How Spectrum built online ticketing for Novotheatre: a web portal and an Android app where visitors pick a date and show, buy a ticket and enter with a barcode.",
+        "image": "https://spectrum.com.bd/assets/img/og/cs-novotheatre.jpg",
+        "datePublished": "2026-11-09",
+        "dateModified": "2026-11-09",
+        "author": {
+          "@type": "Organization",
+          "name": "Spectrum IT Solutions Ltd.",
+          "url": "https://spectrum.com.bd/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Spectrum IT Solutions Ltd.",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://spectrum.com.bd/assets/img/logo.png"
+          }
+        },
+        "mainEntityOfPage": "https://spectrum.com.bd/case-study-novotheatre.html",
+        "about": "Novotheatre, Bangladesh"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://spectrum.com.bd/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Case Studies",
+            "item": "https://spectrum.com.bd/case-study.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Novotheatre eTicket",
+            "item": "https://spectrum.com.bd/case-study-novotheatre.html"
+          }
+        ]
+      }
+    ]
+    </script>
+</head>
+<body>
+    <a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
+    <header>
+    <!-- Start Top bar -->
+    <div class="container-fluid bg-dark pt-2 pb-2 top_bar">
+        <div class="container text-light d-flex justify-content-between align-items-center">
+            <div class="top_social d-flex align-items-center">
+                <a class="text-light me-3" href="https://www.facebook.com/myspectrumit" target="_blank" rel="noopener" aria-label="Spectrum Facebook"><i class="fab fa-facebook-f fa-sm fa-fw"></i></a>
+                <a class="text-light me-3" href="https://www.linkedin.com/company/spectrum-it-solutions-limited" target="_blank" rel="noopener" aria-label="Spectrum LinkedIn"><i class="fab fa-linkedin fa-sm fa-fw"></i></a>
+                <a class="text-light" href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" aria-label="Spectrum YouTube"><i class="fab fa-youtube fa-sm fa-fw"></i></a>
+            </div>
+            <div class="top_email d-flex align-items-center">
+                <a class="top_email_badge text-decoration-none" href="mailto:contact@spectrum.com.bd">
+                    <i class="fa fa-envelope"></i>
+                    <span>contact@spectrum.com.bd</span>
+                </a>
+            </div>
+        </div> 
+    </div>
+    <!-- Close Top bar -->
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow sticky-top pt-3 pb-3">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+                <div class="logo">
+                    <a class="navbar-brand text-success align-self-center m-0 p-0" href="index.html">
+                        <img src="assets/img/logo.png" width="165" height="60" alt="Spectrum IT Solutions Logo">
+                    </a>
+                </div>
+                <div class="iso d-none d-lg-flex align-items-center ms-3">
+                    <img src="assets/img/ISO_9001.png" width="70" height="75" alt="ISO 9001:2015" class="me-1">
+                    <img src="assets/img/ISO_27001.png" width="70" height="75" alt="ISO 27001:2022">
+                </div>
+            </div>
+
+            <button class="navbar-toggler d-lg-none border-0 ms-auto collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="templatemo_main_nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex menu_list justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="about-us.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="projects.html">Projects</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="case-study.html" id="caseStudyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Case Study
+                            </a>
+                            <ul class="dropdown-menu shadow-sm" aria-labelledby="caseStudyDropdown">
+                                <li><a class="dropdown-item" href="case-study.html"><i class="fas fa-layer-group me-2 text-warning"></i> All Case Studies</a></li>
+                                <li><hr class="dropdown-divider my-1"></li>
+                                <li><a class="dropdown-item" href="case-study-tcb.html"><i class="fas fa-id-card me-2 text-success"></i> TCB Smart Family Card</a></li>
+                                <li class="d-none"><!-- Hidden while ecourt.gov.bd is offline (not deleted). Remove "d-none" to show it again. --><a class="dropdown-item" href="case-study-e-court.html"><i class="fas fa-gavel me-2 text-primary"></i> Industrial e-Court</a></li>
+                                <li><a class="dropdown-item" href="case-study-e-licensing.html"><i class="fas fa-file-contract me-2 text-info"></i> National e-Licensing</a></li>
+                                <li><a class="dropdown-item" href="case-study-smart-card.html"><i class="fas fa-print me-2 text-warning"></i> Smart Card Issuance</a></li>
+                                <li><a class="dropdown-item" href="case-study-ocd.html"><i class="fas fa-calendar-check me-2 text-info"></i> Officers’ Club Dhaka</a></li>
+                                <li><a class="dropdown-item" href="case-study-tcb-contact-center.html"><i class="fas fa-headset me-2 text-success"></i> TCB AI Contact Center</a></li>
+                                <li><a class="dropdown-item" href="case-study-novotheatre.html"><i class="fas fa-ticket-alt me-2 text-warning"></i> Novotheatre eTicket</a></li>
+                                <li><a class="dropdown-item" href="case-study-gcc.html"><i class="fas fa-landmark me-2 text-success"></i> Gazipur City Corporation</a></li>
+                                <li><a class="dropdown-item" href="case-study-apfs.html"><i class="fas fa-user-clock me-2 text-primary"></i> Automated Presence &amp; Feedback</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="ms-lg-3">
+                    <div class="free_con d-flex align-items-center">
+                        <i class="fa fa-phone-alt mx-2 text-warning"></i>
+                        <div>
+                            <span>Free Consultant</span><br>
+                            <a href="tel:+8801615900004" style="color: inherit; text-decoration: none;"><strong>+880 1615-900004</strong></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-lg-none text-center pt-3 pb-2 border-top mt-3">
+                    <img width="26" height="28" src="assets/img/ISO_9001.png" alt="ISO 9001:2015" class="me-2" style="height: 28px;" loading="lazy">
+                    <img width="26" height="28" src="assets/img/ISO_27001.png" alt="ISO 27001:2022" style="height: 28px;" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </nav>
+    </header>
+
+    <main id="main-content">
+
+    <!-- Page Hero Banner -->
+    <div class="page-hero-banner">
+        <div class="container position-relative text-center">
+            <div class="breadcrumb-pill">
+                <a href="index.html"><i class="fas fa-home me-1"></i> Home</a>
+                <span class="opacity-50">/</span>
+                <a href="case-study.html">Case Studies</a>
+                <span class="opacity-50">/</span>
+                <span style="color: #f26522; font-weight: 600;">Novotheatre eTicket</span>
+            </div>
+            <h1>Novotheatre <span>eTicket</span></h1>
+            <p class="hero-desc">
+                How Spectrum built Novotheatre&rsquo;s online ticketing, so visitors can choose a show and buy a ticket on the web or in the app instead of queuing at the counter.
+            </p>
+            <div class="hero-features">
+                <span class="hero-feature-item">
+                    <i class="fas fa-ticket-alt" style="color: #4ade80;"></i> Tickets Online
+                </span>
+                <span class="hero-feature-item">
+                    <i class="fas fa-mobile-alt" style="color: #38bdf8;"></i> Android App: 500+ Downloads
+                </span>
+                <span class="hero-feature-item">
+                    <i class="fas fa-calendar-check" style="color: #f26522;"></i> Pick a Date and Show
+                </span>
+                <span class="hero-feature-item">
+                    <i class="fas fa-qrcode" style="color: #fbbf24;"></i> Barcode Tickets at the Gate
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- CASE STUDY -->
+    <article class="dis-article container py-5 cs-article" aria-labelledby="cs-title">
+        <header class="dis-article-header">
+            <span class="cs-label">Case study</span>
+            <h2 id="cs-title" class="dis-article-title">Novotheatre eTicket</h2>
+            <p class="dis-article-updated">Updated <time datetime="2026-11-09">9 November 2026</time></p>
+        </header>
+        <p class="dis-article-lead">
+            Novotheatre welcomes visitors to space shows, 5D movies, virtual reality and science exhibits. Spectrum built its online ticketing: a web portal and the Novotheatre eTicket app, where visitors pick a date and a show, buy a ticket and enter with a barcode.
+        </p>
+
+        <div class="cs-glance">
+            <div class="cs-glance-media">
+                <picture><source srcset="assets/img/apps/novotheatre-icon.webp" type="image/webp"><img src="assets/img/apps/novotheatre-icon.png" width="256" height="256" alt="Novotheatre eTicket app icon" loading="lazy" class="img-fluid"></picture>
+            </div>
+            <dl class="cs-glance-list">
+                    <div class="cs-glance-row"><dt><i class="fas fa-building" aria-hidden="true"></i> Client</dt><dd>Novotheatre, Bangladesh</dd></div>
+                    <div class="cs-glance-row"><dt><i class="fas fa-layer-group" aria-hidden="true"></i> Sector</dt><dd>Science, space and visitor attractions</dd></div>
+                    <div class="cs-glance-row"><dt><i class="fas fa-tools" aria-hidden="true"></i> What we built</dt><dd>An online ticket portal and the Novotheatre eTicket app</dd></div>
+                    <div class="cs-glance-row"><dt><i class="fas fa-external-link-alt" aria-hidden="true"></i> Live system</dt><dd><a href="https://novo.spectrum.com.bd/" target="_blank" rel="noopener">novo.spectrum.com.bd</a></dd></div>
+                    <div class="cs-glance-row"><dt><i class="fas fa-mobile-alt" aria-hidden="true"></i> Mobile apps</dt><dd><a href="https://play.google.com/store/apps/details?id=com.spectrum.novotheatre_official" target="_blank" rel="noopener">Google Play</a></dd></div>
+            </dl>
+        </div>
+
+        <section id="problem">
+            <h2>The problem</h2>
+            <p>Without online ticketing, visitors, school groups and families have to queue at the counter to buy tickets, without knowing in advance what is showing and when.</p><p>Counter-only sales also make it harder to plan for busy days and to keep every sale in one record.</p>
+        </section>
+
+        <section id="solution">
+            <h2>What we built</h2>
+            <p>Online ticketing on the web and on Android:</p>
+            <ul class="dis-article-list">
+                <li><strong>An online ticket portal</strong> where visitors choose a date and see each show with its time, duration and price.</li><li><strong>The Novotheatre eTicket Android app</strong>, in Bangla, with log in and &ldquo;buy ticket online&rdquo; on the home screen.</li><li><strong>Shows and exhibits in one place</strong>, such as the entrance ticket, 5D movies, VR and the digital and science exhibits.</li><li><strong>Barcode tickets</strong> that are checked at the entry gates.</li><li><strong>Sales records</strong> kept in one system.</li>
+            </ul>
+        </section>
+
+        <section id="app">
+            <h2>The Novotheatre eTicket app</h2>
+            <div class="app-head">
+                <picture><source srcset="assets/img/apps/novotheatre-icon.webp" type="image/webp"><img src="assets/img/apps/novotheatre-icon.png" width="256" height="256" alt="Novotheatre eTicket app icon" loading="lazy"></picture>
+                <div><h3>Novotheatre eTicket</h3><div class="app-meta"><span class="">Android</span><span class="">500+ downloads</span><span class="app-meta-star">3.8★ from 10 reviews on Google Play</span></div></div>
+            </div>
+            <div class="app-gallery" role="list">
+                <figure role="listitem">
+                    <picture><source srcset="assets/img/apps/novotheatre/screen-1.webp" type="image/webp"><img src="assets/img/apps/novotheatre/screen-1.jpg" width="324" height="720" alt="Novotheatre eTicket app screen: Home: log in or buy a ticket online" loading="lazy"></picture>
+                    <figcaption>Home: log in or buy a ticket online</figcaption>
+                </figure>
+                <figure role="listitem">
+                    <picture><source srcset="assets/img/apps/novotheatre/screen-2.webp" type="image/webp"><img src="assets/img/apps/novotheatre/screen-2.jpg" width="324" height="720" alt="Novotheatre eTicket app screen: Log in" loading="lazy"></picture>
+                    <figcaption>Log in</figcaption>
+                </figure>
+                <figure role="listitem">
+                    <picture><source srcset="assets/img/apps/novotheatre/screen-3.webp" type="image/webp"><img src="assets/img/apps/novotheatre/screen-3.jpg" width="324" height="720" alt="Novotheatre eTicket app screen: Choose a date and show, such as entrance, 5D movie, VR or exhibits" loading="lazy"></picture>
+                    <figcaption>Choose a date and show, such as entrance, 5D movie, VR or exhibits</figcaption>
+                </figure>
+            </div>
+            <div class="store-btns"><a class="store-btn" href="https://play.google.com/store/apps/details?id=com.spectrum.novotheatre_official" target="_blank" rel="noopener"><i class="fas fa-mobile-alt" aria-hidden="true"></i><span class="store-btn-text"><small>Get it on</small>Google Play</span></a></div>
+        </section>
+
+        <section id="how">
+            <h2>How it works</h2>
+            <div class="dis-article-tiles">
+                <div class="dis-article-tile">
+                    <i class="fas fa-calendar-check" aria-hidden="true"></i>
+                    <h3>Pick a date</h3>
+                    <p>The visitor opens the portal or app and chooses a day.</p>
+                </div>
+                <div class="dis-article-tile">
+                    <i class="fas fa-list-ol" aria-hidden="true"></i>
+                    <h3>Choose a show</h3>
+                    <p>Each show lists its time, duration and price.</p>
+                </div>
+                <div class="dis-article-tile">
+                    <i class="fas fa-ticket-alt" aria-hidden="true"></i>
+                    <h3>Buy the ticket</h3>
+                    <p>The visitor buys online and gets a ticket with a barcode.</p>
+                </div>
+                <div class="dis-article-tile">
+                    <i class="fas fa-qrcode" aria-hidden="true"></i>
+                    <h3>Enter at the gate</h3>
+                    <p>The barcode is checked at the gate on arrival.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="results">
+            <h2>Results</h2>
+            <ul class="cs-stats list-unstyled">
+                <li><span class="cs-stat-num">500+</span><span class="cs-stat-label">App downloads</span></li>
+                <li><span class="cs-stat-num">Web + app</span><span class="cs-stat-label">Two ways to buy</span></li>
+                <li><span class="cs-stat-num">Barcode</span><span class="cs-stat-label">Tickets checked at the gate</span></li>
+            </ul>
+            <ul class="dis-article-list">
+                <li>Visitors can buy tickets before they arrive, on the web or in the app.</li><li>Each show&rsquo;s time, duration and price is clear before buying.</li><li>The Novotheatre eTicket app has been downloaded more than 500 times from Google Play.</li>
+            </ul>
+        </section>
+
+        <section id="technology">
+            <h2>The technology, in plain words</h2>
+            <ul class="dis-article-list">
+                <li><strong>Ticket portal:</strong> shows by date, with prices and a buy button.</li><li><strong>Android app:</strong> the same tickets on a phone, in Bangla.</li><li><strong>Barcode tickets:</strong> each ticket carries a barcode for the entry gate.</li><li><strong>One sales record:</strong> online and app sales in the same system.</li>
+            </ul>
+            <p>Want to know more about the technology? Read our guides on <a href="services.html">All Services</a> and <a href="mobile-apps.html">Our Mobile Apps</a>.</p>
+        </section>
+
+        <div class="cs-actions">
+            <a href="contact.html?product=Novotheatre%20eTicket%20(similar%20project)#contact-form-section" class="btn btn-primary px-4 py-2 fw-semibold rounded-pill shadow-sm" style="background: #2e3760; border-color: #2e3760;"><i class="fas fa-paper-plane me-2" aria-hidden="true"></i> Discuss a similar project</a>
+            <a href="https://novo.spectrum.com.bd/" target="_blank" rel="noopener" class="btn btn-outline-secondary px-4 py-2 fw-semibold rounded-pill"><i class="fas fa-external-link-alt me-2" aria-hidden="true"></i> Visit the live system</a>
+            <a href="https://play.google.com/store/apps/details?id=com.spectrum.novotheatre_official" target="_blank" rel="noopener" class="btn btn-outline-secondary px-4 py-2 fw-semibold rounded-pill"><i class="fas fa-mobile-alt me-2" aria-hidden="true"></i> Get it on Google Play</a>
+        </div>
+    </article>
+
+    <!-- MORE CASE STUDIES -->
+    <section class="container-fluid py-5 cs-more" aria-labelledby="cs-more-title">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="abt-eyebrow abt-eyebrow-green">More Case Studies</span>
+                <h2 id="cs-more-title" class="abt-title text-center">Other Systems <span>We Built</span></h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <a class="abt-work-card" href="case-study-tcb.html">
+                        <i class="fas fa-id-card abt-work-icon" aria-hidden="true"></i>
+                        <h3>TCB Smart Family Card</h3>
+                        <p>Smart family cards so the right families receive TCB&rsquo;s low-price goods.</p>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <a class="abt-work-card" href="case-study-e-licensing.html">
+                        <i class="fas fa-file-contract abt-work-icon" aria-hidden="true"></i>
+                        <h3>National e-Licensing</h3>
+                        <p>One portal to apply for and receive government licences online.</p>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <a class="abt-work-card" href="case-study-smart-card.html">
+                        <i class="fas fa-print abt-work-icon" aria-hidden="true"></i>
+                        <h3>Smart Card Issuance</h3>
+                        <p>Automated printing and issuing of secure smart cards at scale.</p>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <a class="abt-work-card" href="case-study-ocd.html">
+                        <i class="fas fa-calendar-check abt-work-icon" aria-hidden="true"></i>
+                        <h3>Officers&rsquo; Club Dhaka</h3>
+                        <p>Club website, member portal and Android and iOS apps, with online booking for halls, guest rooms and the salon.</p>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <a class="abt-work-card" href="case-study-gcc.html">
+                        <i class="fas fa-landmark abt-work-icon" aria-hidden="true"></i>
+                        <h3>Gazipur City Corporation e-Revenue</h3>
+                        <p>Holding tax and trade licences online, on the web and in the My GCC app.</p>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <a class="abt-work-card" href="case-study-apfs.html">
+                        <i class="fas fa-user-clock abt-work-icon" aria-hidden="true"></i>
+                        <h3>Automated Presence &amp; Feedback</h3>
+                        <p>Attendance, leave and feedback on the phone, used by six government bodies.</p>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <a class="abt-work-card" href="case-study-tcb-contact-center.html">
+                        <i class="fas fa-headset abt-work-icon" aria-hidden="true"></i>
+                        <h3>TCB AI Contact Center</h3>
+                        <p>Calls and messages from dealers and beneficiaries answered 24/7, with every complaint tracked.</p>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="case-study.html" class="button">see all case studies</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <div class="container-fluid py-5 cta-banner-section">
+        <div class="container text-center py-4 position-relative" style="z-index: 2;">
+            <h2 class="display-6 fw-bold text-white mb-3">Planning a Similar System?</h2>
+            <p class="mx-auto mb-4" style="max-width: 650px; font-size: 16px; line-height: 1.7; color: rgba(255, 255, 255, 0.85);">
+                Tell us what you need to build. We will show you how we would approach it, with an honest view of time and cost.
+            </p>
+            <div class="d-flex justify-content-center align-items-center flex-wrap gap-3 pt-2">
+                <a href="contact.html#contact-form-section" class="cta-primary-btn">
+                    <i class="fas fa-paper-plane me-2"></i> Talk to Our Team
+                </a>
+                <a href="tel:+8801615900004" class="cta-secondary-btn">
+                    <i class="fas fa-phone-alt me-2"></i> Call +880 1615-900004
+                </a>
+            </div>
+        </div>
+    </div>
+
+    </main>
+
+    <!-- Footer start -->
+    <footer>
+    <div class="footer-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 mb-4 footer-col-about">
+                    <div class="footer-about">
+                        <a href="index.html"><img src="assets/img/logo.png" width="165" height="60" class="img-fluid mb-3" alt="Spectrum IT Solutions Logo" loading="lazy"></a>
+                        <p>A Dhaka software company building secure digital services for government and business since 2012.</p>
+                        <div class="mt-3 footer-social-icons">
+                            <a class="text-light" href="https://www.facebook.com/myspectrumit" target="_blank" rel="noopener" aria-label="Spectrum Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a class="text-light" href="https://www.linkedin.com/company/spectrum-it-solutions-limited" target="_blank" rel="noopener" aria-label="Spectrum LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a class="text-light" href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" aria-label="Spectrum YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <a href="https://basis.org.bd/company-profile/21-04-024" target="_blank" rel="noopener"><img src="assets/img/basis_logo.png" width="214" height="54" class="img-fluid" style="padding-top: 30px; padding-bottom: 30px;" alt="BASIS Member" loading="lazy"></a>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 mb-4">
+                    <h3 class="text-white mb-3" style="font-size: 1.25rem;">Valuable Projects</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="https://licence.gov.bd/" target="_blank" rel="noopener" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> www.licence.gov.bd</a></li>
+                        <li class="mb-2"><a href="https://ocd.org.bd/" target="_blank" rel="noopener" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> www.ocd.org.bd</a></li>
+                        <li class="mb-2"><a href="http://www.tcbsheba.com/" target="_blank" rel="noopener" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> www.tcbsheba.com</a></li>
+                        <li class="mb-2 d-none"><!-- Hidden while ecourt.gov.bd is offline (not deleted). Remove "d-none" to show it again. --><a href="http://www.ecourt.gov.bd/" target="_blank" rel="noopener" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> www.ecourt.gov.bd</a></li>
+                        <li class="mb-2"><a href="https://novo.spectrum.com.bd/" target="_blank" rel="noopener" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> www.sobticket.com</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 mb-4 footer-col-links">
+                    <h3 class="text-white mb-3" style="font-size: 1.25rem;">Quick Link</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="artificial-intelligence.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Artificial Intelligence</a></li>
+                        <li class="mb-2"><a href="digital-identity-security.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Digital Identity &amp; Security</a></li>
+                        <li class="mb-2"><a href="smart-card-technologies.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Smart Card Technologies</a></li>
+                        <li class="mb-2"><a href="blockchain-technology.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Blockchain Technology</a></li>
+                        <li class="mb-2"><a href="about-us.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> About Us</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Our Services</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Our Products</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 mb-4 footer-col-contact">
+                    <h3 class="text-white mb-3" style="font-size: 1.25rem;">Contact Us</h3>
+                    <p class="text-light mb-2"><i class="fas fa-map-marker-alt me-2 text-warning"></i> 52/1, New Eskaton Road (Hasan Holdings Ltd., 12th Floor), Dhaka-1000, Bangladesh</p>
+                    <p class="text-light mb-2"><i class="fas fa-envelope me-2 text-warning"></i> <a href="mailto:contact@spectrum.com.bd" class="text-light text-decoration-none">contact@spectrum.com.bd</a></p>
+                    <p class="text-light mb-2"><i class="fas fa-phone-alt me-2 text-warning"></i> <a href="tel:+8801615900004" class="text-light text-decoration-none">+880 1615-900004</a></p>
+                </div>
+            </div>
+
+            <!-- Copyright section with same background inside footer-wrapper -->
+            <div class="footer-copyright">
+                <p class="mb-0">Copyright &copy; 2026 <a href="index.html" style="color: #f26522; text-decoration: none;"><strong>Spectrum IT Solutions Ltd.</strong></a> All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+    </footer>
+    <!-- Footer end -->
+
+    <!-- Scripts -->
+    <script src="assets/js/bootstrap.bundle.min.js" defer></script>
+    <script src="assets/js/custom.js?v=20261109i" defer></script>
+</body>
+</html>

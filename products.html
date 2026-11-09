@@ -40,7 +40,7 @@
     <!-- Bootstrap & Site Styles -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.min.css">
-    <link rel="stylesheet" href="assets/css/responsive-fixes.min.css?v=20261108g">
+    <link rel="stylesheet" href="assets/css/responsive-fixes.min.css?v=20261109z">
     <!-- Structured Data (JSON-LD Organization & WebPage) -->
     <script type="application/ld+json">
     [
@@ -129,7 +129,7 @@
                 </div>
                 <div class="iso d-none d-lg-flex align-items-center ms-3">
                     <img src="assets/img/ISO_9001.png" width="70" height="75" alt="ISO 9001:2015" class="me-1">
-                    <img src="assets/img/ISO_27001.png" width="70" height="75" alt="ISO 27001:2013">
+                    <img src="assets/img/ISO_27001.png" width="70" height="75" alt="ISO 27001:2022">
                 </div>
             </div>
 
@@ -159,9 +159,15 @@
                             <ul class="dropdown-menu shadow-sm" aria-labelledby="caseStudyDropdown">
                                 <li><a class="dropdown-item" href="case-study.html"><i class="fas fa-layer-group me-2 text-warning"></i> All Case Studies</a></li>
                                 <li><hr class="dropdown-divider my-1"></li>
-                                <li><a class="dropdown-item" target="_blank" rel="noopener" href="https://digital.tcbsheba.com/"><i class="fas fa-id-card me-2 text-success"></i> Digital Transformation of TCB</a></li>
-                                <li><a class="dropdown-item" target="_blank" rel="noopener" href="http://www.ecourt.gov.bd/"><i class="fas fa-gavel me-2 text-primary"></i> Industrial e-Court BD</a></li>
-                                <li><a class="dropdown-item" target="_blank" rel="noopener" href="https://licence.gov.bd/"><i class="fas fa-file-contract me-2 text-info"></i> National e-Licensing Portal</a></li>
+                                <li><a class="dropdown-item" href="case-study-tcb.html"><i class="fas fa-id-card me-2 text-success"></i> TCB Smart Family Card</a></li>
+                                <li class="d-none"><!-- Hidden while ecourt.gov.bd is offline (not deleted). Remove "d-none" to show it again. --><a class="dropdown-item" href="case-study-e-court.html"><i class="fas fa-gavel me-2 text-primary"></i> Industrial e-Court</a></li>
+                                <li><a class="dropdown-item" href="case-study-e-licensing.html"><i class="fas fa-file-contract me-2 text-info"></i> National e-Licensing</a></li>
+                                <li><a class="dropdown-item" href="case-study-smart-card.html"><i class="fas fa-print me-2 text-warning"></i> Smart Card Issuance</a></li>
+                                <li><a class="dropdown-item" href="case-study-ocd.html"><i class="fas fa-calendar-check me-2 text-info"></i> Officers’ Club Dhaka</a></li>
+                                <li><a class="dropdown-item" href="case-study-tcb-contact-center.html"><i class="fas fa-headset me-2 text-success"></i> TCB AI Contact Center</a></li>
+                                <li><a class="dropdown-item" href="case-study-novotheatre.html"><i class="fas fa-ticket-alt me-2 text-warning"></i> Novotheatre eTicket</a></li>
+                                <li><a class="dropdown-item" href="case-study-gcc.html"><i class="fas fa-landmark me-2 text-success"></i> Gazipur City Corporation</a></li>
+                                <li><a class="dropdown-item" href="case-study-apfs.html"><i class="fas fa-user-clock me-2 text-primary"></i> Automated Presence &amp; Feedback</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -182,7 +188,7 @@
 
                 <div class="d-lg-none text-center pt-3 pb-2 border-top mt-3">
                     <img width="26" height="28" src="assets/img/ISO_9001.png" alt="ISO 9001:2015" class="me-2" style="height: 28px;" loading="lazy">
-                    <img width="26" height="28" src="assets/img/ISO_27001.png" alt="ISO 27001:2013" style="height: 28px;" loading="lazy">
+                    <img width="26" height="28" src="assets/img/ISO_27001.png" alt="ISO 27001:2022" style="height: 28px;" loading="lazy">
                 </div>
             </div>
         </div>
@@ -201,398 +207,601 @@
             </div>
             <h1>Our <span>Products</span></h1>
             <p class="hero-desc">
-                Field-proven hardware systems, high-security smart card personalization printers, certified biometric devices, and mission-critical enterprise software platforms engineered for sovereign reliability.
+                Ready-to-use devices and software for ID cards, security, self-service and running your business. We supply, install and support them across Bangladesh.
             </p>
             <div class="hero-features">
-                <span class="hero-feature-item">
-                    <i class="fas fa-id-card" style="color: #4ade80;"></i> Smart Card &amp; Printers
-                </span>
-                <span class="hero-feature-item">
-                    <i class="fas fa-fingerprint" style="color: #f26522;"></i> Certified Biometrics
-                </span>
-                <span class="hero-feature-item">
-                    <i class="fas fa-tv" style="color: #38bdf8;"></i> Kiosks &amp; Signage
-                </span>
-                <span class="hero-feature-item">
-                    <i class="fas fa-video" style="color: #fbbf24;"></i> Surveillance &amp; Telemetry
-                </span>
-                <span class="hero-feature-item">
-                    <i class="fas fa-cubes" style="color: #a78bfa;"></i> Enterprise Software
-                </span>
+                <a class="hero-feature-item" href="#id-cards"><i class="fas fa-id-card" style="color: #4ade80;"></i> ID &amp; Cards</a>
+                <a class="hero-feature-item" href="#security-access"><i class="fas fa-shield-alt" style="color: #f26522;"></i> Security &amp; Access</a>
+                <a class="hero-feature-item" href="#ai-contact-center"><i class="fas fa-headset" style="color: #fbbf24;"></i> AI Contact Center</a>
+                <a class="hero-feature-item" href="#kiosks-displays"><i class="fas fa-tv" style="color: #38bdf8;"></i> Kiosks &amp; Displays</a>
+                <a class="hero-feature-item" href="#business-software"><i class="fas fa-chart-line" style="color: #a78bfa;"></i> Business Software</a>
             </div>
         </div>
     </div>
 
-    <!-- SECTION 1: TURNKEY HARDWARE & SPECIALIZED SYSTEMS (8 CORE PRODUCTS) -->
-    <div class="container pt-5 pb-3">
-        <div class="text-center mb-4">
-            <span class="badge px-3 py-2 rounded-pill fw-semibold mb-2" style="background: rgba(242, 101, 34, 0.1); color: #f26522; border: 1px solid rgba(242, 101, 34, 0.25); font-size: 13px;">Turnkey Hardware Systems</span>
-            <h2 class="header_two" style="color: #2e3760; font-size: 36px; font-weight: 700;">Hardware &amp; <span style="color: #f26522;">Specialized Devices</span></h2>
-            <p class="text-muted mx-auto mb-4" style="max-width: 680px; font-size: 15px;">Industrial-grade, ruggedized hardware solutions deployed across national governance platforms, financial institutions, and enterprise facilities.</p>
-
-            <!-- Interactive Category Filter Tabs (Single Line Segmented Group) -->
-            <div class="filter-nav-wrap">
-                <button class="filter-btn active" data-filter="all">
-                    <i class="fas fa-layer-group"></i> All <span class="badge-count">12</span>
+    <!-- Intro + filter -->
+    <div class="container pt-5 pb-2">
+        <div class="text-center mb-2">
+            <span class="badge px-3 py-2 rounded-pill fw-semibold mb-2" style="background: rgba(242, 101, 34, 0.1); color: #c2410c; border: 1px solid rgba(242, 101, 34, 0.25); font-size: 13px;">Find What You Need</span>
+            <h2 class="header_two" style="color: #2e3760; font-size: 36px; font-weight: 700;">Products Grouped by <span style="color: #f26522;">What You Need</span></h2>
+            <p class="text-muted mx-auto mb-4 prod-intro">Pick a group to see only those products. Every product comes with installation, training and local support.</p>
+            <div class="filter-nav-wrap" role="group" aria-label="Show products by group">
+                <button class="filter-btn active" data-filter="all" aria-pressed="true">
+                    <i class="fas fa-layer-group" aria-hidden="true"></i> All <span class="badge-count">21</span>
                 </button>
-                <button class="filter-btn" data-filter="hardware">
-                    <i class="fas fa-microchip"></i> Hardware <span class="badge-count">8</span>
+                <button class="filter-btn" data-filter="id" aria-pressed="false">
+                    <i class="fas fa-id-card" aria-hidden="true"></i> ID &amp; Cards <span class="badge-count">4</span>
                 </button>
-                <button class="filter-btn" data-filter="software">
-                    <i class="fas fa-code"></i> Software <span class="badge-count">4</span>
+                <button class="filter-btn" data-filter="security" aria-pressed="false">
+                    <i class="fas fa-shield-alt" aria-hidden="true"></i> Security &amp; Access <span class="badge-count">6</span>
+                </button>
+                <button class="filter-btn" data-filter="contact" aria-pressed="false">
+                    <i class="fas fa-headset" aria-hidden="true"></i> AI Contact Center <span class="badge-count">7</span>
+                </button>
+                <button class="filter-btn" data-filter="kiosk" aria-pressed="false">
+                    <i class="fas fa-tv" aria-hidden="true"></i> Kiosks &amp; Displays <span class="badge-count">2</span>
+                </button>
+                <button class="filter-btn" data-filter="business" aria-pressed="false">
+                    <i class="fas fa-chart-line" aria-hidden="true"></i> Business Software <span class="badge-count">2</span>
                 </button>
             </div>
         </div>
     </div>
 
-    <div class="container pb-5 filter-section">
-        <div class="row g-4">
-            <!-- Product 1: Smart Card & Printer -->
-            <div class="col-lg-3 col-md-6 col-sm-6 filter-item reveal-on-scroll" data-category="hardware">
+    <section class="container-fluid filter-section prod-group" id="id-cards" aria-labelledby="id-cards-title">
+        <div class="container">
+            <div class="prod-group-head">
+                <span class="prod-group-icon"><i class="fas fa-id-card" aria-hidden="true"></i></span>
+                <div>
+                    <h2 id="id-cards-title">ID &amp; Cards</h2>
+                    <p>Print secure cards and check that people and documents are real.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+            <div class="col-lg-3 col-md-6 col-sm-6 filter-item reveal-on-scroll" data-category="id">
                 <div class="product-card-modern">
                     <div>
                         <div class="product-icon-wrap">
                             <i class="fas fa-id-card" aria-hidden="true"></i>
                         </div>
                         <div class="text-center">
-                            <span class="product-cat">Personalization</span>
+                            <span class="product-cat">Card printing</span>
                         </div>
-                        <h4 aria-level="3">Smart Card &amp; Printer</h4>
-                        <p>High-definition retransfer and direct-to-card smart card printers, dual-interface chip encoding, and secure holographic lamination.</p>
+                        <h3 class="product-name">Smart Card Printers</h3>
+                        <p>Print and encode ID, staff and service cards in-house, with chips and anti-copy features built in.</p>
                         <ul class="product-specs-list">
-                            <li><i class="fas fa-check-circle"></i> Retransfer &amp; Direct-to-Card</li>
-                            <li><i class="fas fa-check-circle"></i> Contact &amp; Contactless RFID</li>
-                            <li><i class="fas fa-check-circle"></i> High-Speed Batch Issuance</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Full-colour cards, one or thousands at a time</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Writes chip and tap (contactless) cards</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Adds holograms and laminate against copying</li>
                         </ul>
                     </div>
-                    <div class="pt-3 text-center">
-                        <a href="smart-card-technologies.html" class="button">read more</a>
+                    <div class="prod-card-actions">
+                        <a href="contact.html?product=Smart%20Card%20Printers#contact-form-section" class="button">Ask for a quote</a>
+                        <a href="smart-card-technologies.html" class="prod-more-link">See how it works <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
-
-            <!-- Product 2: Time Attendance Systems -->
-            <div class="col-lg-3 col-md-6 col-sm-6 filter-item reveal-on-scroll" data-category="hardware">
-                <div class="product-card-modern">
-                    <div>
-                        <div class="product-icon-wrap">
-                            <i class="fas fa-user-clock" aria-hidden="true"></i>
-                        </div>
-                        <div class="text-center">
-                            <span class="product-cat">Workforce Security</span>
-                        </div>
-                        <h4 aria-level="3">Time Attendance</h4>
-                        <p>Optical fingerprint and AI facial recognition terminals featuring standalone operation, battery backup, and encrypted cloud sync.</p>
-                        <ul class="product-specs-list">
-                            <li><i class="fas fa-check-circle"></i> Face &amp; Fingerprint Auth</li>
-                            <li><i class="fas fa-check-circle"></i> Standalone Battery Backup</li>
-                            <li><i class="fas fa-check-circle"></i> Real-time Cloud Push SDK</li>
-                        </ul>
-                    </div>
-                    <div class="pt-3 text-center">
-                        <a href="contact.html" class="button">read more</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 3: Access Control Solutions -->
-            <div class="col-lg-3 col-md-6 col-sm-6 filter-item reveal-on-scroll" data-category="hardware">
-                <div class="product-card-modern">
-                    <div>
-                        <div class="product-icon-wrap">
-                            <i class="fas fa-user-lock" aria-hidden="true"></i>
-                        </div>
-                        <div class="text-center">
-                            <span class="product-cat">Physical Security</span>
-                        </div>
-                        <h4 aria-level="3">Access Control</h4>
-                        <p>Smart turnstiles, optical flap barriers, electromagnetic locks, and multi-factor biometric/RFID facility controllers.</p>
-                        <ul class="product-specs-list">
-                            <li><i class="fas fa-check-circle"></i> Anti-Tailgating Speed Gates</li>
-                            <li><i class="fas fa-check-circle"></i> Multi-Factor Biometric Access</li>
-                            <li><i class="fas fa-check-circle"></i> Fire Alarm &amp; Emergency Release</li>
-                        </ul>
-                    </div>
-                    <div class="pt-3 text-center">
-                        <a href="contact.html" class="button">read more</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 4: Digital Signage -->
-            <div class="col-lg-3 col-md-6 col-sm-6 filter-item reveal-on-scroll" data-category="hardware">
-                <div class="product-card-modern">
-                    <div>
-                        <div class="product-icon-wrap">
-                            <i class="fas fa-tv" aria-hidden="true"></i>
-                        </div>
-                        <div class="text-center">
-                            <span class="product-cat">Display Solutions</span>
-                        </div>
-                        <h4 aria-level="3">Digital Signage</h4>
-                        <p>Centralized networked signage systems with ultra-HD commercial displays, remote content scheduling, and multi-zone split playback.</p>
-                        <ul class="product-specs-list">
-                            <li><i class="fas fa-check-circle"></i> 4K Commercial Grade Displays</li>
-                            <li><i class="fas fa-check-circle"></i> Centralized Web CMS</li>
-                            <li><i class="fas fa-check-circle"></i> Multi-Zone Layouts &amp; Tickers</li>
-                        </ul>
-                    </div>
-                    <div class="pt-3 text-center">
-                        <a href="contact.html" class="button">read more</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 5: Self-Service Kiosk -->
-            <div class="col-lg-3 col-md-6 col-sm-6 filter-item reveal-on-scroll" data-category="hardware">
-                <div class="product-card-modern">
-                    <div>
-                        <div class="product-icon-wrap">
-                            <i class="fas fa-hand-pointer" aria-hidden="true"></i>
-                        </div>
-                        <div class="text-center">
-                            <span class="product-cat">Interactive Terminals</span>
-                        </div>
-                        <h4 aria-level="3">Self-Service Kiosk</h4>
-                        <p>Rugged interactive touch kiosks equipped with industrial thermal ticket printers, QR scanners, payment readers, and fingerprint sensors.</p>
-                        <ul class="product-specs-list">
-                            <li><i class="fas fa-check-circle"></i> Capacitive Multi-Touch Screen</li>
-                            <li><i class="fas fa-check-circle"></i> Integrated Thermal Printer &amp; QR</li>
-                            <li><i class="fas fa-check-circle"></i> Vandal-Proof Steel Enclosure</li>
-                        </ul>
-                    </div>
-                    <div class="pt-3 text-center">
-                        <a href="contact.html" class="button">read more</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 6: Biometric Devices -->
-            <div class="col-lg-3 col-md-6 col-sm-6 filter-item reveal-on-scroll" data-category="hardware">
+            <div class="col-lg-3 col-md-6 col-sm-6 filter-item reveal-on-scroll" data-category="id">
                 <div class="product-card-modern">
                     <div>
                         <div class="product-icon-wrap">
                             <i class="fas fa-fingerprint" aria-hidden="true"></i>
                         </div>
                         <div class="text-center">
-                            <span class="product-cat">Identity Hardware</span>
+                            <span class="product-cat">Identity checks</span>
                         </div>
-                        <h4 aria-level="3">Biometric Devices</h4>
-                        <p>FBI PIV and STQC certified USB optical &amp; capacitive fingerprint scanners, dual-iris cameras, live-finger detection, and NID readers.</p>
+                        <h3 class="product-name">Biometric Devices</h3>
+                        <p>Fingerprint scanners, iris cameras and NID card readers that confirm a person is who they say they are.</p>
                         <ul class="product-specs-list">
-                            <li><i class="fas fa-check-circle"></i> FBI PIV &amp; STQC Certified</li>
-                            <li><i class="fas fa-check-circle"></i> Fake Finger &amp; LFD Protection</li>
-                            <li><i class="fas fa-check-circle"></i> Multi-OS SDK (Win/Linux/Android)</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Spots fake or rubber fingers</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Fingerprint, iris and NID card reading</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Works with Windows, Linux and Android</li>
                         </ul>
                     </div>
-                    <div class="pt-3 text-center">
-                        <a href="digital-identity-security.html" class="button">read more</a>
+                    <div class="prod-card-actions">
+                        <a href="contact.html?product=Biometric%20Devices#contact-form-section" class="button">Ask for a quote</a>
+                        <a href="digital-identity-security.html" class="prod-more-link">See how it works <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
-
-            <!-- Product 7: CCTV & Surveillance Cameras -->
-            <div class="col-lg-3 col-md-6 col-sm-6 filter-item reveal-on-scroll" data-category="hardware">
+            <div class="col-lg-3 col-md-6 col-sm-6 filter-item reveal-on-scroll" data-category="id">
+                <div class="product-card-modern">
+                    <div>
+                        <div class="product-icon-wrap">
+                            <i class="fas fa-user-check" aria-hidden="true"></i>
+                        </div>
+                        <div class="text-center">
+                            <span class="product-cat">Software</span>
+                        </div>
+                        <h3 class="product-name">Spectrum e-KYC</h3>
+                        <p>Check a customer&rsquo;s NID and face online in seconds, with no paper forms to fill in.</p>
+                        <ul class="product-specs-list">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Checks NID details instantly</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Matches the selfie to the NID photo</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Catches photos of photos and masks</li>
+                        </ul>
+                    </div>
+                    <div class="prod-card-actions">
+                        <a href="contact.html?product=Spectrum%20e-KYC#contact-form-section" class="button">Ask for a quote</a>
+                        <a href="digital-identity-security.html" class="prod-more-link">See how it works <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 filter-item reveal-on-scroll" data-category="id">
+                <div class="product-card-modern product-card-upokari">
+                    <div>
+                        <div class="product-icon-wrap">
+                            <i class="fas fa-robot" aria-hidden="true"></i>
+                        </div>
+                        <div class="text-center">
+                            <span class="product-cat">Live now</span>
+                        </div>
+                        <h3 class="product-name">Upokari</h3>
+                        <p>Our AI tool that spots forged documents in seconds: land records, TCB family cards and NID cards.</p>
+                        <ul class="product-specs-list">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Catches fakes, photocopies and edited papers</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Flags photos taken of a screen</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Checks each document against the issuing record</li>
+                        </ul>
+                    </div>
+                    <div class="prod-card-actions">
+                        <a href="contact.html?product=Upokari#contact-form-section" class="button">Ask for a quote</a>
+                        <a href="upokari.html" class="prod-more-link">See how it works <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                        <a href="https://upokari.ai/" class="prod-more-link" target="_blank" rel="noopener">Visit Upokari.ai <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid filter-section prod-group prod-group-alt" id="security-access" aria-labelledby="security-access-title">
+        <div class="container">
+            <div class="prod-group-head">
+                <span class="prod-group-icon"><i class="fas fa-shield-alt" aria-hidden="true"></i></span>
+                <div>
+                    <h2 id="security-access-title">Security &amp; Access</h2>
+                    <p>Control who gets in, record who is at work, and keep an eye on sites and vehicles.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+            <div class="col-lg-4 col-md-6 col-sm-6 filter-item reveal-on-scroll" data-category="security">
+                <div class="product-card-modern">
+                    <div>
+                        <div class="product-icon-wrap">
+                            <i class="fas fa-user-lock" aria-hidden="true"></i>
+                        </div>
+                        <div class="text-center">
+                            <span class="product-cat">Entry control</span>
+                        </div>
+                        <h3 class="product-name">Access Control</h3>
+                        <p>Gates, turnstiles and door locks that let in only the right people, by card, fingerprint or face.</p>
+                        <ul class="product-specs-list">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Speed gates let one person through at a time</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Open with card, fingerprint or face</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Doors unlock by themselves in a fire alarm</li>
+                        </ul>
+                    </div>
+                    <div class="prod-card-actions">
+                        <a href="contact.html?product=Access%20Control#contact-form-section" class="button">Ask for a quote</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 filter-item reveal-on-scroll" data-category="security">
+                <div class="product-card-modern">
+                    <div>
+                        <div class="product-icon-wrap">
+                            <i class="fas fa-user-clock" aria-hidden="true"></i>
+                        </div>
+                        <div class="text-center">
+                            <span class="product-cat">Staff attendance</span>
+                        </div>
+                        <h3 class="product-name">Time Attendance</h3>
+                        <p>Face and fingerprint machines that record when staff arrive and leave, with all reports in one place.</p>
+                        <ul class="product-specs-list">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Check in by face or fingerprint</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Keeps working in a power cut</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Sends records to your HR or payroll software</li>
+                        </ul>
+                    </div>
+                    <div class="prod-card-actions">
+                        <a href="contact.html?product=Time%20Attendance#contact-form-section" class="button">Ask for a quote</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 filter-item reveal-on-scroll" data-category="security">
                 <div class="product-card-modern">
                     <div>
                         <div class="product-icon-wrap">
                             <i class="fas fa-video" aria-hidden="true"></i>
                         </div>
                         <div class="text-center">
-                            <span class="product-cat">Perimeter Security</span>
+                            <span class="product-cat">Surveillance</span>
                         </div>
-                        <h4 aria-level="3">CCTV Camera</h4>
-                        <p>High-definition IP surveillance cameras with starlight night vision, motorized optical zoom, vandal-proof IP67 domes, and AI analytics.</p>
+                        <h3 class="product-name">CCTV Cameras</h3>
+                        <p>Clear day-and-night cameras for offices, factories and public places, with alerts when something looks wrong.</p>
                         <ul class="product-specs-list">
-                            <li><i class="fas fa-check-circle"></i> 4K UHD Starlight Imaging</li>
-                            <li><i class="fas fa-check-circle"></i> 50m Smart IR &amp; IP67 Housing</li>
-                            <li><i class="fas fa-check-circle"></i> AI Motion &amp; Perimeter Alert</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Sharp 4K picture, even at night</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Weatherproof for outdoor use</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Alerts for movement in restricted areas</li>
                         </ul>
                     </div>
-                    <div class="pt-3 text-center">
-                        <a href="contact.html" class="button">read more</a>
+                    <div class="prod-card-actions">
+                        <a href="contact.html?product=CCTV%20Cameras#contact-form-section" class="button">Ask for a quote</a>
                     </div>
                 </div>
             </div>
-
-            <!-- Product 8: GPS & IoT Tracker -->
-            <div class="col-lg-3 col-md-6 col-sm-6 filter-item reveal-on-scroll" data-category="hardware">
+            <div class="col-lg-4 col-md-6 col-sm-6 filter-item reveal-on-scroll" data-category="security">
                 <div class="product-card-modern">
                     <div>
                         <div class="product-icon-wrap">
                             <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                         </div>
                         <div class="text-center">
-                            <span class="product-cat">Telemetry Hardware</span>
+                            <span class="product-cat">Vehicle tracking</span>
                         </div>
-                        <h4 aria-level="3">Tracker</h4>
-                        <p>Real-time vehicle and mobile asset tracking units featuring GSM/GPS dual-satellite positioning, anti-jamming, and remote engine cut-off.</p>
+                        <h3 class="product-name">GPS Trackers</h3>
+                        <p>See where every vehicle is right now, from your phone or computer.</p>
                         <ul class="product-specs-list">
-                            <li><i class="fas fa-check-circle"></i> High-Precision GPS/GLONASS</li>
-                            <li><i class="fas fa-check-circle"></i> Remote Engine Immobilization</li>
-                            <li><i class="fas fa-check-circle"></i> Fuel Sensor &amp; Geofence Alerts</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Live location on a map</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Stop the engine remotely if a vehicle is stolen</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Alerts for fuel theft and leaving set areas</li>
                         </ul>
                     </div>
-                    <div class="pt-3 text-center">
-                        <a href="contact.html" class="button">read more</a>
+                    <div class="prod-card-actions">
+                        <a href="contact.html?product=GPS%20Trackers#contact-form-section" class="button">Ask for a quote</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <!-- SECTION 2: ENTERPRISE SOFTWARE SUITES -->
-    <div class="container-fluid py-5 filter-section" style="background: #f8fafc; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
-        <div class="container">
-            <div class="text-center mb-5">
-                <span class="badge px-3 py-2 rounded-pill fw-semibold mb-2" style="background: rgba(30, 126, 52, 0.1); color: #1e7e34; border: 1px solid rgba(30, 126, 52, 0.25); font-size: 13px;">Software Platforms</span>
-                <h2 class="header_two" style="color: #2e3760; font-size: 36px; font-weight: 700;">Enterprise <span style="color: #f26522;">Software Suites</span></h2>
-                <p class="text-muted mx-auto" style="max-width: 680px; font-size: 15px;">Battle-tested digital platforms designed for high-concurrency public service delivery, corporate operations, and national identity ecosystems.</p>
-            </div>
-
-            <div class="row g-4">
-                <!-- Suite 1: Spectrum Enterprise ERP -->
-                <div class="col-lg-3 col-md-6 col-sm-6 filter-item reveal-on-scroll" data-category="software">
-                    <div class="product-card-modern">
-                        <div>
-                            <div class="product-icon-wrap">
-                            <i class="fas fa-chart-line" aria-hidden="true"></i>
-                        </div>
-                            <div class="text-center">
-                                <span class="product-cat">Operations &amp; ERP</span>
-                            </div>
-                            <h4 aria-level="3">Enterprise ERP</h4>
-                            <p>Integrated financial accounting, procurement, HR, payroll, supply chain, and asset management suite designed for corporate and institutional scale.</p>
-                            <ul class="product-specs-list">
-                                <li><i class="fas fa-check-circle"></i> Financials &amp; Double-Entry Audit</li>
-                                <li><i class="fas fa-check-circle"></i> Automated Payroll &amp; Tax Engine</li>
-                                <li><i class="fas fa-check-circle"></i> Multi-Warehouse Inventory</li>
-                            </ul>
-                        </div>
-                        <div class="pt-3 text-center">
-                            <a href="contact.html" class="button">read more</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Suite 2: Spectrum e-KYC Suite -->
-                <div class="col-lg-3 col-md-6 col-sm-6 filter-item reveal-on-scroll" data-category="software">
-                    <div class="product-card-modern">
-                        <div>
-                            <div class="product-icon-wrap">
-                            <i class="fas fa-user-check" aria-hidden="true"></i>
-                        </div>
-                            <div class="text-center">
-                                <span class="product-cat">Digital Trust</span>
-                            </div>
-                            <h4 aria-level="3">Spectrum e-KYC</h4>
-                            <p>Instant citizen verification and NID validation SDK with biometric facial match, passive liveness detection, and Porichoy API interoperability.</p>
-                            <ul class="product-specs-list">
-                                <li><i class="fas fa-check-circle"></i> Instant National NID Verification</li>
-                                <li><i class="fas fa-check-circle"></i> Passive Biometric Liveness Check</li>
-                                <li><i class="fas fa-check-circle"></i> Banking Grade AML/CFT Compliance</li>
-                            </ul>
-                        </div>
-                        <div class="pt-3 text-center">
-                            <a href="digital-identity-security.html" class="button">read more</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Suite 3: Smart City & IoT Platform -->
-                <div class="col-lg-3 col-md-6 col-sm-6 filter-item reveal-on-scroll" data-category="software">
-                    <div class="product-card-modern">
-                        <div>
-                            <div class="product-icon-wrap">
-                            <i class="fas fa-city" aria-hidden="true"></i>
-                        </div>
-                            <div class="text-center">
-                                <span class="product-cat">Urban Infrastructure</span>
-                            </div>
-                            <h4 aria-level="3">Smart City IoT</h4>
-                            <p>Centralized municipal command and control platform integrating smart street lighting, traffic telemetry, environmental sensors, and incident dispatching.</p>
-                            <ul class="product-specs-list">
-                                <li><i class="fas fa-check-circle"></i> GIS Real-Time Sensor Telemetry</li>
-                                <li><i class="fas fa-check-circle"></i> Automated Incident Dispatch</li>
-                                <li><i class="fas fa-check-circle"></i> Open IoT Protocols (MQTT/CoAP)</li>
-                            </ul>
-                        </div>
-                        <div class="pt-3 text-center">
-                            <a href="contact.html" class="button">read more</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Suite 4: AI Computer Vision Suite -->
-                <div class="col-lg-3 col-md-6 col-sm-6 filter-item reveal-on-scroll" data-category="software">
-                    <div class="product-card-modern">
-                        <div>
-                            <div class="product-icon-wrap">
+            <div class="col-lg-4 col-md-6 col-sm-6 filter-item reveal-on-scroll" data-category="security">
+                <div class="product-card-modern">
+                    <div>
+                        <div class="product-icon-wrap">
                             <i class="fas fa-eye" aria-hidden="true"></i>
                         </div>
-                            <div class="text-center">
-                                <span class="product-cat">Applied AI</span>
-                            </div>
-                            <h4 aria-level="3">AI Vision Suite</h4>
-                            <p>Deep-learning video analytics engine for real-time crowd density estimation, automated license plate recognition (ALPR), and perimeter breach alerts.</p>
-                            <ul class="product-specs-list">
-                                <li><i class="fas fa-check-circle"></i> License Plate Recognition (ALPR)</li>
-                                <li><i class="fas fa-check-circle"></i> Real-Time Crowd &amp; Queue Analytics</li>
-                                <li><i class="fas fa-check-circle"></i> Edge Device &amp; Cloud Inference</li>
-                            </ul>
+                        <div class="text-center">
+                            <span class="product-cat">Software</span>
                         </div>
-                        <div class="pt-3 text-center">
-                            <a href="artificial-intelligence.html" class="button">read more</a>
-                        </div>
+                        <h3 class="product-name">AI Video Analytics</h3>
+                        <p>Software that watches camera feeds for you: it reads number plates, counts crowds and raises alarms.</p>
+                        <ul class="product-specs-list">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Reads vehicle number plates</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Counts people and queue length</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Runs on your site or in the cloud</li>
+                        </ul>
+                    </div>
+                    <div class="prod-card-actions">
+                        <a href="contact.html?product=AI%20Video%20Analytics#contact-form-section" class="button">Ask for a quote</a>
+                        <a href="artificial-intelligence.html" class="prod-more-link">See how it works <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
-
-            <!-- Featured live product: Upokari -->
-            <div class="card mt-4 border-0 shadow-sm text-start" style="border-radius: 16px; background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%); color: white;">
-                <div class="card-body p-4 p-md-5">
-                    <div class="row align-items-center g-4">
-                        <div class="col-lg-8">
-                            <div class="d-inline-flex align-items-center px-3 py-1 rounded-pill mb-3" style="background: rgba(129, 140, 248, 0.2); border: 1px solid rgba(129, 140, 248, 0.45); color: #a5b4fc; font-size: 13px; font-weight: 700;">
-                                <i class="fas fa-robot me-2"></i> LIVE NOW &middot; UPOKARI.AI
-                            </div>
-                            <h3 class="text-white fw-bold mb-3">Upokari: Spot Forged Documents in Seconds</h3>
-                            <p class="text-light opacity-90 mb-4" style="line-height: 1.8; font-size: 16px;">
-                                Spectrum's AI verification engine for land records (Nokol, Khatian and deeds), TCB family cards and NID cards. It catches counterfeits, photocopies, photos of a screen and edited genuine documents, then cross-checks each one against the issuing registry.
-                            </p>
-                            <a href="https://upokari.ai/" target="_blank" rel="noopener" class="btn btn-warning px-4 py-2 fw-bold text-dark rounded-pill shadow-sm">
-                                <i class="fas fa-external-link-alt me-2"></i> Visit Upokari.ai
-                            </a>
+            <div class="col-lg-4 col-md-6 col-sm-6 filter-item reveal-on-scroll" data-category="security">
+                <div class="product-card-modern">
+                    <div>
+                        <div class="product-icon-wrap">
+                            <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
                         </div>
-                        <div class="col-lg-4">
-                            <ul class="dis-tcb-stats dis-upokari-stats list-unstyled bg-white rounded-3 shadow text-dark text-start mb-0">
-                                <li>
-                                    <span class="dis-tcb-num">3</span>
-                                    <span class="dis-tcb-label">Document types live: land records, TCB cards and NID</span>
-                                </li>
-                                <li>
-                                    <span class="dis-tcb-num">&lt;0.1%</span>
-                                    <span class="dis-tcb-label">False accept rate</span>
-                                </li>
-                            </ul>
+                        <div class="text-center">
+                            <span class="product-cat">Alarms</span>
                         </div>
+                        <h3 class="product-name">Alarm &amp; Sensor Systems</h3>
+                        <p>Intruder alarms and smoke, heat and water sensors for offices and server rooms, so you hear about problems early.</p>
+                        <ul class="product-specs-list">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Door and intruder alarms</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Smoke, heat and water sensors for server rooms</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Alerts by SMS, app or email</li>
+                        </ul>
+                    </div>
+                    <div class="prod-card-actions">
+                        <a href="contact.html?product=Alarm%20%26%20Sensor%20Systems#contact-form-section" class="button">Ask for a quote</a>
                     </div>
                 </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid filter-section prod-group" id="ai-contact-center" aria-labelledby="ai-contact-center-title">
+        <div class="container">
+            <div class="prod-group-head">
+                <span class="prod-group-icon"><i class="fas fa-headset" aria-hidden="true"></i></span>
+                <div>
+                    <h2 id="ai-contact-center-title">AI Contact Center</h2>
+                    <p>Answer every call and message 24/7. Take the whole system, or only the parts you need.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+            <div class="col-lg-3 col-md-6 col-sm-6 filter-item reveal-on-scroll" data-category="contact">
+                <div class="product-card-modern">
+                    <div>
+                        <div class="product-icon-wrap">
+                            <i class="fas fa-headset" aria-hidden="true"></i>
+                        </div>
+                        <div class="text-center">
+                            <span class="product-cat">Call centre</span>
+                        </div>
+                        <h3 class="product-name">General Call Centre</h3>
+                        <p>Software for your agents to take, make and transfer calls, with a phone menu, a call queue, the customer record and tickets.</p>
+                        <ul class="product-specs-list">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Phone menu (IVR) and call queue</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Call history and after-hours recordings</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Scheduling and an admin dashboard</li>
+                        </ul>
+                    </div>
+                    <div class="prod-card-actions">
+                        <a href="contact.html?product=General%20Call%20Centre#contact-form-section" class="button">Ask for a quote</a>
+                        <a href="ai-contact-center.html" class="prod-more-link">See how it works <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 filter-item reveal-on-scroll" data-category="contact">
+                <div class="product-card-modern">
+                    <div>
+                        <div class="product-icon-wrap">
+                            <i class="fas fa-robot" aria-hidden="true"></i>
+                        </div>
+                        <div class="text-center">
+                            <span class="product-cat">Voice AI</span>
+                        </div>
+                        <h3 class="product-name">AI Voice Agent</h3>
+                        <p>Answers phone calls 24/7 with no queue, finds the answer in your FAQs and documents, and replies by voice.</p>
+                        <ul class="product-specs-list">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Speech to text and text to speech</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Answers from your FAQs and documents</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Hands over to a person with a summary</li>
+                        </ul>
+                    </div>
+                    <div class="prod-card-actions">
+                        <a href="contact.html?product=AI%20Voice%20Agent#contact-form-section" class="button">Ask for a quote</a>
+                        <a href="ai-contact-center.html" class="prod-more-link">See how it works <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 filter-item reveal-on-scroll" data-category="contact">
+                <div class="product-card-modern">
+                    <div>
+                        <div class="product-icon-wrap">
+                            <i class="fas fa-comments" aria-hidden="true"></i>
+                        </div>
+                        <div class="text-center">
+                            <span class="product-cat">Chat</span>
+                        </div>
+                        <h3 class="product-name">Chatbot Engine</h3>
+                        <p>Text chat on your website or app, with the same AI and the same customer record as the voice agent.</p>
+                        <ul class="product-specs-list">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Chat on your website or app</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Same knowledge base as the voice agent</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Hands over to a person when needed</li>
+                        </ul>
+                    </div>
+                    <div class="prod-card-actions">
+                        <a href="contact.html?product=Chatbot%20Engine#contact-form-section" class="button">Ask for a quote</a>
+                        <a href="ai-contact-center.html" class="prod-more-link">See how it works <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 filter-item reveal-on-scroll" data-category="contact">
+                <div class="product-card-modern">
+                    <div>
+                        <div class="product-icon-wrap">
+                            <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                        </div>
+                        <div class="text-center">
+                            <span class="product-cat">Social media</span>
+                        </div>
+                        <h3 class="product-name">Social Media AI Assistant</h3>
+                        <p>Answers people on WhatsApp, Messenger and Instagram, in text or voice notes.</p>
+                        <ul class="product-specs-list">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> WhatsApp, Messenger and Instagram</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Text and voice notes</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Sends reports and updates on WhatsApp</li>
+                        </ul>
+                    </div>
+                    <div class="prod-card-actions">
+                        <a href="contact.html?product=Social%20Media%20AI%20Assistant#contact-form-section" class="button">Ask for a quote</a>
+                        <a href="ai-contact-center.html" class="prod-more-link">See how it works <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 filter-item reveal-on-scroll" data-category="contact">
+                <div class="product-card-modern">
+                    <div>
+                        <div class="product-icon-wrap">
+                            <i class="fas fa-project-diagram" aria-hidden="true"></i>
+                        </div>
+                        <div class="text-center">
+                            <span class="product-cat">Routing</span>
+                        </div>
+                        <h3 class="product-name">AI Contact Engine</h3>
+                        <p>The core that recognises each contact, understands what they need and sends them to the right AI flow or person.</p>
+                        <ul class="product-specs-list">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Routing by caller type and topic</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> One shared history for every channel</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Links AI flows and human agents</li>
+                        </ul>
+                    </div>
+                    <div class="prod-card-actions">
+                        <a href="contact.html?product=AI%20Contact%20Engine#contact-form-section" class="button">Ask for a quote</a>
+                        <a href="ai-contact-center.html" class="prod-more-link">See how it works <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 filter-item reveal-on-scroll" data-category="contact">
+                <div class="product-card-modern">
+                    <div>
+                        <div class="product-icon-wrap">
+                            <i class="fas fa-chart-line" aria-hidden="true"></i>
+                        </div>
+                        <div class="text-center">
+                            <span class="product-cat">Analytics</span>
+                        </div>
+                        <h3 class="product-name">AI Insight Engine</h3>
+                        <p>Analyses every recorded call and shows what people ask about most.</p>
+                        <ul class="product-specs-list">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Calls grouped by topic</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Top concerns and repeat questions</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Filter by day, week or month</li>
+                        </ul>
+                    </div>
+                    <div class="prod-card-actions">
+                        <a href="contact.html?product=AI%20Insight%20Engine#contact-form-section" class="button">Ask for a quote</a>
+                        <a href="ai-contact-center.html" class="prod-more-link">See how it works <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 filter-item reveal-on-scroll" data-category="contact">
+                <div class="product-card-modern">
+                    <div>
+                        <div class="product-icon-wrap">
+                            <i class="fas fa-clipboard-check" aria-hidden="true"></i>
+                        </div>
+                        <div class="text-center">
+                            <span class="product-cat">Complaints</span>
+                        </div>
+                        <h3 class="product-name">AI Customer Care Engine</h3>
+                        <p>Runs every complaint from ticket to report to follow-up, until it is resolved.</p>
+                        <ul class="product-specs-list">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> A numbered ticket for every complaint</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> PDF report sent on WhatsApp</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Timed follow-up and escalation</li>
+                        </ul>
+                    </div>
+                    <div class="prod-card-actions">
+                        <a href="contact.html?product=AI%20Customer%20Care%20Engine#contact-form-section" class="button">Ask for a quote</a>
+                        <a href="ai-contact-center.html" class="prod-more-link">See how it works <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <div class="container-fluid filter-section prod-group prod-group-alt">
+        <div class="container">
+            <div class="row g-5 prod-pair-row">
+                <section class="col-lg-6 filter-section prod-half" id="kiosks-displays" aria-labelledby="kiosks-displays-title">
+            <div class="prod-group-head">
+                <span class="prod-group-icon"><i class="fas fa-tv" aria-hidden="true"></i></span>
+                <div>
+                    <h2 id="kiosks-displays-title">Kiosks &amp; Displays</h2>
+                    <p>Let people serve themselves and keep them informed, with less waiting at the counter.</p>
+                </div>
+            </div>
+                    <div class="row g-4">
+            <div class="col-md-6 col-sm-6 filter-item reveal-on-scroll" data-category="kiosk">
+                <div class="product-card-modern">
+                    <div>
+                        <div class="product-icon-wrap">
+                            <i class="fas fa-hand-pointer" aria-hidden="true"></i>
+                        </div>
+                        <div class="text-center">
+                            <span class="product-cat">Self-service</span>
+                        </div>
+                        <h3 class="product-name">Self-Service Kiosks</h3>
+                        <p>Touch-screen machines where people can take a token, print a slip or pay, without queuing at a counter.</p>
+                        <ul class="product-specs-list">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Simple touch screen</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Built-in printer and QR scanner</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Strong steel body for public places</li>
+                        </ul>
+                    </div>
+                    <div class="prod-card-actions">
+                        <a href="contact.html?product=Self-Service%20Kiosks#contact-form-section" class="button">Ask for a quote</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 filter-item reveal-on-scroll" data-category="kiosk">
+                <div class="product-card-modern">
+                    <div>
+                        <div class="product-icon-wrap">
+                            <i class="fas fa-tv" aria-hidden="true"></i>
+                        </div>
+                        <div class="text-center">
+                            <span class="product-cat">Screens</span>
+                        </div>
+                        <h3 class="product-name">Digital Signage</h3>
+                        <p>Screens that show notices, offers or queue numbers, all updated from one web dashboard.</p>
+                        <ul class="product-specs-list">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Bright, commercial-grade screens</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Update every screen from one place</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Split screens for video, news and tickers</li>
+                        </ul>
+                    </div>
+                    <div class="prod-card-actions">
+                        <a href="contact.html?product=Digital%20Signage#contact-form-section" class="button">Ask for a quote</a>
+                    </div>
+                </div>
+            </div>
+                    </div>
+                </section>
+                <section class="col-lg-6 filter-section prod-half" id="business-software" aria-labelledby="business-software-title">
+            <div class="prod-group-head">
+                <span class="prod-group-icon"><i class="fas fa-chart-line" aria-hidden="true"></i></span>
+                <div>
+                    <h2 id="business-software-title">Business Software</h2>
+                    <p>Run day-to-day operations from one system instead of many spreadsheets.</p>
+                </div>
+            </div>
+                    <div class="row g-4">
+            <div class="col-md-6 col-sm-6 filter-item reveal-on-scroll" data-category="business">
+                <div class="product-card-modern">
+                    <div>
+                        <div class="product-icon-wrap">
+                            <i class="fas fa-chart-line" aria-hidden="true"></i>
+                        </div>
+                        <div class="text-center">
+                            <span class="product-cat">Software</span>
+                        </div>
+                        <h3 class="product-name">Enterprise ERP</h3>
+                        <p>One system for accounts, purchasing, staff, payroll and stock, so every department works from the same numbers.</p>
+                        <ul class="product-specs-list">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Accounts with a full audit trail</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Payroll and tax worked out automatically</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Stock across many warehouses</li>
+                        </ul>
+                    </div>
+                    <div class="prod-card-actions">
+                        <a href="contact.html?product=Enterprise%20ERP#contact-form-section" class="button">Ask for a quote</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 filter-item reveal-on-scroll" data-category="business">
+                <div class="product-card-modern">
+                    <div>
+                        <div class="product-icon-wrap">
+                            <i class="fas fa-city" aria-hidden="true"></i>
+                        </div>
+                        <div class="text-center">
+                            <span class="product-cat">Software</span>
+                        </div>
+                        <h3 class="product-name">Smart City Platform</h3>
+                        <p>One control-room view of street lights, traffic and environment sensors, for faster response to problems.</p>
+                        <ul class="product-specs-list">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Live sensor data on a map</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Sends the right team to each incident</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Works with common IoT devices</li>
+                        </ul>
+                    </div>
+                    <div class="prod-card-actions">
+                        <a href="contact.html?product=Smart%20City%20Platform#contact-form-section" class="button">Ask for a quote</a>
+                    </div>
+                </div>
+            </div>
+                    </div>
+                </section>
             </div>
         </div>
     </div>
 
-    <!-- SECTION 3: ENGINEERING ASSURANCE & COMPLIANCE -->
-    <div class="container py-5">
+    <!-- WHY BUY FROM SPECTRUM -->
+    <section class="container py-5" id="why-spectrum">
         <div class="row align-items-center">
-            <div class="col-lg-5 mb-4 mb-lg-0 text-center text-lg-start">
-                <span class="badge px-3 py-2 rounded-pill fw-semibold mb-2" style="background: rgba(46, 55, 96, 0.1); color: #2e3760; border: 1px solid rgba(46, 55, 96, 0.2); font-size: 13px;">Spectrum Assurance</span>
-                <h2 class="header_two" style="color: #2e3760; font-size: 34px; font-weight: 700;">Engineered for <span style="color: #f26522;">Mission-Critical</span> Reliability</h2>
+            <div class="col-lg-5 mb-4 mb-lg-0 prod-why-text">
+                <span class="badge px-3 py-2 rounded-pill fw-semibold mb-2" style="background: rgba(46, 55, 96, 0.1); color: #2e3760; border: 1px solid rgba(46, 55, 96, 0.2); font-size: 13px;">Why Spectrum</span>
+                <h2 class="header_two" style="color: #2e3760; font-size: 34px; font-weight: 700;">More Than a <span style="color: #f26522;">Box on a Desk</span></h2>
                 <p class="text-muted" style="line-height: 1.8; font-size: 15px;">
-                    Every product delivered by Spectrum IT Solutions complies with stringent international engineering standards. We provide end-to-end integration support, custom firmware development, and locally stationed technical support teams across Bangladesh.
+                    We do not just deliver a product. We set it up, connect it to the systems you already use, train your team, and stay on hand when you need help.
                 </p>
-                <div class="pt-2 text-center text-lg-start">
-                    <a href="contact.html" class="button">Request Product Catalog</a>
+                <div class="pt-2">
+                    <a href="contact.html?product=Product%20catalogue#contact-form-section" class="button">Ask for our catalogue</a>
                 </div>
             </div>
             <div class="col-lg-7">
@@ -601,65 +810,65 @@
                         <div class="p-4 bg-white rounded-3 shadow-sm border h-100">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="rounded-circle p-3 me-3 d-flex align-items-center justify-content-center" style="background: rgba(30, 126, 52, 0.1); width: 50px; height: 50px;">
-                                    <i class="fas fa-certificate text-success fa-lg"></i>
+                                    <i class="fas fa-certificate text-success fa-lg" aria-hidden="true"></i>
                                 </div>
-                                <h5 aria-level="3" class="fw-bold mb-0" style="color: #2e3760; font-size: 17px;">Certified Compliance</h5>
+                                <h3 class="fw-bold mb-0" style="color: #2e3760; font-size: 17px;">Certified Processes</h3>
                             </div>
-                            <p class="text-muted small mb-0">ISO 9001:2015 and ISO 27001:2013 certified processes. Hardware meets CE, FCC, and FBI PIV standards.</p>
+                            <p class="text-muted small mb-0">Our work follows ISO 9001:2015 for quality and ISO 27001:2022 for information security.</p>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="p-4 bg-white rounded-3 shadow-sm border h-100">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="rounded-circle p-3 me-3 d-flex align-items-center justify-content-center" style="background: rgba(242, 101, 34, 0.1); width: 50px; height: 50px;">
-                                    <i class="fas fa-tools text-warning fa-lg"></i>
+                                    <i class="fas fa-tools text-warning fa-lg" aria-hidden="true"></i>
                                 </div>
-                                <h5 aria-level="3" class="fw-bold mb-0" style="color: #2e3760; font-size: 17px;">24/7 SLA Support</h5>
+                                <h3 class="fw-bold mb-0" style="color: #2e3760; font-size: 17px;">Local Support</h3>
                             </div>
-                            <p class="text-muted small mb-0">Dedicated Dhaka technical lab, ready replacement units, and nationwide SLA maintenance engineers.</p>
+                            <p class="text-muted small mb-0">A technical team in Dhaka, spare units ready, and engineers who can visit sites across Bangladesh.</p>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="p-4 bg-white rounded-3 shadow-sm border h-100">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="rounded-circle p-3 me-3 d-flex align-items-center justify-content-center" style="background: rgba(59, 130, 246, 0.1); width: 50px; height: 50px;">
-                                    <i class="fas fa-code text-primary fa-lg"></i>
+                                    <i class="fas fa-code text-primary fa-lg" aria-hidden="true"></i>
                                 </div>
-                                <h5 aria-level="3" class="fw-bold mb-0" style="color: #2e3760; font-size: 17px;">SDK &amp; Driver Support</h5>
+                                <h3 class="fw-bold mb-0" style="color: #2e3760; font-size: 17px;">Easy to Connect</h3>
                             </div>
-                            <p class="text-muted small mb-0">Comprehensive SDKs, REST APIs, and native drivers for seamless integration with existing software.</p>
+                            <p class="text-muted small mb-0">Ready tools and guides (SDKs and APIs) so devices work with the software you already have.</p>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="p-4 bg-white rounded-3 shadow-sm border h-100">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="rounded-circle p-3 me-3 d-flex align-items-center justify-content-center" style="background: rgba(168, 85, 247, 0.1); width: 50px; height: 50px;">
-                                    <i class="fas fa-shield-alt text-purple fa-lg" style="color: #8b5cf6;"></i>
+                                    <i class="fas fa-shield-alt fa-lg" style="color: #8b5cf6;" aria-hidden="true"></i>
                                 </div>
-                                <h5 aria-level="3" class="fw-bold mb-0" style="color: #2e3760; font-size: 17px;">Sovereign Security</h5>
+                                <h3 class="fw-bold mb-0" style="color: #2e3760; font-size: 17px;">Your Data Stays Here</h3>
                             </div>
-                            <p class="text-muted small mb-0">Air-gapped deployment, local data residency, and zero foreign cloud dependencies for sensitive data.</p>
+                            <p class="text-muted small mb-0">We can set systems up on your own servers, with personal data kept inside Bangladesh.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- SECTION 4: CALL TO ACTION -->
+    <!-- CALL TO ACTION -->
     <div class="container-fluid py-5 cta-banner-section">
         <div class="container text-center py-4 position-relative" style="z-index: 2;">
-            <span class="badge px-3 py-2 rounded-pill fw-semibold mb-3" style="background: rgba(242, 101, 34, 0.2); color: #f26522; border: 1px solid rgba(242, 101, 34, 0.4); font-size: 13px;">Ready to Modernize Your Operations?</span>
-            <h2 class="display-6 fw-bold text-white mb-3">Need Custom Specifications or a Volume Quote?</h2>
+            <span class="badge px-3 py-2 rounded-pill fw-semibold mb-3" style="background: rgba(242, 101, 34, 0.2); color: #f26522; border: 1px solid rgba(242, 101, 34, 0.4); font-size: 13px;">Bulk Orders and Tenders</span>
+            <h2 class="display-6 fw-bold text-white mb-3">Need Many Units or a Custom Setup?</h2>
             <p class="text-light opacity-75 mx-auto mb-4" style="max-width: 650px; font-size: 16px; line-height: 1.7;">
-                Our technical solutions team provides free hardware evaluations, RFP compliance matrices, and on-site demonstrations across Bangladesh.
+                Tell us what you need. We can visit your site, show you a demo and help with tender documents.
             </p>
             <div class="d-flex justify-content-center align-items-center flex-wrap gap-3 pt-2">
-                <a href="contact.html" class="cta-primary-btn">
-                    <i class="fas fa-paper-plane me-2"></i> Contact Engineering
+                <a href="contact.html#contact-form-section" class="cta-primary-btn">
+                    <i class="fas fa-paper-plane me-2"></i> Ask for a quote
                 </a>
                 <a href="tel:+8801615900004" class="cta-secondary-btn">
-                    <i class="fas fa-phone-alt me-2 text-warning"></i> +8801615900004
+                    <i class="fas fa-phone-alt me-2 text-warning"></i> +880 1615-900004
                 </a>
             </div>
         </div>
@@ -675,7 +884,7 @@
                 <div class="col-lg-3 col-sm-6 mb-4 footer-col-about">
                     <div class="footer-about">
                         <a href="index.html"><img src="assets/img/logo.png" width="165" height="60" class="img-fluid mb-3" alt="Spectrum IT Solutions Logo" loading="lazy"></a>
-                        <p>We are a software development company delivering splendid business IT Solutions and related services to customers home &amp; abroad.</p>
+                        <p>A Dhaka software company building secure digital services for government and business since 2012.</p>
                         <div class="mt-3 footer-social-icons">
                             <a class="text-light" href="https://www.facebook.com/myspectrumit" target="_blank" rel="noopener" aria-label="Spectrum Facebook"><i class="fab fa-facebook-f"></i></a>
                             <a class="text-light" href="https://www.linkedin.com/company/spectrum-it-solutions-limited" target="_blank" rel="noopener" aria-label="Spectrum LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -691,12 +900,12 @@
                         <li class="mb-2"><a href="https://licence.gov.bd/" target="_blank" rel="noopener" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> www.licence.gov.bd</a></li>
                         <li class="mb-2"><a href="https://ocd.org.bd/" target="_blank" rel="noopener" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> www.ocd.org.bd</a></li>
                         <li class="mb-2"><a href="http://www.tcbsheba.com/" target="_blank" rel="noopener" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> www.tcbsheba.com</a></li>
-                        <li class="mb-2"><a href="http://www.ecourt.gov.bd/" target="_blank" rel="noopener" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> www.ecourt.gov.bd</a></li>
+                        <li class="mb-2 d-none"><!-- Hidden while ecourt.gov.bd is offline (not deleted). Remove "d-none" to show it again. --><a href="http://www.ecourt.gov.bd/" target="_blank" rel="noopener" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> www.ecourt.gov.bd</a></li>
                         <li class="mb-2"><a href="https://novo.spectrum.com.bd/" target="_blank" rel="noopener" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> www.sobticket.com</a></li>
                     </ul>
                 </div>
 
-                <div class="col-lg-3 col-sm-6 mb-4">
+                <div class="col-lg-3 col-sm-6 mb-4 footer-col-links">
                     <h3 class="text-white mb-3" style="font-size: 1.25rem;">Quick Link</h3>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="artificial-intelligence.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Artificial Intelligence</a></li>
@@ -729,6 +938,6 @@
 
     <!-- Scripts -->
     <script src="assets/js/bootstrap.bundle.min.js" defer></script>
-    <script src="assets/js/custom.js?v=20261108g" defer></script>
+    <script src="assets/js/custom.js?v=20261109i" defer></script>
 </body>
 </html>

@@ -40,7 +40,7 @@
     <!-- Bootstrap & Site Styles -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.min.css">
-    <link rel="stylesheet" href="assets/css/responsive-fixes.min.css?v=20261108g">
+    <link rel="stylesheet" href="assets/css/responsive-fixes.min.css?v=20261109z">
     <!-- Structured Data (JSON-LD Organization & WebPage) -->
     <script type="application/ld+json">
     [
@@ -50,6 +50,7 @@
         "name": "Spectrum IT Solutions Ltd.",
         "url": "https://spectrum.com.bd/",
         "logo": "https://spectrum.com.bd/assets/img/logo.png",
+        "foundingDate": "2012",
         "telephone": "+8801615900004",
         "email": "contact@spectrum.com.bd",
         "address": {
@@ -67,7 +68,7 @@
       },
       {
         "@context": "https://schema.org",
-        "@type": "WebPage",
+        "@type": "AboutPage",
         "name": "About Spectrum IT Solutions | Software Company in Dhaka",
         "description": "Spectrum IT Solutions is a Dhaka software company with 12+ years of national identity, smart card and e-government work. Meet our leadership.",
         "url": "https://spectrum.com.bd/about-us.html",
@@ -129,7 +130,7 @@
                 </div>
                 <div class="iso d-none d-lg-flex align-items-center ms-3">
                     <img src="assets/img/ISO_9001.png" width="70" height="75" alt="ISO 9001:2015" class="me-1">
-                    <img src="assets/img/ISO_27001.png" width="70" height="75" alt="ISO 27001:2013">
+                    <img src="assets/img/ISO_27001.png" width="70" height="75" alt="ISO 27001:2022">
                 </div>
             </div>
 
@@ -159,9 +160,15 @@
                             <ul class="dropdown-menu shadow-sm" aria-labelledby="caseStudyDropdown">
                                 <li><a class="dropdown-item" href="case-study.html"><i class="fas fa-layer-group me-2 text-warning"></i> All Case Studies</a></li>
                                 <li><hr class="dropdown-divider my-1"></li>
-                                <li><a class="dropdown-item" target="_blank" rel="noopener" href="https://digital.tcbsheba.com/"><i class="fas fa-id-card me-2 text-success"></i> Digital Transformation of TCB</a></li>
-                                <li><a class="dropdown-item" target="_blank" rel="noopener" href="http://www.ecourt.gov.bd/"><i class="fas fa-gavel me-2 text-primary"></i> Industrial e-Court BD</a></li>
-                                <li><a class="dropdown-item" target="_blank" rel="noopener" href="https://licence.gov.bd/"><i class="fas fa-file-contract me-2 text-info"></i> National e-Licensing Portal</a></li>
+                                <li><a class="dropdown-item" href="case-study-tcb.html"><i class="fas fa-id-card me-2 text-success"></i> TCB Smart Family Card</a></li>
+                                <li class="d-none"><!-- Hidden while ecourt.gov.bd is offline (not deleted). Remove "d-none" to show it again. --><a class="dropdown-item" href="case-study-e-court.html"><i class="fas fa-gavel me-2 text-primary"></i> Industrial e-Court</a></li>
+                                <li><a class="dropdown-item" href="case-study-e-licensing.html"><i class="fas fa-file-contract me-2 text-info"></i> National e-Licensing</a></li>
+                                <li><a class="dropdown-item" href="case-study-smart-card.html"><i class="fas fa-print me-2 text-warning"></i> Smart Card Issuance</a></li>
+                                <li><a class="dropdown-item" href="case-study-ocd.html"><i class="fas fa-calendar-check me-2 text-info"></i> Officers’ Club Dhaka</a></li>
+                                <li><a class="dropdown-item" href="case-study-tcb-contact-center.html"><i class="fas fa-headset me-2 text-success"></i> TCB AI Contact Center</a></li>
+                                <li><a class="dropdown-item" href="case-study-novotheatre.html"><i class="fas fa-ticket-alt me-2 text-warning"></i> Novotheatre eTicket</a></li>
+                                <li><a class="dropdown-item" href="case-study-gcc.html"><i class="fas fa-landmark me-2 text-success"></i> Gazipur City Corporation</a></li>
+                                <li><a class="dropdown-item" href="case-study-apfs.html"><i class="fas fa-user-clock me-2 text-primary"></i> Automated Presence &amp; Feedback</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -182,7 +189,7 @@
 
                 <div class="d-lg-none text-center pt-3 pb-2 border-top mt-3">
                     <img width="26" height="28" src="assets/img/ISO_9001.png" alt="ISO 9001:2015" class="me-2" style="height: 28px;" loading="lazy">
-                    <img width="26" height="28" src="assets/img/ISO_27001.png" alt="ISO 27001:2013" style="height: 28px;" loading="lazy">
+                    <img width="26" height="28" src="assets/img/ISO_27001.png" alt="ISO 27001:2022" style="height: 28px;" loading="lazy">
                 </div>
             </div>
         </div>
@@ -201,247 +208,83 @@
             </div>
             <h1>About <span>Spectrum</span></h1>
             <p class="hero-desc">
-                Over a decade of leadership in digital transformation, sovereign identity systems, and nation-building enterprise engineering.
+                A Dhaka software company building secure digital services for government and business since 2012.
             </p>
             <div class="hero-features">
                 <span class="hero-feature-item">
-                    <i class="fas fa-award" style="color: #f26522;"></i> 12+ Years Proven Delivery
+                    <i class="fas fa-calendar-check" style="color: #f26522;"></i> Since 2012
                 </span>
                 <span class="hero-feature-item">
                     <i class="fas fa-certificate" style="color: #4ade80;"></i> ISO 9001:2015 &amp; ISO 27001:2022
                 </span>
                 <span class="hero-feature-item">
-                    <i class="fas fa-handshake" style="color: #38bdf8;"></i> BASIS Member &amp; National Partner
+                    <i class="fas fa-handshake" style="color: #38bdf8;"></i> BASIS Member
                 </span>
                 <span class="hero-feature-item">
-                    <i class="fas fa-globe" style="color: #fbbf24;"></i> Dhaka, Bangladesh &amp; Global Delivery
+                    <i class="fas fa-map-marker-alt" style="color: #fbbf24;"></i> Head Office in Dhaka
                 </span>
             </div>
         </div>
     </div>
 
-    <!-- SECTION 1: MEET OUR CHAIRMAN (FULL SPEECH & BIOGRAPHY ON TOP) -->
-    <div class="container py-5" id="chairman">
-        <div class="text-center mb-5">
-            <span class="badge px-3 py-2 rounded-pill fw-semibold mb-2" style="background: rgba(242, 101, 34, 0.1); color: #f26522; border: 1px solid rgba(242, 101, 34, 0.25); font-size: 13px;">Corporate Leadership</span>
-            <h2 class="header_two" style="color: #2e3760; font-size: 38px; font-weight: 700;">Meet Our <span style="color: #f26522;">Chairman</span></h2>
-            <h4 aria-level="3" class="fw-bold text-dark mt-1" style="font-size: 26px;">Kabir Ahmed Bhuiyan</h4>
-            <p class="text-muted mx-auto" style="max-width: 650px;">Visionary Leader in Technology, Humanity, and Global Development</p>
-        </div>
-
-        <div class="row align-items-start">
-            <!-- Left: Profile & Credentials -->
-            <div class="col-lg-4 col-md-5 mb-4 mb-lg-0">
-                <div class="chairman-profile-card text-center">
-                    <picture><source srcset="assets/img/chairman_Sir.webp" type="image/webp"><img width="447" height="451" src="assets/img/chairman_Sir.png" alt="Kabir Ahmed Bhuiyan, Chairman" loading="lazy" class="img-fluid mb-3"></picture>
-                    <h4 class="fw-bold mb-1" style="color: #2e3760;">Kabir Ahmed Bhuiyan</h4>
-                    <p class="text-muted small mb-2">Chairman, Spectrum IT Solutions Ltd.</p>
-                    <span class="chairman-badge"><i class="fas fa-globe-americas me-1"></i> International Envoy of Humanity</span>
-                    
-                    <div class="chairman-social-links my-3">
-                        <a href="https://www.facebook.com/kabhuiyanbd" target="_blank" rel="noopener" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.linkedin.com/in/kabir-ahmed-bhuiyan-0a631a108/" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="mailto:chairman@spectrum.com.bd" title="Email"><i class="fas fa-envelope"></i></a>
-                    </div>
-
-                    <div class="text-start border-top pt-3 mt-3">
-                        <div class="small text-muted mb-2"><strong class="text-dark"><i class="fas fa-building text-warning me-2"></i>Global Leadership:</strong></div>
-                        <p class="small text-muted mb-2">Managing Director: Bhuiyan Group UK Limited, Bhuiyan International, Bhuiyan Real Estate UK Limited &amp; Balance.</p>
-                        <div class="small text-muted mb-2"><strong class="text-dark"><i class="fas fa-heart text-danger me-2"></i>Philanthropy:</strong></div>
-                        <p class="small text-muted mb-0">Bhuiyan Global Foundation supporting nationwide social advancement &amp; healthcare.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Right: Full Speech & Biography -->
-            <div class="col-lg-8 col-md-7">
-                <!-- Main Intro -->
-                <div class="speech-block">
-                    <h5><i class="fas fa-quote-left text-warning"></i> A Visionary Leader in Technology &amp; Global Development</h5>
-                    <p class="mb-3">
-                        <strong>Kabir Ahmed Bhuiyan</strong> is a distinguished and visionary leader in Bangladesh’s technology sector. He is the Chairman of Spectrum IT Solutions Limited, a company that—under his dynamic leadership—has been delivering world-class software solutions, enterprise technology, and digital transformation services to clients across both local and international markets. His leadership philosophy rests on three guiding principles: innovation, strategic foresight, and an unwavering commitment to excellence.
-                    </p>
-                    <p>
-                        Beyond technology, Mr. Bhuiyan has made profound contributions to trade, humanitarian advancement, and socio-economic development in Bangladesh and on the global stage. Widely recognized as the “International Envoy of Humanity,” he is an entrepreneur, philanthropist, and political figure admired for his patriotism, compassion, and multidimensional development initiatives.
-                    </p>
-                </div>
-
-                <!-- Humanitarian Diplomacy -->
-                <div class="speech-block">
-                    <h5><i class="fas fa-hand-holding-heart text-danger"></i> Humanitarian Diplomacy</h5>
-                    <p>
-                        During the global COVID-19 pandemic in 2020, Mr. Bhuiyan spearheaded nationwide humanitarian relief, distributing medical supplies, food, and protective equipment throughout Brahmanbaria district and other regions of Bangladesh. His humanitarian diplomacy extended internationally when Senator Abiola Ajimobi, the Governor of Oyo State in Nigeria, contracted COVID-19. At the request of the Nigerian government, he played a pivotal role in facilitating the supply of a Bangladeshi-produced medicine. With the intervention of Bangladesh’s Foreign Minister, Dr. A. K. Abdul Momen, the medicine and protective equipment were dispatched to Nigeria on a special government-arranged flight. This episode stands as a proud chapter in Bangladesh’s international engagement.
-                    </p>
-                </div>
-
-                <!-- Championing the Blue Gold Economy -->
-                <div class="speech-block">
-                    <h5><i class="fas fa-water text-primary"></i> Championing the &ldquo;Blue Gold Economy&rdquo;</h5>
-                    <p>
-                        Mr. Bhuiyan firmly believes that Bangladesh’s vast freshwater reserves can position the nation as a global hub of the “Blue Gold Economy.” Through policy papers, speeches, and published articles, he has consistently advocated for bottled water exports, water diplomacy, and investments in climate-resilient infrastructure.
-                    </p>
-                </div>
-
-                <!-- Commitment to Sustainability -->
-                <div class="speech-block">
-                    <h5><i class="fas fa-leaf text-success"></i> Commitment to Sustainability and Energy Transition</h5>
-                    <p>
-                        Alongside water resource advocacy, he is deeply engaged in addressing air pollution and climate change. He has advanced forward-looking policy recommendations on sustainable energy use, urban greening, and the expansion of renewable energy. His collaborations with international research institutions and environmental organizations underscore his commitment to sustainable global development.
-                    </p>
-                </div>
-
-                <!-- Global Partnerships -->
-                <div class="speech-block">
-                    <h5><i class="fas fa-globe-asia text-info"></i> Global Partnerships and Development Initiatives</h5>
-                    <p class="mb-3">
-                        With strong ties to political leaders, business communities, and policymakers across Europe, Africa, and beyond, Mr. Bhuiyan actively leverages these relationships to strengthen Bangladesh’s trade and diplomatic partnerships worldwide.
-                    </p>
-                    <p>
-                        Through the Bhuiyan Global Foundation, he supports social development initiatives, while his diversified business ventures span garments, real estate, information technology, and international trade. Additionally, through Gelence, he facilitates cross-border investment and government-focused solution initiatives.
-                    </p>
-                </div>
-
-                <!-- Multifaceted Leadership -->
-                <div class="speech-block">
-                    <h5><i class="fas fa-network-wired text-secondary"></i> Multifaceted Leadership</h5>
-                    <p>
-                        In addition to his business and philanthropic pursuits, Mr. Bhuiyan is actively engaged in advancing education, healthcare, environmental protection, and water resource management in Bangladesh. He also serves as the Managing Director of Bhuiyan Group UK Limited, Bhuiyan International, Bhuiyan Real Estate UK Limited, and Balance. Through these enterprises, he has cultivated long-term collaborations with global investors, business leaders, and policymakers.
-                    </p>
-                </div>
-
-                <!-- Executive Summary -->
-                <div class="speech-summary-card">
-                    <p>
-                        <i class="fas fa-star text-warning me-2"></i> In summary, <strong>Kabir Ahmed Bhuiyan</strong> is a bridge-builder between technology, humanity, and international trade. His vision and initiatives are not only shaping Bangladesh’s future but also unlocking new opportunities on the global stage.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- SECTION 2: MISSION & VISION (ORIGINAL TEXT & MISSION_BG) -->
-    <div class="container-fluid abt_pg_mission py-5 position-relative" style="background-image: url('assets/img/mission_bg.webp'); background-size: cover; background-position: center;">
-        <div class="container py-4">
-            <div class="text-center mb-5">
-                <span class="badge px-3 py-2 rounded-pill fw-semibold mb-2" style="background: rgba(255, 255, 255, 0.15); color: #fff; border: 1px solid rgba(255, 255, 255, 0.3); font-size: 13px;">Our Core Philosophy</span>
-                <h2 class="display-6 fw-bold text-white">Mission &amp; Vision</h2>
-            </div>
-            <div class="row g-4 align-items-stretch">
-                <!-- Mission -->
-                <div class="col-lg-6 reveal-on-scroll">
-                    <div class="abt-mission-box">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="mission-icon-wrap me-3">
-                                <picture>
-                                    <source srcset="assets/img/mission.webp" type="image/webp">
-                                    <img loading="lazy" width="240" height="250" src="assets/img/mission.png" alt="Our Mission">
-                                </picture>
-                            </div>
-                            <h3 class="mb-0">Our Mission</h3>
-                        </div>
-                        <p>
-                            Our mission at <strong>Spectrum IT Solutions Limited</strong> is to deliver secure, smart, and innovative technology solutions that simplify processes, enhance transparency, and improve service delivery across all sectors. We are dedicated to supporting the national vision of “Digital Bangladesh” by building inclusive digital systems that empower citizens, strengthen institutions, and promote sustainable development. Through continuous innovation, strategic partnerships, and a commitment to excellence, we aim to transform how technology serves people and organizations—making services faster, smarter, and more accessible for everyone.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Vision -->
-                <div class="col-lg-6 reveal-on-scroll">
-                    <div class="abt-mission-box">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="mission-icon-wrap me-3">
-                                <picture>
-                                    <source srcset="assets/img/vission.webp" type="image/webp">
-                                    <img loading="lazy" width="240" height="250" src="assets/img/vission.png" alt="Our Vision">
-                                </picture>
-                            </div>
-                            <h3 class="mb-0">Our Vision</h3>
-                        </div>
-                        <p>
-                            Our vision at <strong>Spectrum IT Solutions Limited</strong> is to be a leading force in shaping a digitally advanced and inclusive Bangladesh. We aspire to revolutionize the way public and private services are delivered by harnessing the power of secure, intelligent, and user-friendly technology.<br><br>
-                            By building sustainable digital ecosystems, we aim to bridge the gap between people and services—ensuring transparency, efficiency, and accessibility for all. We envision a future where innovation drives national development, and every citizen benefits from the opportunities of a truly connected, smart nation.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- SECTION 3: ABOUT US & WHAT WE DO (FULL DETAILS PRESERVED) -->
-    <div class="container py-5">
-        <!-- About Us Detail -->
-        <div class="row align-items-center mb-5 pb-5 border-bottom">
-            <div class="col-lg-6 mb-4 mb-lg-0 text-center">
-                <picture><source srcset="assets/img/about_us_3.webp" type="image/webp"><img loading="lazy" width="594" height="563" src="assets/img/about_us_3.png" alt="Spectrum Technology Expertise" class="img-fluid rounded-3 shadow-sm" style="max-height: 420px; width: auto;"></picture>
+    <!-- WHO WE ARE -->
+    <section class="container py-5" id="who-we-are">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 text-center">
+                <picture><source srcset="assets/img/about_us_3.webp" type="image/webp"><img loading="lazy" width="594" height="563" src="assets/img/about_us_3.png" alt="Spectrum team working on software for public services" class="img-fluid rounded-3" style="max-height: 420px; width: auto;"></picture>
             </div>
             <div class="col-lg-6">
-                <span class="badge px-3 py-2 rounded-pill fw-semibold mb-2" style="background: rgba(30, 126, 52, 0.1); color: #1e7e34; border: 1px solid rgba(30, 126, 52, 0.25); font-size: 13px;">Corporate Overview</span>
-                <h2 class="header_two" style="color: #2e3760; font-size: 34px; font-weight: 700;">About Us</h2>
-                <h5 aria-level="3" class="fw-bold mb-3" style="color: #f26522;">Highly Tailored Technology, Development &amp; Support Services</h5>
-                <p class="text-muted" style="line-height: 1.8; font-size: 15px;">
-                    We are a software development company delivering splendid business IT Solutions and related services to customers at home &amp; abroad. Our development services are led by our dedicated and passionate team to provide the best industry practices combined with technology expertise and business knowledge to drive the digital transformation. Founded in 2012 on a solid foundation of honest family values, we have built lasting relationships that have kept us on the cutting edge of innovation ever since.
-                </p>
-                <p class="text-muted" style="line-height: 1.8; font-size: 15px;">
-                    Our main area of expertise is <strong>Software Development, Biometric Authentication Systems, Digital Identity &amp; Security Systems, Smart Card Personalization &amp; Printing Solutions, Web &amp; Mobile Application Development, Payment Gateway &amp; API Integration, E-commerce, Tracking Systems, Social Media Marketing, Email marketing, SMS marketing</strong>, and nationwide managed services.
-                </p>
+                <span class="abt-eyebrow abt-eyebrow-green">Who We Are</span>
+                <h2 class="abt-title">Technology That Makes Services <span>Simpler</span></h2>
+                <p class="abt-lead">Spectrum IT Solutions Ltd. is a software company in Dhaka. Since 2012 we have built systems that help government offices and businesses serve people faster and more safely.</p>
+                <p class="abt-text">We design, build and run software for digital identity, smart cards, licensing, courts and public services. Our work does not stop at launch: we train staff, keep systems running and keep improving them.</p>
+                <ul class="abt-glance list-unstyled mb-0">
+                    <li><i class="fas fa-calendar-check" aria-hidden="true"></i><span><strong>Founded</strong> 2012</span></li>
+                    <li><i class="fas fa-building" aria-hidden="true"></i><span><strong>Head office</strong> 52/1 New Eskaton Road, Dhaka</span></li>
+                    <li><i class="fas fa-certificate" aria-hidden="true"></i><span><strong>Certified</strong> ISO 9001:2015 (quality) and ISO 27001:2022 (information security)</span></li>
+                    <li><i class="fas fa-award" aria-hidden="true"></i><span><strong>Member</strong> BASIS, Bangladesh Association of Software and Information Services</span></li>
+                </ul>
             </div>
         </div>
+    </section>
 
-        <!-- What We Do Detail -->
-        <div class="row align-items-center">
-            <div class="col-lg-6 mb-4 mb-lg-0 order-lg-last text-center">
-                <picture><source srcset="assets/img/about_us_office.webp" type="image/webp"><img width="605" height="586" src="assets/img/about_us_office.png" alt="Spectrum Engineering Headquarters" loading="lazy" class="img-fluid rounded-3 shadow-sm" style="max-height: 400px; width: auto;"></picture>
-            </div>
-            <div class="col-lg-6">
-                <span class="badge px-3 py-2 rounded-pill fw-semibold mb-2" style="background: rgba(242, 101, 34, 0.1); color: #f26522; border: 1px solid rgba(242, 101, 34, 0.25); font-size: 13px;">Operational Capabilities</span>
-                <h2 class="header_two" style="color: #2e3760; font-size: 34px; font-weight: 700;">What We Do</h2>
-                <h5 aria-level="3" class="fw-bold mb-3" style="color: #f26522;">Building Value Through Collaboration, Insight &amp; Expertise</h5>
-                <p class="text-muted" style="line-height: 1.8; font-size: 15px;">
-                    <strong>Spectrum IT Solutions Limited</strong> is a leading technology firm based in Dhaka, Bangladesh, dedicated to delivering innovative and secure IT solutions across government, non-government, and private sectors. With a strong focus on national development and digital transformation, Spectrum specializes in developing scalable software applications, biometric authentication systems, and smart card-based platforms. Their expertise spans web and mobile app development, ERP systems, IoT integration, secure database management, cloud-based infrastructure, and custom e-Governance platforms.
-                </p>
-                <p class="text-muted" style="line-height: 1.8; font-size: 15px;">
-                    The company has played a key role in building impactful systems such as the <strong>Industrial e-Court System, the TCB Smart Family Card Platform, National Biometric Attendance Services</strong>, and various <strong>e-Licensing portals</strong>. Spectrum also provides consulting, technical training, and long-term system maintenance, ensuring end-to-end service delivery.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- SECTION 4: PROVEN MILESTONES & COUNTERS -->
+    <!-- NUMBERS -->
     <div class="container-fluid py-5" style="background: #f8fafc; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
         <div class="container text-center">
+            <h2 class="visually-hidden">Spectrum in Numbers</h2>
             <div class="row g-4 justify-content-center">
                 <div class="col-lg-3 col-sm-6 text-center">
                     <div class="counter-stat-card text-center">
-                        <img loading="lazy" width="46" height="46" src="assets/img/icon_1.png" alt="Projects Completed">
+                        <img loading="lazy" width="46" height="46" src="assets/img/icon_1.png" alt="">
                         <div class="text-center w-100">
-                            <h3 class="text-center">118</h3>
+                            <p class="abt-stat-num">118</p>
                             <span class="text-center">Projects Completed</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center">
                     <div class="counter-stat-card text-center">
-                        <img loading="lazy" width="42" height="48" src="assets/img/icon_2.png" alt="Happy Clients">
+                        <img loading="lazy" width="42" height="48" src="assets/img/icon_2.png" alt="">
                         <div class="text-center w-100">
-                            <h3 class="text-center">115</h3>
+                            <p class="abt-stat-num">115</p>
                             <span class="text-center">Happy Clients</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center">
                     <div class="counter-stat-card text-center">
-                        <img loading="lazy" width="47" height="47" src="assets/img/icon_3.png" alt="Business Partners">
+                        <img loading="lazy" width="47" height="47" src="assets/img/icon_3.png" alt="">
                         <div class="text-center w-100">
-                            <h3 class="text-center">23</h3>
+                            <p class="abt-stat-num">23</p>
                             <span class="text-center">Business Partners</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center">
                     <div class="counter-stat-card text-center">
-                        <img loading="lazy" width="48" height="42" src="assets/img/icon_4.png" alt="IT Consultants">
+                        <img loading="lazy" width="48" height="42" src="assets/img/icon_4.png" alt="">
                         <div class="text-center w-100">
-                            <h3 class="text-center">21</h3>
+                            <p class="abt-stat-num">21</p>
                             <span class="text-center">IT Consultants</span>
                         </div>
                     </div>
@@ -450,51 +293,319 @@
         </div>
     </div>
 
-    <!-- SECTION 5: VALUABLE CLIENTS -->
-    <div class="container py-5 text-center">
-        <span class="badge px-3 py-2 rounded-pill fw-semibold mb-2 d-inline-block text-center" style="background: rgba(30, 126, 52, 0.1); color: #1e7e34; border: 1px solid rgba(30, 126, 52, 0.25); font-size: 13px;">Trusted Partnerships</span>
-        <h2 class="header_two mb-4 text-center" style="color: #2e3760; font-size: 34px; font-weight: 700; text-align: center !important;">Our Valuable Clients</h2>
-        <div class="row g-4 justify-content-center pt-2">
-            <div class="col-lg-4 col-md-4 col-6">
-                <div class="client-logo-card">
-                    <img loading="lazy" width="192" height="136" src="assets/img/vlc_01.jpg" alt="Valuable Client 1">
+    <!-- WHAT WE DO -->
+    <section class="container py-5" id="what-we-do">
+        <div class="text-center mb-5">
+            <span class="abt-eyebrow">What We Do</span>
+            <h2 class="abt-title text-center">Our Areas of <span>Work</span></h2>
+            <p class="abt-sub">Ten areas, one team. Each links to a page that explains it in plain words.</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <a class="abt-link-card" href="digital-identity-security.html">
+                    <span class="abt-link-icon"><i class="fas fa-fingerprint" aria-hidden="true"></i></span>
+                    <h3>Digital Identity &amp; Security</h3>
+                    <p>Check that people and documents are real, from NID checks to spotting fake papers.</p>
+                    <span class="abt-link-more">Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a class="abt-link-card" href="smart-card-technologies.html">
+                    <span class="abt-link-icon"><i class="fas fa-id-card" aria-hidden="true"></i></span>
+                    <h3>Smart Card Technologies</h3>
+                    <p>Design, print and manage secure ID, staff and service cards.</p>
+                    <span class="abt-link-more">Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a class="abt-link-card" href="artificial-intelligence.html">
+                    <span class="abt-link-icon"><i class="fas fa-brain" aria-hidden="true"></i></span>
+                    <h3>Artificial Intelligence</h3>
+                    <p>Practical AI that reads documents, flags fraud and saves staff time.</p>
+                    <span class="abt-link-more">Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a class="abt-link-card" href="blockchain-technology.html">
+                    <span class="abt-link-icon"><i class="fas fa-link" aria-hidden="true"></i></span>
+                    <h3>Blockchain Technology</h3>
+                    <p>Records and certificates that cannot be secretly changed later.</p>
+                    <span class="abt-link-more">Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a class="abt-link-card" href="services.html">
+                    <span class="abt-link-icon"><i class="fas fa-code" aria-hidden="true"></i></span>
+                    <h3>Software &amp; e-Government</h3>
+                    <p>Websites, mobile apps, online portals, ERP and digital public services.</p>
+                    <span class="abt-link-more">Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a class="abt-link-card" href="products.html">
+                    <span class="abt-link-icon"><i class="fas fa-microchip" aria-hidden="true"></i></span>
+                    <h3>Products</h3>
+                    <p>Ready-made devices and software: card printers, biometrics, kiosks and more.</p>
+                    <span class="abt-link-more">Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a class="abt-link-card" href="anti-counterfeit.html">
+                    <span class="abt-link-icon"><i class="fas fa-qrcode" aria-hidden="true"></i></span>
+                    <h3>Anti-Counterfeit Solution</h3>
+                    <p>Secure labels, QR codes and quick checks that prove a product or document is genuine.</p>
+                    <span class="abt-link-more">Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a class="abt-link-card" href="brand-protection.html">
+                    <span class="abt-link-icon"><i class="fas fa-shield-alt" aria-hidden="true"></i></span>
+                    <h3>Brand Protection</h3>
+                    <p>Find and stop fake copies of your products before they reach your customers.</p>
+                    <span class="abt-link-more">Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a class="abt-link-card" href="business-automation.html">
+                    <span class="abt-link-icon"><i class="fas fa-cogs" aria-hidden="true"></i></span>
+                    <h3>Business Automation</h3>
+                    <p>Turn slow, paper-based office work into fast digital workflows you can track.</p>
+                    <span class="abt-link-more">Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a class="abt-link-card" href="ai-contact-center.html">
+                    <span class="abt-link-icon"><i class="fas fa-headset" aria-hidden="true"></i></span>
+                    <h3>AI Contact Center</h3>
+                    <p>Calls, chats and complaints answered 24/7 on phone, WhatsApp and web.</p>
+                    <span class="abt-link-more">Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR WORK -->
+    <section class="container-fluid py-5" id="our-work" style="background: #f8fafc; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="abt-eyebrow abt-eyebrow-green">Our Work</span>
+                <h2 class="abt-title text-center">Systems People Use <span>Every Day</span></h2>
+                <p class="abt-sub">A few of the national systems we have built and still look after.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <a class="abt-work-card" href="case-study-tcb.html">
+                        <i class="fas fa-id-card abt-work-icon" aria-hidden="true"></i>
+                        <h3>TCB Smart Family Card</h3>
+                        <p>Smart family cards so the right families receive TCB&rsquo;s low-price goods.</p>
+                    </a>
+                </div>
+                <!-- Hidden while ecourt.gov.bd is offline (not deleted). Remove "d-none" to show it again. -->
+                <div class="col-md-6 col-lg-4 d-none">
+                    <a class="abt-work-card" href="case-study-e-court.html">
+                        <i class="fas fa-gavel abt-work-icon" aria-hidden="true"></i>
+                        <h3>Industrial e-Court</h3>
+                        <p>Online filing and tracking of industrial court cases.</p>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <a class="abt-work-card" href="case-study-e-licensing.html">
+                        <i class="fas fa-file-contract abt-work-icon" aria-hidden="true"></i>
+                        <h3>National e-Licensing</h3>
+                        <p>One portal to apply for and receive government licences online.</p>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <a class="abt-work-card" href="case-study-smart-card.html">
+                        <i class="fas fa-print abt-work-icon" aria-hidden="true"></i>
+                        <h3>Smart Card Issuance</h3>
+                        <p>Automated printing and issuing of secure smart cards at scale.</p>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <a class="abt-work-card" href="case-study-ocd.html">
+                        <i class="fas fa-calendar-check abt-work-icon" aria-hidden="true"></i>
+                        <h3>Officers&rsquo; Club Dhaka</h3>
+                        <p>Club website, member portal and Android and iOS apps, with online booking.</p>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <a class="abt-work-card" href="upokari.html">
+                        <i class="fas fa-robot abt-work-icon" aria-hidden="true"></i>
+                        <h3>Upokari</h3>
+                        <p>Our own products: AI that spots forged documents, a secure notice and document app, and eCom.</p>
+                    </a>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-6">
-                <div class="client-logo-card">
-                    <img loading="lazy" width="192" height="136" src="assets/img/vlc_02.jpg" alt="Valuable Client 2">
-                </div>
+            <div class="text-center mt-5">
+                <a href="case-study.html" class="button">see all case studies</a>
             </div>
-            <div class="col-lg-4 col-md-4 col-6">
-                <div class="client-logo-card">
-                    <img loading="lazy" width="192" height="136" src="assets/img/vlc_03.jpg" alt="Valuable Client 3">
-                </div>
+        </div>
+    </section>
+
+    <!-- MISSION & VISION -->
+    <section class="container-fluid abt_pg_mission py-5 position-relative" id="mission" style="background-image: url('assets/img/mission_bg.webp'); background-size: cover; background-position: center;">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <span class="badge px-3 py-2 rounded-pill fw-semibold mb-2" style="background: rgba(255, 255, 255, 0.15); color: #fff; border: 1px solid rgba(255, 255, 255, 0.3); font-size: 13px;">Why We Exist</span>
+                <h2 class="display-6 fw-bold text-white">Mission &amp; Vision</h2>
             </div>
-            <div class="col-lg-4 col-md-4 col-6">
-                <div class="client-logo-card">
-                    <img loading="lazy" width="192" height="136" src="assets/img/vlc_04.jpg" alt="Valuable Client 4">
+            <div class="row g-4 align-items-stretch">
+                <div class="col-lg-6 reveal-on-scroll">
+                    <div class="abt-mission-box">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="mission-icon-wrap me-3">
+                                <picture>
+                                    <source srcset="assets/img/mission.webp" type="image/webp">
+                                    <img loading="lazy" width="240" height="250" src="assets/img/mission.png" alt="">
+                                </picture>
+                            </div>
+                            <h3 class="mb-0">Our Mission</h3>
+                        </div>
+                        <p>
+                            To build secure, simple technology that makes public and business services faster, clearer and easier to reach. We do it through careful engineering, strong partnerships and support that lasts long after launch.
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-6">
-                <div class="client-logo-card">
-                    <img loading="lazy" width="192" height="136" src="assets/img/vlc_05.jpg" alt="Valuable Client 5">
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-6">
-                <div class="client-logo-card">
-                    <img loading="lazy" width="192" height="136" src="assets/img/vlc_06.jpg" alt="Valuable Client 6">
+                <div class="col-lg-6 reveal-on-scroll">
+                    <div class="abt-mission-box">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="mission-icon-wrap me-3">
+                                <picture>
+                                    <source srcset="assets/img/vission.webp" type="image/webp">
+                                    <img loading="lazy" width="240" height="250" src="assets/img/vission.png" alt="">
+                                </picture>
+                            </div>
+                            <h3 class="mb-0">Our Vision</h3>
+                        </div>
+                        <p>
+                            A Bangladesh where every citizen can get the services they need quickly, safely and without piles of paperwork, powered by trusted systems built here at home.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- SECTION: CALL TO ACTION -->
+    <!-- HOW WE WORK -->
+    <section class="container py-5" id="how-we-work">
+        <div class="text-center mb-5">
+            <span class="abt-eyebrow">How We Work</span>
+            <h2 class="abt-title text-center">What You Can <span>Expect</span> From Us</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="abt-value-card">
+                    <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                    <h3>Security First</h3>
+                    <p>Every system is built to protect personal data, following ISO 27001.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="abt-value-card">
+                    <i class="fas fa-landmark" aria-hidden="true"></i>
+                    <h3>Built for Bangladesh</h3>
+                    <p>We know local rules, offices and users, and design around them.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="abt-value-card">
+                    <i class="fas fa-headset" aria-hidden="true"></i>
+                    <h3>With You After Launch</h3>
+                    <p>Training, support and updates for as long as the system runs.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="abt-value-card">
+                    <i class="fas fa-comments" aria-hidden="true"></i>
+                    <h3>Clear and Honest</h3>
+                    <p>Plain updates, realistic timelines and no hidden surprises.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LEADERSHIP: CHAIRMAN -->
+    <section class="container-fluid py-5" id="chairman" style="background: #f8fafc; border-top: 1px solid #e2e8f0;">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="abt-eyebrow">Leadership</span>
+                <h2 class="abt-title text-center">Meet Our <span>Chairman</span></h2>
+            </div>
+            <div class="row align-items-start g-4">
+                <div class="col-lg-4 col-md-5">
+                    <div class="chairman-profile-card text-center">
+                        <picture><source srcset="assets/img/chairman_Sir.webp" type="image/webp"><img width="447" height="451" src="assets/img/chairman_Sir.png" alt="Kabir Ahmed Bhuiyan, Chairman" loading="lazy" class="img-fluid mb-3"></picture>
+                        <h3 class="h4 fw-bold mb-1" style="color: #2e3760;">Kabir Ahmed Bhuiyan</h3>
+                        <p class="text-muted small mb-2">Chairman, Spectrum IT Solutions Ltd.</p>
+                        <span class="chairman-badge"><i class="fas fa-globe-americas me-1"></i> International Envoy of Humanity</span>
+                        <div class="chairman-social-links my-3">
+                            <a href="https://www.facebook.com/kabhuiyanbd" target="_blank" rel="noopener" aria-label="Kabir Ahmed Bhuiyan on Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.linkedin.com/in/kabir-ahmed-bhuiyan-0a631a108/" target="_blank" rel="noopener" aria-label="Kabir Ahmed Bhuiyan on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="mailto:chairman@spectrum.com.bd" aria-label="Email the Chairman"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-7">
+                    <div class="speech-block">
+                        <h4 class="h5"><i class="fas fa-quote-left text-warning" aria-hidden="true"></i> A Leader in Technology and Development</h4>
+                        <p class="mb-3">
+                            <strong>Kabir Ahmed Bhuiyan</strong> is the Chairman of Spectrum IT Solutions Limited. Under his leadership, Spectrum delivers software, enterprise technology and digital transformation services to clients in Bangladesh and abroad, guided by three principles: innovation, strategic foresight and a commitment to excellence.
+                        </p>
+                        <p>
+                            Beyond technology, he works in trade, humanitarian relief and social development in Bangladesh and internationally, and is widely known as the &ldquo;International Envoy of Humanity&rdquo;.
+                        </p>
+                    </div>
+
+                    <div class="speech-block">
+                        <h4 class="h5"><i class="fas fa-hand-holding-heart text-danger" aria-hidden="true"></i> Humanitarian Diplomacy</h4>
+                        <p>
+                            During the global COVID-19 pandemic in 2020, Mr. Bhuiyan spearheaded nationwide humanitarian relief, distributing medical supplies, food, and protective equipment throughout Brahmanbaria district and other regions of Bangladesh. His humanitarian diplomacy extended internationally when Senator Abiola Ajimobi, the Governor of Oyo State in Nigeria, contracted COVID-19. At the request of the Nigerian government, he played a pivotal role in facilitating the supply of a Bangladeshi-produced medicine. With the intervention of Bangladesh’s Foreign Minister, Dr. A. K. Abdul Momen, the medicine and protective equipment were dispatched to Nigeria on a special government-arranged flight. This episode stands as a proud chapter in Bangladesh’s international engagement.
+                        </p>
+                    </div>
+
+                    <button type="button" class="abt-bio-btn" data-bs-toggle="modal" data-bs-target="#chairmanModal">
+                        Read the full profile <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLIENTS -->
+    <section class="container py-5 text-center" id="clients">
+        <span class="abt-eyebrow abt-eyebrow-green">Trusted By</span>
+        <h2 class="abt-title text-center">Some of Our <span>Clients</span></h2>
+        <p class="abt-sub mb-4">Government bodies and institutions that rely on our systems.</p>
+        <div class="row g-4 justify-content-center pt-2">
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="client-logo-card"><img loading="lazy" width="192" height="136" src="assets/img/vlc_01.jpg" alt="Department of Explosives"></div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="client-logo-card"><img loading="lazy" width="192" height="136" src="assets/img/vlc_02.jpg" alt="Government of Bangladesh: attendance system"></div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="client-logo-card"><img loading="lazy" width="192" height="136" src="assets/img/vlc_03.jpg" alt="Government of Bangladesh: licensing"></div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="client-logo-card"><img loading="lazy" width="192" height="136" src="assets/img/vlc_04.jpg" alt="Islamic Foundation Bangladesh"></div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="client-logo-card"><img loading="lazy" width="192" height="136" src="assets/img/vlc_05.jpg" alt="Novotheatre, Bangladesh"></div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="client-logo-card"><img loading="lazy" width="192" height="136" src="assets/img/vlc_06.jpg" alt="Officers’ Club Dhaka"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
     <div class="container-fluid py-5 cta-banner-section">
         <div class="container text-center py-4 position-relative" style="z-index: 2;">
-            <span class="badge px-3 py-2 rounded-pill fw-semibold mb-3" style="background: rgba(242, 101, 34, 0.2); color: #f26522; border: 1px solid rgba(242, 101, 34, 0.4); font-size: 13px;">Over Two Decades of Excellence</span>
-            <h2 class="display-6 fw-bold text-white mb-3">Partner with Bangladesh&rsquo;s Sovereign Tech Pioneer</h2>
+            <span class="badge px-3 py-2 rounded-pill fw-semibold mb-3" style="background: rgba(242, 101, 34, 0.2); color: #f26522; border: 1px solid rgba(242, 101, 34, 0.4); font-size: 13px;">Since 2012</span>
+            <h2 class="display-6 fw-bold text-white mb-3">Let&rsquo;s Build Something That Lasts</h2>
             <p class="text-light opacity-75 mx-auto mb-4" style="max-width: 650px; font-size: 16px; line-height: 1.7;">
-                Delivering high-reliability digital governance, biometric security, and mission-critical software engineering since 2000.
+                Tell us about your project, and our team will get back to you with a clear next step.
             </p>
             <div class="d-flex justify-content-center align-items-center flex-wrap gap-3 pt-2">
                 <a href="contact.html" class="cta-primary-btn">
@@ -507,6 +618,74 @@
         </div>
     </div>
 
+
+    <!-- Chairman full profile (popup) -->
+    <div class="modal fade abt-bio-modal" id="chairmanModal" tabindex="-1" aria-labelledby="chairmanModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="d-flex align-items-center gap-3">
+                        <picture><source srcset="assets/img/chairman_Sir.webp" type="image/webp"><img width="447" height="451" src="assets/img/chairman_Sir.png" alt="" class="abt-bio-avatar"></picture>
+                        <div>
+                            <h2 class="modal-title h5 fw-bold mb-0" id="chairmanModalTitle">Kabir Ahmed Bhuiyan</h2>
+                            <span class="abt-bio-role">Chairman, Spectrum IT Solutions Ltd.</span>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="speech-block">
+                        <h4 class="h5"><i class="fas fa-quote-left text-warning" aria-hidden="true"></i> A Leader in Technology and Development</h4>
+                        <p class="mb-3">
+                            <strong>Kabir Ahmed Bhuiyan</strong> is the Chairman of Spectrum IT Solutions Limited. Under his leadership, Spectrum delivers software, enterprise technology and digital transformation services to clients in Bangladesh and abroad, guided by three principles: innovation, strategic foresight and a commitment to excellence.
+                        </p>
+                        <p>
+                            Beyond technology, he works in trade, humanitarian relief and social development in Bangladesh and internationally, and is widely known as the &ldquo;International Envoy of Humanity&rdquo;.
+                        </p>
+                    </div>
+
+                            <div class="speech-block">
+                                <h4 class="h5"><i class="fas fa-hand-holding-heart text-danger" aria-hidden="true"></i> Humanitarian Diplomacy</h4>
+                                <p>
+                                    During the global COVID-19 pandemic in 2020, Mr. Bhuiyan spearheaded nationwide humanitarian relief, distributing medical supplies, food, and protective equipment throughout Brahmanbaria district and other regions of Bangladesh. His humanitarian diplomacy extended internationally when Senator Abiola Ajimobi, the Governor of Oyo State in Nigeria, contracted COVID-19. At the request of the Nigerian government, he played a pivotal role in facilitating the supply of a Bangladeshi-produced medicine. With the intervention of Bangladesh’s Foreign Minister, Dr. A. K. Abdul Momen, the medicine and protective equipment were dispatched to Nigeria on a special government-arranged flight. This episode stands as a proud chapter in Bangladesh’s international engagement.
+                                </p>
+                            </div>
+                            <div class="speech-block">
+                                <h4 class="h5"><i class="fas fa-water text-primary" aria-hidden="true"></i> Championing the &ldquo;Blue Gold Economy&rdquo;</h4>
+                                <p>
+                                    Mr. Bhuiyan firmly believes that Bangladesh’s vast freshwater reserves can position the nation as a global hub of the “Blue Gold Economy.” Through policy papers, speeches, and published articles, he has consistently advocated for bottled water exports, water diplomacy, and investments in climate-resilient infrastructure.
+                                </p>
+                            </div>
+                            <div class="speech-block">
+                                <h4 class="h5"><i class="fas fa-leaf text-success" aria-hidden="true"></i> Sustainability and Energy Transition</h4>
+                                <p>
+                                    Alongside water resource advocacy, he is deeply engaged in addressing air pollution and climate change. He has advanced forward-looking policy recommendations on sustainable energy use, urban greening, and the expansion of renewable energy. His collaborations with international research institutions and environmental organizations underscore his commitment to sustainable global development.
+                                </p>
+                            </div>
+                            <div class="speech-block">
+                                <h4 class="h5"><i class="fas fa-globe-asia text-info" aria-hidden="true"></i> Global Partnerships</h4>
+                                <p class="mb-3">
+                                    With strong ties to political leaders, business communities, and policymakers across Europe, Africa, and beyond, Mr. Bhuiyan actively leverages these relationships to strengthen Bangladesh’s trade and diplomatic partnerships worldwide.
+                                </p>
+                                <p>
+                                    Through the Bhuiyan Global Foundation, he supports social development initiatives, while his diversified business ventures span garments, real estate, information technology, and international trade. Additionally, through Gelence, he facilitates cross-border investment and government-focused solution initiatives.
+                                </p>
+                            </div>
+                            <div class="speech-block">
+                                <h4 class="h5"><i class="fas fa-network-wired text-secondary" aria-hidden="true"></i> Business Leadership</h4>
+                                <p>
+                                    In addition to his business and philanthropic pursuits, Mr. Bhuiyan is actively engaged in advancing education, healthcare, environmental protection, and water resource management in Bangladesh. He also serves as the Managing Director of Bhuiyan Group UK Limited, Bhuiyan International, Bhuiyan Real Estate UK Limited, and Balance. Through these enterprises, he has cultivated long-term collaborations with global investors, business leaders, and policymakers.
+                                </p>
+                            </div>
+                            <div class="speech-summary-card">
+                                <p>
+                                    <i class="fas fa-star text-warning me-2" aria-hidden="true"></i> In summary, <strong>Kabir Ahmed Bhuiyan</strong> is a bridge-builder between technology, humanity, and international trade. His vision and initiatives are not only shaping Bangladesh’s future but also unlocking new opportunities on the global stage.
+                                </p>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </main>
 
     <!-- Footer start -->
@@ -517,7 +696,7 @@
                 <div class="col-lg-3 col-sm-6 mb-4 footer-col-about">
                     <div class="footer-about">
                         <a href="index.html"><img src="assets/img/logo.png" width="165" height="60" class="img-fluid mb-3" alt="Spectrum IT Solutions Logo" loading="lazy"></a>
-                        <p>We are a software development company delivering splendid business IT Solutions and related services to customers home &amp; abroad.</p>
+                        <p>A Dhaka software company building secure digital services for government and business since 2012.</p>
                         <div class="mt-3 footer-social-icons">
                             <a class="text-light" href="https://www.facebook.com/myspectrumit" target="_blank" rel="noopener" aria-label="Spectrum Facebook"><i class="fab fa-facebook-f"></i></a>
                             <a class="text-light" href="https://www.linkedin.com/company/spectrum-it-solutions-limited" target="_blank" rel="noopener" aria-label="Spectrum LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -533,12 +712,12 @@
                         <li class="mb-2"><a href="https://licence.gov.bd/" target="_blank" rel="noopener" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> www.licence.gov.bd</a></li>
                         <li class="mb-2"><a href="https://ocd.org.bd/" target="_blank" rel="noopener" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> www.ocd.org.bd</a></li>
                         <li class="mb-2"><a href="http://www.tcbsheba.com/" target="_blank" rel="noopener" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> www.tcbsheba.com</a></li>
-                        <li class="mb-2"><a href="http://www.ecourt.gov.bd/" target="_blank" rel="noopener" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> www.ecourt.gov.bd</a></li>
+                        <li class="mb-2 d-none"><!-- Hidden while ecourt.gov.bd is offline (not deleted). Remove "d-none" to show it again. --><a href="http://www.ecourt.gov.bd/" target="_blank" rel="noopener" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> www.ecourt.gov.bd</a></li>
                         <li class="mb-2"><a href="https://novo.spectrum.com.bd/" target="_blank" rel="noopener" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> www.sobticket.com</a></li>
                     </ul>
                 </div>
 
-                <div class="col-lg-3 col-sm-6 mb-4">
+                <div class="col-lg-3 col-sm-6 mb-4 footer-col-links">
                     <h3 class="text-white mb-3" style="font-size: 1.25rem;">Quick Link</h3>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="artificial-intelligence.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-1 text-warning"></i> Artificial Intelligence</a></li>
@@ -571,6 +750,6 @@
 
     <!-- Scripts -->
     <script src="assets/js/bootstrap.bundle.min.js" defer></script>
-    <script src="assets/js/custom.js?v=20261108g" defer></script>
+    <script src="assets/js/custom.js?v=20261109i" defer></script>
 </body>
 </html>

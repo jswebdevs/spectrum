@@ -21,9 +21,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (groupWrap) {
                     groupWrap.querySelectorAll('.filter-btn').forEach(function (btn) {
                         btn.classList.remove('active');
+                        if (btn.hasAttribute('aria-pressed')) btn.setAttribute('aria-pressed', 'false');
                     });
                 }
                 this.classList.add('active');
+                if (this.hasAttribute('aria-pressed')) this.setAttribute('aria-pressed', 'true');
 
                 // Filter items across page
                 const filterItems = document.querySelectorAll('.filter-item');

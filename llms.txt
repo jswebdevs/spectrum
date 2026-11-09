@@ -1,20 +1,34 @@
 # Spectrum IT Solutions Ltd.
-> Premier Dhaka-based software company providing digital identity, biometric infrastructure, smart card platforms, AI systems, and national-scale software engineering.
+> Software company in Dhaka, Bangladesh, since 2012. Builds digital identity, smart card, AI, anti-counterfeit and business automation systems for government and business.
 
 ## Key pages
 - [Home](https://spectrum.com.bd/index.html): Homepage with overview of capabilities
 - [About](https://spectrum.com.bd/about-us.html): Company background, 12+ years experience, ISO 9001 & ISO 27001
-- [Services](https://spectrum.com.bd/services.html): Digital identity, smart cards, AI, blockchain, cybersecurity, ERP
+- [Services](https://spectrum.com.bd/services.html): Main services (digital identity, smart cards, AI, blockchain, anti-counterfeit, brand protection, business automation, AI contact center, custom software) and the systems Spectrum installs
 - [Digital Identity & Security](https://spectrum.com.bd/digital-identity-security.html): Guide to digital identity in Bangladesh (NID, e-KYC, verification, safety), plus automated ID verification
 - [Smart Card Technologies](https://spectrum.com.bd/smart-card-technologies.html): Guide to smart cards (chips, security, issuance, smart cards in Bangladesh), plus Spectrum's card programmes such as the TCB family card
 - [Artificial Intelligence](https://spectrum.com.bd/artificial-intelligence.html): Guide to AI (what it can do, Bangla, risks, starting a project), plus Spectrum's AI systems such as Upokari document verification
 - [Blockchain Technology](https://spectrum.com.bd/blockchain-technology.html): Guide to blockchain (how it works, when you need one, Bangladesh), plus tamper-proof record systems
-- [Products](https://spectrum.com.bd/products.html): Enterprise hardware and software products
+- [Anti-Counterfeit Solutions](https://spectrum.com.bd/anti-counterfeit.html): Guide to fake documents, cards and certificates and how to stop them, plus secure cards, QR checks and AI fake detection
+- [Brand Protection](https://spectrum.com.bd/brand-protection.html): Guide to stopping fake products with unique codes, secure labels, customer checks and supply chain tracking
+- [Business Automation](https://spectrum.com.bd/business-automation.html): Guide to automating office work (forms, approvals, documents, reports), plus Spectrum's workflow systems
+- [AI Contact Center](https://spectrum.com.bd/ai-contact-center.html): Guide to AI contact centres (how they work, industry examples, benefits, rollout), plus Spectrum's seven-part AI Contact Center: call centre, AI voice agent, chatbot, social media assistant, routing, insight and complaint engines
+- [Upokari](https://spectrum.com.bd/upokari.html): Spectrum's own product family: Upokari Verification Engine (upokari.ai, AI checks for land records, TCB cards and NIDs), the Upokari app (secure mailbox and document vault, Android and iOS, 10K+ downloads) and Upokari eCom (marketplace seller app)
+- [Mobile Apps](https://spectrum.com.bd/mobile-apps.html): 8 Android and iOS apps published by Spectrum, 110K+ downloads: TCB Card Sheba, Upokari, Novotheatre eTicket, Officers’ Club Dhaka, Automated Presence & Feedback, Upokari eCom Seller, My GCC, GSB Library
+- [Products](https://spectrum.com.bd/products.html): Devices and software grouped by need: ID and cards (card printers, biometrics, e-KYC, Upokari), security and access, AI contact center, kiosks and displays, business software
 - [Projects](https://spectrum.com.bd/projects.html): Delivered government and corporate projects
-- [Case Studies](https://spectrum.com.bd/case-study.html): TCB Smart Family Card, Industrial e-Court BD, National e-Licensing, OCD certificate verification
+- [Case Studies](https://spectrum.com.bd/case-study.html): Overview of all case studies
+  - [TCB Smart Family Card and TCB Card Sheba app](https://spectrum.com.bd/case-study-tcb.html)
+  - [National e-Licensing](https://spectrum.com.bd/case-study-e-licensing.html)
+  - [Smart Card Issuance](https://spectrum.com.bd/case-study-smart-card.html)
+  - [Officers’ Club Dhaka website and mobile apps](https://spectrum.com.bd/case-study-ocd.html)
+  - [TCB AI Contact Center](https://spectrum.com.bd/case-study-tcb-contact-center.html)
+  - [Novotheatre eTicket](https://spectrum.com.bd/case-study-novotheatre.html)
+  - [Gazipur City Corporation e-Revenue and My GCC app](https://spectrum.com.bd/case-study-gcc.html)
+  - [Automated Presence & Feedback (APFS), used by the Ministry of Land, Ministry of Agriculture, National Sports Council, Noakhali DC Office, Dhaka Novotheatre and BM Bhaban](https://spectrum.com.bd/case-study-apfs.html)
 - [Contact](https://spectrum.com.bd/contact.html): Enquiries and consultations
 
 ## Contact
 - Email: contact@spectrum.com.bd
-- Phone: +8801615900004
+- Phone: +880 1615-900004
 - Address: 52/1, New Eskaton Road (Hasan Holdings Ltd., 12th Floor), Dhaka-1000, Bangladesh
