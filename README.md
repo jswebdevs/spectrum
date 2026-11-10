@@ -32,6 +32,8 @@ Static website for [Spectrum IT Solutions Ltd.](https://spectrum.com.bd/), Dhaka
 | Case study: Novotheatre eTicket | `case-study-novotheatre.html` |
 | Case study: Gazipur City Corporation e-Revenue | `case-study-gcc.html` |
 | Case study: Automated Presence & Feedback | `case-study-apfs.html` |
+| Privacy Policy | `privacy-policy.html` |
+| Terms of Use | `terms.html` |
 | Not found | `404.html` |
 
 The eight service pages follow the same layout: a plain-language article first (with contents, FAQ and Article/FAQ structured data), then the Spectrum service section. Each case study page has a facts box, the problem, what was built, how it works, results and the technology in plain words.
@@ -62,6 +64,10 @@ Then open http://127.0.0.1:5000/.
 - **New icons:** the site loads a Font Awesome 5.15.4 subset. If you use an icon that is not in `assets/css/fontawesome-subset.min.css`, add its rule and rebuild the subset fonts, or it will show as a blank square.
 - **New page:** copy the head, header and footer from an existing page, add it to `sitemap.xml`, `llms.txt` and the footer Quick Links, and create a share image in `assets/img/og/`.
 - Phone numbers are shown as `+880 1615-900004`; `tel:` links use `+8801615900004`.
+
+## Page builder
+
+Some pages (case studies, service pages, Upokari, Mobile Apps, Privacy and Terms) were generated with small Python scripts kept in `.claude/build/` (not in git). They copy the head, header and footer from `blockchain-technology.html`. Pages can also be edited by hand.
 
 ## Deploy
 
