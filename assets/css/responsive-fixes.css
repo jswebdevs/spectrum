@@ -3309,3 +3309,63 @@ footer .footer-wrapper .footer-col-links ul li { margin-bottom: 6px !important; 
 .footer-copyright .footer-legal a { color: #cbd5e1; text-decoration: none; }
 .footer-copyright .footer-legal a:hover { color: #f26522; text-decoration: underline; }
 .footer-copyright .footer-legal span { margin: 0 10px; color: #64748b; }
+
+/* No red backgrounds on links or positive elements (2026-11-11).
+   Green (#15803d) for actions, blue/indigo for labels and decoration. */
+.button { color: #15803d !important; border-color: #15803d !important; }
+.button:hover, .button:focus, .button:hover a { background-color: #15803d !important; color: #fff !important; border-color: #15803d !important; }
+.hero_button, #template-mo-zay-hero-carousel .hero_button { background-color: #15803d !important; border-color: #15803d !important; color: #fff !important; }
+.hero_button:hover, .hero_button:focus, #template-mo-zay-hero-carousel .hero_button:hover { background-color: #166534 !important; }
+.cta-primary-btn { background: linear-gradient(135deg, #16a34a 0%, #15803d 100%) !important; box-shadow: 0 8px 20px rgba(21, 128, 61, 0.3) !important; }
+.cta-primary-btn:hover, .cta-primary-btn:focus { background: linear-gradient(135deg, #15803d 0%, #166534 100%) !important; }
+.contact-wrapper .contact-page-form .btn-submit:hover { background: #166534; }
+.badge-count, .filter-btn.active .badge-count { background: #15803d !important; }
+.filter-btn:hover { background: rgba(37, 99, 235, 0.08) !important; }
+.product-card-modern:hover .product-icon-wrap, .project-card-modern:hover .project-icon-wrap, .abt-link-card:hover .abt-link-icon { background: linear-gradient(135deg, #16a34a 0%, #15803d 100%) !important; border-color: rgba(22, 163, 74, 0.6) !important; }
+.product-card-modern:hover, .project-card-modern:hover, .abt-link-card:hover, .abt-work-card:hover, .app-card:hover { border-color: #16a34a !important; }
+.abt-bio-btn { color: #15803d; border-color: rgba(21, 128, 61, 0.4); }
+.abt-bio-btn:hover, .abt-bio-btn:focus-visible { background: #15803d; color: #fff; }
+.store-btn:hover { background: #1d4ed8; }
+.footer-wrapper .footer-about .footer-social-icons a:hover, .chairman-social-links a:hover { background: #1d4ed8 !important; }
+.services-item_all { background: linear-gradient(135deg, #15803d 0%, #166534 100%) !important; }
+.services-item_all:hover { background: #166534 !important; }
+nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before, nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after, nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::before, nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after { background-color: #2e3760 !important; }
+.abt-eyebrow { background: rgba(79, 70, 229, 0.08); color: #4338ca; border-color: rgba(79, 70, 229, 0.25); }
+.prod-group-icon { background: rgba(79, 70, 229, 0.1); color: #4338ca; }
+.chairman-badge { background: rgba(37, 99, 235, 0.08) !important; color: #1d4ed8 !important; border-color: rgba(37, 99, 235, 0.25) !important; }
+.contact-product-note { background: rgba(37, 99, 235, 0.06); border-color: rgba(37, 99, 235, 0.3); }
+.contact-product-note i { color: #1d4ed8; }
+
+/* Buttons and links: only green/blue and white. Hover swaps the two colours (2026-11-11). */
+/* Filled green buttons -> white on hover */
+.cta-primary-btn, .hero_button, #template-mo-zay-hero-carousel .hero_button, .btn-submit, .btn.btn-warning { background: #15803d !important; color: #fff !important; border: 2px solid #15803d !important; box-shadow: none !important; }
+.cta-primary-btn:hover, .cta-primary-btn:focus, .hero_button:hover, .hero_button:focus, #template-mo-zay-hero-carousel .hero_button:hover, .btn-submit:hover, .btn.btn-warning:hover, .btn.btn-warning:focus { background: #fff !important; color: #15803d !important; border-color: #15803d !important; }
+.cta-primary-btn i, .btn.btn-warning i { color: inherit !important; }
+/* Filled blue (navy) buttons -> white on hover */
+.btn.btn-primary { background: #1e3a8a !important; color: #fff !important; border: 2px solid #1e3a8a !important; }
+.btn.btn-primary:hover, .btn.btn-primary:focus { background: #fff !important; color: #1e3a8a !important; border-color: #1e3a8a !important; }
+.store-btn { background: #1e3a8a; color: #fff !important; border: 2px solid #1e3a8a; }
+.store-btn:hover, .store-btn:focus { background: #fff; color: #1e3a8a !important; border-color: #1e3a8a; }
+/* Outline buttons: white with green -> green with white */
+.button, .project-btn-portal, .abt-bio-btn, .btn.btn-outline-secondary { background: #fff !important; color: #15803d !important; border: 2px solid #15803d !important; }
+.button:hover, .button:focus, .project-btn-portal:hover, .project-btn-portal:focus, .abt-bio-btn:hover, .abt-bio-btn:focus-visible, .btn.btn-outline-secondary:hover, .btn.btn-outline-secondary:focus { background: #15803d !important; color: #fff !important; border-color: #15803d !important; }
+.project-btn-portal i, .project-btn-portal:hover i, .button i { color: inherit !important; }
+/* On dark banners: white outline -> solid white */
+.cta-secondary-btn, .btn.btn-outline-light { background: transparent !important; color: #fff !important; border: 2px solid #fff !important; }
+.cta-secondary-btn:hover, .cta-secondary-btn:focus, .btn.btn-outline-light:hover, .btn.btn-outline-light:focus { background: #fff !important; color: #1e3a8a !important; border-color: #fff !important; }
+.cta-secondary-btn i, .cta-secondary-btn:hover i { color: inherit !important; }
+/* "View All Services" box on the homepage */
+.services-item_all .btn-light { background: #fff !important; color: #15803d !important; border: 2px solid #fff !important; }
+.services-item_all .btn-light:hover, .services-item_all .btn-light:focus { background: transparent !important; color: #fff !important; border-color: #fff !important; }
+/* Watch Video */
+.hero_watch_button, #template-mo-zay-hero-carousel .hero_watch_button { color: #15803d !important; }
+.hero_watch_button:hover, #template-mo-zay-hero-carousel .hero_watch_button:hover { color: #1e3a8a !important; }
+/* Text links in content: blue */
+.abt-link-more, .prod-more-link, .app-more, .cs-glance-row dd a, #main-content .dis-article a:not(.btn):not(.button), #main-content .legal-doc a, #main-content p a:not(.btn):not(.button), #main-content li a:not(.btn):not(.button):not(.dropdown-item) { color: #1d4ed8 !important; }
+.prod-more-link:hover, .app-more:hover, .cs-glance-row dd a:hover, #main-content p a:not(.btn):not(.button):hover, #main-content li a:not(.btn):not(.button):not(.dropdown-item):hover { color: #15803d !important; }
+.abt-link-card:hover .abt-link-more { color: #15803d !important; }
+
+/* Leftovers: stronger selectors */
+.services-item_all a.btn.btn-light { color: #15803d !important; }
+.services-item_all a.btn.btn-light:hover, .services-item_all a.btn.btn-light:focus { color: #fff !important; }
+#template-mo-zay-hero-carousel a.hero_watch_button:hover { color: #1e3a8a !important; }

@@ -23,7 +23,7 @@ Static website for [Spectrum IT Solutions Ltd.](https://spectrum.com.bd/), Dhaka
 | AI Contact Center | `ai-contact-center.html` |
 | Upokari (product family) | `upokari.html` |
 | Mobile Apps | `mobile-apps.html` |
-| Case study: TCB Smart Family Card | `case-study-tcb.html` |
+| Case study: TCB Smart Card | `case-study-tcb.html` |
 | Case study: Industrial e-Court (hidden: ecourt.gov.bd is offline; page kept, not linked, noindex) | `case-study-e-court.html` |
 | Case study: National e-Licensing | `case-study-e-licensing.html` |
 | Case study: Smart Card Issuance | `case-study-smart-card.html` |

@@ -30,7 +30,7 @@
       "representativeQueries": [
         "smart card issuance bangladesh",
         "card personalization",
-        "tcb family card"
+        "tcb smart card"
       ]
     },
     {
@@ -74,9 +74,9 @@
       "displayName": "National Enterprise Projects",
       "type": "application/ai-catalog+json",
       "url": "https://spectrum.com.bd/projects.html",
-      "description": "Proven national-scale implementations including TCB Smart Family Card, e-Court, and Licensing platforms",
+      "description": "Proven national-scale implementations including TCB Smart Card, e-Court, and Licensing platforms",
       "representativeQueries": [
-        "TCB smart family card project",
+        "TCB smart card project",
         "judiciary ecourt software",
         "national elicensing portal"
       ]
