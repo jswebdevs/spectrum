@@ -28,7 +28,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 /* Footer: authentic background matching the main website */
 .footer-wrapper {
-  background-image: url('../img/footer_bg.jpg') !important;
+  background-image: url('../img/footer_bg.webp') !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
   background-position: center center !important;
