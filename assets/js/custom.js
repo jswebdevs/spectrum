@@ -77,8 +77,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             }, {
                 root: null,
-                rootMargin: '0px 0px -40px 0px',
-                threshold: 0.12
+                rootMargin: '0px 0px 200px 0px',
+                threshold: 0
             });
 
             revealElements.forEach(function (el) {
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // -------------------------------------------------------------------------
     // 3. Mobile Navigation Fullscreen Lock & Scroll Management
     // -------------------------------------------------------------------------
-    const mainNav = document.getElementById('templatemo_main_nav');
+    const mainNav = document.getElementById('main_nav');
     const navbar = document.querySelector('nav.navbar');
 
     function updateNavBottom() {
@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // flicked quickly), otherwise it springs back.
 // -------------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', function () {
-    const carousel = document.getElementById('template-mo-zay-hero-carousel');
+    const carousel = document.getElementById('hero-carousel');
     if (!carousel) return;
     const inner = carousel.querySelector('.carousel-inner');
     const items = Array.from(inner.querySelectorAll('.carousel-item'));
@@ -273,4 +273,26 @@ document.addEventListener('DOMContentLoaded', function () {
     inner.addEventListener('click', function (e) {
         if (Math.abs(dx) > 8) { e.preventDefault(); e.stopPropagation(); dx = 0; }
     }, true);
+});
+
+// -------------------------------------------------------------------------
+// Staging copies must not be indexed: any host other than the live domain
+// (GitHub Pages preview, staging subdomain) gets a noindex tag.
+// -------------------------------------------------------------------------
+(function () {
+    var host = location.hostname;
+    var live = host === 'spectrum.com.bd' || host === 'www.spectrum.com.bd';
+    if (!live) {
+        var m = document.querySelector('meta[name="robots"]') || document.head.appendChild(document.createElement('meta'));
+        m.setAttribute('name', 'robots');
+        m.setAttribute('content', 'noindex, nofollow');
+    }
+})();
+
+// Years of experience, worked out from the founding year so it never goes stale.
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('[data-years-since]').forEach(function (el) {
+        var years = new Date().getFullYear() - parseInt(el.getAttribute('data-years-since'), 10);
+        if (years > 0) el.textContent = years + '+';
+    });
 });

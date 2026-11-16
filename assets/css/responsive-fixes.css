@@ -330,10 +330,10 @@ nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
 @media (min-width: 992px) {
   nav.navbar .logo, nav.navbar .iso { flex: 0 0 auto; width: auto; max-width: none; }
   nav.navbar .navbar-brand { margin-right: 8px; }
-  #templatemo_main_nav,
-  #templatemo_main_nav.collapse,
-  #templatemo_main_nav.collapse:not(.show),
-  #templatemo_main_nav.collapse.show {
+  #main_nav,
+  #main_nav.collapse,
+  #main_nav.collapse:not(.show),
+  #main_nav.collapse.show {
     position: static !important;
     display: flex !important;
     visibility: visible !important;
@@ -351,8 +351,8 @@ nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
     max-height: none !important;
     overflow: visible !important;
   }
-  #templatemo_main_nav > .col-lg-9 { flex: 1 1 auto; width: auto; max-width: none; }
-  #templatemo_main_nav > .col-lg-3 { flex: 0 0 auto; width: auto; max-width: none; }
+  #main_nav > .col-lg-9 { flex: 1 1 auto; width: auto; max-width: none; }
+  #main_nav > .col-lg-3 { flex: 0 0 auto; width: auto; max-width: none; }
   .free_con { display: flex; align-items: center; white-space: nowrap; margin-right: 0 !important; }
   .free_con .col-md-3, .free_con .col-md-9 { flex: 0 0 auto; width: auto; max-width: none; float: none; padding: 0; }
   .menu_list { flex-direction: row; flex-wrap: nowrap; justify-content: flex-end; }
@@ -497,8 +497,8 @@ nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
   }
 
   /* FULL-HEIGHT MOBILE DROPDOWN OVERLAY (TAKES 100% MOBILE VIEWPORT HEIGHT AT ONCE) */
-  #templatemo_main_nav.collapsing,
-  #templatemo_main_nav.collapse.show {
+  #main_nav.collapsing,
+  #main_nav.collapse.show {
     position: fixed !important;
     top: var(--navbar-bottom, 65px) !important;
     left: 0 !important;
@@ -527,38 +527,38 @@ nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
   }
 
   /* Full height at once: eliminate height animation delay so menu is full height instantly */
-  #templatemo_main_nav.collapsing {
+  #main_nav.collapsing {
     height: calc(100vh - var(--navbar-bottom, 65px)) !important;
     height: calc(100dvh - var(--navbar-bottom, 65px)) !important;
     transition: opacity 0.2s ease !important;
     opacity: 0.95 !important;
   }
 
-  #templatemo_main_nav.collapse.show {
+  #main_nav.collapse.show {
     opacity: 1 !important;
     transition: opacity 0.2s ease !important;
   }
 
-  #templatemo_main_nav.collapse.show::-webkit-scrollbar,
-  #templatemo_main_nav.collapsing::-webkit-scrollbar {
+  #main_nav.collapse.show::-webkit-scrollbar,
+  #main_nav.collapsing::-webkit-scrollbar {
     display: none !important;
     width: 0 !important;
     height: 0 !important;
   }
 
-  #templatemo_main_nav.collapse:not(.show) {
+  #main_nav.collapse:not(.show) {
     display: none !important;
   }
 
   /* Internal Menu Spacing and Typography */
-  #templatemo_main_nav .menu_list {
+  #main_nav .menu_list {
     flex-direction: column !important;
     padding: 12px 20px 0 !important;
     margin: 0 !important;
     width: 100% !important;
   }
 
-  #templatemo_main_nav .nav-link {
+  #main_nav .nav-link {
     display: block !important;
     padding: 13px 8px !important;
     font-size: 16px !important;
@@ -569,13 +569,13 @@ nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
     transition: color 0.2s ease, background-color 0.2s ease !important;
   }
 
-  #templatemo_main_nav .nav-link:hover,
-  #templatemo_main_nav .nav-link:focus {
+  #main_nav .nav-link:hover,
+  #main_nav .nav-link:focus {
     color: #1e7e34 !important;
     background-color: #f9fafb !important;
   }
 
-  #templatemo_main_nav .dropdown-menu {
+  #main_nav .dropdown-menu {
     display: none;
     position: static !important;
     float: none !important;
@@ -589,10 +589,10 @@ nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
     max-height: 300px !important;
     overflow-y: auto !important;
   }
-  #templatemo_main_nav .dropdown-menu.show {
+  #main_nav .dropdown-menu.show {
     display: block !important;
   }
-  #templatemo_main_nav .dropdown-item {
+  #main_nav .dropdown-item {
     padding: 10px 16px !important;
     font-size: 14px !important;
     color: #334155 !important;
@@ -603,21 +603,21 @@ nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
     min-height: 44px;
     line-height: 1.4;
   }
-  #templatemo_main_nav .dropdown-item:last-child {
+  #main_nav .dropdown-item:last-child {
     border-bottom: none;
   }
-  #templatemo_main_nav .dropdown-item:hover,
-  #templatemo_main_nav .dropdown-item:focus,
-  #templatemo_main_nav .dropdown-item:active {
+  #main_nav .dropdown-item:hover,
+  #main_nav .dropdown-item:focus,
+  #main_nav .dropdown-item:active {
     background-color: #e2e8f0 !important;
     color: #f26522 !important;
   }
-  #templatemo_main_nav .dropdown-divider {
+  #main_nav .dropdown-divider {
     border-top: 1px solid #e2e8f0 !important;
     margin: 4px 0 !important;
   }
 
-  #templatemo_main_nav .free_con {
+  #main_nav .free_con {
     width: 100% !important;
     padding: 14px 28px 20px !important;
     display: flex !important;
@@ -625,7 +625,7 @@ nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
     border-top: 1px solid #e5e7eb !important;
     margin-top: 8px !important;
   }
-  #templatemo_main_nav .free_con, #templatemo_main_nav .free_con * { color: #1f2937; }
+  #main_nav .free_con, #main_nav .free_con * { color: #1f2937; }
 
   /* Tighter section spacing */
   .about, .services, .portfolio, .technology, .client {
@@ -867,8 +867,8 @@ nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
   }
 }
 
-#template-mo-zay-hero-carousel,
-#template-mo-zay-hero-carousel.sld {
+#hero-carousel,
+#hero-carousel.sld {
   position: relative;
   background-color: #f8fafc;
   background-image: none !important;
@@ -879,7 +879,7 @@ nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
   background-image: none !important;
 }
 
-#template-mo-zay-hero-carousel .sld-slide {
+#hero-carousel .sld-slide {
   height: 570px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -901,13 +901,13 @@ nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
 
 
 
-#template-mo-zay-hero-carousel .hero_text {
+#hero-carousel .hero_text {
   z-index: 2;
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-#template-mo-zay-hero-carousel .header_two {
+#hero-carousel .header_two {
   font-family: 'Roboto', system-ui, -apple-system, sans-serif;
   font-size: 30px !important;
   font-weight: 200 !important;
@@ -917,8 +917,8 @@ nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
   line-height: 1.3;
 }
 
-#template-mo-zay-hero-carousel .hero_text h1,
-#template-mo-zay-hero-carousel .header_thr {
+#hero-carousel .hero_text h1,
+#hero-carousel .header_thr {
   font-family: 'Roboto', system-ui, -apple-system, sans-serif;
   font-size: 45px !important;
   font-weight: 700 !important;
@@ -928,7 +928,7 @@ nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
   line-height: 1.2;
 }
 
-#template-mo-zay-hero-carousel .hero_text p {
+#hero-carousel .hero_text p {
   font-family: 'Roboto', system-ui, -apple-system, sans-serif;
   font-size: 16px !important;
   font-weight: 400 !important;
@@ -939,7 +939,7 @@ nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
   margin-bottom: 20px;
 }
 
-#template-mo-zay-hero-carousel .hero_icon {
+#hero-carousel .hero_icon {
   color: #1e293b !important;
   font-weight: 600;
   font-size: 14.5px;
@@ -947,13 +947,13 @@ nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
   letter-spacing: 0.5px;
 }
 
-#template-mo-zay-hero-carousel .hero_icon img {
+#hero-carousel .hero_icon img {
   vertical-align: middle;
   height: 22px;
   width: auto;
 }
 
-#template-mo-zay-hero-carousel .hero_button {
+#hero-carousel .hero_button {
   background-color: #c2410c !important;
   border: 1px solid #c2410c !important;
   border-radius: 10px !important;
@@ -968,13 +968,13 @@ nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
   margin-right: 20px;
 }
 
-#template-mo-zay-hero-carousel .hero_button:hover {
+#hero-carousel .hero_button:hover {
   background-color: #fff !important;
   border-color: #c2410c !important;
   color: #c2410c !important;
 }
 
-#template-mo-zay-hero-carousel .hero_watch_button {
+#hero-carousel .hero_watch_button {
   display: inline-flex;
   align-items: center;
   text-decoration: none !important;
@@ -984,18 +984,18 @@ nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
   transition: color 0.3s ease;
 }
 
-#template-mo-zay-hero-carousel .hero_watch_button img {
+#hero-carousel .hero_watch_button img {
   vertical-align: middle;
   height: 38px;
   width: auto;
 }
 
-#template-mo-zay-hero-carousel .hero_watch_button:hover {
+#hero-carousel .hero_watch_button:hover {
   color: #9a3412 !important;
 }
 
-#template-mo-zay-hero-carousel .carousel-control-prev,
-#template-mo-zay-hero-carousel .carousel-control-next {
+#hero-carousel .carousel-control-prev,
+#hero-carousel .carousel-control-next {
   width: 50px;
   opacity: 0.6;
   color: #64748b !important;
@@ -1004,13 +1004,13 @@ nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
   z-index: 5;
 }
 
-#template-mo-zay-hero-carousel .carousel-control-prev:hover,
-#template-mo-zay-hero-carousel .carousel-control-next:hover {
+#hero-carousel .carousel-control-prev:hover,
+#hero-carousel .carousel-control-next:hover {
   opacity: 1;
   color: #f26522 !important;
 }
 
-#template-mo-zay-hero-carousel .carousel-indicators {
+#hero-carousel .carousel-indicators {
   bottom: 18px !important;
   margin-bottom: 0 !important;
   z-index: 5;
@@ -1019,7 +1019,7 @@ nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
   align-items: center !important;
 }
 
-#template-mo-zay-hero-carousel .carousel-indicators [data-bs-target] {
+#hero-carousel .carousel-indicators [data-bs-target] {
   box-sizing: content-box;
   flex: 0 1 auto;
   width: 30px !important;
@@ -1033,7 +1033,7 @@ nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
   transition: opacity 0.3s ease !important;
 }
 
-#template-mo-zay-hero-carousel .carousel-indicators .active {
+#hero-carousel .carousel-indicators .active {
   background-color: #111827 !important;
   opacity: 0.95 !important;
   width: 30px !important;
@@ -1041,57 +1041,57 @@ nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
 }
 
 @media (min-width: 992px) {
-  #template-mo-zay-hero-carousel,
-  #template-mo-zay-hero-carousel.sld,
-  #template-mo-zay-hero-carousel .carousel-inner,
-  #template-mo-zay-hero-carousel .sld-slide {
+  #hero-carousel,
+  #hero-carousel.sld,
+  #hero-carousel .carousel-inner,
+  #hero-carousel .sld-slide {
     height: 570px !important;
     min-height: 570px !important;
     max-height: 570px !important;
   }
-  #template-mo-zay-hero-carousel .sld-slide {
+  #hero-carousel .sld-slide {
     background-position: right center;
     background-size: cover;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-  #template-mo-zay-hero-carousel,
-  #template-mo-zay-hero-carousel.sld,
-  #template-mo-zay-hero-carousel .carousel-inner,
-  #template-mo-zay-hero-carousel .sld-slide {
+  #hero-carousel,
+  #hero-carousel.sld,
+  #hero-carousel .carousel-inner,
+  #hero-carousel .sld-slide {
     height: 520px !important;
     min-height: 520px !important;
     max-height: 520px !important;
   }
-  #template-mo-zay-hero-carousel .sld-slide {
+  #hero-carousel .sld-slide {
     background-position: right center;
     background-size: cover;
   }
-  #template-mo-zay-hero-carousel .header_two {
+  #hero-carousel .header_two {
     font-size: 26px !important;
   }
-  #template-mo-zay-hero-carousel .hero_text h1,
-  #template-mo-zay-hero-carousel .header_thr {
+  #hero-carousel .hero_text h1,
+  #hero-carousel .header_thr {
     font-size: 38px !important;
   }
-  #template-mo-zay-hero-carousel .hero_text p {
+  #hero-carousel .hero_text p {
     font-size: 15px !important;
     max-width: 480px;
   }
 }
 
 @media (max-width: 767.98px) {
-  #template-mo-zay-hero-carousel,
-  #template-mo-zay-hero-carousel.sld,
-  #template-mo-zay-hero-carousel .carousel-inner,
-  #template-mo-zay-hero-carousel .sld-slide {
+  #hero-carousel,
+  #hero-carousel.sld,
+  #hero-carousel .carousel-inner,
+  #hero-carousel .sld-slide {
     height: 520px !important;
     min-height: 520px !important;
     max-height: 520px !important;
   }
-  #template-mo-zay-hero-carousel,
-  #template-mo-zay-hero-carousel.sld {
+  #hero-carousel,
+  #hero-carousel.sld {
     background-color: #f8fafc !important;
     background-image: none !important;
     margin-bottom: 0 !important;
@@ -1099,7 +1099,7 @@ nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
     position: relative !important;
     overflow: hidden !important;
   }
-  #template-mo-zay-hero-carousel .sld-slide {
+  #hero-carousel .sld-slide {
     padding: 30px 0 !important;
     background-color: #f8fafc !important;
     background-image: none !important;
@@ -1108,13 +1108,13 @@ nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
     position: relative !important;
     overflow: hidden !important;
   }
-  #template-mo-zay-hero-carousel .sld-slide .container {
+  #hero-carousel .sld-slide .container {
     height: 100% !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
   }
-  #template-mo-zay-hero-carousel .sld-slide .row {
+  #hero-carousel .sld-slide .row {
     width: 100% !important;
     margin: 0 !important;
   }
@@ -1135,24 +1135,24 @@ nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
     object-position: left center !important;
     display: block !important;
   }
-  #template-mo-zay-hero-carousel .hero_text {
+  #hero-carousel .hero_text {
     text-align: center !important;
     padding-top: 15px;
     padding-bottom: 20px;
   }
-  #template-mo-zay-hero-carousel .header_two {
+  #hero-carousel .header_two {
     text-align: center !important;
     font-size: 24px !important;
     margin-bottom: 8px;
   }
-  #template-mo-zay-hero-carousel .hero_text h1,
-  #template-mo-zay-hero-carousel .header_thr {
+  #hero-carousel .hero_text h1,
+  #hero-carousel .header_thr {
     text-align: center !important;
     font-size: 34px !important;
     margin-bottom: 14px;
     line-height: 1.25;
   }
-  #template-mo-zay-hero-carousel .hero_text p {
+  #hero-carousel .hero_text p {
     text-align: center !important;
     font-size: 15px !important;
     margin-left: auto;
@@ -1161,34 +1161,34 @@ nav.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
     line-height: 1.6;
     max-width: 92%;
   }
-  #template-mo-zay-hero-carousel .hero_icons {
+  #hero-carousel .hero_icons {
     justify-content: center !important;
     flex-wrap: wrap;
     gap: 12px;
     margin-bottom: 20px !important;
   }
-  #template-mo-zay-hero-carousel .hero_icon {
+  #hero-carousel .hero_icon {
     margin-right: 0 !important;
     font-size: 14px;
   }
-  #template-mo-zay-hero-carousel .hero_buttons {
+  #hero-carousel .hero_buttons {
     justify-content: center !important;
     flex-wrap: wrap;
     gap: 14px;
     margin-top: 20px !important;
   }
-  #template-mo-zay-hero-carousel .hero_button {
+  #hero-carousel .hero_button {
     margin-right: 0 !important;
     padding: 10px 28px;
     font-size: 15px;
   }
-  #template-mo-zay-hero-carousel .carousel-indicators {
+  #hero-carousel .carousel-indicators {
     display: none !important;
   }
-  #template-mo-zay-hero-carousel .carousel-control-prev {
+  #hero-carousel .carousel-control-prev {
     left: 4px;
   }
-  #template-mo-zay-hero-carousel .carousel-control-next {
+  #hero-carousel .carousel-control-next {
     right: 4px;
   }
 }
@@ -2684,11 +2684,11 @@ body.mobile-menu-open > *:not(nav.navbar):not(.top_bar):not(header) {
   object-position: right center;
   display: block;
 }
-#template-mo-zay-hero-carousel .sld-slide {
+#hero-carousel .sld-slide {
   position: relative;
   overflow: hidden;
 }
-#template-mo-zay-hero-carousel .container {
+#hero-carousel .container {
   position: relative;
   z-index: 2;
 }
@@ -3028,7 +3028,7 @@ body.mobile-menu-open > *:not(nav.navbar):not(.top_bar):not(header) {
 /* Homepage hero: on tablet the photo reaches behind the text, so a light fade
    on the left keeps it readable. Desktop (992px and up) has no overlay. */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  #template-mo-zay-hero-carousel .sld-slide::after {
+  #hero-carousel .sld-slide::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -3056,10 +3056,10 @@ body.mobile-menu-open > *:not(nav.navbar):not(.top_bar):not(header) {
 .product-card-modern:hover .product-icon-wrap i{color:#fff;text-shadow:0 0 12px rgba(255,255,255,0.6);}
 
 /* Hero slider: finger-following swipe (custom.js) */
-#template-mo-zay-hero-carousel .carousel-inner { touch-action: pan-y; }
-#template-mo-zay-hero-carousel .carousel-item.sld-drag-peek { display: block; position: absolute; top: 0; left: 0; width: 100%; }
-#template-mo-zay-hero-carousel .carousel-inner { cursor: grab; }
-#template-mo-zay-hero-carousel.sld-dragging .carousel-inner { cursor: grabbing; user-select: none; -webkit-user-select: none; }
+#hero-carousel .carousel-inner { touch-action: pan-y; }
+#hero-carousel .carousel-item.sld-drag-peek { display: block; position: absolute; top: 0; left: 0; width: 100%; }
+#hero-carousel .carousel-inner { cursor: grab; }
+#hero-carousel.sld-dragging .carousel-inner { cursor: grabbing; user-select: none; -webkit-user-select: none; }
 
 /* About page (2026-11-09) */
 .abt-eyebrow { display: inline-block; padding: 6px 16px; border-radius: 50px; font-size: 13px; font-weight: 600; margin-bottom: 10px; background: rgba(242, 101, 34, 0.1); color: #c2410c; border: 1px solid rgba(242, 101, 34, 0.25); }
@@ -3176,21 +3176,21 @@ footer .footer-wrapper .footer-col-links ul li { margin-bottom: 6px !important; 
    On narrower screens it was cropped from the left, pushing the photo under the text. Here we crop a little
    from the right instead and keep the text column narrower, so the text stays on the plain grey. No overlay. */
 @media (min-width: 992px) and (max-width: 1919.98px) {
-  #template-mo-zay-hero-carousel .hero_text { max-width: 440px; }
+  #hero-carousel .hero_text { max-width: 440px; }
 }
 @media (min-width: 1400px) and (max-width: 1599.98px) {
-  #template-mo-zay-hero-carousel .hero-bg-img { object-position: 90% 50% !important; }
+  #hero-carousel .hero-bg-img { object-position: 90% 50% !important; }
 }
 @media (min-width: 1200px) and (max-width: 1399.98px) {
-  #template-mo-zay-hero-carousel .hero-bg-img { object-position: 65% 50% !important; }
+  #hero-carousel .hero-bg-img { object-position: 65% 50% !important; }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  #template-mo-zay-hero-carousel .hero-bg-img { object-position: 55% 50% !important; }
-  #template-mo-zay-hero-carousel .hero_text { max-width: 380px; }
+  #hero-carousel .hero-bg-img { object-position: 55% 50% !important; }
+  #hero-carousel .hero_text { max-width: 380px; }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  #template-mo-zay-hero-carousel .hero_icon, #template-mo-zay-hero-carousel .hero_button, #template-mo-zay-hero-carousel .hero_watch_button { white-space: nowrap; }
-  #template-mo-zay-hero-carousel .hero_button { padding-left: 22px !important; padding-right: 22px !important; }
+  #hero-carousel .hero_icon, #hero-carousel .hero_button, #hero-carousel .hero_watch_button { white-space: nowrap; }
+  #hero-carousel .hero_button { padding-left: 22px !important; padding-right: 22px !important; }
 }
 
 /* Mobile breadcrumbs: smaller text, each item kept on one line, wrap between items only */
@@ -3314,8 +3314,8 @@ footer .footer-wrapper .footer-col-links ul li { margin-bottom: 6px !important; 
    Green (#15803d) for actions, blue/indigo for labels and decoration. */
 .button { color: #15803d !important; border-color: #15803d !important; }
 .button:hover, .button:focus, .button:hover a { background-color: #15803d !important; color: #fff !important; border-color: #15803d !important; }
-.hero_button, #template-mo-zay-hero-carousel .hero_button { background-color: #15803d !important; border-color: #15803d !important; color: #fff !important; }
-.hero_button:hover, .hero_button:focus, #template-mo-zay-hero-carousel .hero_button:hover { background-color: #166534 !important; }
+.hero_button, #hero-carousel .hero_button { background-color: #15803d !important; border-color: #15803d !important; color: #fff !important; }
+.hero_button:hover, .hero_button:focus, #hero-carousel .hero_button:hover { background-color: #166534 !important; }
 .cta-primary-btn { background: linear-gradient(135deg, #16a34a 0%, #15803d 100%) !important; box-shadow: 0 8px 20px rgba(21, 128, 61, 0.3) !important; }
 .cta-primary-btn:hover, .cta-primary-btn:focus { background: linear-gradient(135deg, #15803d 0%, #166534 100%) !important; }
 .contact-wrapper .contact-page-form .btn-submit:hover { background: #166534; }
@@ -3338,8 +3338,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before, n
 
 /* Buttons and links: only green/blue and white. Hover swaps the two colours (2026-11-11). */
 /* Filled green buttons -> white on hover */
-.cta-primary-btn, .hero_button, #template-mo-zay-hero-carousel .hero_button, .btn-submit, .btn.btn-warning { background: #15803d !important; color: #fff !important; border: 2px solid #15803d !important; box-shadow: none !important; }
-.cta-primary-btn:hover, .cta-primary-btn:focus, .hero_button:hover, .hero_button:focus, #template-mo-zay-hero-carousel .hero_button:hover, .btn-submit:hover, .btn.btn-warning:hover, .btn.btn-warning:focus { background: #fff !important; color: #15803d !important; border-color: #15803d !important; }
+.cta-primary-btn, .hero_button, #hero-carousel .hero_button, .btn-submit, .btn.btn-warning { background: #15803d !important; color: #fff !important; border: 2px solid #15803d !important; box-shadow: none !important; }
+.cta-primary-btn:hover, .cta-primary-btn:focus, .hero_button:hover, .hero_button:focus, #hero-carousel .hero_button:hover, .btn-submit:hover, .btn.btn-warning:hover, .btn.btn-warning:focus { background: #fff !important; color: #15803d !important; border-color: #15803d !important; }
 .cta-primary-btn i, .btn.btn-warning i { color: inherit !important; }
 /* Filled blue (navy) buttons -> white on hover */
 .btn.btn-primary { background: #1e3a8a !important; color: #fff !important; border: 2px solid #1e3a8a !important; }
@@ -3358,8 +3358,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before, n
 .services-item_all .btn-light { background: #fff !important; color: #15803d !important; border: 2px solid #fff !important; }
 .services-item_all .btn-light:hover, .services-item_all .btn-light:focus { background: transparent !important; color: #fff !important; border-color: #fff !important; }
 /* Watch Video */
-.hero_watch_button, #template-mo-zay-hero-carousel .hero_watch_button { color: #15803d !important; }
-.hero_watch_button:hover, #template-mo-zay-hero-carousel .hero_watch_button:hover { color: #1e3a8a !important; }
+.hero_watch_button, #hero-carousel .hero_watch_button { color: #15803d !important; }
+.hero_watch_button:hover, #hero-carousel .hero_watch_button:hover { color: #1e3a8a !important; }
 /* Text links in content: blue */
 .abt-link-more, .prod-more-link, .app-more, .cs-glance-row dd a, #main-content .dis-article a:not(.btn):not(.button), #main-content .legal-doc a, #main-content p a:not(.btn):not(.button), #main-content li a:not(.btn):not(.button):not(.dropdown-item) { color: #1d4ed8 !important; }
 .prod-more-link:hover, .app-more:hover, .cs-glance-row dd a:hover, #main-content p a:not(.btn):not(.button):hover, #main-content li a:not(.btn):not(.button):not(.dropdown-item):hover { color: #15803d !important; }
@@ -3368,7 +3368,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before, n
 /* Leftovers: stronger selectors */
 .services-item_all a.btn.btn-light { color: #15803d !important; }
 .services-item_all a.btn.btn-light:hover, .services-item_all a.btn.btn-light:focus { color: #fff !important; }
-#template-mo-zay-hero-carousel a.hero_watch_button:hover { color: #1e3a8a !important; }
+#hero-carousel a.hero_watch_button:hover { color: #1e3a8a !important; }
 
 /* Client logos: square cards, large logos, name underneath */
 .client-square { margin: 0; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; aspect-ratio: 1 / 1; padding: 14px; background: #fff; border: 1px solid #e2e8f0; border-radius: 14px; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04); transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease; }
@@ -3384,3 +3384,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before, n
 .client-square img { width: 78%; max-width: 190px; height: auto; max-height: none; }
 .client-square figcaption { font-size: 14px; }
 @media (max-width: 575.98px) { .client-square { padding: 12px; } .client-square img { width: 82%; } .client-square figcaption { font-size: 12px; } }
+
+/* Home About text: left-aligned (review item 17) */
+.about p { text-align: left !important; }
