@@ -42,7 +42,8 @@ The small files with old names (`dis.html`, `sct.html`, `ai.html`, `About Us.htm
 
 ## Folders
 
-- `assets/css/` — `bootstrap.min.css`, the theme (`style.min.css`), site fixes (`responsive-fixes.css` and its minified copy), and `fontawesome-subset.min.css`.
+- `assets/css/` — **`site.min.css` is the only stylesheet pages load.** It is built by `tools/build-css.mjs` from `fonts.css` (self-hosted Roboto), `fontawesome-subset.min.css`, `bootstrap.min.css`, the theme (`style.min.css`) and the site fixes (`responsive-fixes.css` and its minified copy), with unused rules removed.
+- `assets/fonts/roboto/` — self-hosted Roboto (variable woff2 per character set).
 - `assets/webfonts/` — Font Awesome subset fonts (only the icons the site uses).
 - `assets/js/` — `components.js` (`<site-header>` and `<site-footer>` Web Components), Bootstrap bundle, and `custom.js`.
 - `assets/img/` — images. `apps/` holds app icons and app screenshots taken from the Google Play and App Store listings; `projects/` holds screenshots of client web portals. `og/` holds the 1200×630 social share images, `pages/` the service page visuals, `digital-identity/` the Digital Identity page images.
@@ -58,9 +59,13 @@ Then open http://127.0.0.1:5000/.
 
 ## Editing conventions
 
-- **CSS changes** go in both `assets/css/responsive-fixes.css` (readable) and `assets/css/responsive-fixes.min.css` (loaded by the pages). After a change, bump the `?v=` version on `responsive-fixes.min.css` in every page so browsers fetch the new file.
+- **CSS changes** go in both `assets/css/responsive-fixes.css` (readable) and `assets/css/responsive-fixes.min.css`. Then rebuild the combined stylesheet and bump the `?v=` version on `site.min.css` in every page:
+  ```bash
+  npx -y -p purgecss@7 node tools/build-css.mjs
+  ```
+  Also re-run it after adding HTML that uses Bootstrap or theme classes no page used before, otherwise those rules are missing from `site.min.css`.
 - The theme forces `font-size: 18px !important` on `p`, `li` and `div`. Overrides need a more specific selector with `!important`.
-- **Images:** add a `.webp` next to each `.jpg`/`.png` and use `<picture>` with the WebP as the first source. Always set `width` and `height`.
+- **Images:** add a `.webp` next to each `.jpg`/`.png` and use `<picture>` with the WebP as the first source. Always set `width` and `height`. Large images get smaller copies for phones (`banner_img_0X-828.webp`, `-1200.webp`, `about_us_2-384.webp`, `logo-256.webp`) referenced with `srcset`/`sizes`.
 - **New icons:** the site loads a Font Awesome 5.15.4 subset. If you use an icon that is not in `assets/css/fontawesome-subset.min.css`, add its rule and rebuild the subset fonts, or it will show as a blank square.
 - **New page:** copy the head, header and footer from an existing page, add it to `sitemap.xml`, `llms.txt` and the footer Quick Links, and create a share image in `assets/img/og/`.
 - Phone numbers are shown as `+880 1615-900004`; `tel:` links use `+8801615900004`.

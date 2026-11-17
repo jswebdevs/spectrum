@@ -30,19 +30,12 @@
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
     <link rel="ard" href=".well-known/ard.json">
     <!-- Resource Hints & Preloads -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="image" href="assets/img/banner_img_03.webp" type="image/webp" fetchpriority="high">
-    <!-- Google Fonts & FontAwesome -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"></noscript>
+    <link rel="preload" as="image" href="assets/img/banner_img_03.webp" imagesrcset="assets/img/banner_img_03-828.webp 828w, assets/img/banner_img_03-1200.webp 1200w, assets/img/banner_img_03.webp 1924w" imagesizes="100vw" type="image/webp" fetchpriority="high">
     <link rel="preload" href="assets/webfonts/fa-solid-900.woff2?v=3" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="assets/css/fontawesome-subset.min.css?v=3">
-    <!-- Bootstrap & Site Styles -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.min.css">
-    <link rel="stylesheet" href="assets/css/responsive-fixes.min.css?v=20261117a">
-    <script src="assets/js/components.js?v=20261117a" defer></script>
+    <!-- Self-hosted Roboto + one combined, purged stylesheet (tools/build-css.mjs) -->
+    <link rel="preload" href="assets/fonts/roboto/roboto-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/css/site.min.css?v=20261117b">
+    <script src="assets/js/components.js?v=20261117b" defer></script>
     <!-- Structured Data (JSON-LD Organization & WebPage) -->
     <script type="application/ld+json">
     [
@@ -105,7 +98,7 @@
             <!-- Slide 1: Digital Identity (banner_img_03.webp) -->
             <div class="carousel-item active sld-slide sld-slide-1">
                 <picture class="hero-bg-picture">
-                    <img width="1924" height="570" src="assets/img/banner_img_03.webp" alt="Digital Identity" class="hero-bg-img" fetchpriority="high" decoding="async">
+                    <img width="1924" height="570" src="assets/img/banner_img_03.webp" srcset="assets/img/banner_img_03-828.webp 828w, assets/img/banner_img_03-1200.webp 1200w, assets/img/banner_img_03.webp 1924w" sizes="100vw" alt="Digital Identity" class="hero-bg-img" fetchpriority="high" decoding="async">
                 </picture>
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
@@ -118,8 +111,8 @@
                                 <span class="hero_icon d-inline-flex align-items-center"><img src="assets/img/icon_qwork.png" width="39" height="38" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> QUALITY WORK</span>
                             </div>
                             <div class="hero_buttons d-flex align-items-center mt-4">
-                                <a href="digital-identity-security.html" class="hero_button" aria-label="Explore Digital Identity and Security solutions">Explore Solution</a>
-                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center" aria-label="Watch video about Digital Identity on YouTube"><img src="assets/img/icon_video_green.png" width="38" height="38" class="me-2" alt="" aria-hidden="true"> Watch Video</a>
+                                <a href="digital-identity-security.html" class="hero_button" aria-label="Explore Solution: Digital Identity and Security solutions">Explore Solution</a>
+                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center" aria-label="Watch video about Digital Identity on YouTube"><img src="assets/img/icon_video_green.webp" width="38" height="38" class="me-2" alt="" aria-hidden="true"> Watch Video</a>
                             </div>
                         </div>
                     </div>
@@ -129,7 +122,7 @@
             <!-- Slide 2: Blockchain Technology (banner_img_05.webp) -->
             <div class="carousel-item sld-slide sld-slide-2">
                 <picture class="hero-bg-picture">
-                    <img width="1924" height="570" src="assets/img/banner_img_05.webp" alt="Blockchain Technology" class="hero-bg-img" loading="lazy" decoding="async">
+                    <img width="1924" height="570" src="assets/img/banner_img_05.webp" srcset="assets/img/banner_img_05-828.webp 828w, assets/img/banner_img_05-1200.webp 1200w, assets/img/banner_img_05.webp 1924w" sizes="100vw" alt="Blockchain Technology" class="hero-bg-img" loading="lazy" decoding="async">
                 </picture>
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
@@ -142,8 +135,8 @@
                                 <span class="hero_icon d-inline-flex align-items-center"><img loading="lazy" src="assets/img/icon_qwork.png" width="39" height="38" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> QUALITY WORK</span>
                             </div>
                             <div class="hero_buttons d-flex align-items-center mt-4">
-                                <a href="blockchain-technology.html" class="hero_button" aria-label="Explore Blockchain Technology">Explore Solution</a>
-                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center" aria-label="Watch video about Blockchain Technology on YouTube"><img loading="lazy" src="assets/img/icon_video_green.png" width="38" height="38" class="me-2" alt="" aria-hidden="true"> Watch Video</a>
+                                <a href="blockchain-technology.html" class="hero_button" aria-label="Explore Solution: Blockchain Technology">Explore Solution</a>
+                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center" aria-label="Watch video about Blockchain Technology on YouTube"><img loading="lazy" src="assets/img/icon_video_green.webp" width="38" height="38" class="me-2" alt="" aria-hidden="true"> Watch Video</a>
                             </div>
                         </div>
                     </div>
@@ -153,7 +146,7 @@
             <!-- Slide 3: Artificial Intelligence (banner_img_01.webp) -->
             <div class="carousel-item sld-slide sld-slide-3">
                 <picture class="hero-bg-picture">
-                    <img width="1920" height="570" src="assets/img/banner_img_01.webp" alt="Artificial Intelligence" class="hero-bg-img" loading="lazy" decoding="async">
+                    <img width="1920" height="570" src="assets/img/banner_img_01.webp" srcset="assets/img/banner_img_01-828.webp 828w, assets/img/banner_img_01-1200.webp 1200w, assets/img/banner_img_01.webp 1924w" sizes="100vw" alt="Artificial Intelligence" class="hero-bg-img" loading="lazy" decoding="async">
                 </picture>
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
@@ -166,8 +159,8 @@
                                 <span class="hero_icon d-inline-flex align-items-center"><img loading="lazy" src="assets/img/icon_qwork.png" width="39" height="38" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> QUALITY WORK</span>
                             </div>
                             <div class="hero_buttons d-flex align-items-center mt-4">
-                                <a href="artificial-intelligence.html" class="hero_button" aria-label="Explore Artificial Intelligence services">Explore Solution</a>
-                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center" aria-label="Watch video about Artificial Intelligence on YouTube"><img loading="lazy" src="assets/img/icon_video_green.png" width="38" height="38" class="me-2" alt="" aria-hidden="true"> Watch Video</a>
+                                <a href="artificial-intelligence.html" class="hero_button" aria-label="Explore Solution: Artificial Intelligence services">Explore Solution</a>
+                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center" aria-label="Watch video about Artificial Intelligence on YouTube"><img loading="lazy" src="assets/img/icon_video_green.webp" width="38" height="38" class="me-2" alt="" aria-hidden="true"> Watch Video</a>
                             </div>
                         </div>
                     </div>
@@ -177,7 +170,7 @@
             <!-- Slide 4: Smart Card Technologies (banner_img_04.webp) -->
             <div class="carousel-item sld-slide sld-slide-4">
                 <picture class="hero-bg-picture">
-                    <img width="1924" height="570" src="assets/img/banner_img_04.webp" alt="Smart Card Technologies" class="hero-bg-img" loading="lazy" decoding="async">
+                    <img width="1924" height="570" src="assets/img/banner_img_04.webp" srcset="assets/img/banner_img_04-828.webp 828w, assets/img/banner_img_04-1200.webp 1200w, assets/img/banner_img_04.webp 1924w" sizes="100vw" alt="Smart Card Technologies" class="hero-bg-img" loading="lazy" decoding="async">
                 </picture>
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
@@ -190,8 +183,8 @@
                                 <span class="hero_icon d-inline-flex align-items-center"><img loading="lazy" src="assets/img/icon_qwork.png" width="39" height="38" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> QUALITY WORK</span>
                             </div>
                             <div class="hero_buttons d-flex align-items-center mt-4">
-                                <a href="smart-card-technologies.html" class="hero_button" aria-label="Explore Smart Card Technologies">Explore Solution</a>
-                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center" aria-label="Watch video about Smart Card Technologies on YouTube"><img loading="lazy" src="assets/img/icon_video_green.png" width="38" height="38" class="me-2" alt="" aria-hidden="true"> Watch Video</a>
+                                <a href="smart-card-technologies.html" class="hero_button" aria-label="Explore Solution: Smart Card Technologies">Explore Solution</a>
+                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center" aria-label="Watch video about Smart Card Technologies on YouTube"><img loading="lazy" src="assets/img/icon_video_green.webp" width="38" height="38" class="me-2" alt="" aria-hidden="true"> Watch Video</a>
                             </div>
                         </div>
                     </div>
@@ -201,7 +194,7 @@
             <!-- Slide 5: Software & IT Solutions (banner_img_02.webp) -->
             <div class="carousel-item sld-slide sld-slide-5">
                 <picture class="hero-bg-picture">
-                    <img width="1924" height="570" src="assets/img/banner_img_02.webp" alt="Software and IT Solutions" class="hero-bg-img" loading="lazy" decoding="async">
+                    <img width="1924" height="570" src="assets/img/banner_img_02.webp" srcset="assets/img/banner_img_02-828.webp 828w, assets/img/banner_img_02-1200.webp 1200w, assets/img/banner_img_02.webp 1924w" sizes="100vw" alt="Software and IT Solutions" class="hero-bg-img" loading="lazy" decoding="async">
                 </picture>
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
@@ -214,8 +207,8 @@
                                 <span class="hero_icon d-inline-flex align-items-center"><img loading="lazy" src="assets/img/icon_qwork.png" width="39" height="38" style="height: 22px; width: auto;" class="me-2" alt="" aria-hidden="true"> QUALITY WORK</span>
                             </div>
                             <div class="hero_buttons d-flex align-items-center mt-4">
-                                <a href="services.html" class="hero_button" aria-label="Explore Software and IT Solutions">Explore Solution</a>
-                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center" aria-label="Watch video about Software and IT Solutions on YouTube"><img loading="lazy" src="assets/img/icon_video_green.png" width="38" height="38" class="me-2" alt="" aria-hidden="true"> Watch Video</a>
+                                <a href="services.html" class="hero_button" aria-label="Explore Solution: Software and IT Solutions">Explore Solution</a>
+                                <a href="https://www.youtube.com/@SpectrumITSolutionsbdLtd" target="_blank" rel="noopener" class="hero_watch_button d-inline-flex align-items-center" aria-label="Watch video about Software and IT Solutions on YouTube"><img loading="lazy" src="assets/img/icon_video_green.webp" width="38" height="38" class="me-2" alt="" aria-hidden="true"> Watch Video</a>
                             </div>
                         </div>
                     </div>
@@ -240,7 +233,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="about_image text-center">
-                        <picture><source srcset="assets/img/about_us_2.webp" type="image/webp"><img src="assets/img/about_us_2.png" width="594" height="563" class="img-fluid" alt="About Spectrum IT Solutions" loading="lazy" decoding="async" style="border-radius: 12px; aspect-ratio: 594/563;"></picture>
+                        <picture><source srcset="assets/img/about_us_2-384.webp 384w, assets/img/about_us_2.webp 594w" sizes="(min-width: 992px) 594px, 92vw" type="image/webp"><img src="assets/img/about_us_2.png" width="594" height="563" class="img-fluid" alt="About Spectrum IT Solutions" loading="lazy" decoding="async" style="border-radius: 12px; aspect-ratio: 594/563;"></picture>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -280,7 +273,7 @@
                         </div>
 
                         <div class="read-more-homepage">
-                            <a href="about-us.html" class="button" aria-label="Read more about Spectrum IT Solutions Ltd. and company profile">Read More About Us</a>
+                            <a href="about-us.html" class="button" aria-label="Read More About Us: Spectrum IT Solutions Ltd. and company profile">Read More About Us</a>
                         </div>
                     </div>
                 </div>
@@ -306,7 +299,7 @@
                             <p class="text-muted">Check that people and documents are real, from NID checks and face matching to smart cards.</p>
                         </div>
                         <div class="pt-3 text-center">
-                            <a href="digital-identity-security.html" class="button" aria-label="Explore Digital Identity and Security solutions">Explore Solutions</a>
+                            <a href="digital-identity-security.html" class="button" aria-label="Explore Solutions: Digital Identity and Security solutions">Explore Solutions</a>
                         </div>
                     </div>
                 </div>
@@ -320,7 +313,7 @@
                             <p class="text-muted">Design, print, encode and check secure ID, staff and service cards.</p>
                         </div>
                         <div class="pt-3 text-center">
-                            <a href="smart-card-technologies.html" class="button" aria-label="Explore Smart Card Technologies">Explore Solutions</a>
+                            <a href="smart-card-technologies.html" class="button" aria-label="Explore Solutions: Smart Card Technologies">Explore Solutions</a>
                         </div>
                     </div>
                 </div>
@@ -334,7 +327,7 @@
                             <p class="text-muted">Practical AI that reads Bangla and English documents, matches faces and flags fraud.</p>
                         </div>
                         <div class="pt-3 text-center">
-                            <a href="artificial-intelligence.html" class="button" aria-label="Explore Artificial Intelligence services">Explore Solutions</a>
+                            <a href="artificial-intelligence.html" class="button" aria-label="Explore Solutions: Artificial Intelligence services">Explore Solutions</a>
                         </div>
                     </div>
                 </div>
@@ -348,7 +341,7 @@
                             <p class="text-muted">Stop fake documents, cards and certificates, and catch them in seconds with QR checks and AI.</p>
                         </div>
                         <div class="pt-3 text-center">
-                            <a href="anti-counterfeit.html" class="button" aria-label="Explore Anti-Counterfeit Solutions">Explore Solutions</a>
+                            <a href="anti-counterfeit.html" class="button" aria-label="Explore Solutions: Anti-Counterfeit Solutions">Explore Solutions</a>
                         </div>
                     </div>
                 </div>
@@ -362,7 +355,7 @@
                             <p class="text-muted">Tamper-proof records for land, certificates and supply chains, with QR verification and private blockchain networks.</p>
                         </div>
                         <div class="pt-3 text-center">
-                            <a href="blockchain-technology.html" class="button" aria-label="Explore Blockchain Technology">Explore Solutions</a>
+                            <a href="blockchain-technology.html" class="button" aria-label="Explore Solutions: Blockchain Technology">Explore Solutions</a>
                         </div>
                     </div>
                 </div>

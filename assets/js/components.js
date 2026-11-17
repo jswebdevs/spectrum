@@ -30,7 +30,7 @@ class SiteHeader extends HTMLElement {
             <div class="d-flex align-items-center">
                 <div class="logo">
                     <a class="navbar-brand text-success align-self-center m-0 p-0" href="./">
-                        <img src="assets/img/logo.png" width="165" height="60" alt="Spectrum IT Solutions Logo">
+                        <img src="assets/img/logo.png" srcset="assets/img/logo-256.webp 256w, assets/img/logo.png 495w" sizes="183px" width="165" height="60" alt="Spectrum IT Solutions Logo">
                     </a>
                 </div>
                 <div class="iso d-none d-lg-flex align-items-center ms-3">
@@ -146,7 +146,7 @@ class SiteFooter extends HTMLElement {
             <div class="row">
                 <div class="col-lg-3 col-sm-6 mb-4 footer-col-about">
                     <div class="footer-about">
-                        <a href="./"><img src="assets/img/logo.png" width="165" height="60" class="img-fluid mb-3" alt="Spectrum IT Solutions Logo" loading="lazy"></a>
+                        <a href="./"><img src="assets/img/logo.png" srcset="assets/img/logo-256.webp 256w, assets/img/logo.png 495w" sizes="183px" width="165" height="60" class="img-fluid mb-3" alt="Spectrum IT Solutions Logo" loading="lazy"></a>
                         <p>A Dhaka software company building secure digital services for government and business since 2012.</p>
                         <div class="mt-3 footer-social-icons">
                             <a class="text-light" href="https://www.facebook.com/myspectrumit" target="_blank" rel="noopener" aria-label="Spectrum Facebook"><i class="fab fa-facebook-f"></i></a>
