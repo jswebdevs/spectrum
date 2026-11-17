@@ -2384,13 +2384,18 @@ picture {
 /* ==========================================================================
    MOBILE MENU BODY SCROLL LOCK & BACKGROUND PROTECTION
    ========================================================================== */
+site-header,
+site-footer {
+  display: contents;
+}
+
 body.mobile-menu-open {
   overflow: hidden !important;
   height: 100vh !important;
   height: 100dvh !important;
 }
 
-body.mobile-menu-open > *:not(nav.navbar):not(.top_bar):not(header) {
+body.mobile-menu-open > *:not(nav.navbar):not(.top_bar):not(header):not(site-header) {
   pointer-events: none !important;
   user-select: none !important;
 }
@@ -2400,7 +2405,7 @@ body.mobile-menu-open > *:not(nav.navbar):not(.top_bar):not(header) {
     overflow: visible !important;
     height: auto !important;
   }
-  body.mobile-menu-open > *:not(nav.navbar):not(.top_bar):not(header) {
+  body.mobile-menu-open > *:not(nav.navbar):not(.top_bar):not(header):not(site-header) {
     pointer-events: auto !important;
     user-select: auto !important;
   }

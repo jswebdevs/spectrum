@@ -44,7 +44,7 @@ The small files with old names (`dis.html`, `sct.html`, `ai.html`, `About Us.htm
 
 - `assets/css/` — `bootstrap.min.css`, the theme (`style.min.css`), site fixes (`responsive-fixes.css` and its minified copy), and `fontawesome-subset.min.css`.
 - `assets/webfonts/` — Font Awesome subset fonts (only the icons the site uses).
-- `assets/js/` — Bootstrap bundle and `custom.js`.
+- `assets/js/` — `components.js` (`<site-header>` and `<site-footer>` Web Components), Bootstrap bundle, and `custom.js`.
 - `assets/img/` — images. `apps/` holds app icons and app screenshots taken from the Google Play and App Store listings; `projects/` holds screenshots of client web portals. `og/` holds the 1200×630 social share images, `pages/` the service page visuals, `digital-identity/` the Digital Identity page images.
 - `sitemap.xml`, `robots.txt`, `llms.txt`, `.well-known/ard.json` — search and AI discovery files.
 
